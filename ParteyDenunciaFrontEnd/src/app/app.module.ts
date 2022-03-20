@@ -19,6 +19,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { DatosgeneralesComponent } from './components/datosgenerales/datosgenerales.component';
+import { DenuncianteComponent } from './components/denunciante/denunciante.component';
 
 
 
@@ -29,7 +30,8 @@ import { DatosgeneralesComponent } from './components/datosgenerales/datosgenera
     AboutComponent,
     BuscadorComponent,
     HomeComponent,
-    DatosgeneralesComponent
+    DatosgeneralesComponent,
+    DenuncianteComponent
   ],
   imports: [
     BrowserModule,

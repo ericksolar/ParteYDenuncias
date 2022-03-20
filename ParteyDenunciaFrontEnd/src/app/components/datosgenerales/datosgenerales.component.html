@@ -1,6 +1,8 @@
 <!-- As a link -->
 
 
+
+
 <!-- As a heading -->
 <nav class="navbar navbar-dark bg-primary">
     <div class="container-fluid">
@@ -8,86 +10,440 @@
     </div>
 </nav>
 
-<div class="row mt-5">
-    <div class="col-4">
+<div class="row mt-3" style="border: 1px solid red;">
+    <!--area arriba-->
+    <div class="col-4" style="border: 1px solid blue;">
+        <!--area izquierda-->
 
     </div>
 
 
-    <div style="text-align: left;" class="col-4">
+    <div style="text-align: left;" class="col-5" style="border: 1px solid black;">
+        <!--area derecha-->
+
 
         <form>
             <!-- <fieldset disabled> -->
-            <legend style="padding-left: 100px;">Datos Generales de la Denuncia (Solo lo llena el funcionario policial)</legend>
+            <legend style="padding-left: 50px; ">Acta General de la Denuncia </legend>
+
+            <br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">Con Denenidos</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">Sin Detenidos</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">Pasa a Control de Detención</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">No pasa a Control de Detención</label>
+            </div>
+            <!-- ////////////////////////////////////// -->
+            <br>
+            <hr>
+
+        </form>
+
+
+        <form>
+            <!-- <fieldset disabled> -->
+            <legend style="padding-left: 30px;">Datos Generales de la Denuncia </legend>
+            <legend style="padding-left: 10px;">(Solo lo llena el funcionario policial)</legend>
+            <br><br>
+
+
+
+            <label> Fecha y Hora: <input type="datetime-local"></label>
+
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Delito:</label>
+                </td>
+                <td>
+                    <textarea class="form-control" rows="1"></textarea>
+                </td>
+            </tr>
 
             <div class="mb-3 mt-5">
-                <label style="padding-right: 20px;" for="disabledSelect" class="form-label">Institución a Cargo</label>
+                <label style="padding-right: 20px;" for="disabledSelect" class="form-label">Zona del Delito</label>
                 <select class="form-select" aria-label="Default select example">
                   <option selected>Seleccione Institución a Cargo</option>
-                  <option value="1">Gobernación Marítima de ....</option>
-                  <option value="1">Capitanía de Puerto de ....</option>
-                  <option value="2">Policia de Ivestigaciones</option>
-                  <option value="3">Carabineros</option>
+                  <option value="1">Rural</option>
+                  <option value="1">Urbano</option>
+                  <option value="2">Marítimo</option>
+                  <option value="3">Fluvial</option>
+                  <option value="3">Lacustre</option>
+
                 </select>
             </div>
 
-            <div class="mb-3 ">
-                <label style="padding-right: 20px;" for="disabledSelect" class="form-label">Unidad Policial</label>
+
+            <div class="mb-3 mt-5">
+                <label style="padding-right: 10px;" for="disabledSelect" class="form-label">Tipo de Lugar de Ocurrencia</label>
                 <select class="form-select" aria-label="Default select example">
-                <option selected>Seleccione Unidad Policial</option>
-                <option value="1">Gobernación Marítima de ....</option>
-                <option value="1">Capitanía de Puerto de ....</option>
-                <option value="2">Policia de Ivestigaciones</option>
-                <option value="3">Carabineros</option>
-              </select>
-            </div>
+                  <option selected>Seleccione Institución a Cargo</option>
+                  <option value="1">Vía Pública</option>
+                  <option value="1">Local Comercial</option>
+                  <option value="2">Domicilio Particular</option>
+                  <option value="3">Establecimiento Educacional</option>
+                  <option value="3">Otro</option>
 
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">Parte</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">Folio</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">RUC</label>
+                </select>
             </div>
 
 
-            <legend style="padding-left: 100px; margin-top: 50px;">Lugar de Adopción del Procedimiento</legend>
+            <tr>
+                <td colspan="4">
+                    <label style="padding-right: 10px;">Lugar Específico de ocurrencia:</label>
+                </td>
+                <td colspan="4">
+                    <textarea class="form-control" rows="1"></textarea>
+                </td>
+            </tr>
+
+            <br><br><br>
+            <legend style="padding-left: 150px;">Dirección del Delito </legend>
 
 
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">Guardia</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">Borde Costero</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">Unidad Marítima</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label>Unidad Marítima</label>
-            </div>
+
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Calle:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
 
 
-            <button type="submit" class="btn btn-primary" style="margin-left: 500px; margin-top: 150px;">Siguiente</button>
-            <!-- </fieldset> -->
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Número:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Departamento / Oficina:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
 
-            <button type="submit" class="btn btn-primary " routerLink="/home" routerLinkActive="active" style="margin-left: 500px; margin-top: 150px;">Volver</button>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Block:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Población o Villa:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Sector:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Región:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Comuna:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Intersección:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Luegar Específico:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Referencia de la dirección:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Latitud:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Longitud:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+
+
+
+            <br><br><br><br>
+
+
+
+
+
+            <button type="submit" class="btn btn-primary " routerLink="/datosgenerales" routerLinkActive="active" style="margin-left: 500px; margin-top: 150px;">Siguiente</button>
 
 
         </form>
 
 
-
-
     </div>
 
 </div>
+
+
+
+
+<!-- ////////////////////////////////////////////////////////// -->
+
+
+<!-- 
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Ingreso</li>
+                    </ol>
+                </nav>
+
+                <div class="card">
+                    <div class="list-group">
+                        <a class="list-group-item active">
+                            <span><div class="text-center"><p style="color:white"><b>INGRESO DE PATRULLAJE</b></p></div></span>
+                        </a>
+                    </div>
+                    <br>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="text-center text-danger font-weight-bold">ESTIMADO USUARIO: CONSIDERAR QUE PUEDE INGRESAR PATRULLAJES HASTA 2 DÍAS MÁXIMO DE ANTIGÜEDAD.</p>
+                        </div>
+                    </div>
+
+                 
+
+
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-striped w-auto" style="border: 1px solid black;" border="1" bgcolor="#85C1E9">
+                               
+                                    <tr>
+                                        <td style="width:400px;">
+                                            <p><b>INICIO PATRULLAJE</b></p>
+                                        </td>
+
+                                      
+                                        <td>
+                                            <h5><input type="time" [(ngModel)]="hcomex" (ngModelChange)="cambiofcinicio()"></h5>
+
+                                        </td>
+
+                                    </tr>
+
+
+
+                                   
+                                    <br>
+
+                                    <tr style="border-top:1px solid rgb(33, 97, 180); ">
+                                        <td style="padding-top: 30px;">
+                                            <b><u>TIPOS DE PATRULLAJES:</u></b>
+                                        </td>
+                                        <td colspan="2" class="text-center" style="padding-top: 30px; border: 1px solid black;">
+                                            <b><u>DURACIÓN DE PATRULLAJES:</u></b>
+                                        </td>
+                                    </tr>
+
+                                   
+                                    <tr>
+                                        <td *ngIf="grabado && (HrsCostero>0 || MinCostero>0)">
+                                            <h5><a routerLink="/controlcostero" routerLinkActive="active">CONTROL COSTERO</a></h5>
+                                        </td>
+                                        <td *ngIf="!grabado || (HrsCostero==0 && MinCostero==0)"> - CONTROL COSTERO</td>
+                                        <td>
+                                            <h5>Horas:<input size="3" type="number" [(ngModel)]="HrsCostero" value="{{HrsCostero}}" (ngModelChange)="cambiofcpatrullajes()" max="23" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                        <td>
+                                            <h5>Minutos:<input size="3" type="number" [(ngModel)]="MinCostero" value="{{MinCostero}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="59" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td *ngIf="grabado && (HrsRecintos>0 || MinRecintos>0)"><a routerLink="/controlcostero" routerLinkActive="active">RECINTOS PORTUARIOS</a></td>
+                                        <td *ngIf="!grabado || (HrsRecintos==0 && MinRecintos==0)"> - RECINTOS PORTUARIOS</td>
+                                        <td>
+                                            <h5>Horas:<input size="3" type="number" [(ngModel)]="HrsRecintos" value="{{HrsRecintos}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="23" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                        <td>
+                                            <h5>Minutos:<input size="3" type="number" [(ngModel)]="MinRecintos" value="{{MinRecintos}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="59" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td *ngIf="grabado && (HrsFiscalizacion>0 || MinFiscalizacion>0)"><a routerLink="/controlcostero" routerLinkActive="active">FISCALIZACIÓN PESQUERA</a></td>
+                                        <td *ngIf="!grabado || (HrsFiscalizacion==0 && MinFiscalizacion==0)"> - FISCALIZACIÓN PESQUERA</td>
+                                        <td>
+                                            <h5>Horas:<input size="3" type="number" [(ngModel)]="HrsFiscalizacion" value="{{HrsFiscalizacion}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="23" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                        <td>
+                                            <h5>Minutos:<input size="3" type="number" [(ngModel)]="MinFiscalizacion" value="{{MinFiscalizacion}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="59" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td *ngIf="grabado && (HrsCCMM>0 || MinCCMM>0)"><a routerLink="/controlcostero" routerLinkActive="active">CONTROL DE CONCESIONES MARÍTIMAS</a></td>
+                                        <td *ngIf="!grabado || (HrsCCMM==0 && MinCCMM==0)"> - CONTROL DE CONCESIONES MARÍTIMAS</td>
+                                        <td>
+                                            <h5>Horas:<input size="3" type="number" [(ngModel)]="HrsCCMM" value="{{HrsCCMM}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="23" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                        <td>
+                                            <h5>Minutos:<input size="3" type="number" [(ngModel)]="MinCCMM" value="{{MinCCMM}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="59" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td *ngIf="grabado && (HrsCentrosCultivos>0 || MinCentrosCultivos>0)"><a routerLink="/controlcostero" routerLinkActive="active">CENTROS DE CULTIVOS</a></td>
+                                        <td *ngIf="!grabado || (HrsCentrosCultivos==0 && MinCentrosCultivos==0)"> - CENTROS DE CULTIVOS</td>
+                                        <td>
+                                            <h5>Horas:<input size="3" type="number" [(ngModel)]="HrsCentrosCultivos" value="{{HrsCentrosCultivos}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="23" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                        <td>
+                                            <h5>Minutos:<input size="3" type="number" [(ngModel)]="MinCentrosCultivos" value="{{MinCentrosCultivos}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="59" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td> - PATRULLAJES ESPECIAL NO PLANIFICADO</td>
+                                        <td>
+                                            <h5>Horas:<input size="3" type="number" [(ngModel)]="HrsEspecial" value="{{HrsEspecial}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="23" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                        <td>
+                                            <h5>Minutos:<input size="3" type="number" [(ngModel)]="MinEspecial" value="{{MinEspecial}}" (ngModelChange)="cambiofcpatrullajes()" value="0" max="59" min="0" onKeyDown="if(this.value.length==2 && event.keyCode>47 && event.keyCode < 58)return false;"
+                                                /></h5>
+                                        </td>
+                                    </tr>
+                                    <br>
+                                    <tr style="border-top:1px solid rgb(33, 97, 180); ">
+                                        <td colspan="3" style="padding-top: 20px;" class="text-center">
+
+
+                                            <b>MEDIOS DE APOYO UTILIZADOS EN EL PATRULLAJE</b>
+
+                                           
+                                        </td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td style="padding-left: 10px; border: 1px solid black; ">
+                                            <input #inputvehiculo type="checkbox" [checked]="valorvehiculo" (change)="checkvehiculo(inputvehiculo.checked)" />VEHÍCULO
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td style="padding-left: 10px;">
+                                            <input #inputbotegoma type="checkbox" [checked]="valorbotegoma" (change)="checkbotegoma(inputbotegoma.checked)" />BOTE GOMA</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="padding-left: 10px;">
+                                            <input #inputcuatrimoto type="checkbox" [checked]="valorbotegoma" (change)="checkcuatrimoto(inputcuatrimoto.checked)" />CUATRIMOTO</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="padding-left: 10px;">
+                                            <input #inputmotoagua type="checkbox" [checked]="valormotoagua" (change)="checkmotoagua(inputmotoagua.checked)" />MOTO AGUA</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td style="padding-left: 10px;">
+                                            <input #inputbicicleta type="checkbox" [checked]="valorbicicleta" (change)="checkbicicleta(inputbicicleta.checked)" />BICICLETA</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-left: 10px;" colspan="3"> <input #inputotro type="checkbox" [checked]="valorotro" (change)="checkotro(inputotro.checked)" />OTRO (Especificar en las observaciones del tipo de patrullaje)
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td *ngIf="grabado"><u><p class="font-weight-bold"><b>INTEGRANTES</b>   <a routerLink="/integrantes" routerLinkActive="active"><i style="padding-left: 10px;" class="fa fa-user-plus fa-2x"></i></a></p></u></td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td></td>
+                                        <td *ngIf="verdisk" style="padding-left: 140px;">
+                                            <div (click)="onClick()"><i class="fa fa-save fa-4x"></i></div>
+
+                                        </td>
+                                        <td *ngIf="!verdisk"></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
