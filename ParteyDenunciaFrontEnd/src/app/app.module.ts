@@ -20,6 +20,14 @@ import { AboutComponent } from './components/about/about.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
 import { DatosgeneralesComponent } from './components/datosgenerales/datosgenerales.component';
 import { DenuncianteComponent } from './components/denunciante/denunciante.component';
+import { DelitoComponent } from './components/delito/delito.component';
+import { TransporteComponent } from './components/transporte/transporte.component';
+import { VictimaComponent } from './components/victima/victima.component';
+import { ImputadoComponent } from './components/imputado/imputado.component';
+import { TestigoComponent } from './components/testigo/testigo.component';
+import { RelatoComponent } from './components/relato/relato.component';
+import { FiscalComponent } from './components/fiscal/fiscal.component';
+import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
 
 
 
@@ -31,7 +39,15 @@ import { DenuncianteComponent } from './components/denunciante/denunciante.compo
     BuscadorComponent,
     HomeComponent,
     DatosgeneralesComponent,
-    DenuncianteComponent
+    DenuncianteComponent,
+    DelitoComponent,
+    TransporteComponent,
+    VictimaComponent,
+    ImputadoComponent,
+    TestigoComponent,
+    RelatoComponent,
+    FiscalComponent,
+    FuncionariosComponent
   ],
   imports: [
     BrowserModule,
