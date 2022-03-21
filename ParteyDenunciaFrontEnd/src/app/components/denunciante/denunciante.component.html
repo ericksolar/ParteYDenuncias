@@ -6,13 +6,13 @@
 
 <div class="row mt-3" style="border: 1px solid red;">
     <!--area arriba-->
-    <div class="col-4" style="border: 1px solid blue;">
-        <!--area izquierda-->
+    <!-- <div class="col-4" style="border: 1px solid blue;"> -->
+    <!--area izquierda-->
 
-    </div>
+    <!-- </div> -->
 
 
-    <div style="text-align: left;" class="col-5" style="border: 1px solid black;">
+    <div style="text-align: left;" class="col-5 offset-1" style="border: 1px solid black;">
         <!--area derecha-->
 
 
@@ -206,270 +206,136 @@
             <hr>
 
             <!-- <fieldset disabled> -->
-            <legend style="padding-left: 270px; ">Domicilio </legend>
+
+            <div class="row border">
+
+                <!-- /////////////////  1RA PARTE DEL COL  /////////////        -->
+                <div class="col-3 border">
+                    <p>Domicilio:</p>
+                </div>
+
+                <!-- /////////////////  2DA PARTE DEL COL  /////////////        -->
+                <div class="col-7 border">
+                    <tr>
+                        <label for="disabledSelect" class="form-label">Tipo de Dirección</label>
+
+                        <td>
+                            <select class="form-select" aria-label="Default select example">
+                          <option selected>Seleccione Tipo de Dirección</option>
+                          <option value="1">Particular</option>
+                          <option value="1">Comercial</option>
+                          <option value="2">Otra</option>
+                          </select>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="padding-right: 50px;">
+                            <label>Calle:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Número:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Departamento/Oficina:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Block:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Población/Villa:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Sector:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Región:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Comuna:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Intersección:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Observación referencia de la dirección:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Latitud:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-right: 75px;">
+                            <label>Longitud:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                </div>
+            </div>
+
 
             <br>
 
 
-            <tr>
-                <label for="disabledSelect" class="form-label">Tipo de Dirección</label>
 
-                <td>
-                    <select class="form-select" aria-label="Default select example">
-                  <option selected>Seleccione Tipo de Dirección</option>
-                  <option value="1">Particular</option>
-                  <option value="1">Comercial</option>
-                  <option value="2">Otra</option>
-
-    </select>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Calle:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Número:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Departamento/Oficina:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Block:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Población/Villa:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Sector:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Región:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Comuna:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Intersección:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Observación referencia de la dirección:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Latitud:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 75px;">
-                    <label>Longitud:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
             <hr>
 
-            <!-- /////////////////////////////////      DATOS DE CONTACTO     ////////////////////////////// -->
-
-            <legend style="padding-left: 270px; ">Datos de Contacto </legend>
-
-            <br>
-
-
-            <tr>
-                <td style="padding-right: 220px;">
-                    <label for="disabledSelect" class="form-label">Tipo de Contacto</label>
-
-                </td>
-
-                <td>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccione Tipo de Contacto</option>
-                        <option value="1">Particular</option>
-                        <option value="1">Comercial</option>
-                        <option value="1">No tiene</option>
-                        <option value="2">Otra</option>
-
-                    </select>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Teléfono Fijo:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Teléfono Móvil:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Correo Electrónico:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Redes Sociales:</label>
-                </td>
-                <td>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccione Si / No </option>
-                        <option value="1">Si</option>
-                        <option value="1">No</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Tipo de Red Social:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-
-
-            <!-- /////////////////////////////////      PARA CASOS DE NNA     ////////////////////////////// -->
-            <hr>
-            <legend style="padding-left: 150px; ">Para casos de NNA, indicar NNA (Niño, Niña, Adolecente) </legend>
-
-            <br>
-
-
-            <tr>
-                <td style="padding-right: 150px;">
-                    <label for="disabledSelect" class="form-label">Parentesco/Vínculo/relación</label>
-
-                </td>
-
-                <td>
-                    <select class="form-select" aria-label="Default select example">
-              <option selected>Seleccione parentesco/vínculo/relación</option>
-              <option value="1">Padre</option>
-              <option value="1">Madre</option>
-              <option value="1">Hermana</option>
-              <option value="2">Hermano</option>
-              <option value="1">Tío</option>
-              <option value="2">Tía</option>
-              <option value="1">Abuelo</option>
-              <option value="2">Abuela</option>
-              <option value="1">Primo</option>
-              <option value="2">Prima</option>
-              <option value="1">Vecino</option>
-              <option value="2">Vecina</option>
-              <option value="1">Amigo</option>
-              <option value="2">Amiga</option>
-              <option value="1">Otro</option>
-          </select>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td style="padding-right: 20px;">
-                    <label>¿Es el denunciante el adulto </label><br>
-                    <label>protector/referente de la víctima?</label>
-
-                </td>
-                <td>
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccione Si / No </option>
-                        <option value="1">Si</option>
-                        <option value="1">No</option>
-                    </select>
-                </td>
-            </tr>
-
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Si la respuesta es NO, indicar los</label><br>
-                    <label>datos del adulto protector/referente</label><br>
-
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Persona(s) a quien(es) el niño, niña</label><br>
-                    <label>o adolecente contó los hechos</label><br>
-                    <label>(si es que los contó)</label><br>
-
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
 
             <tr>
                 <td>
@@ -491,4 +357,153 @@
 
     </div>
 
+    <div style="text-align: left;" class="col-5" style="border: 1px solid black;">
+        <!-- /////////////////////////////////      DATOS DE CONTACTO     ////////////////////////////// -->
+
+        <legend style="padding-left: 270px; ">Datos de Contacto </legend>
+
+        <br>
+
+
+        <tr>
+            <td style="padding-right: 220px;">
+                <label for="disabledSelect" class="form-label">Tipo de Contacto</label>
+
+            </td>
+
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                     <option selected>Seleccione Tipo de Contacto</option>
+                     <option value="1">Particular</option>
+                     <option value="1">Comercial</option>
+                     <option value="1">No tiene</option>
+                     <option value="2">Otra</option>
+
+                 </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>Teléfono Fijo:</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>Teléfono Móvil:</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>Correo Electrónico:</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>Redes Sociales:</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                     <option selected>Seleccione Si / No </option>
+                     <option value="1">Si</option>
+                     <option value="1">No</option>
+                 </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>Tipo de Red Social:</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+
+        <!-- /////////////////////////////////      PARA CASOS DE NNA     ////////////////////////////// -->
+        <hr>
+        <legend style="padding-left: 150px; ">Para casos de NNA, indicar NNA (Niño, Niña, Adolecente) </legend>
+
+        <br>
+
+
+        <tr>
+            <td style="padding-right: 150px;">
+                <label for="disabledSelect" class="form-label">Parentesco/Vínculo/relación</label>
+
+            </td>
+
+            <td>
+                <select class="form-select" aria-label="Default select example">
+           <option selected>Seleccione parentesco/vínculo/relación</option>
+           <option value="1">Padre</option>
+           <option value="1">Madre</option>
+           <option value="1">Hermana</option>
+           <option value="2">Hermano</option>
+           <option value="1">Tío</option>
+           <option value="2">Tía</option>
+           <option value="1">Abuelo</option>
+           <option value="2">Abuela</option>
+           <option value="1">Primo</option>
+           <option value="2">Prima</option>
+           <option value="1">Vecino</option>
+           <option value="2">Vecina</option>
+           <option value="1">Amigo</option>
+           <option value="2">Amiga</option>
+           <option value="1">Otro</option>
+       </select>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td style="padding-right: 20px;">
+                <label>¿Es el denunciante el adulto </label><br>
+                <label>protector/referente de la víctima?</label>
+
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                     <option selected>Seleccione Si / No </option>
+                     <option value="1">Si</option>
+                     <option value="1">No</option>
+                 </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>Si la respuesta es NO, indicar los</label><br>
+                <label>datos del adulto protector/referente</label><br>
+
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>Persona(s) a quien(es) el niño, niña</label><br>
+                <label>o adolecente contó los hechos</label><br>
+                <label>(si es que los contó)</label><br>
+
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+    </div>
 </div>
