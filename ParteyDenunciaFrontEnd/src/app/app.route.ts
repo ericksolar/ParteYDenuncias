@@ -5,6 +5,7 @@ import { BuscadorComponent } from './components/buscador/buscador.component';
 import { DatosgeneralesComponent } from './components/datosgenerales/datosgenerales.component';
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
 import { FiscalComponent } from './components/fiscal/fiscal.component';
+import { RelatoComponent } from './components/relato/relato.component';
 
 const ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
@@ -12,6 +13,7 @@ const ROUTES: Routes = [
     { path: 'datosgenerales', component: DatosgeneralesComponent },
     { path: 'funcionarios', component: FuncionariosComponent },
     { path: 'fiscal', component: FiscalComponent },
+    { path: 'relato', component: RelatoComponent },
 
     { path: 'buscar/:termino', component: BuscadorComponent },
 
