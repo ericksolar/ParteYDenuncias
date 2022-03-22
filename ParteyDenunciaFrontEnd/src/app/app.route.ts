@@ -7,8 +7,14 @@ import { DenuncianteComponent } from './components/denunciante/denunciante.compo
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
 import { FiscalComponent } from './components/fiscal/fiscal.component';
 import { RelatoComponent } from './components/relato/relato.component';
+import { DelitoComponent } from './components/delito/delito.component';
+
 import { TestigoComponent } from './components/testigo/testigo.component';
+
 import { ImputadoComponent } from './components/imputado/imputado.component';
+
+import { TransporteComponent } from './components/transporte/transporte.component';
+
 
 const ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
@@ -18,6 +24,11 @@ const ROUTES: Routes = [
     { path: 'funcionarios', component: FuncionariosComponent },
     { path: 'fiscal', component: FiscalComponent },
     { path: 'relato', component: RelatoComponent },
+    { path: 'delito', component: DelitoComponent },
+    { path: 'transporte', component: TransporteComponent },
+
+
+
     { path: 'testigo', component: TestigoComponent },
     { path: 'imputado', component: ImputadoComponent },
 
