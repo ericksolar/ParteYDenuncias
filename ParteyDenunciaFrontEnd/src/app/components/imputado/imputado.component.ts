@@ -12,4 +12,7 @@ export class ImputadoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectedValue: string = '';
+  selectedTipoDocumento: string = '';
+
 }
