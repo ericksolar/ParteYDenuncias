@@ -9,6 +9,9 @@ import { FiscalComponent } from './components/fiscal/fiscal.component';
 import { RelatoComponent } from './components/relato/relato.component';
 import { DelitoComponent } from './components/delito/delito.component';
 
+import { TestigoComponent } from './components/testigo/testigo.component';
+
+
 const ROUTES: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'about', component: AboutComponent },
@@ -19,6 +22,8 @@ const ROUTES: Routes = [
     { path: 'relato', component: RelatoComponent },
     { path: 'delito', component: DelitoComponent },
 
+
+    { path: 'testigo', component: TestigoComponent },
 
     { path: 'buscar/:termino', component: BuscadorComponent },
 
