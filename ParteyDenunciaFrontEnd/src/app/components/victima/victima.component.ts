@@ -12,4 +12,6 @@ export class VictimaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+selectedTipoDocumento: string ='';
+
 }
