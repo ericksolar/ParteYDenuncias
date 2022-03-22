@@ -24,7 +24,7 @@
 
         <form>
             <!-- <fieldset disabled> -->
-            <legend style="padding-left: 250px; ">ACTA GENERAL DE LA DENUNCIA </legend>
+            <!-- <legend style="padding-left: 250px; ">ACTA GENERAL DE LA DENUNCIA </legend>
 
             <br>
 
@@ -50,11 +50,11 @@
                         <label class="form-check-label" for="flexCheckChecked">No pasa a Control de Detención</label>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 
             <!-- ////////////////////////////////////// -->
-            <br>
+
 
 
         </form>
@@ -62,7 +62,7 @@
 
         <form>
             <tr>
-                <td style="padding-left: 200px; padding-top: 50px;">
+                <td style="padding-left: 200px; padding-top: 20px;">
                     <legend>1.- Datos Generales de la Denuncia</legend>
                     <p style="padding-left: 50px;"> (Solo lo llena el funcionario policial)</p>
 
@@ -70,61 +70,74 @@
             </tr>
             <!-- <fieldset disabled> -->
 
-            <br><br>
+            <br>
 
-
-
-            <label> Fecha y Hora: <input type="datetime-local"></label>
-
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Delito:</label>
-                </td>
-                <td>
-                    <textarea class="form-control" rows="1"></textarea>
-                </td>
-            </tr>
-
-            <div class="mb-3 mt-5">
-                <label style="padding-right: 20px;" for="disabledSelect" class="form-label">Zona del Delito</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Seleccione Institución a Cargo</option>
-                  <option value="1">Rural</option>
-                  <option value="1">Urbano</option>
-                  <option value="2">Marítimo</option>
-                  <option value="3">Fluvial</option>
-                  <option value="3">Lacustre</option>
-
-                </select>
+            <div class="row border">
+                <div class="col-4 border">
+                    <p> Fecha y Hora: </p>
+                </div>
+                <div class="col-8 border">
+                    <input type="datetime-local">
+                </div>
             </div>
 
 
-            <div class="mb-3 mt-5">
-                <label style="padding-right: 10px;" for="disabledSelect" class="form-label">Tipo de Lugar de Ocurrencia</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Seleccione Institución a Cargo</option>
-                  <option value="1">Vía Pública</option>
-                  <option value="1">Local Comercial</option>
-                  <option value="2">Domicilio Particular</option>
-                  <option value="3">Establecimiento Educacional</option>
-                  <option value="3">Otro</option>
+            <div class="row border">
+                <div class="col-4 border">
+                    <p> Delito: </p>
+                </div>
+                <div class="col-8 border">
+                    <textarea class="form-control" rows="1"></textarea>
 
-                </select>
+                </div>
+            </div>
+            <div class="row border">
+                <div class="col-4 border">
+                    <p> Zona del Delito: </p>
+                </div>
+                <div class="col-8 border">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccione Institución a Cargo</option>
+                        <option value="1">Rural</option>
+                        <option value="1">Urbano</option>
+                        <option value="2">Marítimo</option>
+                        <option value="3">Fluvial</option>
+                        <option value="3">Lacustre</option>
+      
+                      </select>
+                </div>
             </div>
 
 
-            <tr>
-                <td colspan="4">
-                    <label style="padding-right: 10px;">Lugar Específico de ocurrencia:</label>
-                </td>
-                <td colspan="4">
+            <div class="row border">
+                <div class="col-4 border">
+                    <p> Tipo de Lugar de Ocurrencia: </p>
+                </div>
+                <div class="col-8 border">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccione Institución a Cargo</option>
+                        <option value="1">Vía Pública</option>
+                        <option value="1">Local Comercial</option>
+                        <option value="2">Domicilio Particular</option>
+                        <option value="3">Establecimiento Educacional</option>
+                        <option value="3">Otro</option>
+      
+                      </select>
+
+                </div>
+            </div>
+
+            <div class="row border">
+                <div class="col-4 border">
+                    <p> Lugar Específico de ocurrencia: </p>
+                </div>
+                <div class="col-8 border">
                     <textarea class="form-control" rows="1"></textarea>
-                </td>
-            </tr>
 
-            <br><br><br>
+                </div>
+            </div>
 
-
+            <!-- //////////////   DIRECCIÓN DEL DELITO   ////////////////////                                                        -->
             <div class="row border">
                 <div class="col-3 border">
                     <p>Dirección del Delito</p>
@@ -249,28 +262,18 @@
             </div>
 
 
-
-
-
-
-
-
-
-            <br><br><br><br>
-
-
             <tr>
                 <td>
-                    <button type="submit" class="btn btn-primary " routerLink="/home" routerLinkActive="active" style="margin-left: 150px; margin-top: 150px;">Atrás</button>
+                    <button type="submit" class="btn btn-primary " routerLink="/home" routerLinkActive="active" style="margin-left: 190px; margin-top: 100px;">Atrás</button>
 
                 </td>
                 <td>
-                    <button type="submit" class="btn btn-primary " routerLink="/denunciante" routerLinkActive="active" style="margin-left: 250px; margin-top: 150px;">Siguiente</button>
+                    <button type="submit" class="btn btn-primary " routerLink="/denunciante" routerLinkActive="active" style="margin-left: 250px; margin-top: 100px;">Siguiente</button>
 
                 </td>
             </tr>
 
-
+            <br><br><br><br>
 
 
         </form>
