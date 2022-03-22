@@ -19,9 +19,10 @@
 
         <!-- ////////////////////////////AQUI EL OTRO COL DE 8     ///////////////////////////// -->
         <div class="row border">
+            <legend style="text-align: center;">Formulario Parte y Denuncia</legend>
+
             <div class="col-8 border">
                 <form>
-                    <legend style="padding-left: 100px;">Formulario Parte y Denuncia</legend>
 
                     <div class="mb-3 mt-5">
                         <label style="padding-right: 20px;" for="disabledSelect" class="form-label">Institución a Cargo</label>
@@ -59,6 +60,16 @@
                     </div>
 
                     <tr>
+                        <td style="padding-right: 50px;">
+                            <label>Número de Parte, Folio o RUC: / Oficina:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <br>
+
+                    <tr>
                         <td>
                             <label> Fecha inicio de la Denuncia: <input type="date"></label>
 
@@ -91,8 +102,8 @@
             </div>
             <!-- ////////////////////////////AQUI ESTA EL OTRO COL DE 4///////////////////////////// -->
             <div class="col-4 border">
-                <legend style="padding-left: 100px; margin-top: 50px;">Lugar de Adopción del Procedimiento</legend>
-
+                <legend style="padding-left: 100px; margin-top: 50px;"></legend>
+                <p>Lugar de Adopción del Procedimiento: </p>
 
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -107,10 +118,64 @@
                     <label class="form-check-label" for="flexCheckChecked">Unidad Marítima</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                    <label>Otro Lugar</label>
+                    <tr>
+                        <td style="padding-right: 50px;">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                            <label>Otro Lugar:</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
                 </div>
 
+            </div>
+
+
+            <div class="col-12" style="border: 1px solid black; text-align: left; margin-top: 50px;">
+
+                <form>
+                    <!-- <fieldset disabled> -->
+                    <legend style="margin-left: 500px;">Acta General de la Denuncia </legend>
+
+                    <br>
+
+
+                    <div class="row border">
+                        <div class="col-3 border">
+
+                        </div>
+                        <div class="col-3 border">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">Con Denenidos</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">Sin Detenidos</label>
+                            </div>
+                        </div>
+                        <div class="col-4 border">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">Pasa a Control de Detención</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                <label class="form-check-label" for="flexCheckChecked">No pasa a Control de Detención</label>
+                            </div>
+                            <div class="col-2 border">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ////////////////////////////////////// -->
+                    <br>
+
+
+                </form>
             </div>
 
             <button type="submit" class="btn btn-primary " routerLink="/datosgenerales" routerLinkActive="active" style="margin-left: 900px; margin-top: 100px;">Siguiente</button>
@@ -132,6 +197,13 @@
         </div> -->
 
 
+
     </div>
+
+
+
+
+
+
 
 </div>

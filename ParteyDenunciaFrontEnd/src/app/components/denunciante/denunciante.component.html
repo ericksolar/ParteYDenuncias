@@ -40,22 +40,25 @@
                 </td>
             </tr>
 
+            <!-- NGMODEL ******************   OTRO    -->
             <tr>
                 <label for="disabledSelect" class="form-label">Zona del Delito</label>
 
                 <td>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="zonaDelito" name="zonadelito">
                           <option selected>Seleccione Tipo de Documento</option>
                           <option value="1">RUN</option>
-                          <option value="1">DNI</option>
-                          <option value="2">Pasaporte</option>
-                          <option value="3">Otro</option>
+                          <option value="2">DNI</option>
+                          <option value="3">Pasaporte</option>
+                          <option value="zona">Otro</option>
         
             </select>
+                    <div class="form-group" *ngIf="zonaDelito == 'zona'">
+                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                    </div>
                 </td>
             </tr>
-
-
+            <!--  NGMODEL ******************   OTRO    -->
 
 
 
@@ -142,20 +145,29 @@
                 </td>
             </tr>
 
+            <!-- NGMODEL ******************   OTRO    -->
 
             <tr>
                 <label for="disabledSelect" class="form-label">Identidad de Género</label>
 
                 <td>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="IdentidadGenero" name="IdentidaddeGenero">
                           <option selected>Seleccione Género</option>
                           <option value="1">Hombre</option>
-                          <option value="1">Mujer</option>    
-                          <option value="1">Otro</option>
-                          <option value="1">No Consultado</option>    
+                          <option value="2">Mujer</option>  
+                          <option value="3">No Consultado</option>    
+                          <option value="Identidad">Otro</option>
                      </select>
+                    <div class="form-group" *ngIf="IdentidadGenero == 'Identidad'">
+                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                    </div>
                 </td>
             </tr>
+
+
+            <!--  NGMODEL ******************   OTRO    -->
+
+
 
 
 
@@ -439,26 +451,32 @@
             </td>
 
             <td>
-                <select class="form-select" aria-label="Default select example">
-           <option selected>Seleccione parentesco/vínculo/relación</option>
-           <option value="1">Padre</option>
-           <option value="1">Madre</option>
-           <option value="1">Hermana</option>
-           <option value="2">Hermano</option>
-           <option value="1">Tío</option>
-           <option value="2">Tía</option>
-           <option value="1">Abuelo</option>
-           <option value="2">Abuela</option>
-           <option value="1">Primo</option>
-           <option value="2">Prima</option>
-           <option value="1">Vecino</option>
-           <option value="2">Vecina</option>
-           <option value="1">Amigo</option>
-           <option value="2">Amiga</option>
-           <option value="1">Otro</option>
-       </select>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedTipoDocumento" name="parentesco">
+                    <option selected>Seleccione parentesco/vínculo/relación</option>
+                    <option value="1">Padre</option>
+                    <option value="2">Madre</option>
+                    <option value="3">Hermana</option>
+                    <option value="4">Hermano</option>
+                    <option value="5">Tío</option>
+                    <option value="6">Tía</option>
+                    <option value="7">Abuelo</option>
+                    <option value="8">Abuela</option>
+                    <option value="9">Primo</option>
+                    <option value="10">Prima</option>
+                    <option value="11">Vecino</option>
+                    <option value="12">Vecina</option>
+                    <option value="13">Amigo</option>
+                    <option value="14">Amiga</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
             </td>
         </tr>
+
+
+
 
 
         <tr>

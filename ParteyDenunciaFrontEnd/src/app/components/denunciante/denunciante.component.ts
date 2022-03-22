@@ -11,5 +11,10 @@ export class DenuncianteComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  selectedTipoDocumento: string ='';
+  zonaDelito: string ='';
+  prueba1: string ='';
+  prueba2: string ='';
+  IdentidadGenero: string ='';
 
 }
