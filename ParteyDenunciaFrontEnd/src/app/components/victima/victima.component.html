@@ -1,1 +1,510 @@
-<p>victima works!</p>
+<!-- As a link -->
+<!-- As a heading -->
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1 bg-primary" style="padding-left: 50px;">Parte y Denuncia</span>
+    </div>
+</nav>
+
+.
+<div class="row">
+    <!--area arriba-->
+
+    <div class="col-5 offset-1">
+        <!--area derecha-->
+        <legend class="text-align">Datos de la Víctima </legend>
+
+        <tr>
+            <td>
+                <label>Tipo de persona</label>
+            </td>
+
+            <td>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Natural</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Juridica</label>
+                </div>
+            </td>
+        </tr>
+
+        <!-- <fieldset disabled> -->
+        <tr>
+            <td>
+                <label>Nombre o Razon social</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Nombre Social (Identidad de Genero)</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Tipo de documento de documentacion</label>
+            </td>
+            <td>
+                <select class="form-select" [(ngModel)]="selectedTipoDocumento" aria-label="Default select example">
+                    <option selected> Seleccionar</option>
+                    <option value="1">RUT</option>
+                    <option value="2">Pasaporte</option>
+                    <option value="3">DNI</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>N° de documentos de identificacion:</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Otro documento de identidad</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Fecha de nacimiento</label>
+            </td>
+            <td>
+                <input class="" type="date">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Ciudad de nacimiento</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Idioma o dialecto</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Nacionalidad</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Escolaridad</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Estado Migratorio</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Permanencia transitoria</option>
+                        <option value="2">Residente temporal</option>
+                        <option value="3">Residente oficial</option>
+                        <option value="4">Residente definitivo</option>
+                      </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Sexo Registral (Registro Civil)</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+                    </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Identidad de genero:</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Hombre</option>
+                        <option value="2">Mujer</option>
+                        <option value="3">Otro</option>
+                        <option value="4">No Consultado</option>
+
+
+                      </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Alias</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Pertenece a pueblo originario</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Profesion , oficio, ocupación</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Estado Civil</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Estado de Temperancia</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Hálio alcoholico</option>
+                        <option value="2">Inestabilidad al camniar</option>
+                        <option value="3">Rostro congestionado</option>
+                        <option value="4">incoherencia al hablar</option>
+                      </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Estado</label>
+            </td>
+            <td>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Vivo</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Muerto</label>
+                </div>
+                <br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Presenta lesiones</label>
+            </td>
+            <td>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>¿Que lesiones? Y origen de lesiones</label>
+            </td>
+            <td>
+                <textarea class="form-control" rows="4" cols="50"></textarea>
+                <br>
+            </td>
+        </tr>
+    </div>
+    <div class="col-5 mt-5">
+        <tr>
+            <td>
+                <label>Domicilio</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Seleccionar</option>
+                    <option value="1">Particular</option>
+                    <option value="2">Comercial</option>
+                    <option value="3">Otro</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Calle</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Numero</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Departamento/oficina</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Block</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Poblacion o Villa</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Sector</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Region</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Comuna</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Interseccion</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Observacion Referencia de la direccion</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Latitud</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Longitud</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Datos del contacto</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Seleccionar</option>
+                    <option value="1">Particular</option>
+                    <option value="2">Comercial</option>
+                    <option value="3">No tiene</option>
+                    <option value="4">Otro</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Telefono fijo</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Telefono Movil</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Correo electronico</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td class="mb-3" style="padding-right: 50px;">
+                <label>Redes Sociales</label>
+            </td>
+            <td>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+                <div>
+                    <td>
+                        <label>Cuales Redes Sociales:
+                            <input type="text">
+                        </label>
+                    </td>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Con quién vive</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Seleccionar</option>
+                    <option value="1">Papá</option>
+                    <option value="2">Mamá</option>
+                    <option value="3">Tíos</option>
+                    <option value="4">Abuelos</option>
+                    <option value="2">Residencia institucional</option>
+                    <option value="3">Situación Calle</option>
+                    <option value="4">Otros</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Si es residencia institucional, </p>
+                <p>particular u otra, detallar</p>
+
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <p>¿Conoce al denunciado(s)?</p>
+                <p>¿Podría entregar descripción de él o ellos?</p>
+
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Qué relación tiene con el denunciado(s)</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Seleccionar</option>
+                    <option value="1">Papá</option>
+                    <option value="2">Mamá</option>
+                    <option value="3">Tíos</option>
+                    <option value="4">Abuelos</option>
+                    <option value="2">Residencia institucional</option>
+                    <option value="3">Situación Calle</option>
+                    <option value="4">Otros</option>
+                </select>
+            </td>
+        </tr>
+
+        <br><br><br>
+
+        <div class="align-self-end mt-5 ml-auto mb-3">
+            <button type="button" class="btn btn-primary">Siguiente</button>
+        </div>
+    </div>
+
+</div>

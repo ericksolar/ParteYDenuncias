@@ -14,6 +14,7 @@ import { TestigoComponent } from './components/testigo/testigo.component';
 import { ImputadoComponent } from './components/imputado/imputado.component';
 
 import { TransporteComponent } from './components/transporte/transporte.component';
+import { VictimaComponent } from './components/victima/victima.component';
 
 
 const ROUTES: Routes = [
@@ -26,6 +27,8 @@ const ROUTES: Routes = [
     { path: 'relato', component: RelatoComponent },
     { path: 'delito', component: DelitoComponent },
     { path: 'transporte', component: TransporteComponent },
+    { path: 'victima', component: VictimaComponent },
+
 
 
 
