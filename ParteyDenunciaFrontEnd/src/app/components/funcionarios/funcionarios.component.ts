@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { } from '@angular/forms';
 
 @Component({
   selector: 'app-funcionarios',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FuncionariosComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
