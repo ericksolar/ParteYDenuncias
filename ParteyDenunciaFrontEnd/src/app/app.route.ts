@@ -10,6 +10,9 @@ import { RelatoComponent } from './components/relato/relato.component';
 import { DelitoComponent } from './components/delito/delito.component';
 
 import { TestigoComponent } from './components/testigo/testigo.component';
+
+import { ImputadoComponent } from './components/imputado/imputado.component';
+
 import { TransporteComponent } from './components/transporte/transporte.component';
 
 
@@ -27,6 +30,7 @@ const ROUTES: Routes = [
 
 
     { path: 'testigo', component: TestigoComponent },
+    { path: 'imputado', component: ImputadoComponent },
 
     { path: 'buscar/:termino', component: BuscadorComponent },
 

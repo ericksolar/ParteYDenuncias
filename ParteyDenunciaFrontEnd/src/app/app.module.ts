@@ -28,6 +28,7 @@ import { TestigoComponent } from './components/testigo/testigo.component';
 import { RelatoComponent } from './components/relato/relato.component';
 import { FiscalComponent } from './components/fiscal/fiscal.component';
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -51,6 +52,7 @@ import { FuncionariosComponent } from './components/funcionarios/funcionarios.co
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     APPROUTING
   ],
   providers: [],

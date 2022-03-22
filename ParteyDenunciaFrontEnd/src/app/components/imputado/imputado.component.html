@@ -1,1 +1,559 @@
-<p>imputado works!</p>
+
+
+<!-- As a link -->
+<!-- As a heading -->
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1 bg-primary" style="padding-left: 50px;">Parte y Denuncia</span>
+    </div>
+</nav>
+
+.
+<div class="row">
+    <!--area arriba-->
+
+    <div class="col-5 offset-1">
+        <!--area derecha-->
+        <legend class="text-align">Datos del imputado </legend>
+
+        <tr>
+            <td>
+                <label>Tipo de persona</label>
+            </td>
+
+            <td>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">No</label>
+              </div>  
+            </td>
+        </tr>
+
+        <!-- <fieldset disabled> -->
+        <tr>
+            <td>
+                <label>Nombre o Razon social</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Nombre Social (Identidad de Genero)</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Tipo de documento de documentacion</label>
+            </td>
+            <td>
+                <select class="form-select" [(ngModel)]="selectedTipoDocumento" aria-label="Default select example">
+                    <option selected> Seleccionar</option>
+                    <option value="1">RUT</option>
+                    <option value="2">Pasaporte</option>
+                    <option value="3">DNI</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                  <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
+            </td>
+        </tr>
+
+            <tr>
+                <td>
+                    <label>N° de documentos de identificacion:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Otro documento de identidad</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Fecha de nacimiento</label>
+                </td>
+                <td>
+                    <input class="" type="date">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Ciudad de nacimiento</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Idioma o dialecto</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Nacionalidad</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Escolaridad</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Estado Migratorio</label>
+                </td>
+                <td>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Permanencia transitoria</option>
+                        <option value="2">Residente temporal</option>
+                        <option value="3">Residente oficial</option>
+                        <option value="4">Residente definitivo</option>
+                      </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Sexo Registral (Registro Civil)</label>
+                </td>
+                <td>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label>Identidad de genero:</label>
+                </td>
+                <td>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Hombre</option>
+                        <option value="2">Mujer</option>
+                        <option value="3">Otro</option>
+                        <option value="4">No Consultado</option>
+
+
+                      </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Alias</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Pertenece a pueblo originario</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Profesion , oficio, preocupacion</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Estado Civil</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Estado de Temperancia</label>
+                </td>
+                <td>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Hálito alcohólico</option>
+                        <option value="2">Inestabilidad al camniar</option>
+                        <option value="3">Rostro congestionado</option>
+                        <option value="4">incoherencia al hablar</option>
+                      </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Estado</label>
+                </td>
+                <td> 
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Vivo</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Muerto</label>
+                  </div>
+                  <br>            
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>Presenta lesiones</label>
+                </td>
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                      </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label>¿Que lesiones? Y origen de lesiones</label>
+                </td>
+                <td>
+                    <textarea class="form-control" rows="4" cols="50" ></textarea>
+                    <br>
+                </td>
+            </tr>
+    </div>
+    <div class="col-5 mt-5">
+        <tr>
+            <td>
+                <label>Domicilio</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Seleccionar</option>
+                    <option value="1">Particular</option>
+                    <option value="2">Comercial</option>
+                    <option value="3">Otro</option>
+                </select>
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label>Calle</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Numero</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label>Departamento/oficina</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Block</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Poblacion o Villa</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Sector</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Region</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Comuna</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Interseccion</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Observacion Referencia de la direccion</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Datos del contacto</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Seleccionar</option>
+                    <option value="1">Particular</option>
+                    <option value="2">Comercial</option>
+                    <option value="3">No tiene</option>
+                    <option value="4">Otro</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Telefono fijo</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <label>Telefono Movil</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Correo electronico</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td class="mb-3" style="padding-right: 50px;">
+                <label>Redes Sociales</label>
+            </td>
+            <td>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                  </div>
+                  <div>
+                    <td>
+                        <label>Cuales Redes Sociales:
+                            <input type="text">
+                        </label>
+                    </td>
+                  </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="mb-3" style="padding-right: 50px;">
+                <label>Se aplica la validacion de identidad</label>
+            </td>
+            <td>
+                <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Resultado de la validacion de identidad</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Rol en el hecho delictual</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Seleccionar</option>
+                    <option value="1">Toma parte en la ejcucion</option>
+                    <option value="2">Facilita los medios</option>
+                    <option value="3">fuerza o induce a otro</option>
+                    <option value="4">Lo presencian sin tomar parte inmediataen</option>
+                </select>
+            </td>
+        </tr>
+
+        
+        <tr>
+            <td class="mb-3">
+                <label>Perfil del imputado (apreciacion del funcionario aprehensor)</label>
+            </td>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Violento</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Pasivo</label>
+              </div>
+        </tr>
+
+        <tr>
+            <td class="mb-3">
+                <label>¿El denunciante se encuentra detenido?</label>
+            </td>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">No</label>
+              </div>
+        </tr>
+
+        <tr>
+            <td class="mb-3">
+                <label>Pasa a control de detencion</label>
+            </td>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Si</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">No</label>
+              </div>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Causa de la detencion</label>
+            </td>
+            <td>
+                <textarea class="form-control" rows="4" cols="50" ></textarea>
+                <br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Lugar de la detencion</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Fecha y hora de la detencion</label>
+            </td>
+            <td>
+                <input type="datetime-local">
+            </td>
+        </tr>
+
+        En caso que el detenido sea menor de edad, se comunicó conforme el articulo 36 de la ley 20.084 a: <input type="text">
+        adulto responsable via: 
+        <select class="form-select" aria-label="Default select example">
+            <option selected>Seleccionar</option>
+            <option value="1">Telefonica</option>
+            <option value="2">Presencial</option>
+            <option value="3">Correo electrónico</option>
+            <option value="4">Otra</option>
+        </select>
+
+        <div class="align-self-end mt-5 ml-auto mb-3">
+            <button type="button" class="btn btn-primary">Siguiente</button>
+        </div>
+    </div>
+
+</div>
