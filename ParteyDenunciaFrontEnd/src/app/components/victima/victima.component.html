@@ -10,9 +10,9 @@
 <div class="row">
     <!--area arriba-->
 
-    <div class="col-5 offset-1">
+    <div class="col-5 offset-1 border">
         <!--area derecha-->
-        <legend class="text-align">Datos de la Víctima </legend>
+        <legend class="text-align">4.1.- Datos de la Víctima </legend>
 
         <tr>
             <td>
@@ -159,22 +159,26 @@
             </td>
         </tr>
 
+
+
         <tr>
-            <td>
-                <label>Identidad de genero:</label>
-            </td>
-            <td>
-                <select class="form-select" aria-label="Default select example">
-                        <option selected>Seleccionar</option>
-                        <option value="1">Hombre</option>
-                        <option value="2">Mujer</option>
-                        <option value="3">Otro</option>
-                        <option value="4">No Consultado</option>
+            <label for="disabledSelect" class="form-label">Identidad de género</label>
 
-
-                      </select>
+            <td>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="IdentidadGenero" name="genero">
+                      <option selected>Seleccionar</option>
+                      <option value="1">Hombre</option>
+                      <option value="2">Mujer</option> 
+                      <option value="3">No Consultado</option>
+                      <option value="gene">Otro</option>
+                 </select>
+                <div class="form-group" *ngIf="IdentidadGenero == 'gene'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
             </td>
         </tr>
+
+
 
         <tr>
             <td>
@@ -270,20 +274,32 @@
             </td>
         </tr>
     </div>
-    <div class="col-5 mt-5">
+    <div class="col-5 border">
+        <br><br><br>
+
+
         <tr>
+            <label for="disabledSelect" class="form-label">Domicilio</label>
+
             <td>
-                <label>Domicilio</label>
-            </td>
-            <td>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccionar</option>
-                    <option value="1">Particular</option>
-                    <option value="2">Comercial</option>
-                    <option value="3">Otro</option>
-                </select>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="Domicilio" name="domic">
+                      <option selected>Seleccionar</option>
+                      <option value="1">Particular</option>
+                      <option value="2">Comercial</option>  
+                      <option value="domi">Otro</option>
+                 </select>
+                <div class="form-group" *ngIf="Domicilio == 'domi'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
             </td>
         </tr>
+
+
+
+
+
+
+
 
         <tr>
             <td>
@@ -382,20 +398,27 @@
                 <input type="text">
             </td>
         </tr>
+
+
+
         <tr>
+            <label for="disabledSelect" class="form-label">Datos del contacto</label>
+
             <td>
-                <label>Datos del contacto</label>
-            </td>
-            <td>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Seleccionar</option>
-                    <option value="1">Particular</option>
-                    <option value="2">Comercial</option>
-                    <option value="3">No tiene</option>
-                    <option value="4">Otro</option>
-                </select>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="DatosContacto" name="contacto">
+                      <option selected>Seleccionar</option>
+                      <option value="1">Particular</option>
+                      <option value="2">Comercial</option> 
+                      <option value="3">No tiene</option>
+                      <option value="contac">Otro</option>
+                 </select>
+                <div class="form-group" *ngIf="DatosContacto == 'contac'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
             </td>
         </tr>
+
+
         <tr>
             <td>
                 <label>Telefono fijo</label>
@@ -443,12 +466,13 @@
                 </div>
             </td>
         </tr>
+
+
         <tr>
+            <label for="disabledSelect" class="form-label">Con quién vive</label>
+
             <td>
-                <label>Con quién vive</label>
-            </td>
-            <td>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="Convive" name="vive">
                     <option selected>Seleccionar</option>
                     <option value="1">Papá</option>
                     <option value="2">Mamá</option>
@@ -456,10 +480,22 @@
                     <option value="4">Abuelos</option>
                     <option value="2">Residencia institucional</option>
                     <option value="3">Situación Calle</option>
-                    <option value="4">Otros</option>
-                </select>
+                    <option value="quien">Otros</option>
+                 </select>
+                <div class="form-group" *ngIf="Convive == 'quien'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
             </td>
         </tr>
+
+
+
+
+
+
+
+
+
         <tr>
             <td>
                 <p>Si es residencia institucional, </p>
@@ -483,11 +519,10 @@
         </tr>
 
         <tr>
+            <label for="disabledSelect" class="form-label">Qué relación tiene con el denunciado(s)</label>
+
             <td>
-                <label>Qué relación tiene con el denunciado(s)</label>
-            </td>
-            <td>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="RelacionDenunciado" name="denunciado">
                     <option selected>Seleccionar</option>
                     <option value="1">Papá</option>
                     <option value="2">Mamá</option>
@@ -495,16 +530,26 @@
                     <option value="4">Abuelos</option>
                     <option value="2">Residencia institucional</option>
                     <option value="3">Situación Calle</option>
-                    <option value="4">Otros</option>
-                </select>
+                    <option value="tiene">Otro</option>
+                 </select>
+                <div class="form-group" *ngIf="RelacionDenunciado == 'tiene'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
             </td>
         </tr>
 
-        <br><br><br>
 
-        <div class="align-self-end mt-5 ml-auto mb-3">
-            <button type="button" class="btn btn-primary" routerLink="/imputado" routerLinkActive="active">Siguiente</button>
-        </div>
+        <tr>
+            <td>
+                <button type="submit" class="btn btn-primary " routerLink="/transporte" routerLinkActive="active" style="margin-left: 150px; margin-top: 150px;">Atrás</button>
+
+            </td>
+            <td>
+                <button type="submit" class="btn btn-primary " routerLink="/imputado" routerLinkActive="active" style="margin-left: 250px; margin-top: 150px;">Siguiente</button>
+
+            </td>
+        </tr>
+        <br><br><br>
     </div>
 
 </div>

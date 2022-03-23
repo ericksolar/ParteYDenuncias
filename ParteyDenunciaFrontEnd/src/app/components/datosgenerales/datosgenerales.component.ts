@@ -12,4 +12,6 @@ export class DatosgeneralesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  TipoOcurrencia: string ='';
+
 }

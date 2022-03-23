@@ -10,13 +10,13 @@
 
 <div class="row">
 
-    <div class="col-5 offset-4">
+    <div class="col-5 offset-4 mt-2">
 
         <form>
             <!-- <fieldset disabled> -->
-            <legend>Datos de funcionario(s) acompañante(s) del procedimiento(s)</legend>
+            <legend>4.- Datos de funcionario(s) acompañante(s) del procedimiento(s)</legend>
 
-            
+
             <tr>
                 <td class="mb-3">
                     <label>Nombre:</label>
@@ -128,16 +128,35 @@
 
             <tr>
                 <td style="padding-right: 50px;">
-                    <button type="button" class="btn btn-success">Agregar Datos Funcionario</button>
+                    <button type="button" class="btn btn-success">Imprimir Parte y Denuncia</button>
                 </td>
+
+                <td style="padding-right: 50px;">
+                    <button type="button" class="btn btn-success">Grabar Documentos/Fotografías</button>
+                </td>
+            </tr>
+            <br>
+            <tr>
+
             </tr>
 
 
             <!-- </fieldset> -->
 
+            <td>
+                <button type="submit" class="btn btn-primary " routerLink="/fiscal" routerLinkActive="active" style="margin-left: 50px; margin-top: 150px;">Atrás</button>
 
-            <button type="submit" class="btn btn-primary"  style="margin-left: 500px; margin-top: 100px;">Enviar</button>
-        
+            </td>
+            <td>
+                <button type="submit" class="btn btn-primary " routerLink="/home" routerLinkActive="active" style="margin-left: 100px; margin-top: 150px;">Inicio</button>
+
+            </td>
+            <td>
+                <button type="submit" class="btn btn-primary " routerLink="/funcionarios" routerLinkActive="active" style="margin-left: 100px; margin-top: 150px;">Grabar</button>
+
+            </td>
+
+
         </form>
     </div>
 </div>

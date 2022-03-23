@@ -13,5 +13,9 @@ export class VictimaComponent implements OnInit {
   }
 
 selectedTipoDocumento: string ='';
-
+IdentidadGenero: string ='';
+Domicilio: string ='';
+DatosContacto: string ='';
+Convive: string ='';
+RelacionDenunciado: string ='';
 }

@@ -17,4 +17,9 @@ export class ImputadoComponent implements OnInit {
   selectedIdentidadGenero: string = '';
   selectedDatosContacto: string = '';
   selectedAdultoResponsable: string = '';
+  IdentidadGenero: string = '';
+  Domicilio: string = '';
+  DatosContacto: string = '';
+
+
 }
