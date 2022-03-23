@@ -16,5 +16,7 @@ export class DenuncianteComponent implements OnInit {
   prueba1: string ='';
   prueba2: string ='';
   IdentidadGenero: string ='';
+  TipoContacto: string ='';
+  TipoDireccion: string ='';
 
 }

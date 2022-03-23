@@ -12,4 +12,11 @@ export class TestigoComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  selectedTipoDocumento: string = '';
+  IdentidadGenero: string = '';
+  Domicilio: string = '';
+  DatosContacto: string = '';
+  RelacionDenunciado: string = '';
+
 }

@@ -29,10 +29,6 @@ const ROUTES: Routes = [
     { path: 'transporte', component: TransporteComponent },
     { path: 'victima', component: VictimaComponent },
     { path: 'funcionarios', component: FuncionariosComponent },
-
-
-
-
     { path: 'testigo', component: TestigoComponent },
     { path: 'imputado', component: ImputadoComponent },
 

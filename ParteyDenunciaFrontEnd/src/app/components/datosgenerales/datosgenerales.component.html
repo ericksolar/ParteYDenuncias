@@ -10,15 +10,15 @@
     </div>
 </nav>
 
-<div class="row mt-3" style="border: 1px solid red;">
+<div class="row mt-3">
     <!--area arriba-->
-    <div class="col-4" style="border: 1px solid blue;">
+    <div class="col-4">
         <!--area izquierda-->
 
     </div>
 
 
-    <div style="text-align: left;" class="col-5" style="border: 1px solid black;">
+    <div style="text-align: left;" class="col-5">
         <!--area derecha-->
 
 
@@ -72,30 +72,30 @@
 
             <br>
 
-            <div class="row border">
+            <div class="row ">
                 <div class="col-4 border">
                     <p> Fecha y Hora: </p>
                 </div>
-                <div class="col-8 border">
+                <div class="col-8 ">
                     <input type="datetime-local">
                 </div>
             </div>
 
 
-            <div class="row border">
+            <div class="row ">
                 <div class="col-4 border">
                     <p> Delito: </p>
                 </div>
-                <div class="col-8 border">
+                <div class="col-8 ">
                     <textarea class="form-control" rows="1"></textarea>
 
                 </div>
             </div>
-            <div class="row border">
+            <div class="row ">
                 <div class="col-4 border">
                     <p> Zona del Delito: </p>
                 </div>
-                <div class="col-8 border">
+                <div class="col-8 ">
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Seleccione Institución a Cargo</option>
                         <option value="1">Rural</option>
@@ -109,40 +109,43 @@
             </div>
 
 
-            <div class="row border">
+            <div class="row ">
                 <div class="col-4 border">
                     <p> Tipo de Lugar de Ocurrencia: </p>
                 </div>
-                <div class="col-8 border">
-                    <select class="form-select" aria-label="Default select example">
+                <div class="col-8 ">
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="TipoOcurrencia" name="Ocurrencia">
                         <option selected>Seleccione Institución a Cargo</option>
                         <option value="1">Vía Pública</option>
-                        <option value="1">Local Comercial</option>
-                        <option value="2">Domicilio Particular</option>
-                        <option value="3">Establecimiento Educacional</option>
-                        <option value="3">Otro</option>
+                        <option value="2">Local Comercial</option>
+                        <option value="3">Domicilio Particular</option>
+                        <option value="4">Establecimiento Educacional</option>
+                        <option value="otro">Otro</option>
       
                       </select>
-
+                    <div class="form-group" *ngIf="TipoOcurrencia == 'otro'">
+                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                    </div>
                 </div>
             </div>
 
-            <div class="row border">
+
+            <div class="row ">
                 <div class="col-4 border">
                     <p> Lugar Específico de ocurrencia: </p>
                 </div>
-                <div class="col-8 border">
+                <div class="col-8 ">
                     <textarea class="form-control" rows="1"></textarea>
 
                 </div>
             </div>
 
             <!-- //////////////   DIRECCIÓN DEL DELITO   ////////////////////                                                        -->
-            <div class="row border">
-                <div class="col-3 border">
+            <div class="row border mt-3">
+                <div class="col-3 ">
                     <p>Dirección del Delito</p>
                 </div>
-                <div class="col-7 border">
+                <div class="col-7 ">
                     <tr>
 
 
@@ -264,11 +267,11 @@
 
             <tr>
                 <td>
-                    <button type="submit" class="btn btn-primary " routerLink="/home" routerLinkActive="active" style="margin-left: 190px; margin-top: 100px;">Atrás</button>
+                    <button type="submit" class="btn btn-primary " routerLink="/home" routerLinkActive="active" style="margin-left: 190px; margin-top: 80px;">Atrás</button>
 
                 </td>
                 <td>
-                    <button type="submit" class="btn btn-primary " routerLink="/denunciante" routerLinkActive="active" style="margin-left: 250px; margin-top: 100px;">Siguiente</button>
+                    <button type="submit" class="btn btn-primary " routerLink="/denunciante" routerLinkActive="active" style="margin-left: 250px; margin-top: 80px;">Siguiente</button>
 
                 </td>
             </tr>

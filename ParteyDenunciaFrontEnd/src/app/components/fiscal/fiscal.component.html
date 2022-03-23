@@ -14,13 +14,15 @@
     </div>
 
 
-    <div style="text-align: left;" class="col-4">
+    <div style="text-align: left;" class="col-4 border ">
 
         <form>
-            <!-- <fieldset disabled> -->
-            <legend>Instrucciones del fiscal (En caso de contactos telefonicos)</legend>
+            <div class="text-center">
+                <legend>3.- Instrucciones del fiscal </legend>
+                <p style="padding-left: 45px;"> (En caso de contactos telefonicos)</p>
+            </div>
 
-            
+
             <tr>
                 <td class="mb-3" style="padding-right: 50px;">
                     <label>¿Hubo contacto con el fiscal?</label>
@@ -31,13 +33,13 @@
                         <label class="form-check-label" for="flexRadioDefault1">
                             Si
                         </label>
-                      </div>
-                      <div class="form-check">
+                    </div>
+                    <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                         <label class="form-check-label" for="flexRadioDefault2">
                             No
                         </label>
-                      </div>
+                    </div>
                 </td>
             </tr>
 
@@ -59,17 +61,22 @@
                 </td>
             </tr>
 
-            
 
 
 
-            <!-- </fieldset> -->
 
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-primary " routerLink="/relato" routerLinkActive="active" style="margin-left: 150px; margin-top: 150px;">Atrás</button>
 
-            <button type="submit" class="btn btn-primary " routerLink="/funcionarios" routerLinkActive="active" style="margin-left: 500px; margin-top: 100px;">Siguiente</button>
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-primary " routerLink="/funcionarios" routerLinkActive="active" style="margin-left: 250px; margin-top: 150px;">Siguiente</button>
 
+                </td>
+            </tr>
 
-
+            <br><br><br>
         </form>
 
 
