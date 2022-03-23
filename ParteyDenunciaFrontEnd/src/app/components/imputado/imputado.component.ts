@@ -12,7 +12,9 @@ export class ImputadoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectedValue: string = '';
+  // selectedValue: string = '';
   selectedTipoDocumento: string = '';
-
+  selectedIdentidadGenero: string = '';
+  selectedDatosContacto: string = '';
+  selectedAdultoResponsable: string = '';
 }

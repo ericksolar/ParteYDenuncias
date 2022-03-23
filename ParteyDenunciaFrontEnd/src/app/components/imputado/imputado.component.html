@@ -11,7 +11,7 @@
 .
 <div class="row">
     <!--area arriba-->
-
+    
     <div class="col-5 offset-1">
         <!--area derecha-->
         <legend class="text-align">Datos del imputado </legend>
@@ -57,7 +57,7 @@
                 <label>Tipo de documento de documentacion</label>
             </td>
             <td>
-                <select class="form-select" [(ngModel)]="selectedTipoDocumento" aria-label="Default select example">
+                <select class="form-select" [(ngModel)]="selectedTipoDocumento" name="tipoDocumento" aria-label="Default select example">
                     <option selected> Seleccionar</option>
                     <option value="1">RUT</option>
                     <option value="2">Pasaporte</option>
@@ -65,7 +65,7 @@
                     <option value="otro">Otro</option>
                   </select>
                   <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
-                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                    <input type="text" class="" id="name" ngModel name="tipoDocumento" required>
                 </div>
             </td>
         </tr>
@@ -145,6 +145,7 @@
                         <option value="3">Residente oficial</option>
                         <option value="4">Residente definitivo</option>
                       </select>
+                      
                 </td>
             </tr>
 
@@ -166,15 +167,16 @@
                     <label>Identidad de genero:</label>
                 </td>
                 <td>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" [(ngModel)]="selectedIdentidadGenero" name="identidadDeGenero" aria-label="Default select example">
                         <option selected>Seleccionar</option>
                         <option value="1">Hombre</option>
                         <option value="2">Mujer</option>
                         <option value="3">Otro</option>
-                        <option value="4">No Consultado</option>
-
-
+                        <option value="otro">No Consultado</option>
                       </select>
+                      <div class="form-group" *ngIf="selectedIdentidadGenero == 'otro'">
+                        <input type="text" class="" id="name" ngModel name="nuevo_otro_genero" required>
+                    </div>
                 </td>
             </tr>
 
@@ -373,13 +375,16 @@
                 <label>Datos del contacto</label>
             </td>
             <td>
-                <select class="form-select" aria-label="Default select example">
+                <select class="form-select" [(ngModel)]="selectedDatosContacto" aria-label="Default select example">
                     <option selected>Seleccionar</option>
                     <option value="1">Particular</option>
                     <option value="2">Comercial</option>
                     <option value="3">No tiene</option>
-                    <option value="4">Otro</option>
+                    <option value="otro">Otro</option>
                 </select>
+                <div class="form-group" *ngIf="selectedDatosContacto == 'otro'">
+                    <input type="text" class="" id="name" ngModel name="nuevo_datos_contacto" required>
+                </div>
             </td>
         </tr>
         <tr>
@@ -543,16 +548,19 @@
 
         En caso que el detenido sea menor de edad, se comunicó conforme el articulo 36 de la ley 20.084 a: <input type="text">
         adulto responsable via: 
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" [(ngModel)]="selectedAdultoResponsable" aria-label="Default select example">
             <option selected>Seleccionar</option>
-            <option value="1">Telefonica</option>
-            <option value="2">Presencial</option>
-            <option value="3">Correo electrónico</option>
-            <option value="4">Otra</option>
+            <option value="1">Particular</option>
+            <option value="2">Comercial</option>
+            <option value="3">No tiene</option>
+            <option value="otro">Otro</option>
         </select>
+        <div class="form-group" *ngIf="selectedAdultoResponsable == 'otro'">
+            <input type="text" class="" id="name" ngModel name="nuevo_adulto_responsable" required>
+        </div>
 
         <div class="align-self-end mt-5 ml-auto mb-3">
-            <button type="button" class="btn btn-primary">Siguiente</button>
+            <button routerLink="/testigo" routerLinkActive="active" type="button" class="btn btn-primary">Siguiente</button>
         </div>
     </div>
 

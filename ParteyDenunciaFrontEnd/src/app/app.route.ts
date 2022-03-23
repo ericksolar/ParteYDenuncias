@@ -28,6 +28,7 @@ const ROUTES: Routes = [
     { path: 'delito', component: DelitoComponent },
     { path: 'transporte', component: TransporteComponent },
     { path: 'victima', component: VictimaComponent },
+    { path: 'funcionarios', component: FuncionariosComponent },
 
 
 
