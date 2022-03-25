@@ -1,0 +1,287 @@
+<!-- As a link -->
+
+
+
+
+<!-- As a heading -->
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1" style="padding-left: 50px;">Parte y Denuncia</span>
+    </div>
+</nav>
+
+<div class="row mt-3">
+    <!--area arriba-->
+    <div class="col-4">
+        <!--area izquierda-->
+
+    </div>
+
+
+    <div style="text-align: left;" class="col-5">
+        <!--area derecha-->
+
+
+        <form>
+            <!-- <fieldset disabled> -->
+            <!-- <legend style="padding-left: 250px; ">ACTA GENERAL DE LA DENUNCIA </legend>
+
+            <br>
+
+
+            <div class="row border">
+                <div class="col-6 border">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">Con Denenidos</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">Sin Detenidos</label>
+                    </div>
+                </div>
+                <div class="col-6 border">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">Pasa a Control de Detención</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">No pasa a Control de Detención</label>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!-- ////////////////////////////////////// -->
+
+
+
+        </form>
+
+
+        <form>
+            <tr>
+                <td style="padding-left: 200px; padding-top: 20px;">
+                    <legend>1.- Datos Generales de la Denuncia</legend>
+                    <p style="padding-left: 50px;"> (Solo lo llena el funcionario policial)</p>
+
+                </td>
+            </tr>
+            <!-- <fieldset disabled> -->
+
+            <br>
+
+            <div class="row ">
+                <div class="col-4 border">
+                    <p> Fecha y Hora: </p>
+                </div>
+                <div class="col-8 ">
+                    <input type="datetime-local">
+                </div>
+            </div>
+
+
+            <div class="row ">
+                <div class="col-4 border">
+                    <p> Delito: </p>
+                </div>
+                <div class="col-8 ">
+                    <textarea class="form-control" rows="1"></textarea>
+
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-4 border">
+                    <p> Zona del Delito: </p>
+                </div>
+                <div class="col-8 ">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccione Institución a Cargo</option>
+                        <option value="1">Rural</option>
+                        <option value="1">Urbano</option>
+                        <option value="2">Marítimo</option>
+                        <option value="3">Fluvial</option>
+                        <option value="3">Lacustre</option>
+      
+                      </select>
+                </div>
+            </div>
+
+
+            <div class="row ">
+                <div class="col-4 border">
+                    <p> Tipo de Lugar de Ocurrencia: </p>
+                </div>
+                <div class="col-8 ">
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="TipoOcurrencia" name="Ocurrencia">
+                        <option selected>Seleccione Institución a Cargo</option>
+                        <option value="1">Vía Pública</option>
+                        <option value="2">Local Comercial</option>
+                        <option value="3">Domicilio Particular</option>
+                        <option value="4">Establecimiento Educacional</option>
+                        <option value="otro">Otro</option>
+      
+                      </select>
+                    <div class="form-group" *ngIf="TipoOcurrencia == 'otro'">
+                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row ">
+                <div class="col-4 border">
+                    <p> Lugar Específico de ocurrencia: </p>
+                </div>
+                <div class="col-8 ">
+                    <textarea class="form-control" rows="1"></textarea>
+
+                </div>
+            </div>
+
+            <!-- //////////////   DIRECCIÓN DEL DELITO   ////////////////////                                                        -->
+            <div class="row border mt-3">
+                <div class="col-3 ">
+                    <p>Dirección del Delito</p>
+                </div>
+                <div class="col-7 ">
+                    <tr>
+
+
+
+                        <td>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Calle:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Número:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Departamento / Oficina:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Block:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Población o Villa:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Sector:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Región:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Comuna:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Intersección:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Luegar Específico:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Referencia de la dirección:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Latitud:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-right: 50px;">
+                                    <label>Longitud:</label>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                            </tr>
+                        </td>
+
+                    </tr>
+                </div>
+            </div>
+
+
+            <tr>
+                <td>
+                    <button type="submit" class="btn btn-primary " routerLink="/home" routerLinkActive="active" style="margin-left: 190px; margin-top: 80px;">Atrás</button>
+
+                </td>
+                <td>
+                    <button type="submit" class="btn btn-primary " routerLink="/denunciante" routerLinkActive="active" style="margin-left: 250px; margin-top: 80px;">Siguiente</button>
+
+                </td>
+            </tr>
+
+            <br><br><br><br>
+
+
+        </form>
+
+
+    </div>
+
+</div>

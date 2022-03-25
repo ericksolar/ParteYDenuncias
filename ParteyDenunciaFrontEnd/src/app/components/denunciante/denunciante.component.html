@@ -18,7 +18,7 @@
 
         <form>
             <!-- <fieldset disabled> -->
-            <legend style="padding-left: 270px; ">2.- Datos del Denunciante </legend>
+            <legend style="padding-left: 270px; ">Datos del Denunciante </legend>
 
             <br>
             <tr>
@@ -207,6 +207,8 @@
                           <option value="1">Separado de hecho</option>
                           <option value="1">Divorciado</option>    
                           <option value="1">Viudo</option>    
+                          <option value="1">Acuerdo Union Civil</option>    
+
 
                      </select>
                 </td>
@@ -304,7 +306,7 @@
 
             <tr>
                 <td style="padding-right: 50px;">
-                    <label>Tipo de Red Social:</label>
+                    <label>Cuáles Redes Sociales:</label>
                 </td>
                 <td>
                     <input type="text">
@@ -470,7 +472,7 @@
 
         <!-- /////////////////////////////////      PARA CASOS DE NNA     ////////////////////////////// -->
         <hr>
-        <p> Para casos de NNA, indicar NNA (Niño, Niña, Adolecente):</p>
+        <p> Para casos de NNA, indicar: NNA (Niño, Niña, Adolecente):</p>
         <br>
 
 
@@ -526,7 +528,7 @@
 
         <tr>
             <td>
-                <label>¿Es el denunciante el adulto?</label>
+                <label style="padding-right: 80px;">¿Es el denunciante el adulto protector/referente de la víctima?</label>
             </td>
 
             <td>
@@ -540,22 +542,11 @@
                 </div>
             </td>
         </tr>
-
-
-
-
-
-
-
-
-
-
-
+        <br>
         <tr>
-            <td style="padding-right: 50px;">
-                <label>Si la respuesta es NO, indicar los</label><br>
-                <label>datos del adulto protector/referente</label><br>
-
+            <td style="padding-right: 10px;">
+                <label>Si la respuesta es NO, indicar los datos del adulto protector/referente</label>
+                <br>
             </td>
             <td>
                 <input type="text">
@@ -564,10 +555,17 @@
 
         <tr>
             <td style="padding-right: 50px;">
-                <label>Persona(s) a quien(es) el niño, niña</label><br>
-                <label>o adolecente contó los hechos</label><br>
+                <label>Persona(s) a quien(es) el niño, niña o adolecente contó los hechos</label><br>
                 <label>(si es que los contó)</label><br>
 
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>¿Cómo supo usted de estos hechos?</label><br>
             </td>
             <td>
                 <input type="text">
@@ -582,7 +580,7 @@
 
             </td>
             <td>
-                <button type="submit" class="btn btn-primary " routerLink="/delito" routerLinkActive="active" style="margin-left: 250px; margin-top: 150px;">Siguiente</button>
+                <button type="submit" class="btn btn-primary " routerLink="/delito" routerLinkActive="active" style="margin-left: 100px; margin-top: 150px;">Siguiente</button>
 
             </td>
         </tr>

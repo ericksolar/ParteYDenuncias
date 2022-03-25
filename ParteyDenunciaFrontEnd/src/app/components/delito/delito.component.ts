@@ -11,5 +11,6 @@ export class DelitoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  EjecucionDelito: string ='';
 
 }

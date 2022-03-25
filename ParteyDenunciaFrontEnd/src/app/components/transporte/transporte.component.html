@@ -17,13 +17,13 @@
 
 
         <form>
-            <tr>
-                <td style="padding-left: 250px; padding-top: 50px;">
-                    <legend>4.- Medio de Transporte Utilizado</legend>
-                    <p style="padding-left: 45px;"> (Solo lo llena el funcionario policial)</p>
+            <div style="text-align: center;" class="mt-3">
 
-                </td>
-            </tr>
+                <legend>Medio de Transporte Utilizado</legend>
+                <p> (Solo lo llena el funcionario policial)</p>
+
+            </div>
+
             <br>
 
             <!-- ////////////////          1ra fila       ////////////////////// -->
@@ -312,12 +312,21 @@
 
 
                     </tr>
+
                     <tr>
-                        <td style="padding-right: 10px;">
-                            <label>¿Fue incautado? :</label>
-                        </td>
                         <td>
-                            <input type="text">
+                            <label>¿Fue incautado?</label>
+                        </td>
+
+                        <td style="padding-left: 50px;">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">No</label>
+                            </div>
                         </td>
                     </tr>
 
