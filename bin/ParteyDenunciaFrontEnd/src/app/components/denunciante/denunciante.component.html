@@ -1,0 +1,591 @@
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1" style="padding-left: 50px;">Parte y Denuncia</span>
+    </div>
+</nav>
+
+<div class="row mt-3">
+    <!--area arriba-->
+    <!-- <div class="col-4" style="border: 1px solid blue;"> -->
+    <!--area izquierda-->
+
+    <!-- </div> -->
+
+
+    <div style="text-align: left;" class="col-5 border offset-1 ">
+        <!--area derecha-->
+
+
+        <form>
+            <!-- <fieldset disabled> -->
+            <legend style="padding-left: 270px; ">2.- Datos del Denunciante </legend>
+
+            <br>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Nombre:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+
+            <tr>
+                <td style="padding-right: 75px;">
+                    <label>Nombre Social (Identidad de Género):</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <!-- NGMODEL ******************   OTRO    -->
+            <tr>
+                <label for="disabledSelect" class="form-label">Tipo de documento de Identificación:</label>
+
+                <td>
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="zonaDelito" name="zonadelito">
+                          <option selected>Seleccione tipo documento</option>
+                          <option value="1">RUN</option>
+                          <option value="2">DNI</option>
+                          <option value="3">Pasaporte</option>
+                          <option value="zona">Otro</option>
+        
+            </select>
+                    <div class="form-group" *ngIf="zonaDelito == 'zona'">
+                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                    </div>
+                </td>
+            </tr>
+            <!--  NGMODEL ******************   OTRO    -->
+
+
+
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Número de Documento de Identificación:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Otros documentos de identidad:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Fecha de nacimiento:</label>
+                </td>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Ciudad de Nacimiento:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Idioma o dialecto:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Nacionalidad:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Escolaridad:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+
+            <tr>
+                <label for="disabledSelect" class="form-label">Estado Migratorio</label>
+                <td>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione Estado</option>
+                      <option value="1">Permanencia transitoria</option>
+                      <option value="1">Residente oficial</option>    
+                      <option value="1">Residente temporal</option>
+                      <option value="1">Residente definitivo</option>    
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <label for="disabledSelect" class="form-label">Sexo Registral (Registro Civil)</label>
+
+                <td>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione Sexo del Denunciante</option>
+                      <option value="1">Masculino</option>
+                      <option value="1">Femenino</option>       
+                    </select>
+                </td>
+            </tr>
+
+            <!-- NGMODEL ******************   OTRO    -->
+
+            <tr>
+                <label for="disabledSelect" class="form-label">Identidad de Género</label>
+
+                <td>
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="IdentidadGenero" name="IdentidaddeGenero">
+                          <option selected>Seleccione Género</option>
+                          <option value="1">Hombre</option>
+                          <option value="2">Mujer</option>  
+                          <option value="3">No Consultado</option>    
+                          <option value="Identidad">Otro</option>
+                     </select>
+                    <div class="form-group" *ngIf="IdentidadGenero == 'Identidad'">
+                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                    </div>
+                </td>
+            </tr>
+
+
+            <!--  NGMODEL ******************   OTRO    -->
+
+
+
+
+
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Alias:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Pueblos originarios:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Profesión / Oficio / Ocupación:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <label for="disabledSelect" class="form-label">Estado Civil</label>
+
+                <td>
+                    <select class="form-select" aria-label="Default select example">
+                          <option selected>Seleccione Estado Civil</option>
+                          <option value="1">Soltero</option>
+                          <option value="1">Casado</option>    
+                          <option value="1">Separado de hecho</option>
+                          <option value="1">Divorciado</option>    
+                          <option value="1">Viudo</option>    
+
+                     </select>
+                </td>
+            </tr>
+
+
+            <!-- <legend style="padding-left: 300px;">Domicilio </legend> -->
+
+            <hr>
+
+            <!-- <fieldset AQUI IBA DOMICILIO   disabled> -->
+
+            <p>Datos de Contacto:</p>
+            <br>
+
+
+            <tr>
+                <td style="padding-right: 220px;">
+                    <label for="disabledSelect" class="form-label">Tipo de Contacto</label>
+
+                </td>
+
+
+                <td>
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="TipoContacto" name="Contacto">
+                          <option selected>Seleccione Tipo de Contacto</option>
+                          <option value="1">Particular</option>
+                          <option value="2">Comercial</option>  
+                          <option value="3">No tiene</option>    
+                          <option value="contactos">Otro</option>
+                     </select>
+                    <div class="form-group" *ngIf="TipoContacto == 'contactos'">
+                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Teléfono Fijo:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Teléfono Móvil:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Correo Electrónico:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <!-- <tr>
+                <td style="padding-right: 50px;">
+                    <label>Redes Sociales:</label>
+                </td>
+                <td>
+                    <select class="form-select" aria-label="Default select example">
+                             <option selected>Seleccione Si / No </option>
+                             <option value="1">Si</option>
+                             <option value="1">No</option>
+                         </select>
+                </td>
+            </tr> -->
+
+            <tr>
+                <td>
+                    <label>Redes Sociales:</label>
+                </td>
+
+                <td>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                    </div>
+                </td>
+            </tr>
+
+
+
+            <tr>
+                <td style="padding-right: 50px;">
+                    <label>Tipo de Red Social:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+
+            <br>
+
+
+
+
+
+
+
+            <br><br>
+
+
+            <br><br>
+
+        </form>
+
+
+    </div>
+
+    <div style="text-align: left;" class="col-5 border">
+        <!-- /////////////////////////////////      DATOS DE CONTACTO     ////////////////////////////// -->
+
+        <p>Domicilio:</p>
+
+        <div class="row ">
+
+            <!-- /////////////////  1RA PARTE DEL COL  /////////////        -->
+
+            <!-- <div class="col-3 ">
+                <p></p>
+            </div> -->
+
+            <!-- /////////////////  2DA PARTE DEL COL  /////////////        -->
+            <div class="col-10 ">
+
+                <tr>
+                    <label for="disabledSelect" class="form-label">Tipo de Dirección</label>
+
+                    <td>
+                        <select class="form-select" aria-label="Default select example" [(ngModel)]="TipoDireccion" name="Direcccion">
+                              <option selected>Seleccione Tipo de Dirección</option>
+                              <option value="1">Particular</option>
+                              <option value="2">Comercial</option>  
+                              <option value="direc">Otro</option>
+                         </select>
+                        <div class="form-group" *ngIf="TipoDireccion == 'direc'">
+                            <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                        </div>
+                    </td>
+                </tr>
+
+
+
+
+
+                <tr>
+                    <td style="padding-right: 50px;">
+                        <label>Calle:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Número:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Departamento/Oficina:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Block:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Población/Villa:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Sector:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Región:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Comuna:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Intersección:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Observación referencia de la dirección:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Latitud:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-right: 75px;">
+                        <label>Longitud:</label>
+                    </td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+            </div>
+        </div>
+
+
+
+
+        <!-- /////////////////////////////////      PARA CASOS DE NNA     ////////////////////////////// -->
+        <hr>
+        <p> Para casos de NNA, indicar NNA (Niño, Niña, Adolecente):</p>
+        <br>
+
+
+        <tr>
+            <td style="padding-right: 150px;">
+                <label for="disabledSelect" class="form-label">Parentesco/Vínculo/relación</label>
+
+            </td>
+
+            <td>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="selectedTipoDocumento" name="parentesco">
+                    <option selected>Seleccione parentesco/vínculo/relación</option>
+                    <option value="1">Padre</option>
+                    <option value="2">Madre</option>
+                    <option value="3">Hermana</option>
+                    <option value="4">Hermano</option>
+                    <option value="5">Tío</option>
+                    <option value="6">Tía</option>
+                    <option value="7">Abuelo</option>
+                    <option value="8">Abuela</option>
+                    <option value="9">Primo</option>
+                    <option value="10">Prima</option>
+                    <option value="11">Vecino</option>
+                    <option value="12">Vecina</option>
+                    <option value="13">Amigo</option>
+                    <option value="14">Amiga</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+        <!-- <tr>
+            <td style="padding-right: 20px;">
+                <label>¿Es el denunciante el adulto </label><br>
+                <label>protector/referente de la víctima?</label>
+
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                     <option selected>Seleccione Si / No </option>
+                     <option value="1">Si</option>
+                     <option value="1">No</option>
+                 </select>
+            </td>
+        </tr> -->
+
+        <tr>
+            <td>
+                <label>¿Es el denunciante el adulto?</label>
+            </td>
+
+            <td>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>Si la respuesta es NO, indicar los</label><br>
+                <label>datos del adulto protector/referente</label><br>
+
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>Persona(s) a quien(es) el niño, niña</label><br>
+                <label>o adolecente contó los hechos</label><br>
+                <label>(si es que los contó)</label><br>
+
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+                <button type="submit" class="btn btn-primary " routerLink="/datosgenerales" routerLinkActive="active" style="margin-left: 150px; margin-top: 150px;">Atrás</button>
+
+            </td>
+            <td>
+                <button type="submit" class="btn btn-primary " routerLink="/delito" routerLinkActive="active" style="margin-left: 250px; margin-top: 150px;">Siguiente</button>
+
+            </td>
+        </tr>
+
+    </div>
+</div>

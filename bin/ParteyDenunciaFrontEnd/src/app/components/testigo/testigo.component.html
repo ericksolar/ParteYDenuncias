@@ -1,0 +1,512 @@
+<!-- As a link -->
+<!-- As a heading -->
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1" style="padding-left: 50px;">Parte y Denuncia</span>
+    </div>
+</nav>
+
+<div class="row mt-3">
+    <!--area arriba-->
+
+
+    <div class="col-5 col-md-5 offset-1 border">
+        <!--area derecha-->
+        <legend class="text-align mt-2">1.- Datos del testigo </legend>
+
+        <!-- <fieldset disabled> -->
+        <tr>
+            <td>
+                <label>Nombre:</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Nombre Social (identidad de genero)</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+                <label>Tipo de documento de documentacion</label>
+            </td>
+            <td>
+                <select class="form-select" [(ngModel)]="selectedTipoDocumento" name="tipoDocumento" aria-label="Default select example">
+                    <option selected> Seleccionar</option>
+                    <option value="1">RUT</option>
+                    <option value="2">Pasaporte</option>
+                    <option value="3">DNI</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
+                    <input type="text" class="" id="name" ngModel name="tipoDocumento" required>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+        <tr>
+            <td>
+                <label>N° de documentos de identificacion:</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding-right: 50px;">
+                <label>Otro documento de identidad</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Fecha de nacimiento</label>
+            </td>
+            <td>
+                <input class="" type="date">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Ciudad de nacimiento</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Idioma o dialecto</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Nacionalidad</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Escolaridad</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Tipo de documento</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Permanencia transitoria</option>
+                        <option value="2">Residente temporal</option>
+                        <option value="3">Residente oficial</option>
+                        <option value="4">Residente definitivo</option>
+                      </select>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+                <label>Sexo Registral (Registro Civil)</label>
+            </td>
+            <td>
+                <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Masculino</option>
+                        <option value="2">Femenino</option>
+     
+                      </select>
+                <br>
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <label for="disabledSelect" class="form-label">Identidad de género</label>
+
+            <td>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="IdentidadGenero" name="genero">
+                      <option selected>Seleccionar</option>
+                      <option value="1">Hombre</option>
+                      <option value="2">Mujer</option>  
+                      <option value="3">No Consultado</option>
+                      <option value="gene">Otro</option>
+
+                 </select>
+                <div class="form-group" *ngIf="IdentidadGenero == 'gene'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+
+
+
+
+
+        <tr>
+            <td>
+                <label>Alias</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Pertenece a pueblo originario</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Profesion , oficio, preocupacion</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Estado Civil</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Presenta Lesiones</label>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Si
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                    </label>
+                </div>
+                <br>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>¿Que lesiones? Y origen de lesiones</label>
+            </td>
+            <td>
+                <textarea class="form-control" rows="4" cols="50"></textarea>
+                <br>
+            </td>
+        </tr>
+    </div>
+    <div class="col-5  col-md-5 border">
+        <br><br>
+        <tr>
+            <label for="disabledSelect" class="form-label">Domicilio</label>
+
+            <td>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="Domicilio" name="domic">
+                      <option selected>Seleccionar</option>
+                      <option value="1">Particular</option>
+                      <option value="2">Comercial</option>  
+                      <option value="domi">Otro</option>
+                 </select>
+                <div class="form-group" *ngIf="Domicilio == 'domi'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Calle</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Numero</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Departamento/oficina</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Block</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Poblacion o Villa</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Sector</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Region</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Comuna</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Interseccion</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Observacion Referencia de la direccion</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+
+        <tr>
+            <label for="disabledSelect" class="form-label">Datos del contacto</label>
+
+            <td>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="DatosContacto" name="contacto">
+                      <option selected>Seleccionar</option>
+                      <option value="1">Particular</option>
+                      <option value="2">Comercial</option> 
+                      <option value="3">No tiene</option>
+                      <option value="contac">Otro</option>
+                 </select>
+                <div class="form-group" *ngIf="DatosContacto == 'contac'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+        <tr>
+            <td>
+                <label>Telefono fijo</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Telefono Movil</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Correo electronico</label>
+            </td>
+            <td>
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td class="mb-3" style="padding-right: 50px;">
+                <label>Redes Sociales</label>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Si
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                    </label>
+                </div>
+                <div class="form-check">
+                    <td>
+                        <label>Otro:
+                            <input type="text">
+                        </label>
+                    </td>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>¿Conoce al denunciando(s)?</label>
+                <label>¿Podria entregar descripcion de el o ellos?</label>
+            </td>
+            <td>
+                <textarea class="form-control" rows="4" cols="50"></textarea>
+                <br>
+            </td>
+        </tr>
+
+
+
+
+        <tr>
+            <label for="disabledSelect" class="form-label">¿Que relacion tiene con el denunciado(s)?</label>
+
+            <td>
+                <select class="form-select" aria-label="Default select example" [(ngModel)]="RelacionDenunciado" name="denunciado">
+                    <option selected>Seleccionar</option>
+                    <option value="1">Padre</option>
+                    <option value="2">Madre</option>
+                    <option value="3">Hermana</option>
+                    <option value="4">Hermano</option>
+                    <option value="5">Tio</option>
+                    <option value="6">Tia</option>
+                    <option value="7">Abuelo</option>
+                    <option value="8">Abuela</option>
+                    <option value="9">Primo</option>
+                    <option value="10">Primo</option>
+                    <option value="11">Vecina</option>
+                    <option value="12">Vecino</option>
+                    <option value="13">Amigo</option>
+                    <option value="14">Amiga</option>
+                    <option value="denun">Otro</option>
+                 </select>
+                <div class="form-group" *ngIf="RelacionDenunciado == 'denun'">
+                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                </div>
+            </td>
+        </tr>
+
+
+
+
+
+        <tr>
+            <td class="mb-3" style="padding-right: 50px;">
+                <label>¿Conoce o puede mencionar otros testigos?</label>
+            </td>
+            <td>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Si
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                    </label>
+                </div>
+                <div class="form-check">
+                    <td style="padding-right: 50px;">
+                        <label>Si la respuesta es SI, indicar referencias o nombres:</label>
+                        <textarea class="form-control" rows="4" cols="50"></textarea>
+                    </td>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" class="btn btn-primary " routerLink="/imputado" routerLinkActive="active" style="margin-left: 150px; margin-top: 80px;">Atrás</button>
+
+            </td>
+            <td>
+                <button type="submit" class="btn btn-primary " routerLink="/relato" routerLinkActive="active" style="margin-left: 250px; margin-top: 80px;">Siguiente</button>
+
+            </td>
+        </tr>
+        <br><br>
+    </div>
+
+</div>

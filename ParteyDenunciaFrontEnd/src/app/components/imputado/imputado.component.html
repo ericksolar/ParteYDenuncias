@@ -12,7 +12,7 @@
 
     <div class="col-5 offset-1 border">
         <!--area derecha-->
-        <legend class="text-align">5.- Datos del imputado </legend>
+        <legend class="text-align">Datos del imputado </legend>
 
         <tr>
             <td>
@@ -22,11 +22,11 @@
             <td>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                    <label class="form-check-label" for="inlineRadio1">Natural</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                    <label class="form-check-label" for="inlineRadio2">No</label>
+                    <label class="form-check-label" for="inlineRadio2">Jurídica</label>
                 </div>
             </td>
         </tr>
@@ -34,7 +34,7 @@
         <!-- <fieldset disabled> -->
         <tr>
             <td>
-                <label>Nombre o Razon social</label>
+                <label>Nombre o Razón social</label>
             </td>
             <td>
                 <input type="text">
@@ -43,7 +43,7 @@
 
         <tr>
             <td>
-                <label>Nombre Social (Identidad de Genero)</label>
+                <label>Nombre Social (Identidad de Género)</label>
             </td>
             <td>
                 <input type="text">
@@ -52,7 +52,7 @@
 
         <tr>
             <td>
-                <label>Tipo de documento de documentacion</label>
+                <label>Tipo de documento de identificación</label>
             </td>
             <td>
                 <select class="form-select" [(ngModel)]="selectedTipoDocumento" name="tipoDocumento" aria-label="Default select example">
@@ -70,7 +70,7 @@
 
         <tr>
             <td>
-                <label>N° de documentos de identificacion:</label>
+                <label>N° de documentos de identificación:</label>
             </td>
             <td>
                 <input type="text">
@@ -205,7 +205,7 @@
 
         <tr>
             <td>
-                <label>Profesion , oficio, preocupacion</label>
+                <label>Profesión , oficio, ocupación</label>
             </td>
             <td>
                 <input type="text">
@@ -308,7 +308,7 @@
         </tr>
         <tr>
             <td>
-                <label>Numero</label>
+                <label>Número</label>
             </td>
             <td>
                 <input type="text ">
@@ -349,7 +349,7 @@
         </tr>
         <tr>
             <td>
-                <label>Region</label>
+                <label>Región</label>
             </td>
             <td>
                 <input type="text ">
@@ -373,7 +373,7 @@
         </tr>
         <tr>
             <td>
-                <label>Observacion Referencia de la direccion</label>
+                <label>Observacion Referencia de la dirección</label>
             </td>
             <td>
                 <input type="text ">
@@ -434,16 +434,20 @@
                     <label class="form-check-label" for="inlineRadio2">No</label>
                 </div>
                 <div>
-                    <td>
-                        <label>Cuales Redes Sociales:
-                            <input type="text">
-                        </label>
-                    </td>
+
                 </div>
             </td>
+
         </tr>
 
-
+        <tr>
+            <td>
+                <label>Cuáles Redes Sociales</label>
+            </td>
+            <td>
+                <input type="text ">
+            </td>
+        </tr>
         <tr>
             <td class="mb-3" style="padding-right: 50px;">
                 <label>Se aplica la validación de identidad</label>
@@ -480,7 +484,7 @@
                     <option value="1 ">Toma parte en la ejcucion</option>
                     <option value="2 ">Facilita los medios</option>
                     <option value="3 ">fuerza o induce a otro</option>
-                    <option value="4 ">Lo presencian sin tomar parte inmediataen</option>
+                    <option value="4 ">Lo presencian sin tomar parte inmediata en él</option>
                 </select>
             </td>
         </tr>
@@ -523,7 +527,7 @@
 
         <tr>
             <td class="mb-3" style="padding-right: 50px;">
-                <label>Pasa a control de detencion</label>
+                <label>Pasa a control de detención</label>
             </td>
             <td>
                 <div class="form-check form-check-inline">
@@ -544,7 +548,7 @@
 
         <tr>
             <td>
-                <label>Causa de la detencion</label>
+                <label>Causa de la detención</label>
             </td>
             <td>
                 <textarea class="form-control " rows="4 " cols="50 "></textarea>
@@ -554,7 +558,7 @@
 
         <tr>
             <td>
-                <label>Lugar de la detencion</label>
+                <label>Lugar de la detención</label>
             </td>
             <td>
                 <input type="text ">
@@ -563,10 +567,10 @@
 
         <tr>
             <td>
-                <label>Fecha y hora de la detencion</label>
+                <label>Fecha y hora de la detención</label>
             </td>
             <td>
-                <input type="datetime-local ">
+                <input type="date">
             </td>
         </tr>
 

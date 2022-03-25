@@ -19,9 +19,9 @@
 
 
         <tr>
-            <td style="padding-left: 150px; padding-top: 50px;">
-                <legend>3.- Clasificación del Delito</legend>
-                <p style="padding-left: 25px;"> (Solo lo llena el funcionario policial)</p>
+            <td style="padding-left: 250px; padding-top: 50px;">
+                <legend>Clasificación del Delito</legend>
+                <p> (Solo lo llena el funcionario policial)</p>
 
             </td>
         </tr>
@@ -30,7 +30,43 @@
 
         <div style="padding-left: 150px;">
 
-            <div class="form-check">
+
+            <!-- <tr>
+                <label for="disabledSelect" class="form-label">Grado de Ejecución del delito</label>
+
+                <td>
+                    <select class="form-select" aria-label="Default select example" [(ngModel)]="EjecucionDelito" name="Delito">
+                          <option selected>Grado de Ejecución del Delito</option>
+                          <option value="1">Tentado</option>
+                          <option value="2">Frustrado</option>  
+                          <option value="3">Frustrado</option>  
+                          <option value="direc">Otro</option>
+                     </select>
+                    <div class="form-group" *ngIf="EjecucionDelito == 'direc'">
+                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                    </div>
+                </td>
+            </tr> -->
+
+            <tr>
+                <label for="disabledSelect" class="form-label">Grado de Ejecución del delito:</label>
+
+                <td style="padding-left: 30px;">
+                    <select class="form-select" aria-label="Default select example">
+                          <option selected>Seleccionar</option>
+                          <option value="1">Tentado</option>
+                          <option value="2">Frustrado</option>  
+                          <option value="3">Consumado</option>  
+                     </select>
+
+                </td>
+            </tr>
+
+
+
+
+
+            <!-- <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">Tentado</label>
             </div>
@@ -41,11 +77,11 @@
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">Consumado</label>
-            </div>
-
+            </div> -->
+            <br><br>
             <tr>
                 <td>
-                    <label style="padding-right: 100px; margin-top: 50px;">Delito:</label>
+                    <label style="padding-right: 50px; margin-top: 10px;">Modus Operandi:</label>
 
                 </td>
                 <td>

@@ -12,7 +12,7 @@
 
     <div class="col-5 offset-1 border">
         <!--area derecha-->
-        <legend class="text-align">4.1.- Datos de la Víctima </legend>
+        <legend class="text-align">Datos de la Víctima </legend>
 
         <tr>
             <td>
@@ -52,12 +52,12 @@
 
         <tr>
             <td>
-                <label>Tipo de documento de documentacion</label>
+                <label>Tipo de documento de identificación</label>
             </td>
             <td>
                 <select class="form-select" [(ngModel)]="selectedTipoDocumento" aria-label="Default select example">
                     <option selected> Seleccionar</option>
-                    <option value="1">RUT</option>
+                    <option value="1">RUN</option>
                     <option value="2">Pasaporte</option>
                     <option value="3">DNI</option>
                     <option value="otro">Otro</option>
@@ -70,7 +70,7 @@
 
         <tr>
             <td>
-                <label>N° de documentos de identificacion:</label>
+                <label>N° de documentos de identificación:</label>
             </td>
             <td>
                 <input type="text">
@@ -223,7 +223,7 @@
             <td>
                 <select class="form-select" aria-label="Default select example">
                         <option selected>Seleccionar</option>
-                        <option value="1">Hálio alcoholico</option>
+                        <option value="1">Hálito alcohólico</option>
                         <option value="2">Inestabilidad al camniar</option>
                         <option value="3">Rostro congestionado</option>
                         <option value="4">incoherencia al hablar</option>
@@ -266,7 +266,7 @@
 
         <tr>
             <td>
-                <label>¿Que lesiones? Y origen de lesiones</label>
+                <label>¿Que lesiones? y origen de lesiones</label>
             </td>
             <td>
                 <textarea class="form-control" rows="4" cols="50"></textarea>
@@ -400,7 +400,7 @@
         </tr>
 
 
-
+        <br>
         <tr>
             <label for="disabledSelect" class="form-label">Datos del contacto</label>
 
@@ -438,7 +438,7 @@
         </tr>
         <tr>
             <td>
-                <label>Correo electronico</label>
+                <label>Correo electrónico</label>
             </td>
             <td>
                 <input type="text">
@@ -458,12 +458,16 @@
                     <label class="form-check-label" for="inlineRadio2">No</label>
                 </div>
                 <div>
-                    <td>
-                        <label>Cuales Redes Sociales:
-                            <input type="text">
-                        </label>
-                    </td>
                 </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label>Cuáles redes sociales</label>
+            </td>
+            <td>
+                <input type="text">
             </td>
         </tr>
 
@@ -492,14 +496,10 @@
 
 
 
-
-
-
-
         <tr>
             <td>
-                <p>Si es residencia institucional, </p>
-                <p>particular u otra, detallar</p>
+                <p>Si es residencia institucional, <br>particular u otra, detallar </p>
+                <p></p>
 
             </td>
             <td>
@@ -509,8 +509,7 @@
 
         <tr>
             <td>
-                <p>¿Conoce al denunciado(s)?</p>
-                <p>¿Podría entregar descripción de él o ellos?</p>
+                <p>¿Conoce al denunciado(s)? <br> ¿Podría entregar descripción de él o ellos?</p>
 
             </td>
             <td>
