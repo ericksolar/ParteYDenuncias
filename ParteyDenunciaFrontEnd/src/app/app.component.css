@@ -10,12 +10,18 @@ body{
 
 #content{
     float: right;
-    /* width: calc(80% - 30px); */ /* calculo con aside incluido */
+    /*width: calc(80% - 30px); */ /* calculo con aside incluido */
     width: 100%;
     padding-left: 15px; /* compensa al -15 de row y col del div*/
     padding-right: 15px; /* compensa al -15 de row y col del div*/
     min-height: 780px;
     /* border: 1px solid black;   */
+}
+
+aside{
+    float: left;
+    width: calc(20% - 20px); /* - 20 px para compensar el padding 10 por lado*/
+    padding: 10px;
 }
 
 header{
@@ -55,12 +61,6 @@ nav ul li{
 
 nav ul li a{
     color:white;
-}
-
-aside{
-    float: left;
-    width: calc(20% - 20px); /* - 20 px para compensar el padding 10 por lado*/
-    padding: 10px;
 }
 
 .clearfix{
