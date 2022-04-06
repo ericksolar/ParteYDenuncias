@@ -1,0 +1,68 @@
+body{
+   
+}
+
+#container{
+    /*width: 70%;*/
+    width: 1100px;
+    margin: 0px auto;    
+}
+
+#content{
+    float: right;
+    /*width: calc(80% - 30px); */ /* calculo con aside incluido */
+    width: 100%;
+    padding-left: 15px; /* compensa al -15 de row y col del div*/
+    padding-right: 15px; /* compensa al -15 de row y col del div*/
+    min-height: 780px;
+    /* border: 1px solid black;   */
+}
+
+aside{
+    float: left;
+    width: calc(20% - 20px); /* - 20 px para compensar el padding 10 por lado*/
+    padding: 10px;
+}
+
+header{
+    background-color: #007bff!important;
+    color: white;
+    height: 100px;
+    margin: 0px;
+    text-align: center; 
+}
+
+header h1{
+    /*padding: 15px;
+    padding-left: 50px;*/   
+    line-height: 100px; /*el alto de la caja para centrar*/  
+}
+
+article{
+
+}
+
+footer
+{
+    text-align: center;
+    background-color: darkgray;
+    padding: 25px;
+}
+
+nav{
+    background-color: #919191;
+    border-bottom: 1px solid black;    
+}
+
+nav ul li{
+    float: left;
+    font-weight: bold;
+}
+
+nav ul li a{
+    color:white;
+}
+
+.clearfix{
+    clear: both;
+}

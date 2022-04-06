@@ -1,0 +1,16 @@
+
+h1, h2, h3, h4, h5, h6{
+    text-align: center;
+}
+
+#content{
+    float: right;
+    width: 100%;
+    min-height: 750px;
+}
+
+aside{
+    float: left;
+    width: calc(20% - 20px); /* - 20 px para compensar el padding 10 por lado*/
+    padding: 10px;
+}

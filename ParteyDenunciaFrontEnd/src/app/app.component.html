@@ -1,8 +1,50 @@
 <!-- <app-navbar></app-navbar> -->
 
 <!-- <div class="container main-container"> -->
+<div id="container">
+    <header>
+        <h1>
+            <span >Parte y Denuncia</span>
+        </h1>       
+    </header>
+    <nav class="nav">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Enlaces1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Enlaces2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="#">Enlaces3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="#">Enlaces4</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link"  href="#">Enlaces5</a>
+            </li>
+        </ul>
+    </nav>
 
-<router-outlet></router-outlet>
+    <div class="clearfix"></div> 
+    <article id="content">
+        <router-outlet></router-outlet>       
+    </article>  
+    <!-- <aside>
+        <h2>barra lateral</h2>
+        <form>
+            <input type="text">
+            <input type="submit">
+        </form>
+    </aside>       -->
+</div>
+<div class="clearfix"></div> 
+
+<!-- el footer fuera del contenedorp ara que ocupe toda la pantalla de largo-->
+<footer>
+    <span class="p-t-10">DAG.2022</span>
+</footer>
 
 
 
