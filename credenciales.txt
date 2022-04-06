@@ -1,0 +1,9 @@
+Los datos de usuario aplicacion son los siguientes
+
+User : ParteDenunciaEscritura
+
+Pass : Coga9T7sPEstumlk
+
+Server : Cardumen
+
+BD :Partedenuncia 
