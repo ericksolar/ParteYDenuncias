@@ -1,149 +1,83 @@
 <div class="row">
     <div class="col border">
-        <!-- /////////////////////////////////      DATOS DE CONTACTO     ////////////////////////////// -->
+        <form>
+            <table style="width: 100%;">
+
+                <tr>
+                    <td colspan="3" class="text-center">
+                        <h3>Clasificacion del delito</h3>
+                        <small>(Solo lo debe llenar el funcionario policial)</small>
+                    </td>
+                </tr>
+
+                <div class="row">
+                    
+                    <div class="col offset-4 mt-3 border">
+
+                        <tr>
+                            <td>
+                                <p> Tipo de Lugar de Ocurrencia: <span style="color: red; font-weight: bold;">*</span></p>
+                            </td>
+                            <td colspan="2">
+                                <select>
+                                    <option selected>Seleccione Institución a Cargo</option>
+                                    <option value="1">Vía Pública</option>
+                                    <option value="2">Local Comercial</option>
+                                    <option value="3">Domicilio Particular</option>
+                                    <option value="4">Establecimiento Educacional</option>
+                                    <option value="5">A BORDO DE AVE O EMBARCACIÓN</option>
+                                    <option value="6">INTERIOR PUERTO O TERMINAL</option>
+                                    <option value="7">RAMPA</option>
+                                    <option value="8">TERRENO DE PLAYA</option>
+                                    <option value="9">ARTEFACTO NAVAL</option>
+                                    <option value="10">MAR</option>
+                                    <option value="otro">Otro</option>
+                  
+                                  </select>
+                            </td>
+                        </tr>
 
 
-        <tr>
-            <td>
-                <legend>Clasificación del Delito</legend>
-                <p> (Solo lo llena el funcionario policial)</p>
 
-            </td>
-        </tr>
+                        <tr>
+                            <td>
+                                <label>¿Fue incautado?</label>
+                            </td>
+                            <td style="padding-left: 50px;">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                            </td>
+                        </tr>
 
-        <br>
+                        <tr colspan="2">
+                            <td>
+                                Observación
+                            <td>
+                            <td>
+                                <textarea class="form-control" ></textarea>
+                            </td>
+                        </tr>
 
-        <div style="padding-left: 150px;">
-
-
-            <!-- <tr>
-                <label for="disabledSelect" class="form-label">Grado de Ejecución del delito</label>
-
-                <td>
-                    <select class="form-select" aria-label="Default select example" [(ngModel)]="EjecucionDelito" name="Delito">
-                          <option selected>Grado de Ejecución del Delito</option>
-                          <option value="1">Tentado</option>
-                          <option value="2">Frustrado</option>  
-                          <option value="3">Frustrado</option>  
-                          <option value="direc">Otro</option>
-                     </select>
-                    <div class="form-group" *ngIf="EjecucionDelito == 'direc'">
-                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
                     </div>
-                </td>
-            </tr> -->
+                </div>
+            </table>
+            <div class="row mt-5">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/denunciante" routerLinkActive="active">Atrás</button>
 
-            <tr>
-                <label for="disabledSelect" class="form-label">Grado de Ejecución del delito:</label>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/transporte" routerLinkActive="active" >Siguiente</button>
 
-                <td style="padding-left: 30px;">
-                    <select class="form-select" aria-label="Default select example">
-                          <option selected>Seleccionar</option>
-                          <option value="1">Tentado</option>
-                          <option value="2">Frustrado</option>  
-                          <option value="3">Consumado</option>  
-                     </select>
-
-                </td>
-            </tr>
-
-
-
-
-
-            <!-- <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">Tentado</label>
+                </div>
+                
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">Frustrado</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                <label class="form-check-label" for="flexCheckChecked">Consumado</label>
-            </div> -->
-            <br><br>
-            <tr>
-                <td>
-                    <label style="padding-right: 50px; margin-top: 10px;">Modus Operandi:</label>
-
-                </td>
-                <td>
-                    <textarea class="form-control" rows="1"></textarea>
-                </td>
-            </tr>
-            <br>
-
-            <!-- <tr>
-                <td style="padding-right: 20px;">
-                    <label>Existen lesionados </label><br>
-
-                </td>
-                <td>
-                    <select class="form-select" aria-label="Default select example">
-                     <option selected>Seleccione Si / No </option>
-                     <option value="1">Si</option>
-                     <option value="1">No</option>
-                 </select>
-                </td>
-            </tr> -->
-
-            <tr>
-                <td>
-                    <label>Existen Lesionados</label>
-                </td>
-
-                <td style="padding-left: 50px;">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Si</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">No</label>
-                    </div>
-                </td>
-            </tr>
-            <!-- <tr>
-                <td style="padding-right: 20px;">
-                    <label>Existen fallecidos </label><br>
-
-                </td>
-                <td>
-                    <select class="form-select" aria-label="Default select example">
-                     <option selected>Seleccione Si / No </option>
-                     <option value="1">Si</option>
-                     <option value="1">No</option>
-                 </select>
-                </td>
-            </tr> -->
-            <tr>
-                <td>
-                    <label>Existen Fallecidos</label>
-                </td>
-
-                <td style="padding-left: 50px;">
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Si</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">No</label>
-                    </div>
-                </td>
-            </tr>
-        </div>
-        <tr>
-            <td>
-                <button type="submit" class="btn btn-primary " routerLink="/denunciante" routerLinkActive="active" style="margin-left: 150px; margin-top: 150px;">Atrás</button>
-
-            </td>
-            <td>
-                <button type="submit" class="btn btn-primary " routerLink="/transporte" routerLinkActive="active" style="margin-left: 250px; margin-top: 150px;">Siguiente</button>
-
-            </td>
-        </tr>
+        </form>
     </div>
 </div>
