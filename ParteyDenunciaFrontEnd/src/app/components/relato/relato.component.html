@@ -1,89 +1,72 @@
-<div class="row mt-3">
+<div class="row">
     <!--area arriba-->
-    <div class="col-4">
 
-    </div>
-
-
-    <div style="text-align: left;" class="col-4 border">
+    <div style="text-align: 0px auto; align-items: 0px auto;" class="border col p-3">
         <!--area derecha-->
 
 
         <form>
-            <div class="mt-3" style="text-align: center;">
+            <div style="text-align: center;">
                 <legend>Relato funcionario a cargo de la diligencia o del </legend>
-                <legend> denunciante para denuncuas NNA </legend>
+                <legend> denunciante para denuncias NNA </legend>
             </div>
 
             <br>
+            <div style="text-align: left; margin: 0px auto;">
+                <div class="row" style="max-width: 50%; margin: 0px auto;">
+                    <div class="col-3">
+                        <label>Nombre:<span style="color: red; font-weight: bold;">*</span></label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row" style="max-width: 50%; margin: 0px auto;">
+                    <div class="col-3">
+                        <label>Grado:<span style="color: red; font-weight: bold;">*</span></label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row" style="max-width: 50%; margin: 0px auto;">
+                    <div class="col-3">
+                        <label>RUN:<span style="color: red; font-weight: bold;">*</span></label>
+                    </div>
+                    <div class="col">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row" style="max-width: 50%; margin: 0px auto;">
+                    <div class="col-3">
+                        <label>Narracion del hecho:<span style="color: red; font-weight: bold;">*</span></label>
+                    </div>
+                    <div class="col">
+                        <textarea class="form-control" rows="12" cols="35"></textarea>
+                    </div>
+                </div>
+                <br><br><br>
+                <div class="row" style="max-width: 50%; margin: 0px auto;">
+                    <div class="col-3">
+                        <label>Firma:<span style="color: red; font-weight: bold;">*</span></label>
+                    </div>
+                    <div class="col">
+                        <P>___________________________</P>
+                    </div>
+                </div>
+    
+                <div class="row border">
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/testigo" routerLinkActive="active">Atrás</button>
+    
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/fiscal" routerLinkActive="active">Siguiente</button>
+    
+                    </div>
+                </div>
+            </div>
 
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Nombre:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-
-
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Grado:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>RUN:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Placa:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Narracion del hecho:</label>
-                </td>
-                <td>
-                    <textarea class="form-control" rows="12" cols="35"></textarea>
-                </td>
-            </tr>
-            <br>
-            <tr>
-                <td style="padding-right: 50px;">
-                    <label>Firma:</label>
-                </td>
-                <td>
-                    <P>___________________________</P>
-                </td>
-            </tr>
-
-            <br><br>
-
-
-            <tr>
-                <td>
-                    <button type="submit" class="btn btn-primary " routerLink="/testigo" routerLinkActive="active" style="margin-left: 150px; margin-top: 150px;">Atrás</button>
-
-                </td>
-                <td>
-                    <button type="submit" class="btn btn-primary " routerLink="/fiscal" routerLinkActive="active" style="margin-left: 250px; margin-top: 150px;">Siguiente</button>
-
-                </td>
-            </tr>
         </form>
 
 

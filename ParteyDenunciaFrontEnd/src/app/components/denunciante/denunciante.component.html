@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col border p-25">
+    <div class="col-6 border">
         <!--area derecha-->
 
 
@@ -9,8 +9,8 @@
 
             <br>
             <tr>
-                <td style="padding-right: 50px;">
-                    <label>Nombre:</label>
+                <td >
+                    <label>Nombre:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="text">
@@ -19,7 +19,7 @@
 
 
             <tr>
-                <td style="padding-right: 75px;">
+                <td >
                     <label>Nombre Social (Identidad de Género):</label>
                 </td>
                 <td>
@@ -29,7 +29,7 @@
 
             <!-- NGMODEL ******************   OTRO    -->
             <tr>
-                <label for="disabledSelect" class="form-label">Tipo de documento de Identificación:</label>
+                <label for="disabledSelect" class="form-label">Tipo de documento de Identificación:<span style="color: red; font-weight: bold;">*</span></label>
 
                 <td>
                     <select class="form-select" aria-label="Default select example" [(ngModel)]="zonaDelito" name="zonadelito">
@@ -50,15 +50,15 @@
 
 
             <tr>
-                <td style="padding-right: 50px;">
-                    <label>Número de Documento de Identificación:</label>
+                <td>
+                    <label>Número de Documento de Identificación:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="text">
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 50px;">
+                <td>
                     <label>Otros documentos de identidad:</label>
                 </td>
                 <td>
@@ -66,15 +66,15 @@
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 50px;">
-                    <label>Fecha de nacimiento:</label>
+                <td>
+                    <label>Fecha de nacimiento:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="date">
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 50px;">
+                <td>
                     <label>Ciudad de Nacimiento:</label>
                 </td>
                 <td>
@@ -82,7 +82,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 50px;">
+                <td>
                     <label>Idioma o dialecto:</label>
                 </td>
                 <td>
@@ -90,16 +90,16 @@
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 50px;">
-                    <label>Nacionalidad:</label>
+                <td>
+                    <label>Nacionalidad:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="text">
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 50px;">
-                    <label>Escolaridad:</label>
+                <td>
+                    <label>Escolaridad:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="text">
@@ -116,12 +116,13 @@
                       <option value="1">Residente oficial</option>    
                       <option value="1">Residente temporal</option>
                       <option value="1">Residente definitivo</option>    
+                      <option value="1">Ilegal</option>  
                     </select>
                 </td>
             </tr>
 
             <tr>
-                <label for="disabledSelect" class="form-label">Sexo Registral (Registro Civil)</label>
+                <label for="disabledSelect" class="form-label">Sexo Registral (Registro Civil)<span style="color: red; font-weight: bold;">*</span></label>
 
                 <td>
                     <select class="form-select" aria-label="Default select example">
@@ -159,7 +160,7 @@
 
 
             <tr>
-                <td style="padding-right: 50px;">
+                <td>
                     <label>Alias:</label>
                 </td>
                 <td>
@@ -168,7 +169,7 @@
             </tr>
 
             <tr>
-                <td style="padding-right: 50px;">
+                <td>
                     <label>Pueblos originarios:</label>
                 </td>
                 <td>
@@ -176,7 +177,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 50px;">
+                <td>
                     <label>Profesión / Oficio / Ocupación:</label>
                 </td>
                 <td>
@@ -213,7 +214,7 @@
 
 
             <tr>
-                <td style="padding-right: 220px;">
+                <td>
                     <label for="disabledSelect" class="form-label">Tipo de Contacto</label>
 
                 </td>
@@ -235,7 +236,7 @@
 
 
             <tr>
-                <td style="padding-right: 50px;">
+                <td>
                     <label>Teléfono Fijo:</label>
                 </td>
                 <td>
@@ -243,7 +244,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 50px;">
+                <td>
                     <label>Teléfono Móvil:</label>
                 </td>
                 <td>
@@ -251,7 +252,7 @@
                 </td>
             </tr>
             <tr>
-                <td style="padding-right: 50px;">
+                <td>
                     <label>Correo Electrónico:</label>
                 </td>
                 <td>
@@ -292,13 +293,56 @@
 
 
             <tr>
-                <td style="padding-right: 50px;">
+                <td>
                     <label>Cuáles Redes Sociales:</label>
                 </td>
                 <td>
                     <input type="text">
                 </td>
+                
             </tr>
+
+            <tr>
+                <td>
+                    AGREGAR IDENTIFICACIÓN /LOGIN
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                
+            </tr>
+
+            <!-- <tr>
+                <td>
+                    <div class="row p-3">
+                        <div class="col-1"><input class="form-check-input" type="checkbox"></div>
+                        <div class="col-4">Twitter</div>
+                        <div class="col-3"><input type="text"></div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-1"><input class="form-check-input" type="checkbox"></div>
+                        <div class="col-4">Instagram</div>
+                        <div class="col-3"><input type="text"></div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-1"><input class="form-check-input" type="checkbox"></div>
+                        <div class="col-4">Facebook</div>
+                        <div class="col-3"><input type="text"></div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-1"><input class="form-check-input" type="checkbox"></div>
+                        <div class="col-4">Youtube</div>
+                        <div class="col-3"><input type="text"></div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-1"><input class="form-check-input" type="checkbox"></div>
+                        <div class="col-4">Linked-In</div>
+                        <div class="col-3"><input type="text"></div>
+                    </div>
+                    
+                </td>
+
+            </tr> -->
 
 
             <br>
@@ -319,10 +363,10 @@
 
     </div>
 
-    <div style="text-align: left;" class="col-5">
+    <div style="text-align: left;" class="col-6 border">
         <!-- /////////////////////////////////      DATOS DE CONTACTO     ////////////////////////////// -->
 
-        <p>Domicilio:</p>
+        <p>Dirección:</p>
 
         <div class="row ">
 
@@ -356,23 +400,23 @@
 
 
                 <tr>
-                    <td style="padding-right: 50px;">
-                        <label>Calle:</label>
+                    <td>
+                        <label>Calle:<span style="color: red; font-weight: bold;">*</span></label>
                     </td>
                     <td>
                         <input type="text">
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 75px;">
-                        <label>Número:</label>
+                    <td>
+                        <label>Número:<span style="color: red; font-weight: bold;">*</span></label>
                     </td>
                     <td>
                         <input type="text">
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 75px;">
+                    <td >
                         <label>Departamento/Oficina:</label>
                     </td>
                     <td>
@@ -380,7 +424,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 75px;">
+                    <td>
                         <label>Block:</label>
                     </td>
                     <td>
@@ -388,7 +432,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 75px;">
+                    <td>
                         <label>Población/Villa:</label>
                     </td>
                     <td>
@@ -396,7 +440,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 75px;">
+                    <td >
                         <label>Sector:</label>
                     </td>
                     <td>
@@ -405,7 +449,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <p> Región: </p>
+                        <p> Región: <span style="color: red; font-weight: bold;">*</span></p>
 
                     </td>
                     <td>
@@ -433,15 +477,15 @@
 
                 </tr>
                 <tr>
-                    <td style="padding-right: 75px;">
-                        <label>Comuna:</label>
+                    <td>
+                        <label>Comuna:<span style="color: red; font-weight: bold;">*</span></label>
                     </td>
                     <td>
                         <input type="text">
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 75px;">
+                    <td>
                         <label>Intersección:</label>
                     </td>
                     <td>
@@ -449,15 +493,15 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 75px;">
+                    <td>
                         <label>Observación referencia de la dirección:</label>
                     </td>
                     <td>
                         <input type="text">
                     </td>
                 </tr>
-                <tr>
-                    <td style="padding-right: 75px;">
+                <!-- <tr>
+                    <td>
                         <label>Latitud:</label>
                     </td>
                     <td>
@@ -465,13 +509,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding-right: 75px;">
+                    <td>
                         <label>Longitud:</label>
                     </td>
                     <td>
                         <input type="text">
                     </td>
-                </tr>
+                </tr> -->
             </div>
         </div>
 
@@ -485,8 +529,8 @@
 
 
         <tr>
-            <td style="padding-right: 150px;">
-                <label for="disabledSelect" class="form-label">Parentesco/Vínculo/relación</label>
+            <td>
+                <label for="disabledSelect" class="form-label">Parentesco/Vínculo/relación<span style="color: red; font-weight: bold;">*</span></label>
 
             </td>
 
@@ -507,6 +551,7 @@
                     <option value="12">Vecina</option>
                     <option value="13">Amigo</option>
                     <option value="14">Amiga</option>
+                    <option value="14">Guardador</option>
                     <option value="otro">Otro</option>
                 </select>
                 <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
@@ -536,7 +581,7 @@
 
         <tr>
             <td>
-                <label style="padding-right: 80px;">¿Es el denunciante el adulto protector/referente de la víctima?</label>
+                <label>¿Es el denunciante el adulto protector/referente de la víctima?</label>
             </td>
 
             <td>
@@ -552,7 +597,7 @@
         </tr>
         <br>
         <tr>
-            <td style="padding-right: 10px;">
+            <td>
                 <label>Si la respuesta es NO, indicar los datos del adulto protector/referente</label>
                 <br>
             </td>
@@ -562,7 +607,7 @@
         </tr>
 
         <tr>
-            <td style="padding-right: 50px;">
+            <td>
                 <label>Persona(s) a quien(es) el niño, niña o adolecente contó los hechos</label><br>
                 <label>(si es que los contó)</label><br>
 
@@ -572,7 +617,7 @@
             </td>
         </tr>
         <tr>
-            <td style="padding-right: 50px;">
+            <td>
                 <label>¿Cómo supo usted de estos hechos?</label><br>
             </td>
             <td>

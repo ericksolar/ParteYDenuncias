@@ -1,10 +1,8 @@
-<div class="row mt-5">
-    <div class="col-4">
-
-    </div>
+<div class="row border">
+  
 
 
-    <div style="text-align: left;" class="col-4 border ">
+    <div class="col" style="max-width: 50%; margin: 0px auto;">
 
         <form>
             <div class="text-center">
@@ -14,7 +12,7 @@
 
 
             <tr>
-                <td class="mb-3" style="padding-right: 50px;">
+                <td >
                     <label>¿Hubo contacto con el fiscal?</label>
                 </td>
                 <td>
@@ -34,7 +32,7 @@
             </tr>
 
             <tr>
-                <td class="mb-3" style="padding-right: 50px;">
+                <td>
                     <label>Nombre de Fiscal:</label>
                 </td>
                 <td>
@@ -43,7 +41,16 @@
             </tr>
 
             <tr>
-                <td class="mb-3" style="padding-right: 50px;">
+                <td>
+                    <label>Fiscalia local de:</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
                     <label>Instrucciones</label>
                 </td>
                 <td>
@@ -53,20 +60,20 @@
 
 
 
-
-
-            <tr>
-                <td>
-                    <button type="submit" class="btn btn-primary " routerLink="/relato" routerLinkActive="active" style="margin-left: 150px; margin-top: 150px;">Atrás</button>
-
-                </td>
-                <td>
-                    <button type="submit" class="btn btn-primary " routerLink="/funcionarios" routerLinkActive="active" style="margin-left: 250px; margin-top: 150px;">Siguiente</button>
-
-                </td>
-            </tr>
-
             <br><br><br>
+
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/relato" routerLinkActive="active">Atrás</button>
+
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/funcionarios" routerLinkActive="active" >Siguiente</button>
+
+                </div>
+            </div>
+
+           
         </form>
 
 
