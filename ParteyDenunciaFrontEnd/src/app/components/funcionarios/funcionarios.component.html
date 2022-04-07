@@ -1,15 +1,16 @@
-<div class="row">
+<div class="row border">
+    <!-- <fieldset disabled> -->
+    <div class="col-12">
+        <h3 style="text-align: center;">Datos de funcionario(s) acompañante(s) del procedimiento(s)</h3>
 
-    <div class="col-5 offset-4 mt-2">
+    </div>
+
+    <div style="margin: 0px auto; max-width:55%; align-items: 0px auto;" class="col p-3">
 
         <form>
-            <!-- <fieldset disabled> -->
-            <legend>Datos de funcionario(s) acompañante(s) del procedimiento(s)</legend>
-
-
             <tr>
                 <td class="mb-3">
-                    <label>Nombre:</label>
+                    <label>Nombre:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="text">
@@ -18,7 +19,7 @@
 
             <tr>
                 <td class="mb-3">
-                    <label>RUN:</label>
+                    <label>RUN:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="text">
@@ -27,7 +28,7 @@
 
             <tr>
                 <td class="mb-3">
-                    <label>Grado:</label>
+                    <label>Grado:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="text">
@@ -36,7 +37,7 @@
 
             <tr>
                 <td class="mb-3">
-                    <label>NPI:</label>
+                    <label>NPI:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="text">
@@ -45,7 +46,7 @@
 
             <tr>
                 <td class="mb-3" style="padding-right: 50px;">
-                    <label>Rol en el procedimiento:</label>
+                    <label>Rol en el procedimiento:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="text">
@@ -116,37 +117,49 @@
             </tr>
             <hr>
 
-            <tr>
-                <td style="padding-right: 50px;">
-                    <button type="button" class="btn btn-success">Imprimir Parte y Denuncia</button>
-                </td>
-
-                <td style="padding-right: 50px;">
-                    <button type="button" class="btn btn-success">Adjuntar Documentos</button>
-                </td>
 
 
-            </tr>
-            <br>
-            <tr>
 
-            </tr>
+            <div class="row border">
+                <div class="col">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Imprimir Parte y Denuncia</button>
 
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Adjuntar Documentos</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="row border mt-5">
+                <div class="col">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Descargar PDF</button>
+
+                </div>
+
+            </div>
 
             <!-- </fieldset> -->
 
-            <td>
-                <button type="submit" class="btn btn-primary " routerLink="/fiscal" routerLinkActive="active" style="margin-left: 50px; margin-top: 150px;">Atrás</button>
 
-            </td>
-            <td>
-                <button type="submit" class="btn btn-primary " routerLink="/home" routerLinkActive="active" style="margin-left: 100px; margin-top: 150px;">Inicio</button>
 
-            </td>
-            <td>
-                <button type="submit" class="btn btn-primary " routerLink="/funcionarios" routerLinkActive="active" style="margin-left: 100px; margin-top: 150px;">Grabar</button>
+            <div class="row border mt-5">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/fiscal" routerLinkActive="active">Atrás</button>
 
-            </td>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/home" routerLinkActive="active">Inicio</button>
+
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/funcionario" routerLinkActive="active">Grabar</button>
+
+                </div>
+            </div>
+
 
 
         </form>
