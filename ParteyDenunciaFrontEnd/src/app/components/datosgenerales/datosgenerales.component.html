@@ -10,7 +10,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <p> Fecha y Hora: </p>
+                        <p> Fecha y Hora <span style="color: red; font-weight: bold;">*</span>: </p>
                     </td>
                     <td colspan="2">
                         <input type="datetime-local">
@@ -18,7 +18,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <p> Delito </p>
+                        <p> Delito <span style="color: red; font-weight: bold;">*</span></p>
                     </td>
                     <td colspan="2">
                         <textarea class="form-control" rows="1"></textarea>
@@ -26,7 +26,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <p> Zona del Delito: </p>
+                        <p> Zona del Delito: <span style="color: red; font-weight: bold;">*</span></p>
                     </td>
                     <td colspan="2">
                         <select class="form-select" aria-label="Default select example">
@@ -42,7 +42,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <p> Tipo de Lugar de Ocurrencia: </p>
+                        <p> Tipo de Lugar de Ocurrencia: <span style="color: red; font-weight: bold;">*</span></p>
                     </td>
                     <td colspan="2">
                         <select class="form-select" aria-label="Default select example" [(ngModel)]="TipoOcurrencia" name="Ocurrencia">
@@ -51,6 +51,12 @@
                             <option value="2">Local Comercial</option>
                             <option value="3">Domicilio Particular</option>
                             <option value="4">Establecimiento Educacional</option>
+                            <option value="5">A BORDO DE AVE O EMBARCACIÓN</option>
+                            <option value="6">INTERIOR PUERTO O TERMINAL</option>
+                            <option value="7">RAMPA</option>
+                            <option value="8">TERRENO DE PLAYA</option>
+                            <option value="9">ARTEFACTO NAVAL</option>
+                            <option value="10">MAR</option>
                             <option value="otro">Otro</option>
           
                           </select>
@@ -74,7 +80,7 @@
                     <td style="border-right: 0px;">  
                         <div class="row">
                             <div class="col-5">
-                                <label>Calle:</label>
+                                <label>Calle:<span style="color: red; font-weight: bold;">*</span></label>
                             </div>
                             <div class="col-7">
                                 <input type="text">  
@@ -142,7 +148,7 @@
                     <td>
                         <div class="row">
                             <div class="col-5">
-                                <label>Región:</label>
+                                <label>Región:<span style="color: red; font-weight: bold;">*</span></label>
                             </div>
                             <div class="col-7">
                                 <select class="form-select" aria-label="Default select example">
@@ -173,7 +179,7 @@
                     <td style="border-right: 0px;">    
                         <div class="row">
                             <div class="col-5">
-                                <label>Comuna:</label> 
+                                <label>Comuna:<span style="color: red; font-weight: bold;">*</span></label> 
                             </div>
                             <div class="col-7">
                                 <input type="text">       
@@ -202,10 +208,10 @@
                 </tr>
                 <tr>
                     <td>   
-                        <label>Latitud:</label>  <input type="text">                   
+                        <label>Latitud:<span style="color: red; font-weight: bold;">*</span></label>  <input type="text">                   
                     </td>                  
                     <td>   
-                        <label>Longitud:</label>  <input type="text">         
+                        <label>Longitud:<span style="color: red; font-weight: bold;">*</span></label>  <input type="text">         
                     </td>                    
                 </tr>
             </table>
