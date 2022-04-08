@@ -55,14 +55,14 @@
                             </td>
                             <td>
                                 <select class="form-select" [(ngModel)]="selectedTipoDocumento" aria-label="Default select example">
-                                    <option selected> Seleccionar</option>
+                                    <option selected default> Seleccionar</option>
                                     <option value="1">RUN</option>
                                     <option value="2">Pasaporte</option>
                                     <option value="3">DNI</option>
                                     <option value="otro">Otro</option>
                                 </select>
                                 <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
-                                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                                    <input type="text" class="" id="name" ngModel name="" required>
                                 </div>
                             </td>
                         </tr>
@@ -483,7 +483,7 @@
 
                         <tr>
                             <td>
-                                <label>identificación/Login</label>
+                                <label>Agregar Identificación/Login</label>
                             </td>
                             <td>
                                 <input type="text">
@@ -569,8 +569,8 @@
 
             <br>
             <div class="row">
-                <div class="col"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/transporte" routerLinkActive="active">Atrás</button></div>
-                <div class="col"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/imputado" routerLinkActive="active">Siguiente</button></div>                
+                <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/transporte" routerLinkActive="active">Atrás</button></div>
+                <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/imputado" routerLinkActive="active">Siguiente</button></div>                
             </div>
         </form>    
     </div>

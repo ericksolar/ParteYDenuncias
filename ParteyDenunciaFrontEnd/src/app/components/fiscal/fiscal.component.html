@@ -2,85 +2,82 @@
   
 
 
-    <div class="col-5 offset-4">
+    <div class="col border">
 
         <form>
+            <table style="width: 100%;">
 
-            <tr>
-                <td colspan="3" class="text-center">
-                    <h3>Instrucciones del fiscal </h3>
-                    <small>(En caso de contactos telefonicos)</small>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <label>¿Hubo contacto con el fiscal?</label>
-                </td>
-                <td>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
-                            Si
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
-                            No
-                        </label>
-                    </div>
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <label>Nombre de Fiscal:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <label>Fiscalia local de:</label>
-                </td>
-                <td>
-                    <input type="text">
-                </td>
-            </tr>
-
-            <tr>
-                <td>
-                    <label>Instrucciones</label>
-                </td>
-                <td>
-                    <textarea class="form-control" rows="4" cols=""></textarea>
-                </td>
-            </tr>
-
-
-
-
-            <div class="row mt-5">
-                <div class="col">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/relato" routerLinkActive="active">Atrás</button>
-
-                </div>
-                <div class="col">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/funcionarios" routerLinkActive="active" >Siguiente</button>
-
-                </div>
+                <tr>
+                    <td colspan="3" class="text-center">
+                        <h3>Instrucciones del fiscal </h3>
+                        <small>(En caso de contactos telefonicos)</small>
+                    </td>
+                </tr>
                 
+                <div class="row">
+                    <div class="col offset-4 mt-3">
+
+                        <tr>
+                            <td>
+                                <label>¿Hubo contacto con el fiscal?</label>
+                            </td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>Nombre de Fiscal:</label>
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>Fiscalia local de:</label>
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>Instrucciones:</label>
+                            </td>
+                            <td>
+                                <textarea class="form-control" rows="5" cols="50"></textarea>
+                            </td>
+                        </tr>
+                    </div>
+                </div>
+
+            </table>
+            <div class="row mt-5">
+                <div class="col d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg" routerLink="/relato" routerLinkActive="active">Atrás</button>
+
+                </div>
+                <div class="col d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg" routerLink="/funcionarios" routerLinkActive="active" >Siguiente</button>
+
+                </div>
             </div>
-
-           
         </form>
-
-
-
-
     </div>
 
 </div>

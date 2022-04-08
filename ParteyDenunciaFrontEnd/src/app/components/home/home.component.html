@@ -9,12 +9,12 @@
 </nav> -->
 
 <section>
-    <div id="content">
+    <div id="content" class="">
         <form>
             <article>
                 <h3>FORMULARIO PARTE Y DENUNCIA</h3>
             </article>    
-            <div class="row">
+            <div class="row border">
                 <div class="col-8 border">
                     <article>               
                             <div class="mb-3 mt-3">
@@ -94,29 +94,32 @@
                     <div class="mb-3 mt-3">
                         <h6>Lugar de Adopción del Procedimiento: </h6>
                     </div> 
+
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <input class="form-check-input" [(ngModel)]="selectedTLugarProcedimiento" type="radio" value="1" name="flexRadioDefault" id="flexRadioDefault1">
                         <label class="form-check-label" for="flexCheckDefault">Guardia</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input class="form-check-input" type="radio" value="2" name="flexRadioDefault" id="flexRadioDefault2">
                         <label class="form-check-label" for="flexCheckChecked">Borde Costero</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        <input  class="form-check-input" type="radio" value="3" name="flexRadioDefault" id="flexRadioDefault3">
                         <label class="form-check-label" for="flexCheckChecked">Unidad Marítima</label>
                     </div>
                     <div class="form-check">
                         <tr>
                             <td style="padding-right: 50px;">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                                <label>Otro Lugar:</label>
-                            </td>
-                            <td>
-                                <input type="text">
+
+                                <label>Otro</label>
+                                <div class="form-group" *ngIf="selectedTLugarProcedimiento && isChecked">
+                                    <label>Lugar</label>
+                                    <input type="text" class="" id="name" ngModel name="">
+                                </div>
                             </td>
                         </tr>
                     </div>
+
                 </div>
             </div>        
             <div class="clearfix"></div>
@@ -158,10 +161,10 @@
             <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4"></div>
-                <div class="col-4">
+                <div class="col-4 d-grid gap-2">
                     <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/datosgenerales" routerLinkActive="active">Siguiente</button>
                 </div>
-                           </div>        
+            </div>        
         </form>  
     </div>
 
