@@ -12,10 +12,10 @@ export class VictimaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-selectedTipoDocumento: string ='';
-IdentidadGenero: string ='';
-Domicilio: string ='';
-DatosContacto: string ='';
-Convive: string ='';
-RelacionDenunciado: string ='';
+  selectedTipoDocumento: string ='';
+  IdentidadGenero: string ='';
+  Domicilio: string ='';
+  DatosContacto: string ='';
+  Convive: string ='';
+  RelacionDenunciado: string ='';
 }

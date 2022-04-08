@@ -490,7 +490,7 @@
 
                         <tr>
                             <td>
-                                <label>Identificación/Login</label>
+                                <label>Agregar Identificación/Login</label>
                             </td>
                             <td>
                                 <input type="text">
@@ -519,7 +519,11 @@
                                 <label>Resultado de la validacion de identidad</label>
                             </td>
                             <td>
-                                <input type="text ">
+                                <select class="form-select " aria-label="Default select example ">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Corresponde</option>                            
+                                    <option value="2">No Corresponde</option>                            
+                                </select>
                             </td>
                         </tr>
 
@@ -558,7 +562,7 @@
 
                         <tr>
                             <td class="mb-3" style="padding-right: 50px;">
-                                <label>¿El denunciado(imputado) se encuentra detenido?</label>
+                                <label>¿El denunciado(imputado) se encuentra detenido?<span style="color: red; font-weight: bold;">*</span></label>
                             </td>
                             <td>
                                 <div class="form-check form-check-inline">
@@ -576,7 +580,7 @@
 
                         <tr>
                             <td class="mb-3" style="padding-right: 50px;">
-                                <label>Pasa a control de detención <span style="color: red; font-weight: bold;">*</span></label>
+                                <label>Pasa a control de detención</label>
                             </td>
                             <td>
                                 <div class="form-check form-check-inline">
@@ -643,6 +647,7 @@
                                     <option value="2">Presencial</option> 
                                     <option value="3">Correo electrónico</option>
                                     <option value="adulto">Otro</option>
+
                                 </select>
                                 <span style="color: red; font-weight: bold;">*</span>
                                 <div class="form-group" *ngIf="selectedAdultoResponsable == 'adulto'">
@@ -655,8 +660,8 @@
             </table>
             <br>
             <div class="row">
-                <div class="col"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/victima" routerLinkActive="active">Atrás</button></div>
-                <div class="col"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/testigo" routerLinkActive="active">Siguiente</button></div>                
+                <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/victima" routerLinkActive="active">Atrás</button></div>
+                <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/testigo" routerLinkActive="active">Siguiente</button></div>                
             </div>
         </form>
     </div>
