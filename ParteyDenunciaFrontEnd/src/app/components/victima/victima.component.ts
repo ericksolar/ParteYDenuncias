@@ -18,4 +18,5 @@ export class VictimaComponent implements OnInit {
   DatosContacto: string ='';
   Convive: string ='';
   RelacionDenunciado: string ='';
+  Residencia: string ='';
 }

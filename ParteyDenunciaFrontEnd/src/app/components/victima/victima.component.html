@@ -513,11 +513,27 @@
                             </td>
                         </tr>
 
-
-
-
-
                         <tr>
+                            <td>
+                                <label for="disabledSelect" class="form-label">Tipo de residencia</label>
+                            </td>
+
+                            <td>
+                                <select class="form-select" aria-label="Default select example" [(ngModel)]="Residencia" name="vive">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Institucional</option>
+                                    <option value="2">Particular</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <div class="form-group" *ngIf="Residencia == 'otro'">
+                                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                                </div>
+                            </td>
+                        </tr>
+
+
+
+                        <!-- <tr>
                             <td>
                                 <p>Si es residencia institucional, <br>particular u otra, detallar </p>
                                 <p></p>
@@ -526,9 +542,36 @@
                             <td>
                                 <input type="text">
                             </td>
-                        </tr>
+                        </tr> -->
 
                         <tr>
+                            <td class="mb-3" style="padding-right: 50px;">
+                                <label>¿Conoce al denunciado(s)? <br> ¿Podría entregar descripción de él o ellos?</label>
+                            </td>
+                            <td>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <td style="padding-right: 50px;">
+                                        <label>Describa:</label>
+                                        <textarea class="form-control" rows="4" cols="50"></textarea>
+                                    </td>
+                                </div>
+                            </td>
+                        </tr>
+                        
+
+                        <!-- <tr>
                             <td>
                                 <p>¿Conoce al denunciado(s)? <br> ¿Podría entregar descripción de él o ellos?</p>
 
@@ -536,7 +579,7 @@
                             <td>
                                 <input type="text">
                             </td>
-                        </tr>
+                        </tr> -->
 
                         <tr>
                             <td>
