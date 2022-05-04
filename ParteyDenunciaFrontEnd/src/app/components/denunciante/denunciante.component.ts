@@ -13,6 +13,7 @@ export class DenuncianteComponent implements OnInit {
   }
   selectedTipoDocumento: string ='';
   zonaDelito: string ='';
+  TipoIdioma: string='';
   prueba1: string ='';
   prueba2: string ='';
   IdentidadGenero: string ='';

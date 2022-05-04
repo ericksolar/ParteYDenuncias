@@ -17,16 +17,12 @@
                             <td>
                                 <label>Tipo de persona <span style="color: red; font-weight: bold;">*</span></label>
                             </td>
-
                             <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Natural</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Jurídica</label>
-                                </div>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected default>Seleccione Tipo de persona</option>
+                                    <option value="1">Natural</option>
+                                    <option value="2">Juridica</option>
+                                </select>
                             </td>
                         </tr>
 
@@ -59,29 +55,8 @@
                                     <option value="1">RUT</option>
                                     <option value="2">Pasaporte</option>
                                     <option value="3">DNI</option>
-                                    <option value="otro">Otro</option>
                                 </select>
-                                <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
-                                    <input type="text" class="" id="name" ngModel name="tipoDocumento" required>
-                                </div>
-                            </td>
-                        </tr>
 
-                        <tr>
-                            <td>
-                                <label>N° de documentos de identificación:<span style="color: red; font-weight: bold;">*</span></label>
-                            </td>
-                            <td>
-                                <input type="text">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label>Otro documento de identidad</label>
-                            </td>
-                            <td>
-                                <input type="text">
                             </td>
                         </tr>
 
@@ -105,28 +80,53 @@
 
                         <tr>
                             <td>
-                                <label>Idioma o dialecto</label>
+                                <label>Idioma o dialecto:</label>
                             </td>
                             <td>
-                                <input type="text">
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label>Nacionalidad <span style="color: red; font-weight: bold;">*</span></label>
-                            </td>
-                            <td>
-                                <input type="text">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccione Idioma</option>
+                                    <option value="1">Ingles</option>
+                                    <option value="2">Frances</option>
+                                    <option value="3">Aleman</option>
+                                    <option value="4">Español</option>
+                                </select>                            
                             </td>
                         </tr>
-
                         <tr>
                             <td>
-                                <label>Escolaridad</label>
+                                <label>Nacionalidad:<span style="color: red; font-weight: bold;">*</span></label>
                             </td>
                             <td>
-                                <input type="text">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccione Nacionalidad</option>
+                                    <option value="1">UCRANIA</option>
+                                    <OPtion value="2">UGANDA</OPtion>
+                                    <option value="3">3NGLATERRA (GRAN BRETANA)</option>
+                                    <option value="4">ISLAS ULTRAMARINAS DE EE.UU.</option>
+                                    <option value="5">RUSSIA</option>
+                                    <option value="6">ESTADOS UNIDOS</option>
+                                    <option value="7">VOLTA SUPERIOR</option>
+                                    <option value="8">URUGUAY</option>
+                                    <option value="9">UZBEKISTAN</option>
+                                    <option value="10">VANUATU</option>
+                                    <option value="11">SAINT VINCENT AND THE GRENADINES</option>
+                                </select>                                          
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Escolaridad:</label>
+                            </td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccione Escolaridad</option>
+                                    <option value="1">Sin Estudios</option>
+                                    <option value="2">Educacion Basica</option>
+                                    <option value="3">Educacion Secundaria</option>
+                                    <option value="4">Educacion Secundaria Incompleta</option>
+                                    <option value="5">Educacion Universitaria</option>
+                                </select>
+                                                      
                             </td>
                         </tr>
 
@@ -136,7 +136,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
+                                        <option selected>Seleccione Estado Migratorio</option>
                                         <option value="1">Permanencia transitoria</option>
                                         <option value="2">Residente temporal</option>
                                         <option value="3">Residente oficial</option>
@@ -153,7 +153,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
+                                        <option selected>Seleccione Sexo Registral</option>
                                         <option value="1">Masculino</option>
                                         <option value="2">Femenino</option>
                                     </select>
@@ -167,25 +167,14 @@
                             </td>
 
                             <td>
-                                <select class="form-select" aria-label="Default select example" [(ngModel)]="IdentidadGenero" name="genero">
-                                    <option selected>Seleccionar</option>
+                                <select class="form-select" aria-label="Default select example" name="genero">
+                                    <option selected>Seleccione Identidad de Género</option>
                                     <option value="1">Hombre</option>
                                     <option value="2">Mujer</option>  
                                     <option value="3">No Consultado</option>
-                                    <option value="gene">Otro</option>
-
                                 </select>
-                                <div class="form-group" *ngIf="IdentidadGenero == 'gene'">
-                                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
-                                </div>
                             </td>
                         </tr>
-
-
-
-
-
-
 
                         <tr>
                             <td>
@@ -198,21 +187,44 @@
 
                         <tr>
                             <td>
-                                <label>Pertenece a pueblo originario</label>
+                                <label>Pueblo Originario</label>
                             </td>
                             <td>
-                                <input type="text">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccione Pueblo Originario</option>
+                                    <option value="1">Mapuches</option>
+                                    <option value="2">Aymara</option>  
+                                    <option value="3">Rapa Nui</option> 
+                                    <option value="4">Diaguitas</option>
+                                    <option value="5">Atacameños</option>
+                                    <option value="6">Quechuas</option>
+                                    <option value="7">Collas</option>
+                                    <option value="8">Changos</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>Profesión/Oficio/Ocupación:</label>
+                            </td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccione Profesión / Oficio / Ocupación</option>
+                                    <option value="1">No Especifica</option>
+                                    <option value="2">Administrador de Empresas</option>  
+                                    <option value="3">Abogado</option> 
+                                    <option value="4">Adminsitrativo</option>
+                                    <option value="5">Agricultor</option>
+                                    <option value="6">Agricultor Maderero</option>
+                                    <option value="7">Agrónomo</option>
+                                    <option value="8">Analista de Sistemas</option>
+                                    <option value="9">Antropóloga</option>
+                                    <option value="1">Empleado Armada</option>
+                                    <option value="1">Armador Artesanal</option>
+                                </select>
                             </td>
                         </tr>
 
-                        <tr>
-                            <td>
-                                <label>Profesión , oficio, ocupación</label>
-                            </td>
-                            <td>
-                                <input type="text">
-                            </td>
-                        </tr>
 
                         <tr>
                             <td>
@@ -228,58 +240,25 @@
                                     <option value="1">Divorciado</option>    
                                     <option value="1">Viudo</option>    
                                     <option value="1">Acuerdo Union Civil</option>    
-
-
                                 </select>
                             </td>
                         </tr>
 
                         <tr>
                             <td>
-                                <label>Estado de Temperancia</label>
+                                <label>Estado<span style="color: red; font-weight: bold;">*</span></label>
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Hálito alcohólico</option>
-                                        <option value="2">Inestabilidad al camniar</option>
-                                        <option value="3">Rostro congestionado</option>
-                                        <option value="4">incoherencia al hablar</option>
-                                        <option value="5">Normal</option>
-                                    </select>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label>Estado</label>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Vivo</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Muerto</label>
-                                </div>
-                                <br>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>
-                                <label>Presenta lesiones</label>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Si</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">No</label>
-                                </div>
+                                    <option selected>Seleccione Estado</option>
+                                    <option value="1">Vivo/a</option>
+                                    <option value="2">Fallecido/a</option>
+                                    <option value="3">Presenta Halito</option>
+                                    <option value="4">Inestabilidad al caminar</option>
+                                    <option value="5">Rostro Congestionado</option>
+                                    <option value="6">Incoherencia al hablar</option>
+                                    <option value="7">Presenta Lesiones</option>
+                                </select>
                             </td>
                         </tr>
 
@@ -301,15 +280,11 @@
                             </td>
 
                             <td>
-                                <select class="form-select" aria-label="Default select example" [(ngModel)]="Domicilio" name="domic">
-                                    <option selected>Seleccionar Tipo de Domicilio</option>
+                                <select class="form-select" aria-label="Default select example" name="domic">
+                                    <option selected>Seleccione Tipo de Domicilio</option>
                                     <option value="1">Particular</option>
                                     <option value="2">Comercial</option>  
-                                    <option value="domi">Otro</option>
                                 </select>
-                                <div class="form-group" *ngIf="Domicilio == 'domi'">
-                                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
-                                </div>
                             </td>
                         </tr>
 
@@ -392,46 +367,59 @@
 
                         </tr>
                         <tr>
+                            <label class="form-label">Comuna:</label>
                             <td>
-                                <label>Comuna <span style="color: red; font-weight: bold;">*</span></label>
-                            </td>
-                            <td>
-                                <input type="text ">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccione Comuna</option>
+                                    <option value="1">ARICA</option>
+                                    <option value="2">CAMARONES</option>
+                                    <option value="3">PUTRE</option>
+                                    <option value="4">GENERAL LAGOS</option>
+                                    <option value="5">IQUIQUE</option>
+                                    <option value="6">HUARA</option>
+                                    <option value="7">CAMINA</option>
+                                    <option value="8">COLCHANE</option>
+                                    <option value="9">PICA</option>
+                                    <option value="10">POZO ALMONTE</option>
+                                    <option value="11">TOCOPILLA</option>
+                                    <option value="12">MARIA ELENA</option>
+                                    <option value="13">CALAMA</option>
+                                    <option value="14">OLLAGUE</option>
+                                    <option value="15">SAN PEDRO DE ATACAMA</option>
+                                    <option value="16">ANTOFAGASTA</option>
+                                </select>       
                             </td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td>
                                 <label>Interseccion</label>
                             </td>
                             <td>
                                 <input type="text ">
                             </td>
-                        </tr>
+                        </tr> -->
+
                         <tr>
                             <td>
                                 <label>Observacion Referencia de la dirección</label>
                             </td>
                             <td>
-                                <input type="text ">
+                                <textarea class="form-control" rows="4" cols="50"></textarea>
                             </td>
                         </tr>
-                        <br>
+                        <hr>
                         <tr>
                             <td>
                                 <label for="disabledSelect" class="form-label">Datos del contacto</label>
                             </td>
 
                             <td>
-                                <select class="form-select" aria-label="Default select example" [(ngModel)]="DatosContacto" name="contacto">
-                                    <option selected>Seleccionar</option>
+                                <select class="form-select" aria-label="Default select example" name="contacto">
+                                    <option selected>Seleccione Datos del contacto</option>
                                     <option value="1">Particular</option>
                                     <option value="2">Comercial</option> 
                                     <option value="3">No tiene</option>
-                                    <option value="contac">Otro</option>
                                 </select>
-                                <div class="form-group" *ngIf="DatosContacto == 'contac'">
-                                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
-                                </div>
                             </td>
                         </tr>
                         <tr>
@@ -460,23 +448,17 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="mb-3" style="padding-right: 50px;">
-                                <label>Redes Sociales</label>
-                            </td>
+                            <label class="form-label">Cuáles Redes Sociales:</label>
                             <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Si</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">No</label>
-                                </div>
-                                <div>
-
-                                </div>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccione Redes Sociales</option>
+                                    <option value="1">Twitter</option>
+                                    <option value="2">Facebook</option>
+                                    <option value="3">Instagram</option>
+                                    <option value="4">Tegram</option>
+                                    <option value="5">VK</option>
+                                </select>       
                             </td>
-
                         </tr>
 
                         <tr>
@@ -515,6 +497,23 @@
                         </tr>
 
                         <tr>
+                            <td class="mb-3" style="padding-right: 50px;">
+                                <label>Resultado de la validacion de identidad</label>
+                            </td>
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+
+                            </td>
+                        </tr>
+
+                        <!-- <tr>
                             <td>
                                 <label>Resultado de la validacion de identidad</label>
                             </td>
@@ -525,7 +524,7 @@
                                     <option value="2">No Corresponde</option>                            
                                 </select>
                             </td>
-                        </tr>
+                        </tr> -->
 
                         <tr>
                             <td>
