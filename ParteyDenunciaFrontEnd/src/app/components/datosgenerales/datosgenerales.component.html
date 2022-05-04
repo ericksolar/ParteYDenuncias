@@ -14,6 +14,7 @@
                     </td>
                     <td colspan="2">
                         <input type="datetime-local">
+                        
                     </td>
                 </tr>
                 <tr>
@@ -21,7 +22,43 @@
                         <p> Delito: <span style="color: red; font-weight: bold;">*</span></p>
                     </td>
                     <td colspan="2">
-                        <textarea class="form-control" rows="1"></textarea>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccione Delito</option>
+                            <option value="1">ABIGEATO</option>
+                            <option value="2">AGRESIÓN CON LESIONES</option>
+                            <option value="3">ALTERACIÓN DEL ORDEN PÚBLICO</option>
+                            <option value="4">AMENAZAS</option>
+                            <option value="5">AROOJAR PIEDRAS U OBJETOS EN LUGARES PÚBLICOS</option>
+                            <option value="6">ATENTADO CONTRA LA AUTORIDAD</option>
+                            <option value="7">BAÑISTA TEMERARIO</option>
+                            <option value="8">COHECHO</option>
+                            <option value="9">DAÑOS</option>
+                            <option value="10">FALSIFICACIÓN DE INSTRUMENTO PÚBLICO</option>
+                            <option value="11">FEMICIDIO</option>
+                            <option value="12">HOMICIDIO</option>
+                            <option value="13">HURTO</option>
+                            <option value="14">MICROTRÁFICO DE DROGAS</option>
+                            <option value="15">OBSTRUCCIÓN A UNA INVESTIGACIÓN</option>
+                            <option value="16">OMITIR REGLAS DE HIGIENE Y SALUBRIDAD EN TIEMPOS DE PANDEMIA</option>
+                            <option value="17">ORDEN JUDICIAL PENDIENTE</option>
+                            <option value="18">PENDENCIA</option>
+                            <option value="19">PONER EN RIESGO LA SALUD PÚBLICA</option>
+                            <option value="20">PORTE ARMA CORTANTE O PUNZANTE</option>
+                            <option value="21">RECEPTACIÓN</option>
+                            <option value="22">RIÑA O PELEA</option>
+                            <option value="23">ROBO CON INTIMIDACIÓN</option>
+                            <option value="24">ROBO CON VIOLENCIA</option>
+                            <option value="25">SECUESTRO</option>
+                            <option value="26">SUPLANTACIÓN DE IDENTIDAD</option>
+                            <option value="27">TENENCIA ILEGAL DE ARMA</option>
+                            <option value="28">TRÁFICO DE ARMAS</option>
+                            <option value="29">TRÁFICO DE DROGAS</option>
+                            <option value="30">TRÁFICO DE INMIGRANTES</option>
+                            <option value="31">TRATA DE PERSONAS</option>
+                            <option value="32">USURPACIÓN DE FUNCIONES</option>
+                            <option value="33">VIOLACIÓN</option>
+                            <option value="34">VIOLENCIA INTRAFAMILIAR VIF</option>
+                        </select>                    
                     </td>
                 </tr>
                 <tr>
@@ -36,8 +73,7 @@
                             <option value="2">Marítimo</option>
                             <option value="3">Fluvial</option>
                             <option value="3">Lacustre</option>
-          
-                          </select>
+                        </select>
                     </td>
                 </tr>
                 <tr>
@@ -45,8 +81,9 @@
                         <p> Tipo de Lugar de Ocurrencia: <span style="color: red; font-weight: bold;">*</span></p>
                     </td>
                     <td colspan="2">
-                        <select class="form-select" aria-label="Default select example" [(ngModel)]="TipoOcurrencia" name="Ocurrencia">
-                            <option selected>Seleccione Institución a Cargo</option>
+                        <select class="form-select" aria-label="Default select example">
+                            <!-- [(ngModel)]="TipoOcurrencia" name="Ocurrencia" -->
+                            <option selected>Seleccione Lugar de Ocurrencia</option>
                             <option value="1">Vía Pública</option>
                             <option value="2">Local Comercial</option>
                             <option value="3">Domicilio Particular</option>
@@ -56,13 +93,11 @@
                             <option value="7">RAMPA</option>
                             <option value="8">TERRENO DE PLAYA</option>
                             <option value="9">ARTEFACTO NAVAL</option>
-                            <option value="10">MAR</option>
-                            <option value="otro">Otro</option>
-          
+                            <option value="10">MAR</option>          
                           </select>
-                        <div class="form-group" *ngIf="TipoOcurrencia == 'otro'">
+                        <!-- <div class="form-group" *ngIf="TipoOcurrencia == 'otro'">
                             <input type="text" class="" id="name" ngModel name="other_college_name" required>
-                        </div>
+                        </div> -->
                     </td>
                 </tr>
                 <tr>
@@ -87,9 +122,6 @@
                             </div>
                         </div>              
                     </td>
-                    <td style="border-left: 0px;"></td>
-                </tr>
-                <tr>
                     <td>  
                         <div class="row">
                             <div class="col-5">
@@ -99,7 +131,9 @@
                                 <input type="text">
                             </div>
                         </div>                        
-                    </td>     
+                    </td>                    
+                </tr>
+                <tr>
                     <td>
                         <div class="row">
                             <div class="col-5">
@@ -109,9 +143,7 @@
                                 <input type="text">
                             </div>
                         </div> 
-                    </td>              
-                </tr>
-                <tr>
+                    </td>          
                     <td>
                         <div class="row">
                             <div class="col-5">
@@ -121,8 +153,9 @@
                                 <input type="text">
                             </div>
                         </div>
-                       
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <div class="row">
                             <div class="col-5">
@@ -133,9 +166,7 @@
                             </div>
                         </div>                       
                     </td>
-                </tr>
-                <tr>
-                    <td >
+                    <td>
                         <div class="row">
                             <div class="col-5">
                                 <label>Sector:</label>
@@ -145,50 +176,18 @@
                             </div>
                         </div>
                     </td>
+                </tr>
+                <tr>
                     <td>
                         <div class="row">
                             <div class="col-5">
-                                <label>Región:<span style="color: red; font-weight: bold;">*</span></label>
+                                <label>Sector:</label>
                             </div>
                             <div class="col-7">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Región</option>
-                                    <option value="1">I Región</option>
-                                    <option value="1">II Región</option>
-                                    <option value="2">III Región</option>
-                                    <option value="3">IV Región</option>
-                                    <option value="3">V Región</option>
-                                    <option value="1">VI Región</option>
-                                    <option value="1">VII Región</option>
-                                    <option value="2">VIII Región</option>
-                                    <option value="3">IX Región</option>
-                                    <option value="3">X Región</option>
-                                    <option value="1">XI Región</option>
-                                    <option value="1">XII Región</option>
-                                    <option value="2">XIII Región</option>
-                                    <option value="3">XIV Región</option>
-                                    <option value="3">XV Región</option>
-                                    <option value="3">XVI Región</option>
-        
-                                  </select>
+                                <input type="text">
                             </div>
                         </div>
                     </td>
-                </tr>
-                <tr>
-                    <td style="border-right: 0px;">    
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Comuna:<span style="color: red; font-weight: bold;">*</span></label> 
-                            </div>
-                            <div class="col-7">
-                                <input type="text">       
-                            </div>
-                        </div>                                   
-                    </td> 
-                    <td style="border-left: 0px;"></td>                   
-                </tr>
-                <tr>
                     <td style="border-right: 0px;">  
                         <div class="row">
                             <div class="col-5">
@@ -199,11 +198,71 @@
                             </div>
                         </div>                                            
                     </td>       
-                    <td style="border-left: 0px;"></td>             
+                    
                 </tr>
+
                 <tr>
+                    <td>
+                        <div class="row">
+                            <div class="col-5">
+                                <label>Región:<span style="color: red; font-weight: bold;">*</span></label>
+                            </div>
+                            <div class="col-7">
+                                <select class="" aria-label="Default select example">
+                                    <option selected>Seleccione Región</option>
+                                    <option value="1">I Región</option>
+                                    <option value="2">II Región</option>
+                                    <option value="3">III Región</option>
+                                    <option value="4">IV Región</option>
+                                    <option value="5">V Región</option>
+                                    <option value="6">VI Región</option>
+                                    <option value="7">VII Región</option>
+                                    <option value="8">VIII Región</option>
+                                    <option value="9">IX Región</option>
+                                    <option value="10">X Región</option>
+                                    <option value="11">XI Región</option>
+                                    <option value="12">XII Región</option>
+                                    <option value="13">XIII Región</option>
+                                    <option value="14">XIV Región</option>
+                                    <option value="15">XV Región</option>
+                                    <option value="16">XVI Región</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="border-right: 0px;">    
+                        <div class="row">
+                            <div class="col-5">
+                                <label>Comuna:<span style="color: red; font-weight: bold;">*</span></label> 
+                            </div>
+                            <div class="col-7">
+                                <select class="" aria-label="Default select example">
+                                    <option selected>Seleccione Comuna</option>
+                                    <option value="1">ARICA</option>
+                                    <option value="2">CAMARONES</option>
+                                    <option value="3">PUTRE</option>
+                                    <option value="4">GENERAL LAGOS</option>
+                                    <option value="5">IQUIQUE</option>
+                                    <option value="6">HUARA</option>
+                                    <option value="7">CAMINA</option>
+                                    <option value="8">COLCHANE</option>
+                                    <option value="9">PICA</option>
+                                    <option value="10">POZO ALMONTE</option>
+                                    <option value="11">TOCOPILLA</option>
+                                    <option value="12">MARIA ELENA</option>
+                                    <option value="13">CALAMA</option>
+                                    <option value="14">OLLAGUE</option>
+                                    <option value="15">SAN PEDRO DE ATACAMA</option>
+                                    <option value="16">ANTOFAGASTA</option>
+                                </select>       
+                            </div>
+                        </div>                                   
+                    </td> 
+                    <td style="border-left: 0px;"></td>        
+                </tr>
+                <tr style="border-right: 0px;">
                     <td colspan="2">    
-                        <label>Referencia de la dirección:</label> <input type="text">                   
+                        <label>Referencia de la dirección: </label> <input type="text">                   
                     </td>                    
                 </tr>
                 <tr>
