@@ -17,7 +17,7 @@
                     <div class="col-2 ">
                         <p>Medio de Transporte de <b>llegada</b> del imputado</p>
                     </div>
-                    <div class="col-5 border">
+                    <div class="col-2 border">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">Pie</label>
@@ -35,7 +35,7 @@
                             <label class="form-check-label" for="flexCheckChecked">Embarcación</label>
                         </div>
                     </div>
-                    <div class="col-5 border">
+                    <div class="col-7">
                         <P>Detalle medio de Transporte de llegada : </P>
                         <tr>
                             <td style="padding-right: 10px;">
@@ -87,12 +87,177 @@
                         </tr>
                     </div>
                 </div>
-                <!-- ///////////////////      2da FILA    /////////////////// -->
+
                 <div class="row border">
                     <div class="col-2 border">
-                        <p>Medio de Transporte de <b>huida</b> del imputado</p>
+                        <p>Vehículo asociado al medio de transporte utilizado por los imputados (si existe)</p>
                     </div>
                     <div class="col-5 border">
+                        <!-- <div>
+                            <td style="padding-right: 20px;">
+                                <label style="padding-right: 30px;">¿Encargado por robo? </label><br>
+                            </td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example">
+                                <option selected>Seleccione </option>
+                                <option value="1">Si</option>
+                                <option value="1">No</option>
+                            </select>
+                            </td>
+                        </div> -->
+                        <tr>
+                            <td>
+                                <label>¿Encargado por robo?</label>
+                            </td>
+                            <td style="padding-left: 50px;">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- <div>
+                            <td style="padding-right: 20px;">
+                                <label>¿Porta las Placas Patentes? </label><br>
+                            </td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example">
+                                <option selected>Seleccione </option>
+                                <option value="1">Si</option>
+                                <option value="1">No</option>
+                            </select>
+                            </td>
+                        </div> -->
+                        <tr>
+                            <td>
+                                <label>Porta las Placas Patentes?</label>
+                            </td>
+                            <td style="padding-left: 50px;">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-right: 10px;">
+                                <label>Información de Peajes:</label>
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td>
+                                <label>Datos de Zarpé:</label>
+                            </td>
+                            <td style="padding-left: 50px;">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                            </td>
+                        </tr> -->
+                        <!-- <tr>
+                            <td>
+                                <label>Datos de Posat:</label>
+                            </td>
+                            <td style="padding-left: 50px;">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                            </td>
+                        </tr> -->
+                    </div>
+                    <div class="col-5 border">
+                        <tr>
+                            <td style="padding-right: 10px;">
+                                <label>Nro. de Encargo:</label>
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-right: 10px;">
+                                <label>Información de Autopistas:</label>
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>¿Fue incautado?</label>
+                            </td>
+                            <td style="padding-left: 50px;">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- <tr>
+                            <td style="padding-right: 10px;">
+                                <label>Nro de Zarpe:</label>
+                            </td>
+                            <td>
+                                <input type="number">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-right: 10px;">
+                                <label>Lugar de Zarpe:</label>
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-right: 10px;">
+                                <label>Datos del Armador:</label>
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-right: 10px;">
+                                <label>Posat (posición actual):</label>
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr> -->
+                    </div>
+                </div>
+                <!-- ///////////////////      2da FILA    /////////////////// -->
+                <div class="row">
+                    <div class="col-2">
+                        <p>Medio de Transporte de <b>huida</b> del imputado</p>
+                    </div>
+                    <div class="col-2 border">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
                             <label class="form-check-label" for="flexCheckChecked">Pie</label>
@@ -110,7 +275,7 @@
                             <label class="form-check-label" for="flexCheckChecked">Embarcación</label>
                         </div>
                     </div>
-                    <div class="col-5 border">
+                    <div class="col-7">
                         <P>Detalle medio de Transporte de huida: </P>
                         <tr>
                             <td style="padding-right: 10px;">
@@ -230,7 +395,7 @@
                                 <input type="text">
                             </td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td>
                                 <label>Datos de Zarpé:</label>
                             </td>
@@ -244,8 +409,8 @@
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                             </td>
-                        </tr>
-                        <tr>
+                        </tr> -->
+                        <!-- <tr>
                             <td>
                                 <label>Datos de Posat:</label>
                             </td>
@@ -259,7 +424,7 @@
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                             </td>
-                        </tr>
+                        </tr> -->
                     </div>
                     <div class="col-5 border">
                         <tr>
@@ -293,7 +458,7 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td style="padding-right: 10px;">
                                 <label>Nro de Zarpe:</label>
                             </td>
@@ -324,7 +489,7 @@
                             <td>
                                 <input type="text">
                             </td>
-                        </tr>
+                        </tr> -->
                     </div>
                 </div>
                 <!-- ///////////////////      3da FILA    /////////////////// -->
