@@ -58,7 +58,7 @@
                                     <label>Tipo de documento de identificación <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <select class="form-select" [(ngModel)]="selectedTipoDocumento" name="tipoDocumento" aria-label="Default select example">
+                                    <select class="form-select" name="tipoDocumento" aria-label="Default select example">
                                         <option selected> Seleccionar</option>
                                         <option value="1">RUT</option>
                                         <option value="2">Pasaporte</option>
@@ -76,16 +76,10 @@
                                     <label>N° de documento de identificación: <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <input type="text">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td style="padding-right: 50px;">
-                                    <label>Otro documento de identidad</label>
+                                    <input type="text" class="form-control" aria-describedby="button-addon2">
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <button class="btn btn-outline-primary mb-1" type="button" id="button-addon2">Buscar</button>                        
                                 </td>
                             </tr>
 
@@ -109,31 +103,56 @@
 
                             <tr>
                                 <td>
-                                    <label>Idioma o dialecto</label>
+                                    <label>Idioma o dialecto:</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Ingles</option>
+                                        <option value="2">Frances</option>
+                                        <option value="3">Aleman</option>
+                                        <option value="4">Español</option>
+                                    </select>                            
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>
-                                    <label>Nacionalidad <span style="color: red; font-weight: bold;">*</span></label>
+                                    <label>Nacionalidad:<span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">UCRANIA</option>
+                                        <OPtion value="2">UGANDA</OPtion>
+                                        <option value="3">3NGLATERRA (GRAN BRETANA)</option>
+                                        <option value="4">ISLAS ULTRAMARINAS DE EE.UU.</option>
+                                        <option value="5">RUSSIA</option>
+                                        <option value="6">ESTADOS UNIDOS</option>
+                                        <option value="7">VOLTA SUPERIOR</option>
+                                        <option value="8">URUGUAY</option>
+                                        <option value="9">UZBEKISTAN</option>
+                                        <option value="10">VANUATU</option>
+                                        <option value="11">SAINT VINCENT AND THE GRENADINES</option>
+                                    </select>                                          
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>
-                                    <label>Escolaridad</label>
+                                    <label>Escolaridad:</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Sin Estudios</option>
+                                        <option value="2">Educacion Basica</option>
+                                        <option value="3">Educacion Secundaria</option>
+                                        <option value="4">Educacion Secundaria Incompleta</option>
+                                        <option value="5">Educacion Universitaria</option>
+                                    </select>
+                                                          
                                 </td>
                             </tr>
-
+    
                             <tr>
                                 <td>
                                     <label>Estado Migratorio <span style="color: red; font-weight: bold;">*</span></label>
@@ -147,11 +166,10 @@
                                             <option value="4">Residente definitivo</option>
                                             <option value="5">Ilegal</option>
                                         </select>
+    
                                 </td>
                             </tr>
-
-
-
+    
                             <tr>
                                 <td>
                                     <label>Sexo Registral (Registro Civil)</label>
@@ -161,31 +179,23 @@
                                             <option selected>Seleccionar</option>
                                             <option value="1">Masculino</option>
                                             <option value="2">Femenino</option>
-                        
                                         </select>
-                                    <br>
                                 </td>
                             </tr>
-
-
-
+    
+    
                             <tr>
                                 <td>
                                     <label for="disabledSelect" class="form-label">Identidad de género</label>
                                 </td>
-
+    
                                 <td>
-                                    <select class="form-select" aria-label="Default select example" [(ngModel)]="IdentidadGenero" name="genero">
+                                    <select class="form-select" aria-label="Default select example" name="genero">
                                         <option selected>Seleccionar</option>
                                         <option value="1">Hombre</option>
                                         <option value="2">Mujer</option>  
                                         <option value="3">No Consultado</option>
-                                        <option value="gene">Otro</option>
-
                                     </select>
-                                    <div class="form-group" *ngIf="IdentidadGenero == 'gene'">
-                                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
-                                    </div>
                                 </td>
                             </tr>
 
@@ -200,60 +210,79 @@
 
                             <tr>
                                 <td>
-                                    <label>Pertenece a pueblo originario</label>
+                                    <label>Pertenece a Pueblo Originario</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Mapuches</option>
+                                        <option value="2">Aymara</option>  
+                                        <option value="3">Rapa Nui</option> 
+                                        <option value="4">Diaguitas</option>
+                                        <option value="5">Atacameños</option>
+                                        <option value="6">Quechuas</option>
+                                        <option value="7">Collas</option>
+                                        <option value="8">Changos</option>
+                                        <option value="9">No Pertenece</option>
+                                    </select>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>
-                                    <label>Profesion , oficio, preocupacion</label>
+                                    <label>Profesión/Oficio/Ocupación:</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">No Especifica</option>
+                                        <option value="2">Administrador de Empresas</option>  
+                                        <option value="3">Abogado</option> 
+                                        <option value="4">Adminsitrativo</option>
+                                        <option value="5">Agricultor</option>
+                                        <option value="6">Agricultor Maderero</option>
+                                        <option value="7">Agrónomo</option>
+                                        <option value="8">Analista de Sistemas</option>
+                                        <option value="9">Antropóloga</option>
+                                        <option value="1">Empleado Armada</option>
+                                        <option value="1">Armador Artesanal</option>
+                                    </select>
                                 </td>
                             </tr>
-
+    
+    
                             <tr>
                                 <td>
                                     <label for="disabledSelect" class="form-label">Estado Civil</label>
                                 </td>
-
+    
                                 <td>
                                     <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccione Estado Civil</option>
+                                        <option selected>Seleccionar</option>
                                         <option value="1">Soltero</option>
                                         <option value="1">Casado</option>    
                                         <option value="1">Separado de hecho</option>
                                         <option value="1">Divorciado</option>    
                                         <option value="1">Viudo</option>    
                                         <option value="1">Acuerdo Union Civil</option>    
-
-
                                     </select>
                                 </td>
                             </tr>
-
+    
                             <tr>
                                 <td>
-                                    <label>Presenta Lesiones</label>
+                                    <label>Estado<span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Si
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            No
-                                        </label>
-                                    </div>
-                                    <br>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Vivo/a</option>
+                                        <option value="2">Fallecido/a</option>
+                                        <option value="3">Presenta Halito</option>
+                                        <option value="4">Inestabilidad al caminar</option>
+                                        <option value="5">Rostro Congestionado</option>
+                                        <option value="6">Incoherencia al hablar</option>
+                                        <option value="7">Presenta Lesiones</option>
+                                    </select>
                                 </td>
                             </tr>
 

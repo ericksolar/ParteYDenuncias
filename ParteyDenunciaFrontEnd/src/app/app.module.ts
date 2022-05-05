@@ -28,7 +28,7 @@ import { TestigoComponent } from './components/testigo/testigo.component';
 import { RelatoComponent } from './components/relato/relato.component';
 import { FiscalComponent } from './components/fiscal/fiscal.component';
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -52,6 +52,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     FormsModule,
     APPROUTING
   ],
