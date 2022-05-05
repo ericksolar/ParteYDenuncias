@@ -19,7 +19,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected default>Seleccione Tipo de persona</option>
+                                    <option selected default>Seleccionar</option>
                                     <option value="1">Natural</option>
                                     <option value="2">Juridica</option>
                                 </select>
@@ -51,7 +51,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected default>Seleccione Tipo de Documento</option>
+                                    <option selected default>Seleccionar</option>
                                     <option value="1">RUN</option>
                                     <option value="2">Pasaporte</option>
                                     <option value="3">DNI</option>
@@ -61,10 +61,13 @@
 
                         <tr>
                             <td>
-                                <label>N° de documentos de identificación: <span style="color: red; font-weight: bold;">*</span></label>
+                                <label class="">N° de documentos de identificación: <span style="color: red; font-weight: bold;">*</span></label>
                             </td>
                             <td>
-                                <input type="text">
+                                <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-primary mb-1" type="button" id="button-addon2">Buscar</button>                        
                             </td>
                         </tr>
 
@@ -101,7 +104,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Idioma</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Ingles</option>
                                     <option value="2">Frances</option>
                                     <option value="3">Aleman</option>
@@ -115,7 +118,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Nacionalidad</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">UCRANIA</option>
                                     <OPtion value="2">UGANDA</OPtion>
                                     <option value="3">3NGLATERRA (GRAN BRETANA)</option>
@@ -136,7 +139,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Escolaridad</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Sin Estudios</option>
                                     <option value="2">Educacion Basica</option>
                                     <option value="3">Educacion Secundaria</option>
@@ -153,7 +156,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccione Estado Migratorio</option>
+                                        <option selected>Seleccionar</option>
                                         <option value="1">Permanencia transitoria</option>
                                         <option value="2">Residente temporal</option>
                                         <option value="3">Residente oficial</option>
@@ -169,7 +172,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccione Sexo Registral</option>
+                                        <option selected>Seleccionar</option>
                                         <option value="1">Masculino</option>
                                         <option value="2">Femenino</option>
                                     </select>
@@ -181,7 +184,7 @@
 
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Identidad de Género</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Hombre</option>
                                     <option value="2">Mujer</option>  
                                     <option value="3">No Consultado</option>    
@@ -200,11 +203,11 @@
 
                         <tr>
                             <td>
-                                <label>Pueblo Originario</label>
+                                <label>Pertenece a Pueblo originario</label>
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Pueblo Originario</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Mapuches</option>
                                     <option value="2">Aymara</option>  
                                     <option value="3">Rapa Nui</option> 
@@ -212,17 +215,18 @@
                                     <option value="5">Atacameños</option>
                                     <option value="6">Quechuas</option>
                                     <option value="7">Collas</option>
-                                    <option value="8">Changos</option>
+                                    <option value="8">No Pertenece</option>
                                 </select>
                             </td>
                         </tr>
+                        
                         <tr>
                             <td>
                                 <label>Profesión / Oficio / Ocupación:</label>
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Profesión / Oficio / Ocupación</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">No Especifica</option>
                                     <option value="2">Administrador de Empresas</option>  
                                     <option value="3">Abogado</option> 
@@ -245,7 +249,7 @@
 
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Estado Civil</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Soltero</option>
                                     <option value="1">Casado</option>    
                                     <option value="1">Separado de hecho</option>
@@ -263,7 +267,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Estado</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Vivo/a</option>
                                     <option value="2">Fallecido/a</option>
                                     <option value="3">Presenta Halito</option>
@@ -328,7 +332,7 @@
 
                             <td>
                                 <select class="form-select" aria-label="Default select example" name="domic">
-                                    <option selected>Seleccionar Tipo de Domicilio</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Particular</option>
                                     <option value="2">Comercial</option>  
                                 </select>
@@ -390,7 +394,7 @@
                             </td>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Región</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">I Región</option>
                                     <option value="1">II Región</option>
                                     <option value="2">III Región</option>
@@ -416,7 +420,7 @@
                             <label class="form-label">Comuna:</label>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Comuna</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">ARICA</option>
                                     <option value="2">CAMARONES</option>
                                     <option value="3">PUTRE</option>
@@ -455,12 +459,12 @@
                         <hr>
                         <tr>
                             <td>
-                                <label for="disabledSelect" class="form-label">Datos del contacto</label>
+                                <label for="disabledSelect" class="form-label">Datos de contacto</label>
                             </td>
 
                             <td colspan="2">
                                 <select class="form-select" aria-label="Default select example" name="contacto">
-                                    <option selected>Seleccione Datos del contacto</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Particular</option>
                                     <option value="2">Comercial</option> 
                                     <option value="3">No tiene</option>
@@ -515,7 +519,7 @@
                             <label class="form-label">Cuáles Redes Sociales:</label>
                             <td>
                                 <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccione Redes Sociales</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Twitter</option>
                                     <option value="2">Facebook</option>
                                     <option value="3">Instagram</option>
@@ -542,7 +546,7 @@
 
                             <td>
                                 <select class="form-select" aria-label="Default select example" name="vive">
-                                    <option selected>Seleccione Con quién vive</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Papá</option>
                                     <option value="2">Mamá</option>
                                     <option value="3">Tíos</option>
@@ -560,7 +564,7 @@
 
                             <td>
                                 <select class="form-select" aria-label="Default select example" name="vive">
-                                    <option selected>Seleccione Tipo de Residencia</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Institucional</option>
                                     <option value="2">Particular</option>
                                 </select>
@@ -623,7 +627,7 @@
                             </td>
                             <td colspan="2">
                                 <select class="form-select" aria-label="Default select example" name="denunciado">
-                                    <option selected>Seleccione relación</option>
+                                    <option selected>Seleccionar</option>
                                     <option value="1">Papá</option>
                                     <option value="2">Mamá</option>
                                     <option value="3">Tíos</option>
