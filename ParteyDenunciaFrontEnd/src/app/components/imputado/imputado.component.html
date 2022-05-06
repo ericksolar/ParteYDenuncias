@@ -77,7 +77,7 @@
                                 <label>Fecha de nacimiento</label>
                             </td>
                             <td>
-                                <input class="" type="date">
+                                <input class="form-control" type="date">
                             </td>
                         </tr>
 
@@ -563,23 +563,25 @@
                             </td>
                         </tr>
 
-
                         <tr>
-                            <td class="mb-3" style="padding-right: 50px;">
-                                <label>Perfil del imputado (apreciacion del funcionario aprehensor) <span style="color: red; font-weight: bold;">*</span></label>
+                            <td>
+                                <label>Perfil del imputado (apreciacion del funcionario aprehensor)<span style="color: red; font-weight: bold;">*</span></label>
                             </td>
                             <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOption3" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Violento</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOption3" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">Pasivo</label>
-                                </div>
-
+                                <select class="form-select " aria-label="Default select example ">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Violento</option>
+                                    <option value="2">Pasivo</option>
+                                    <option value="3">Con orden de detencion</option>
+                                    <option value="4">Sin Orden de detencion</option>
+                                    <option value="5">Con medidas cautelares vigentes</option>
+                                    <option value="6">Sin medidas cautelares vigentes</option>
+                                </select>
                             </td>
                         </tr>
+
+
+
 
                         <tr>
                             <td class="mb-3" style="padding-right: 50px;">

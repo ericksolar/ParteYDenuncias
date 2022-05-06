@@ -8,7 +8,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class DenuncianteComponent implements OnInit {
 
-
+  textBoxDisabledRedes = true;
+  textBoxDisabledDenunciante = true;
 
   ngOnInit(): void {
   }
@@ -36,6 +37,15 @@ export class DenuncianteComponent implements OnInit {
   campoValido(campo: string){
     return this.miFormulario.controls[campo].errors 
             && this.miFormulario.controls[campo].touched;
+  }
+
+  habilitarCampoRedes(){
+    this.textBoxDisabledRedes = !this.textBoxDisabledRedes;
+  }
+
+  habilitarCampoDenunciante()
+  {
+    this.textBoxDisabledDenunciante = !this.textBoxDisabledDenunciante;
   }
 
   // checkRdesSociales(){

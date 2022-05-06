@@ -350,14 +350,17 @@
                                     <input class="form-check-input"  
                                             type="radio" 
                                             name="inlineRadioOptions" 
-                                            value="option1">
+                                            value="option1"
+                                            (click)="habilitarCampoRedes()">
                                     <label class="form-check-label"  for="inlineRadio1">Si</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" 
                                             type="radio" 
                                             name="inlineRadioOptions" 
-                                            value="option2">
+                                            value="option2"
+                                            (click)="habilitarCampoRedes()"
+                                            checked>
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                             </td>
@@ -366,7 +369,8 @@
                             <tr>
                                 <label class="form-label">Cuáles Redes Sociales:</label>
                                 <td>
-                                    <select class="form-select">
+                                    <select class="form-select" 
+                                            [disabled]="textBoxDisabledRedes">
                                         <option selected>Seleccionar</option>
                                         <option value="1">Twitter</option>
                                         <option value="2">Facebook</option>
@@ -383,7 +387,7 @@
                                 Agregar Identificación/Login
                             </td>
                             <td>
-                                <input type="text" class="form-control" formControlName="login">
+                                <input type="text" class="form-control" [disabled]="textBoxDisabledRedes">
                             </td>
                         </tr>
 
@@ -669,17 +673,23 @@
                             </td>
                             <td>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <input  class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadioOptions1" 
+                                            id="inlineRadio1" 
+                                            value="option1"
+                                            (click)="habilitarCampoDenunciante()" checked>
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <input  class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"
+                                            (click)="habilitarCampoDenunciante()">
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                                 <div class="form-check">
                                     <td style="padding-right: 50px;">
                                         <label>Si la respuesta es NO, indicar los datos del adulto protector/referente:</label>
-                                        <textarea class="form-control" rows="4" cols="50"></textarea>
+                                        <textarea class="form-control" rows="4" cols="50" [disabled]="textBoxDisabledDenunciante"></textarea>
                                     </td>
                                 </div>
                             </td>
