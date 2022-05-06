@@ -13,7 +13,7 @@
                         <p> Fecha y Hora: <span style="color: red; font-weight: bold;">*</span> </p>
                     </td>
                     <td colspan="2">
-                        <input type="datetime-local">
+                        <input type="datetime-local" class="form-control">
                         
                     </td>
                 </tr>
@@ -118,7 +118,7 @@
                                 <label>Calle:<span style="color: red; font-weight: bold;">*</span></label>
                             </div>
                             <div class="col-7">
-                                <input type="text">  
+                                <input type="text" class="form-control">  
                             </div>
                         </div>              
                     </td>
@@ -128,7 +128,7 @@
                                 <label>Número:</label> 
                             </div>
                             <div class="col-7">
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
                         </div>                        
                     </td>                    
@@ -140,7 +140,7 @@
                                 <label>Departamento/Oficina:</label>
                             </div>
                             <div class="col-7">
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
                         </div> 
                     </td>          
@@ -150,7 +150,7 @@
                                 <label>Block:</label>
                             </div>
                             <div class="col-7">
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                     </td>
@@ -159,10 +159,10 @@
                     <td>
                         <div class="row">
                             <div class="col-5">
-                                <label>Población o Villa:</label>
+                                <label class="form-label">Población o Villa:</label>
                             </div>
                             <div class="col-7">
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
                         </div>                       
                     </td>
@@ -172,7 +172,7 @@
                                 <label>Sector:</label>
                             </div>
                             <div class="col-7">
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                     </td>
@@ -184,7 +184,7 @@
                                 <label>Sector:</label>
                             </div>
                             <div class="col-7">
-                                <input type="text">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
                     </td>
@@ -194,7 +194,7 @@
                                 <label>Lugar Específico:</label>
                             </div>
                             <div class="col-7">
-                                <input type="text"> 
+                                <input type="text" class="form-control"> 
                             </div>
                         </div>                                            
                     </td>       
@@ -208,7 +208,7 @@
                                 <label>Región:<span style="color: red; font-weight: bold;">*</span></label>
                             </div>
                             <div class="col-7">
-                                <select class="" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example">
                                     <option selected>Seleccionar</option>
                                     <option value="1">I Región</option>
                                     <option value="2">II Región</option>
@@ -236,7 +236,7 @@
                                 <label>Comuna:<span style="color: red; font-weight: bold;">*</span></label> 
                             </div>
                             <div class="col-7">
-                                <select class="" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example">
                                     <option selected>Seleccionar</option>
                                     <option value="1">ARICA</option>
                                     <option value="2">CAMARONES</option>
@@ -262,15 +262,15 @@
                 </tr>
                 <tr style="border-right: 0px;">
                     <td colspan="2">    
-                        <label>Referencia de la dirección: </label> <input type="text">                   
+                        <label>Referencia de la dirección: </label><textarea class="form-control" rows="2"></textarea>
                     </td>                    
                 </tr>
                 <tr>
                     <td>   
-                        <label>Latitud:<span style="color: red; font-weight: bold;">*</span></label>  <input type="number">                   
+                        <label>Latitud:<span style="color: red; font-weight: bold;">*</span></label>  <input class="form-control" type="number">                   
                     </td>                  
                     <td>   
-                        <label>Longitud:<span style="color: red; font-weight: bold;">*</span></label>  <input type="number">         
+                        <label>Longitud:<span style="color: red; font-weight: bold;">*</span></label>  <input class="form-control" type="number">         
                     </td>                    
                 </tr>
             </table>

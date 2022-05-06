@@ -38,7 +38,7 @@
                                     <label>Nombre: <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
 
@@ -47,7 +47,7 @@
                                     <label>Nombre Social (identidad de género)</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
 
@@ -63,11 +63,8 @@
                                         <option value="1">RUT</option>
                                         <option value="2">Pasaporte</option>
                                         <option value="3">DNI</option>
-                                        <option value="otro">Otro</option>
                                     </select>
-                                    <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
-                                        <input type="text" class="" id="name" ngModel name="tipoDocumento" required>
-                                    </div>
+
                                 </td>
                             </tr>
 
@@ -97,7 +94,7 @@
                                     <label>Ciudad de nacimiento</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
 
@@ -204,7 +201,7 @@
                                     <label>Alias</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
 
@@ -321,7 +318,7 @@
                                     <label>Calle <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -329,7 +326,7 @@
                                     <label>Numero <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
 
@@ -338,7 +335,7 @@
                                     <label>Departamento/oficina</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -346,7 +343,7 @@
                                     <label>Block</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -354,7 +351,7 @@
                                     <label>Poblacion o Villa</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -362,7 +359,7 @@
                                     <label>Sector</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -399,7 +396,7 @@
                                     <label>Comuna <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -407,7 +404,7 @@
                                     <label>Interseccion</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -415,26 +412,23 @@
                                     <label>Observacion Referencia de la direccion</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
-                            <br>
+                            <hr>
                             <tr>
                                 <td>
                                     <label for="disabledSelect" class="form-label">Datos del contacto <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
 
                                 <td>
-                                    <select class="form-select" aria-label="Default select example" [(ngModel)]="DatosContacto" name="contacto">
+                                    <select class="form-select" aria-label="Default select example"  name="contacto">
                                         <option selected>Seleccionar</option>
                                         <option value="1">Particular</option>
                                         <option value="2">Comercial</option> 
                                         <option value="3">No tiene</option>
-                                        <option value="contac">Otro</option>
                                     </select>
-                                    <div class="form-group" *ngIf="DatosContacto == 'contac'">
-                                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
-                                    </div>
+                                
                                 </td>
                             </tr>
 
@@ -443,7 +437,7 @@
                                     <label>Telefono fijo</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
 
@@ -452,7 +446,7 @@
                                     <label>Telefono Movil <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -460,7 +454,7 @@
                                     <label>Correo electronico</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -488,7 +482,7 @@
                                     <label>Cuáles Redes Sociales </label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -496,7 +490,7 @@
                                     <label>Agregar Identificación/Login</label>
                                 </td>
                                 <td>
-                                    <input type="text">
+                                    <input type="text" class="form-control">
                                 </td>
                             </tr>
                             <tr>
@@ -516,7 +510,7 @@
                                 </td>
 
                                 <td>
-                                    <select class="form-select" aria-label="Default select example" [(ngModel)]="RelacionDenunciado" name="denunciado">
+                                    <select class="form-select" aria-label="Default select example" name="denunciado">
                                         <option selected>Seleccionar</option>
                                         <option value="1">Padre</option>
                                         <option value="2">Madre</option>
@@ -532,11 +526,7 @@
                                         <option value="12">Vecino</option>
                                         <option value="13">Amigo</option>
                                         <option value="14">Amiga</option>
-                                        <option value="denun">Otro</option>
                                     </select>
-                                    <div class="form-group" *ngIf="RelacionDenunciado == 'denun'">
-                                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
-                                    </div>
                                 </td>
                             </tr>
 
