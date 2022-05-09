@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-victima',
@@ -7,16 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VictimaComponent implements OnInit {
 
-  constructor() { }
+  textBoxDisabledRedes = true;
+  textBoxDisabledDenunciado = true;
+
+  miFormulario: FormGroup = this.fb.group({
+    nombre: [  , [ Validators.required ] ],
+    redesSociales:[  , [ ] ],
+
+  })
+
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
   }
 
-  selectedTipoDocumento: string ='';
-  IdentidadGenero: string ='';
-  Domicilio: string ='';
-  DatosContacto: string ='';
-  Convive: string ='';
-  RelacionDenunciado: string ='';
-  Residencia: string ='';
+  habilitarCampoRedes(){
+    this.textBoxDisabledRedes = !this.textBoxDisabledRedes;
+  }
+
+  habilitarCampoDenunciado()
+  {
+    this.textBoxDisabledDenunciado = !this.textBoxDisabledDenunciado;
+  }
+
+
 }

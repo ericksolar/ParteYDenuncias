@@ -4,7 +4,7 @@
     <div class="col border">
         
         <!--area derecha-->
-        <form>
+        <form autocomplete="off" [formGroup]="miFormulario">
             <!--area derecha-->
             <table style="width: 100%;">
                 <tr>
@@ -22,11 +22,19 @@
                                 </td>
                                 <td>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <input class="form-check-input" 
+                                                type="radio" 
+                                                name="inlineRadioOptions" 
+                                                id="inlineRadio1" 
+                                                value="option1">
                                         <label class="form-check-label" for="inlineRadio1">Si</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <input class="form-check-input" 
+                                                type="radio" 
+                                                name="inlineRadioOptions" 
+                                                id="inlineRadio2" 
+                                                value="option2">
                                         <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>                                
                                 </td>
@@ -38,7 +46,9 @@
                                     <label>Nombre: <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control">
+                                    <input type="text" 
+                                            class="form-control"
+                                            formControlName="nombre">
                                 </td>
                             </tr>
 
@@ -47,7 +57,9 @@
                                     <label>Nombre Social (identidad de género)</label>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control">
+                                    <input type="text" 
+                                            class="form-control"
+                                            formControlName="nombreSocial">
                                 </td>
                             </tr>
 
@@ -58,7 +70,9 @@
                                     <label>Tipo de documento de identificación <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <select class="form-select" name="tipoDocumento" aria-label="Default select example">
+                                    <select class="form-select"     
+                                            name="tipoDocumento"
+                                            formControlName="tipoDocumentoIdentificacion">
                                         <option selected> Seleccionar</option>
                                         <option value="1">RUT</option>
                                         <option value="2">Pasaporte</option>
@@ -73,10 +87,17 @@
                                     <label>N° de documento de identificación: <span style="color: red; font-weight: bold;">*</span></label>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control" aria-describedby="button-addon2">
+                                    <input type="text" 
+                                            class="form-control" 
+                                            aria-describedby="button-addon2"
+                                            formControlName="numeroDocumentoIdentificacion">
                                 </td>
                                 <td>
-                                    <button class="btn btn-outline-primary mb-1" type="button" id="button-addon2">Buscar</button>                        
+                                    <button class="btn btn-outline-primary mb-1" 
+                                            type="button" 
+                                            id="button-addon2"
+                                            formControlName=""
+                                            >Buscar</button>                        
                                 </td>
                             </tr>
 
@@ -85,7 +106,9 @@
                                     <label>Fecha de nacimiento</label>
                                 </td>
                                 <td>
-                                    <input class="" type="date">
+                                    <input type="date"  
+                                            class="form-control"
+                                            formControlName="">
                                 </td>
                             </tr>
 
@@ -94,7 +117,9 @@
                                     <label>Ciudad de nacimiento</label>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control">
+                                    <input type="text" 
+                                            class="form-control"
+                                            formControlName="ciudadNacimiento">
                                 </td>
                             </tr>
 
@@ -172,7 +197,7 @@
                                     <label>Sexo Registral (Registro Civil)</label>
                                 </td>
                                 <td>
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select class="form-select" >
                                             <option selected>Seleccionar</option>
                                             <option value="1">Masculino</option>
                                             <option value="2">Femenino</option>
@@ -187,7 +212,7 @@
                                 </td>
     
                                 <td>
-                                    <select class="form-select" aria-label="Default select example" name="genero">
+                                    <select class="form-select" name="genero">
                                         <option selected>Seleccionar</option>
                                         <option value="1">Hombre</option>
                                         <option value="2">Mujer</option>  
@@ -301,15 +326,12 @@
                                 </td>
 
                                 <td>
-                                    <select class="form-select" aria-label="Default select example" [(ngModel)]="Domicilio" name="domic">
-                                        <option selected>Seleccionar Tipo de Direccion</option>
+                                    <select class="form-select">
+                                        <option selected>Seleccionar</option>
                                         <option value="1">Particular</option>
                                         <option value="2">Comercial</option>  
-                                        <option value="domi">Otro</option>
                                     </select>
-                                    <div class="form-group" *ngIf="Domicilio == 'domi'">
-                                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
-                                    </div>
+
                                 </td>
                             </tr>
 
@@ -369,7 +391,7 @@
                                 </td>
                                 <td>
                                     <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccione Región</option>
+                                        <option selected>Seleccionar</option>
                                         <option value="1">I Región</option>
                                         <option value="1">II Región</option>
                                         <option value="2">III Región</option>
@@ -399,14 +421,7 @@
                                     <input type="text" class="form-control">
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <label>Interseccion</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
+
                             <tr>
                                 <td>
                                     <label>Observacion Referencia de la direccion</label>
@@ -458,23 +473,29 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="mb-3" style="padding-right: 50px;">
-                                    <label>Redes Sociales</label>
-                                </td>
                                 <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Si
-                                        </label>
+                                    <label>Redes Sociales:</label>
+                                </td>
+    
+                                <td>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input"  
+                                                type="radio" 
+                                                name="inlineRadioOptions" 
+                                                value="option1"
+                                                (click)="habilitarCampoRedes()"
+                                                >
+                                        <label class="form-check-label"  for="inlineRadio1">Si</label>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            No
-                                        </label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" 
+                                                type="radio" 
+                                                name="inlineRadioOptions" 
+                                                value="option2"
+                                                (click)="habilitarCampoRedes()"
+                                                checked>
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
-
                                 </td>
                             </tr>
                             <tr>
@@ -482,7 +503,7 @@
                                     <label>Cuáles Redes Sociales </label>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control"[disabled]="textBoxDisabledRedes">
                                 </td>
                             </tr>
                             <tr>
@@ -490,7 +511,7 @@
                                     <label>Agregar Identificación/Login</label>
                                 </td>
                                 <td>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" [disabled]="textBoxDisabledRedes">
                                 </td>
                             </tr>
                             <tr>
@@ -535,22 +556,26 @@
                                     <label>¿Conoce o puede mencionar otros testigos?</label>
                                 </td>
                                 <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Si
-                                        </label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input"  
+                                                type="radio" 
+                                                name="inlineRadioOptions1" 
+                                                value="option1"
+                                                checked>
+                                        <label class="form-check-label"  for="inlineRadio1">Si</label>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            No
-                                        </label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" 
+                                                type="radio" 
+                                                name="inlineRadioOptions1" 
+                                                value="option2"
+                                                >
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
                                     <div class="form-check">
                                         <td style="padding-right: 50px;">
                                             <label>Si la respuesta es SI, indicar referencias o nombres:</label>
-                                            <textarea class="form-control" rows="4" cols="50"></textarea>
+                                            <textarea class="form-control" rows="4" cols="70"></textarea>
                                         </td>
                                     </div>
                                 </td>
@@ -560,22 +585,26 @@
                                     <label>¿Poosee algún registro o prueba de los hechos?</label>
                                 </td>
                                 <td>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Si
-                                        </label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input"  
+                                                type="radio" 
+                                                name="inlineRadioOptions2" 
+                                                value="option1"
+                                                checked>
+                                        <label class="form-check-label"  for="inlineRadio1">Si</label>
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            No
-                                        </label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" 
+                                                type="radio" 
+                                                name="inlineRadioOptions2" 
+                                                value="option2"
+                                                >
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
                                     <div class="form-check">
                                         <td style="padding-right: 50px;">
                                             <label>Describa:</label>
-                                            <textarea class="form-control" rows="4" cols="50"></textarea>
+                                            <textarea class="form-control" rows="4" cols="70"></textarea>
                                         </td>
                                     </div>
                                 </td>
