@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col border">
-        <form>
+        <form autocomplete="off" [formGroup]="miFormulario">
             <table style="width: 100%;">
                 <tr>
                     <td colspan="3" class="" style="text-align: center;">
@@ -22,42 +22,12 @@
                         <p> Delito: <span style="color: red; font-weight: bold;">*</span></p>
                     </td>
                     <td colspan="2">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Seleccionar</option>
-                            <option value="1">ABIGEATO</option>
-                            <option value="2">AGRESIÓN CON LESIONES</option>
-                            <option value="3">ALTERACIÓN DEL ORDEN PÚBLICO</option>
-                            <option value="4">AMENAZAS</option>
-                            <option value="5">AROOJAR PIEDRAS U OBJETOS EN LUGARES PÚBLICOS</option>
-                            <option value="6">ATENTADO CONTRA LA AUTORIDAD</option>
-                            <option value="7">BAÑISTA TEMERARIO</option>
-                            <option value="8">COHECHO</option>
-                            <option value="9">DAÑOS</option>
-                            <option value="10">FALSIFICACIÓN DE INSTRUMENTO PÚBLICO</option>
-                            <option value="11">FEMICIDIO</option>
-                            <option value="12">HOMICIDIO</option>
-                            <option value="13">HURTO</option>
-                            <option value="14">MICROTRÁFICO DE DROGAS</option>
-                            <option value="15">OBSTRUCCIÓN A UNA INVESTIGACIÓN</option>
-                            <option value="16">OMITIR REGLAS DE HIGIENE Y SALUBRIDAD EN TIEMPOS DE PANDEMIA</option>
-                            <option value="17">ORDEN JUDICIAL PENDIENTE</option>
-                            <option value="18">PENDENCIA</option>
-                            <option value="19">PONER EN RIESGO LA SALUD PÚBLICA</option>
-                            <option value="20">PORTE ARMA CORTANTE O PUNZANTE</option>
-                            <option value="21">RECEPTACIÓN</option>
-                            <option value="22">RIÑA O PELEA</option>
-                            <option value="23">ROBO CON INTIMIDACIÓN</option>
-                            <option value="24">ROBO CON VIOLENCIA</option>
-                            <option value="25">SECUESTRO</option>
-                            <option value="26">SUPLANTACIÓN DE IDENTIDAD</option>
-                            <option value="27">TENENCIA ILEGAL DE ARMA</option>
-                            <option value="28">TRÁFICO DE ARMAS</option>
-                            <option value="29">TRÁFICO DE DROGAS</option>
-                            <option value="30">TRÁFICO DE INMIGRANTES</option>
-                            <option value="31">TRATA DE PERSONAS</option>
-                            <option value="32">USURPACIÓN DE FUNCIONES</option>
-                            <option value="33">VIOLACIÓN</option>
-                            <option value="34">VIOLENCIA INTRAFAMILIAR VIF</option>
+                        <select class="form-select"
+                                formControlName="tipoDelito">
+                            <option disabled value="null">Seleccionar</option>
+                            <option *ngFor="let delito of tpDelito" [ngValue]="delito">
+                              {{ delito }}
+                            </option>
                         </select>                    
                     </td>
                 </tr>
@@ -181,30 +151,6 @@
                     <td>
                         <div class="row">
                             <div class="col-5">
-                                <label>Sector:</label>
-                            </div>
-                            <div class="col-7">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                    </td>
-                    <td style="border-right: 0px;">  
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Lugar Específico:</label>
-                            </div>
-                            <div class="col-7">
-                                <input type="text" class="form-control"> 
-                            </div>
-                        </div>                                            
-                    </td>       
-                    
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="row">
-                            <div class="col-5">
                                 <label>Región:<span style="color: red; font-weight: bold;">*</span></label>
                             </div>
                             <div class="col-7">
@@ -259,6 +205,18 @@
                         </div>                                   
                     </td> 
                     <td style="border-left: 0px;"></td>        
+                </tr>
+                                <tr>
+                    <td style="border-right: 0px;">  
+                        <div class="row">
+                            <div class="col-5">
+                                <label>Lugar Específico:</label>
+                            </div>
+                            <div class="col-7">
+                                <input type="text" class="form-control"> 
+                            </div>
+                        </div>                                            
+                    </td>       
                 </tr>
                 <tr style="border-right: 0px;">
                     <td colspan="2">    
