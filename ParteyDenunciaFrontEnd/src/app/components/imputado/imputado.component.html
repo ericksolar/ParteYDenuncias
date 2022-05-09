@@ -466,11 +466,22 @@
                             </td>
                             <td>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions0" id="inlineRadio1" value="option1">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadioOptions0" 
+                                            id="inlineRadio1" 
+                                            value="option1"
+                                            (click)="habilitarCampoRedes()">
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions0" id="inlineRadio2" value="option2">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadioOptions0" 
+                                            id="inlineRadio2" 
+                                            value="option2"
+                                            (click)="habilitarCampoRedes()"
+                                            checked>
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                                 <div>
@@ -481,7 +492,7 @@
                         <tr>
                             <label class="form-label">Cuáles Redes Sociales:</label>
                             <td>
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" [disabled]="textBoxDisabledRedes">
                                     <option selected>Seleccionar</option>
                                     <option value="1">Twitter</option>
                                     <option value="2">Facebook</option>
@@ -497,7 +508,7 @@
                                 <label>Agregar Identificación/Login</label>
                             </td>
                             <td>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" [disabled]="textBoxDisabledRedes">
                             </td>
                         </tr>
 
@@ -580,40 +591,47 @@
                             </td>
                         </tr>
 
-
-
-
                         <tr>
-                            <td class="mb-3" style="padding-right: 50px;">
-                                <label>¿El denunciado (imputado) se encuentra detenido?<span style="color: red; font-weight: bold;">*</span></label>
+                            <td class="mt-2" style="padding-right: 50px;">
+                                <label>Pasa a control de detención</label>
                             </td>
                             <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value="option1">
+                                <div class="form-check form-check-inline mt-2">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="option2">
+                                <div class="form-check form-check-inline mt-2">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
 
                             </td>
                         </tr>
 
-
                         <tr>
-                            <td class="mb-3" style="padding-right: 50px;">
-                                <label>Pasa a control de detención</label>
+                            <td class="mb-2" style="padding-right: 50px;">
+                                <label>¿El denunciado (imputado) se encuentra detenido?<span style="color: red; font-weight: bold;">*</span></label>
                             </td>
                             <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadioOptions4" 
+                                            id="inlineRadio1" 
+                                            value="option1"
+                                            (click)="deshabilitarDetenido()">
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <div class="form-check form-check-inline mb-2">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadioOptions4" 
+                                            id="inlineRadio2" 
+                                            value="option2"
+                                            (click)="deshabilitarDetenido()"
+                                            checked>
                                     <label class="form-check-label" for="inlineRadio2">No</label>
-                                </div>
+                                 </div>
 
                             </td>
                         </tr>
@@ -623,7 +641,7 @@
                                 <label>Causa de la detención <span style="color: red; font-weight: bold;">*</span></label>
                             </td>
                             <td>
-                                <textarea class="form-control" rows="3" cols="30"></textarea>
+                                <textarea class="form-control" [disabled]="textBoxDisabledDetenido" rows="3" cols="30"></textarea>
                                 <br>
                             </td>
                         </tr>
@@ -633,7 +651,7 @@
                                 <label>Lugar de la detención <span style="color: red; font-weight: bold;">*</span></label>
                             </td>
                             <td>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" [disabled]="textBoxDisabledDetenido">
                             </td>
                         </tr>
 
@@ -642,7 +660,7 @@
                                 <label>Fecha y hora de la detención <span style="color: red; font-weight: bold;">*</span></label>
                             </td>
                             <td>
-                                <input type="date">
+                                <input type="date"  class="form-control" [disabled]="textBoxDisabledDetenido">
                             </td>
                         </tr>
 

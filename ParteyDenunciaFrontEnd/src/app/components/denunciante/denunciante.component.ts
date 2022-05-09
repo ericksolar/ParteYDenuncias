@@ -16,18 +16,18 @@ export class DenuncianteComponent implements OnInit {
 
   miFormulario: FormGroup = this.fb.group({
     nombre: [  , [ Validators.required ] ],
-    tipoDocumento: [ null , [ Validators.required ] ],
+    tipoDocumento: [  , [ Validators.required ] ],
     numeroDocumento: [  , [ Validators.required ] ],
     fechaNacimiento: [  , [ Validators.required ] ],
     ciudadNacimiento:[  , [ Validators.required ] ],
-    nacionalidad:[ null , [ Validators.required ] ],
-    sexoRegistral:[ null , [ Validators.required ] ],
+    nacionalidad:[  , [ Validators.required ] ],
+    sexoRegistral:[  , [ Validators.required ] ],
+    radio:[  , [ Validators.required ] ],
     redesSociales:[  , [ ] ],
     login: [  , [ ] ],
     calle:[  , [ Validators.required ] ],
     numero:[  , [ Validators.required ] ],
     region:[  , [ Validators.required ] ],
-
   })
 
   constructor(private fb: FormBuilder) {
@@ -43,16 +43,20 @@ export class DenuncianteComponent implements OnInit {
     this.textBoxDisabledRedes = !this.textBoxDisabledRedes;
   }
 
+  toggle() {
+    if (this.miFormulario.get('radio')?.value == "radio1") {
+      this.miFormulario.controls['redesSociales'].disable();
+      this.miFormulario.controls['login'].disable();
+    }else if (this.miFormulario.get('radio')?.value == "radio2") {
+      this.miFormulario.controls['redesSociales'].disable();
+      this.miFormulario.controls['login'].disable();
+    }
+  }
+
   habilitarCampoDenunciante()
   {
     this.textBoxDisabledDenunciante = !this.textBoxDisabledDenunciante;
   }
-
-  // checkRdesSociales(){
-  //   if(this.miFormulario.controls['sexoRegistral'].value == 'option2'){
-  //     this.miFormulario.get('login').disabled();
-  //   }
-  // }
 
 
 }
