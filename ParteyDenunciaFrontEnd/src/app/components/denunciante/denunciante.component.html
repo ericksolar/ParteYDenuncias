@@ -339,47 +339,47 @@
                                     </select>
                             </td>
                         </tr> -->
-
                         <tr>
-                            <td>
-                                <label>Redes Sociales:</label>
+                            <td class="mb-3" style="padding-right: 50px;">
+                                <label>Redes Sociales</label>
                             </td>
-
                             <td>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input"  
+                                    <input class="form-check-input" 
                                             type="radio" 
                                             name="inlineRadioOptions" 
+                                            id="inlineRadio1" 
                                             value="option1"
-                                            (click)="toggle()">
-                                    <label class="form-check-label"  for="inlineRadio1">Si</label>
+                                            (click)="habilitarCampoRedes()">
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" 
                                             type="radio" 
                                             name="inlineRadioOptions" 
+                                            id="inlineRadio2" 
                                             value="option2"
-                                            (click)="toggle()"
+                                            (click)="habilitarCampoRedes()"
                                             checked>
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                             </td>
                         </tr>
                         
-                            <tr>
-                                <label class="form-label">Cuáles Redes Sociales:</label>
-                                <td>
-                                    <select class="form-select" 
-                                            [disabled]="textBoxDisabledRedes">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Twitter</option>
-                                        <option value="2">Facebook</option>
-                                        <option value="3">Instagram</option>
-                                        <option value="4">Tegram</option>
-                                        <option value="5">VK</option>
-                                    </select>       
-                                </td>
-                            </tr>
+                        <tr>
+                            <label class="form-label">Cuáles Redes Sociales:</label>
+                            <td>
+                                <select class="form-select" 
+                                        [disabled]="textBoxDisabledRedes">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Twitter</option>
+                                    <option value="2">Facebook</option>
+                                    <option value="3">Instagram</option>
+                                    <option value="4">Tegram</option>
+                                    <option value="5">VK</option>
+                                </select>       
+                            </td>
+                        </tr>
 
 
                         <tr>

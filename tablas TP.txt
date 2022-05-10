@@ -1,0 +1,44 @@
+---Tripulante
+
+SELECT  cd_tpespec, gl_tpespec
+FROM    PERSONALdgtm.dbo.TPEspecialidad
+(Agregar PDI, SERNAPESCA, INSPECCION DEL TRABAJO, SALUD Y OTROS)
+
+
+---Tipo Nave
+
+SELECT CDTPMovil, GLTPMovil
+       FROM Moviles.dbo.TPMovil
+
+---Tipo Tribunal
+
+SELECT CDTPJuzgado, GLTPJuzgado
+FROM   Basicas.dbo.TPJuzgado
+
+---Tp Medida
+
+SELECT   CDTPUnidadMedida, GLTPUnidadM, NMUnidadM
+FROM    Basicas.dbo.TPUnidadMedida
+(Agregar GRAMOS Y CANTIDAD NUMERO N° Y OTROS)
+
+---Tipo Infraccion
+
+SELECT         IDTPInfraccion, GLTPInfraccion
+FROM           lanchas.dbo.TIpoInfraccion
+
+
+---Tipo Decomiso
+
+SELECT       NR_tipo, Descripcion, Nr_clasedec
+FROM           lanchas.dbo.tipodecomiso
+
+---Tipo Evento
+
+SELECT        CDTPEvento, GLTPEvento
+FROM          cgtm.dbo.TPEvento
+(Agregar Recalada Temporal)
+
+---Tipo Actividad
+
+SELECT       cd_tpactividad, gl_tpactividad
+FROM         Lanchas.dbo.TPActividad

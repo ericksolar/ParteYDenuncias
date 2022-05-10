@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FiscalComponent implements OnInit {
 
+  textBoxDisabledFiscal = true;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  habilitarCampoFiscal(){
+    this.textBoxDisabledFiscal = !this.textBoxDisabledFiscal;
+  }
 }

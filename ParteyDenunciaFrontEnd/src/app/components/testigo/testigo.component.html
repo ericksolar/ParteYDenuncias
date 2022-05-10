@@ -24,15 +24,16 @@
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" 
                                                 type="radio" 
-                                                name="inlineRadioOptions" 
+                                                name="inlineRadioOptions0" 
                                                 id="inlineRadio1" 
-                                                value="option1">
+                                                value="option1"
+                                                checked>
                                         <label class="form-check-label" for="inlineRadio1">Si</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" 
                                                 type="radio" 
-                                                name="inlineRadioOptions" 
+                                                name="inlineRadioOptions0" 
                                                 id="inlineRadio2" 
                                                 value="option2">
                                         <label class="form-check-label" for="inlineRadio2">No</label>
@@ -72,7 +73,7 @@
                                 <td>
                                     <select class="form-select"     
                                             name="tipoDocumento"
-                                            formControlName="tipoDocumentoIdentificacion">
+                                            >
                                         <option selected> Seleccionar</option>
                                         <option value="1">RUT</option>
                                         <option value="2">Pasaporte</option>
@@ -472,43 +473,55 @@
                                     <input type="text" class="form-control">
                                 </td>
                             </tr>
+
+                        <tr>
+                            <td class="mb-3" style="padding-right: 50px;">
+                                <label>Redes Sociales</label>
+                            </td>
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadio" 
+                                            id="inlineRadio1" 
+                                            value="option1"
+                                            (click)="habilitarCampoRedes()">
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadio" 
+                                            id="inlineRadio2" 
+                                            value="option2"
+                                            (click)="habilitarCampoRedes()"
+                                            checked>
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                                <div>
+                                </div>
+                            </td>
+                        </tr>
+                  
                             <tr>
+                                <label class="form-label">Cuáles Redes Sociales:</label>
                                 <td>
-                                    <label>Redes Sociales:</label>
+                                    <select class="form-select" 
+                                            [disabled]="textBoxDisabledRedes">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Twitter</option>
+                                        <option value="2">Facebook</option>
+                                        <option value="3">Instagram</option>
+                                        <option value="4">Tegram</option>
+                                        <option value="5">VK</option>
+                                    </select>       
                                 </td>
+                            </tr>
     
-                                <td>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input"  
-                                                type="radio" 
-                                                name="inlineRadioOptions" 
-                                                value="option1"
-                                                (click)="habilitarCampoRedes()"
-                                                >
-                                        <label class="form-check-label"  for="inlineRadio1">Si</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" 
-                                                type="radio" 
-                                                name="inlineRadioOptions" 
-                                                value="option2"
-                                                (click)="habilitarCampoRedes()"
-                                                checked>
-                                        <label class="form-check-label" for="inlineRadio2">No</label>
-                                    </div>
-                                </td>
-                            </tr>
+    
                             <tr>
                                 <td>
-                                    <label>Cuáles Redes Sociales </label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control"[disabled]="textBoxDisabledRedes">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>Agregar Identificación/Login</label>
+                                    Agregar Identificación/Login
                                 </td>
                                 <td>
                                     <input type="text" class="form-control" [disabled]="textBoxDisabledRedes">
@@ -588,7 +601,7 @@
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input"  
                                                 type="radio" 
-                                                name="inlineRadioOptions2" 
+                                                name="inlineRadioOptions3" 
                                                 value="option1"
                                                 checked>
                                         <label class="form-check-label"  for="inlineRadio1">Si</label>
@@ -596,7 +609,7 @@
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" 
                                                 type="radio" 
-                                                name="inlineRadioOptions2" 
+                                                name="inlineRadioOptions3" 
                                                 value="option2"
                                                 >
                                         <label class="form-check-label" for="inlineRadio2">No</label>
