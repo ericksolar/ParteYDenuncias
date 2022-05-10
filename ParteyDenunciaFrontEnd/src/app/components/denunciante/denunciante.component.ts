@@ -30,9 +30,7 @@ export class DenuncianteComponent implements OnInit {
     region:[  , [ Validators.required ] ],
   })
 
-  constructor(private fb: FormBuilder) {
-    // this.miFormulario.controls['tipoDocumento'].setValue(this.default, {onlySelf: true});
-  }
+  constructor(private fb: FormBuilder) {}
 
   campoValido(campo: string){
     return this.miFormulario.controls[campo].errors 
@@ -41,16 +39,6 @@ export class DenuncianteComponent implements OnInit {
 
   habilitarCampoRedes(){
     this.textBoxDisabledRedes = !this.textBoxDisabledRedes;
-  }
-
-  toggle() {
-    if (this.miFormulario.get('radio')?.value == "radio1") {
-      this.miFormulario.controls['redesSociales'].disable();
-      this.miFormulario.controls['login'].disable();
-    }else if (this.miFormulario.get('radio')?.value == "radio2") {
-      this.miFormulario.controls['redesSociales'].disable();
-      this.miFormulario.controls['login'].disable();
-    }
   }
 
   habilitarCampoDenunciante()
