@@ -4,11 +4,9 @@
         <form autocomplete="off" [formGroup]="miFormulario"> 
             <!-- <fieldset disabled> -->
             <div class="col">
-                <div class="col-sm-7">
-                    <div colspan="3" class="text-center">
-                        <h3>Datos del Denunciante</h3>
+                    <div colspan="3" class="col-sm-12 text-center">
+                        <h3 >Datos del Denunciante</h3>
                     </div>
-                </div>
                 <div class="row">
                     <div class="col col-sm border">
 
@@ -384,7 +382,7 @@
 
                         <div class="row mb-2">
 
-                            <div class="col-10 ">
+                            <div class="col-sm">
 
                                 <div class="row mb-2">
                                     <label class="col-sm-4">Tipo de Dirección</label>
@@ -514,95 +512,92 @@
 
                             </div>
 
-                        </div>
+                            <!-- /////////////////////////////////      PARA CASOS DE NNA     ////////////////////////////// -->
+                            <hr>
 
-
-
-
-                        <!-- /////////////////////////////////      PARA CASOS DE NNA     ////////////////////////////// -->
-                        <hr>
-
-                        <div class="row mb-2">
-                            <label class="col-sm-4">Para casos de NNA, indicar:</label>
-                            <div class="col-sm-7">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">Niño</option>
-                                    <option value="2">Niña</option>
-                                    <option value="3">Adolescente</option>
-                                </select>       
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Para casos de NNA, indicar:</label>
+                                <div class="col-sm-7">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Niño</option>
+                                        <option value="2">Niña</option>
+                                        <option value="3">Adolescente</option>
+                                    </select>       
+                                </div>
                             </div>
-                        </div>
                         
-                        <br>
+                            <br>
 
 
-                        <div class="row mb-2">
-                            <label class="col-sm-4">Parentesco/Vínculo/relación</label>
-                            <div class="col-sm-7">
-                                <select class="form-select" aria-label="Default select example">
-                                    <!-- [(ngModel)]="selectedTipoDocumento" name="parentesco" -->
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">Padre</option>
-                                    <option value="2">Madre</option>
-                                    <option value="3">Hermana</option>
-                                    <option value="4">Hermano</option>
-                                    <option value="5">Tío</option>
-                                    <option value="6">Tía</option>
-                                    <option value="7">Abuelo</option>
-                                    <option value="8">Abuela</option>
-                                    <option value="9">Primo</option>
-                                    <option value="10">Prima</option>
-                                    <option value="11">Vecino</option>
-                                    <option value="12">Vecina</option>
-                                    <option value="13">Amigo</option>
-                                    <option value="14">Amiga</option>
-                                    <option value="14">Guardador</option>
-                                </select>
-                                <!-- <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
-                                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
-                                </div> -->
-                            </div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <label class="col-sm-4">¿Es el denunciante el adulto protector/referente de la víctima?</label>
-                            <div class="col-sm-7">
-                                <div class="form-check form-check-inline">
-                                    <input  class="form-check-input" 
-                                            type="radio" 
-                                            name="inlineRadioOptions1" 
-                                            id="inlineRadio1" 
-                                            value="option1"
-                                            (click)="habilitarCampoDenunciante()" checked>
-                                    <label class="form-check-label" for="inlineRadio1">Si</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input  class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"
-                                            (click)="habilitarCampoDenunciante()">
-                                    <label class="form-check-label" for="inlineRadio2">No</label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="col-sm-10">Si la respuesta es NO, indicar los datos del adulto protector/referente:</label>
-                                    <textarea class="form-control" rows="4" cols="50" [disabled]="textBoxDisabledDenunciante"></textarea>
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Parentesco/Vínculo/relación</label>
+                                <div class="col-sm-7">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <!-- [(ngModel)]="selectedTipoDocumento" name="parentesco" -->
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Padre</option>
+                                        <option value="2">Madre</option>
+                                        <option value="3">Hermana</option>
+                                        <option value="4">Hermano</option>
+                                        <option value="5">Tío</option>
+                                        <option value="6">Tía</option>
+                                        <option value="7">Abuelo</option>
+                                        <option value="8">Abuela</option>
+                                        <option value="9">Primo</option>
+                                        <option value="10">Prima</option>
+                                        <option value="11">Vecino</option>
+                                        <option value="12">Vecina</option>
+                                        <option value="13">Amigo</option>
+                                        <option value="14">Amiga</option>
+                                        <option value="14">Guardador</option>
+                                    </select>
+                                    <!-- <div class="form-group" *ngIf="selectedTipoDocumento == 'otro'">
+                                        <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                                    </div> -->
                                 </div>
                             </div>
-                        </div>
 
-                        <br>
+                            <div class="row mb-2">
+                                <label class="col-sm-4">¿Es el denunciante el adulto protector/referente de la víctima?</label>
+                                <div class="col-sm-7">
+                                    <div class="form-check form-check-inline">
+                                        <input  class="form-check-input" 
+                                                type="radio" 
+                                                name="inlineRadioOptions1" 
+                                                id="inlineRadio1" 
+                                                value="option1"
+                                                (click)="habilitarCampoDenunciante()" checked>
+                                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input  class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2"
+                                                (click)="habilitarCampoDenunciante()">
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="col-sm-10">Si la respuesta es NO, indicar los datos del adulto protector/referente:</label>
+                                        <textarea class="form-control" rows="4" cols="50" [disabled]="textBoxDisabledDenunciante"></textarea>
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="row mb-2">
-                                <label class="col-sm-4">Persona(s) a quien(es) el niño, niña o adolecente contó los hechos (si es que los contó)</label><br>
+                            <br>
+
+                            <div class="row mb-2">
+                                    <label class="col-sm-4">Persona(s) a quien(es) el niño, niña o adolecente contó los hechos (si es que los contó)</label><br>
+                                    <div class="col-sm-7">
+                                        <textarea class="form-control mb-1" rows="4" cols="50"></textarea>
+                                    </div>
+                            </div>
+                        
+                            <div class="row mb-2">
+                                <label class="col-sm-4">¿Cómo supo usted de estos hechos?</label><br>
                                 <div class="col-sm-7">
                                     <textarea class="form-control mb-1" rows="4" cols="50"></textarea>
                                 </div>
-                        </div>
-                        
-                        <div class="row mb-2">
-                            <label class="col-sm-4">¿Cómo supo usted de estos hechos?</label><br>
-                            <div class="col-sm-7">
-                                <textarea class="form-control mb-1" rows="4" cols="50"></textarea>
                             </div>
+
                         </div>
                     </div>
                 </div>
