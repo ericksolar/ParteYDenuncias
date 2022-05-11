@@ -1,7 +1,7 @@
 <div class="row border">
     <!-- <fieldset disabled> -->
 
-    <div style="margin: 0px auto; max-width:55%; align-items: 0px auto;" class="col p-3">
+    <div class="col-8 offset-2 p-3">
        
         <tr>
             <td colspan="3" class="text-center">
@@ -10,117 +10,73 @@
         </tr>
         
         <form>
-            <tr>
-                <td class="mb-3">
+
+            <div class="row mt-2 mb-1">
+                <div class="col-4">
+                    <label>RUT:<span style="color: red; font-weight: bold;">*</span></label>
+                </div>                            
+                <div class="col-6">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-outline-primary mb-1 form-control" type="button" id="button-addon2">Buscar</button>                        
+                </div>
+            </div>
+
+            <div class="row mb-1">
+                <div class="col-4">
                     <label>Nombre:<span style="color: red; font-weight: bold;">*</span></label>
-                </td>
-                <td>
+                </div>                            
+                <div class="col-6">
                     <input type="text" class="form-control">
-                </td>
-            </tr>
+                </div>
+            </div>
 
-            <tr>
-                <td class="mb-3">
-                    <label>RUN:<span style="color: red; font-weight: bold;">*</span></label>
-                </td>
-                <td>
-                    <input type="text" class="form-control">
-                </td>
-            </tr>
-
-            <tr>
-                <td class="mb-3">
-                    <label>Grado:<span style="color: red; font-weight: bold;">*</span></label>
-                </td>
-                <td>
-                    <input type="text" class="form-control">
-                </td>
-            </tr>
-
-            <tr>
+            <!-- <tr>
                 <td class="mb-3">
                     <label>NPI:<span style="color: red; font-weight: bold;">*</span></label>
                 </td>
                 <td>
                     <input type="text" class="form-control">
                 </td>
-            </tr>
+            </tr> -->
 
-            <tr>
-                <td class="mb-3" style="padding-right: 50px;">
-                    <label>Rol en el procedimiento:<span style="color: red; font-weight: bold;">*</span></label>
-                </td>
-                <td>
+            <div class="row mb-1">
+                <div class="col-4">
+                    <label>Grado:<span style="color: red; font-weight: bold;">*</span></label>
+                </div>                            
+                <div class="col-6">
                     <input type="text" class="form-control">
-                </td>
-            </tr>
+                </div>
+            </div>
 
-            <tr>
-                <td class="mb-3" style="padding-right: 50px;">
+            <div class="row mb-2">
+                <div class="col-4">
+                    <p>Rol en el procedimiento:</p>
+                </div>                            
+                <div class="col-6">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Seleccionar</option>
+                        <option value="1">Testigo</option>
+                        <option value="2">Aprensor</option>
+                        <!-- <option value="3">PARTE POLICIAL.</option>   -->
+                      </select>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-4">
                     <label>Firma:</label>
-                </td>
-                <td>
-                    <p>___________________</p>
-                </td>
-            </tr>
-            <hr>
-            <tr>
-                <td class="mb-3">
-                    <label>Nombre:</label>
-                </td>
-                <td>
-                    <input type="text" class="form-control">
-                </td>
-            </tr>
+                </div>                            
+                <div class="col-8">
+                    <p>___________________________________________________</p>
+                </div>
+            </div>
 
-            <tr>
-                <td class="mb-3">
-                    <label>RUN:</label>
-                </td>
-                <td>
-                    <input type="text" class="form-control">
-                </td>
-            </tr>
-
-            <tr>
-                <td class="mb-3">
-                    <label>Grado:</label>
-                </td>
-                <td>
-                    <input type="text" class="form-control">
-                </td>
-            </tr>
-
-            <tr>
-                <td class="mb-3">
-                    <label>NPI:</label>
-                </td>
-                <td>
-                    <input type="text" class="form-control">
-                </td>
-            </tr>
-
-            <tr>
-                <td class="mb-3" style="padding-right: 50px;">
-                    <label>Rol en el procedimiento:</label>
-                </td>
-                <td>
-                    <input type="text" class="form-control">
-                </td>
-            </tr>
-
-            <tr>
-                <td class="mb-3" style="padding-right: 50px;">
-                    <label>Firma:</label>
-                </td>
-                <td>
-                    <p>___________________</p>
-                </td>
-            </tr>
             <hr>
 
-
-
+            
+            <hr>
 
             <div class="row border text-center">
                 <div class="col">
