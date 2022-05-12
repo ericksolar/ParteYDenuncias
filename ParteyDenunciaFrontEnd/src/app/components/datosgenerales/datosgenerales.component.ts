@@ -15,6 +15,11 @@ export class DatosgeneralesComponent implements OnInit {
                     'FALSIFICACIÓN DE INSTRUMENTO PÚBLICO', 'FEMICIDIO', 'HOMICIDIO', 'HURTO', 'MICROTRÁFICO DE DROGAS', 'OBSTRUCCIÓN A UNA INVESTIGACIÓN', 'OMITIR REGLAS DE HIGIENE Y SALUBRIDAD EN TIEMPOS DE PANDEMIA',
                   'ORDEN JUDICIAL PENDIENTE','PENDENCIA', 'PONER EN RIESGO LA SALUD PÚBLICA' ];
 
+  tpZonaDelito: any  = [ 'Rural','Urbano','Marítimo','Fluvial','Lacustre'];
+
+
+  // console.log(tpZonaDelito[0]);
+
   miFormulario: FormGroup = this.fb.group({
     fecha: [  , [ Validators.required ] ],
     tipoDelito: [  , [ Validators.required ] ],
@@ -37,6 +42,7 @@ export class DatosgeneralesComponent implements OnInit {
 
   constructor(private fb: FormBuilder) {}
 
-  
+  seleccionarDelito(){}
+    
 
 }

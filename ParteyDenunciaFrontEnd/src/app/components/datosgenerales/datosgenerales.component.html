@@ -1,245 +1,233 @@
 <div class="row">
     <div class="col border">
         <form autocomplete="off" [formGroup]="miFormulario">
-            <table style="width: 100%;">
-                <tr>
-                    <td colspan="3" class="" style="text-align: center;">
+            <div class="col col-sm-12">
+                <div>
+                    <div class="col-sm-12 text-center">
                         <h3>Datos Generales de la Denuncia</h3>
                         <small>(Solo lo llena el funcionario policial)</small>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p> Fecha y Hora: <span style="color: red; font-weight: bold;">*</span> </p>
-                    </td>
-                    <td colspan="2">
-                        <input type="datetime-local" class="form-control-sm">
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col col-sm mt-2">
+                         
+                        <div class="row mb-2">
+                            <label  class="col-sm-3"> Fecha y Hora: <span style="color: red; font-weight: bold;">*</span> </label>
+                            <div class="col-sm-4">
+                                <input type="datetime-local" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-3"> Delito: <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-4">
+                                <select class="form-select"
+                                        formControlName="tipoDelito">
+                                    <option disabled value="null">Seleccionar</option>
+                                    <option *ngFor="let delito of tpDelito" [ngValue]="delito">
+                                    {{ delito }}
+                                    </option>
+                                </select>                    
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-3"> Zona del Delito: <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-4">
+                                <select class="form-select" 
+                                        formControlName="zonaDelito">
+                                <option disabled value="null">Seleccionar</option>
+                                    <option *ngFor="let zona of tpZonaDelito; let i = index" [ngValue]="zona">
+                                    {{ zona }}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2 ">
+                            <label  class="col-sm-3"> Tipo de Lugar de Ocurrencia: <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <!-- [(ngModel)]="TipoOcurrencia" name="Ocurrencia" -->
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Vía Pública</option>
+                                    <option value="2">Local Comercial</option>
+                                    <option value="3">Domicilio Particular</option>
+                                    <option value="4">Esdivcimiento Educacional</option>
+                                    <option value="5">A BORDO DE AVE O EMBARCACIÓN</option>
+                                    <option value="6">INTERIOR PUERTO O TERMINAL</option>
+                                    <option value="7">RAMPA</option>
+                                    <option value="8">TERRENO DE PLAYA</option>
+                                    <option value="9">ARTEFACTO NAVAL</option>
+                                    <option value="10">MAR</option>          
+                                </select>
+                                <!-- <div class="form-group" *ngIf="TipoOcurrencia == 'otro'">
+                                    <input type="text" class="" id="name" ngModel name="other_college_name" required>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-3"> Lugar Específico de ocurrencia: </label>
+                            <div class="col-sm-7">
+                                <textarea class="form-control" rows="4"></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="row">
+
+                        <div class="col-sm-3 mb-2">
+                            <label>Dirección del Delito</label>
+                        </div>
+
+                        <div class="col mb-2">
+                            <div>  
+                                <div class="row mb-2">
+                                    <label class="col-sm-3">Calle:<span style="color: red; font-weight: bold;">*</span></label>
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control" 
+                                        formControlName="zonaDelito">  
+                                    </div>
+                                </div>              
+                            </div>
+
+                            <div>  
+                                <div class="row mb-2">
+                                    <label class="col-sm-3">Número:</label> 
+                                    <div class="col-sm-7">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>                        
+                            </div>                    
                         
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p> Delito: <span style="color: red; font-weight: bold;">*</span></p>
-                    </td>
-                    <td colspan="2">
-                        <select class="form-select"
-                                formControlName="tipoDelito">
-                            <option disabled value="null">Seleccionar</option>
-                            <option *ngFor="let delito of tpDelito" [ngValue]="delito">
-                              {{ delito }}
-                            </option>
-                        </select>                    
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p> Zona del Delito: <span style="color: red; font-weight: bold;">*</span></p>
-                    </td>
-                    <td colspan="2">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Seleccionar</option>
-                            <option value="1">Rural</option>
-                            <option value="1">Urbano</option>
-                            <option value="2">Marítimo</option>
-                            <option value="3">Fluvial</option>
-                            <option value="3">Lacustre</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p> Tipo de Lugar de Ocurrencia: <span style="color: red; font-weight: bold;">*</span></p>
-                    </td>
-                    <td colspan="2">
-                        <select class="form-select" aria-label="Default select example">
-                            <!-- [(ngModel)]="TipoOcurrencia" name="Ocurrencia" -->
-                            <option selected>Seleccionar</option>
-                            <option value="1">Vía Pública</option>
-                            <option value="2">Local Comercial</option>
-                            <option value="3">Domicilio Particular</option>
-                            <option value="4">Establecimiento Educacional</option>
-                            <option value="5">A BORDO DE AVE O EMBARCACIÓN</option>
-                            <option value="6">INTERIOR PUERTO O TERMINAL</option>
-                            <option value="7">RAMPA</option>
-                            <option value="8">TERRENO DE PLAYA</option>
-                            <option value="9">ARTEFACTO NAVAL</option>
-                            <option value="10">MAR</option>          
-                          </select>
-                        <!-- <div class="form-group" *ngIf="TipoOcurrencia == 'otro'">
-                            <input type="text" class="" id="name" ngModel name="other_college_name" required>
-                        </div> -->
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p> Lugar Específico de ocurrencia: </p>
-                    </td>
-                    <td colspan="2">
-                        <textarea class="form-control" rows="4"></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td rowspan="9" style="vertical-align: text-top;">
-                        <p>Dirección del Delito</p>
-                    </td>
-                    <td style="border-right: 0px;">  
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Calle:<span style="color: red; font-weight: bold;">*</span></label>
+
+                        
+                            <div class="row mb-2">
+                                <label class="col-sm-3">Departamento/Oficina:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div> 
+
+                            <div class="row mb-2">
+                                <label class="col-sm-3">Block:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control">
+                                </div>
                             </div>
-                            <div class="col-7">
-                                <input type="text" class="form-control">  
+
+                            <div>
+                                <div class="row mb-2">
+                                    <label class="col-sm-3">Población o Villa:</label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>                       
                             </div>
-                        </div>              
-                    </td>
-                    <td>  
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Número:</label> 
+                            
+                            <div>
+                                <div class="row mb-2">
+                                    <label class="col-sm-3">Sector:</label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-7">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>                        
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Departamento/Oficina:</label>
-                            </div>
-                            <div class="col-7">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div> 
-                    </td>          
-                    <td>
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Block:</label>
-                            </div>
-                            <div class="col-7">
-                                <input type="text" class="form-control">
-                            </div>
+
+                            <div>
+                                <div class="row mb-2">
+                                    <label class="col-sm-3">Región:<span style="color: red; font-weight: bold;">*</span></label>
+                                    <div class="col-sm-7">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Seleccionar</option>
+                                            <option value="1">I Región</option>
+                                            <option value="2">II Región</option>
+                                            <option value="3">III Región</option>
+                                            <option value="4">IV Región</option>
+                                            <option value="5">V Región</option>
+                                            <option value="6">VI Región</option>
+                                            <option value="7">VII Región</option>
+                                            <option value="8">VIII Región</option>
+                                            <option value="9">IX Región</option>
+                                            <option value="10">X Región</option>
+                                            <option value="11">XI Región</option>
+                                            <option value="12">XII Región</option>
+                                            <option value="13">XIII Región</option>
+                                            <option value="14">XIV Región</option>
+                                            <option value="15">XV Región</option>
+                                            <option value="16">XVI Región</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">
+                                    <label class="col-sm-3">Comuna:<span style="color: red; font-weight: bold;">*</span></label> 
+                                    <div class="col-sm-7">
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Seleccionar</option>
+                                            <option value="1">ARICA</option>
+                                            <option value="2">CAMARONES</option>
+                                            <option value="3">PUTRE</option>
+                                            <option value="4">GENERAL LAGOS</option>
+                                            <option value="5">IQUIQUE</option>
+                                            <option value="6">HUARA</option>
+                                            <option value="7">CAMINA</option>
+                                            <option value="8">COLCHANE</option>
+                                            <option value="9">PICA</option>
+                                            <option value="10">POZO ALMONTE</option>
+                                            <option value="11">TOCOPILLA</option>
+                                            <option value="12">MARIA ELENA</option>
+                                            <option value="13">CALAMA</option>
+                                            <option value="14">OLLAGUE</option>
+                                            <option value="15">SAN PEDRO DE ATACAMA</option>
+                                            <option value="16">ANTOFAGASTA</option>
+                                        </select>       
+                                    </div>
+                                </div>                                   
+
+                        
+                                <div class="row mb-2">
+                                    <label class="col-sm-3">Lugar Específico:</label>
+                                    <div class="col-7">
+                                        <input type="text" class="form-control"> 
+                                    </div>
+                                </div>                                            
+
+                                <div class="row mb-2">    
+                                    <label class="col-sm-3">Referencia de la dirección: </label>
+                                    <div class="col-7">
+                                        <textarea class="form-control" rows="2"></textarea>
+                                    </div>
+                                </div>                    
+
+                                <div class="row mb-2">   
+                                    <label class="col-sm-3">Latitud:<span style="color: red; font-weight: bold;">*</span></label>  
+                                    <div class="col-7">
+                                        <input class="form-control" type="number">                   
+                                    </div>
+                                </div>
+
+                                <div class="row mb-2">   
+                                    <label class="col-sm-3">Longitud:<span style="color: red; font-weight: bold;">*</span></label>  
+                                    <div class="col-7">
+                                        <input class="form-control" type="number">         
+                                    </div>
+                                </div>                    
+
                         </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="row">
-                            <div class="col-5">
-                                <label class="form-label">Población o Villa:</label>
-                            </div>
-                            <div class="col-7">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>                       
-                    </td>
-                    <td>
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Sector:</label>
-                            </div>
-                            <div class="col-7">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Región:<span style="color: red; font-weight: bold;">*</span></label>
-                            </div>
-                            <div class="col-7">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">I Región</option>
-                                    <option value="2">II Región</option>
-                                    <option value="3">III Región</option>
-                                    <option value="4">IV Región</option>
-                                    <option value="5">V Región</option>
-                                    <option value="6">VI Región</option>
-                                    <option value="7">VII Región</option>
-                                    <option value="8">VIII Región</option>
-                                    <option value="9">IX Región</option>
-                                    <option value="10">X Región</option>
-                                    <option value="11">XI Región</option>
-                                    <option value="12">XII Región</option>
-                                    <option value="13">XIII Región</option>
-                                    <option value="14">XIV Región</option>
-                                    <option value="15">XV Región</option>
-                                    <option value="16">XVI Región</option>
-                                  </select>
-                            </div>
-                        </div>
-                    </td>
-                    <td style="border-right: 0px;">    
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Comuna:<span style="color: red; font-weight: bold;">*</span></label> 
-                            </div>
-                            <div class="col-7">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">ARICA</option>
-                                    <option value="2">CAMARONES</option>
-                                    <option value="3">PUTRE</option>
-                                    <option value="4">GENERAL LAGOS</option>
-                                    <option value="5">IQUIQUE</option>
-                                    <option value="6">HUARA</option>
-                                    <option value="7">CAMINA</option>
-                                    <option value="8">COLCHANE</option>
-                                    <option value="9">PICA</option>
-                                    <option value="10">POZO ALMONTE</option>
-                                    <option value="11">TOCOPILLA</option>
-                                    <option value="12">MARIA ELENA</option>
-                                    <option value="13">CALAMA</option>
-                                    <option value="14">OLLAGUE</option>
-                                    <option value="15">SAN PEDRO DE ATACAMA</option>
-                                    <option value="16">ANTOFAGASTA</option>
-                                </select>       
-                            </div>
-                        </div>                                   
-                    </td> 
-                    <td style="border-left: 0px;"></td>        
-                </tr>
-                                <tr>
-                    <td style="border-right: 0px;">  
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Lugar Específico:</label>
-                            </div>
-                            <div class="col-7">
-                                <input type="text" class="form-control"> 
-                            </div>
-                        </div>                                            
-                    </td>       
-                </tr>
-                <tr style="border-right: 0px;">
-                    <td colspan="2">    
-                        <label>Referencia de la dirección: </label><textarea class="form-control" rows="2"></textarea>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td>   
-                        <label>Latitud:<span style="color: red; font-weight: bold;">*</span></label>  <input class="form-control" type="number">                   
-                    </td>                  
-                    <td>   
-                        <label>Longitud:<span style="color: red; font-weight: bold;">*</span></label>  <input class="form-control" type="number">         
-                    </td>                    
-                </tr>
-            </table>
+
+                    </div>
+                </div>
+            </div>
             <br>
             <div class="row">
                 <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/home" routerLinkActive="active">Atrás</button></div>
                 <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/denunciante" routerLinkActive="active">Siguiente</button></div>                
             </div>
         </form>
-
-
     </div>
-
 </div>
