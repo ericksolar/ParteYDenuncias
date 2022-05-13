@@ -582,6 +582,14 @@
                             </td>
                         </tr>
 
+                        <tr>
+                            <td>
+                                <label>Nombre residencia institucional</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control">
+                            </td>
+                        </tr>
 
 
                         <!-- <tr>
@@ -594,13 +602,12 @@
                                 <input type="text">
                             </td>
                         </tr> -->
-
                         <tr>
                             <td class="mb-3" style="padding-right: 50px;">
-                                <label>¿Conoce al denunciado(s)? <br> ¿Podría entregar descripción de él o ellos?</label>
+                                <label>¿Conoce al denunciado(s)?</label>
                             </td>
                             <td>
-                                <div class="form-check">
+                                <div class="form-check form-check-inline">
                                     <input class="form-check-input" 
                                             type="radio" 
                                             name="flexRadioDefault" 
@@ -610,7 +617,7 @@
                                         Si
                                     </label>
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check form-check-inline">
                                     <input class="form-check-input" 
                                             type="radio" 
                                             name="flexRadioDefault" 
@@ -621,6 +628,14 @@
                                         No
                                     </label>
                                 </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="mb-3" style="padding-right: 50px;">
+                                <label>¿Podría entregar descripción de él o ellos?</label>
+                            </td>
+                            <td>
                                 <div class="form-check">
                                     <td style="padding-right: 50px;">
                                         <label>Describa:</label>
@@ -646,7 +661,7 @@
                                 <label class="form-label">Qué relación tiene con el denunciado(s)</label>
                             </td>
                             <td colspan="2">
-                                <select class="form-select" aria-label="Default select example" name="denunciado">
+                                <select class="form-select" [disabled]="textBoxDisabledDenunciado" name="denunciado">
                                     <option selected>Seleccionar</option>
                                     <option value="1">Papá</option>
                                     <option value="2">Mamá</option>
