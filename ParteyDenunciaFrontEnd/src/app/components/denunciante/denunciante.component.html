@@ -26,11 +26,20 @@
                             <label class="col-sm-4">N° de documento de identificación: <span style="color: red; font-weight: bold;">*</span></label>
                             <div class="col-sm-6">
                                 <input type="text"  class="form-control" value="Seleccionar" formControlName="numeroDocumento">
+                                <div class="col-sm-12">
+                                    <div class="form-text text-danger"
+                                                *ngIf="campoValido('numeroDocumento')">
+                                        El numero de documento es obligatorio
+                                    </div>
+                                </div>
                             </div>
+                            
                             <div class="col-sm-2">
                                 <button class="btn btn-outline-primary form-control" type="button" id="button-addon2">Buscar</button>                        
                             </div>
+                            
                         </div>
+
 
                         <div class="row mb-2">
                             <label class="col-sm-4">Nombre:<span style="color: red; font-weight: bold;">*</span></label>
@@ -44,12 +53,6 @@
                             <label class="col-sm-4">Nombre Social (Identidad de Género):</label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-sm-7">
-                            <div class="form-text text-danger"
-                                        *ngIf="campoValido('numeroDocumento')">
-                                El numero de documento es obligatorio
                             </div>
                         </div>
 
@@ -450,7 +453,7 @@
                                 </div>
 
                                 <div class="row mb-2">
-                                    <label class="col-sm-4">Sector:<span style="color: red; font-weight: bold;">*</span></label>
+                                    <label class="col-sm-4">Región:<span style="color: red; font-weight: bold;">*</span></label>
                                     <div class="col-sm-7">
                                         <select class="form-select" formControlName="region">
                                             <option [ngValue]="null" disabled>Seleccionar</option>

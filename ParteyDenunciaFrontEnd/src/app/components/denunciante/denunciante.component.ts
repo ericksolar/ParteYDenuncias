@@ -15,20 +15,44 @@ export class DenuncianteComponent implements OnInit {
   }
 
   miFormulario: FormGroup = this.fb.group({
-    nombre: [  , [ Validators.required ] ],
     tipoDocumento: [  , [ Validators.required ] ],
     numeroDocumento: [  , [ Validators.required ] ],
+    nombre: [  , [ Validators.required ] ],
+    nombreSocial: [],
     fechaNacimiento: [  , [ Validators.required ] ],
     ciudadNacimiento:[  , [ Validators.required ] ],
-    nacionalidad:[  , [ Validators.required ] ],
-    sexoRegistral:[  , [ Validators.required ] ],
-    radio:[  , [ Validators.required ] ],
-    redesSociales:[  , [ ] ],
-    login: [  , [ ] ],
-    calle:[  , [ Validators.required ] ],
-    numero:[  , [ Validators.required ] ],
-    region:[  , [ Validators.required ] ],
-  })
+    idioma: [],
+    nacionalidad:[ '' , [ Validators.required ] ],
+    escolaridad: [''],
+    estadoMigratorio: [''],
+    sexoRegistral:[ '' , [ Validators.required ] ],
+    identidadGenero: [''],
+    alias: [''],
+    puebloOriginario: [''],
+    profesion: [''],
+    estadoCivil: [''],
+    tipoContacto: [''],
+    telefonoFijo: [''],
+    telefonoMovil: [''],
+    correo: [''],
+    redesSociales: [''],
+    login: [''],
+    tipoDireccion: [],
+    calle:[ '' , [ Validators.required ] ],
+    numero:[ '' , [ Validators.required ] ],
+    depto: [''],
+    block: [''],
+    poblacion: [''],
+    sector: [''],
+    region:[ '' , [ Validators.required ] ],
+    comuna: [''],
+    referenciaDireccion: [''],
+    nna: [''],
+    parentesco: [''],
+    referenteVictima:[''],
+    contoHechos: [''],
+    supoHechos: [''],
+  });
 
   constructor(private fb: FormBuilder) {}
 
@@ -45,6 +69,8 @@ export class DenuncianteComponent implements OnInit {
   {
     this.textBoxDisabledDenunciante = !this.textBoxDisabledDenunciante;
   }
+
+
 
 
 }

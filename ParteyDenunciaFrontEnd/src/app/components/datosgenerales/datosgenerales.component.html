@@ -38,8 +38,8 @@
                                 <select class="form-select" 
                                         formControlName="zonaDelito">
                                 <option disabled value="null">Seleccionar</option>
-                                    <option *ngFor="let zona of tpZonaDelito; let i = index" [ngValue]="zona">
-                                    {{ zona }}
+                                    <option *ngFor="let zona of tpZonaDelito ; let i = index">
+                                    {{ zona.NMZonaDelito }}
                                     </option>
                                 </select>
                             </div>
@@ -69,9 +69,19 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label class="col-sm-3"> Lugar Específico de ocurrencia: </label>
+                            <label class="col-sm-3">Lugar Específico de ocurrencia: </label>
                             <div class="col-sm-7">
-                                <textarea class="form-control" rows="4"></textarea>
+                                <textarea class="form-control" rows="4" formControlName="lugarEspecifico">
+                                    <div class="col-sm-12">
+                                        <div class="form-text text-danger">
+                                            Contador de caracteres
+                                        </div>
+                                        <div class="form-text text-danger">
+                                            El numero maximo de caracteres es 3000
+                                        </div>
+                                    </div>
+                                </textarea>
+                               
                             </div>
                         </div>
 
@@ -80,146 +90,124 @@
                 
                 <div class="row">
 
-                        <div class="col-sm-3 mb-2">
-                            <label>Dirección del Delito</label>
+                    <div class="col-sm-3 mb-2">
+                        <label>Dirección del Delito</label>
+                    </div>
+
+                    <div class="col mb-2">
+
+                        <div class="row mb-2">
+                            <label class="col-sm-2">Calle:<span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" 
+                                formControlName="calle">
+                                <!-- [disabled]="miFormulario.get['zonaDelito'].value == 'Marítimo'" -->
+                               >  
+                            </div>
+
+                            <label class="col-sm-2">Número:</label> 
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>                        
+                    
+
+                    
+                        <div class="row mb-2">
+                            <label class="col-sm-2">Depto/Oficina:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <label class="col-sm-2">Block:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control">
+                            </div>
                         </div>
 
-                        <div class="col mb-2">
-                            <div>  
-                                <div class="row mb-2">
-                                    <label class="col-sm-3">Calle:<span style="color: red; font-weight: bold;">*</span></label>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control" 
-                                        formControlName="zonaDelito">  
-                                    </div>
-                                </div>              
+                        <div class="row mb-2">
+                            <label class="col-sm-2">Población o Villa:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control">
                             </div>
 
-                            <div>  
-                                <div class="row mb-2">
-                                    <label class="col-sm-3">Número:</label> 
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>                        
-                            </div>                    
-                        
-
-                        
-                            <div class="row mb-2">
-                                <label class="col-sm-3">Departamento/Oficina:</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div> 
-
-                            <div class="row mb-2">
-                                <label class="col-sm-3">Block:</label>
-                                <div class="col-sm-7">
-                                    <input type="text" class="form-control">
-                                </div>
+                            <label class="col-sm-2">Sector:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control">
                             </div>
-
-                            <div>
-                                <div class="row mb-2">
-                                    <label class="col-sm-3">Población o Villa:</label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>                       
-                            </div>
-                            
-                            <div>
-                                <div class="row mb-2">
-                                    <label class="col-sm-3">Sector:</label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <div class="row mb-2">
-                                    <label class="col-sm-3">Región:<span style="color: red; font-weight: bold;">*</span></label>
-                                    <div class="col-sm-7">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Seleccionar</option>
-                                            <option value="1">I Región</option>
-                                            <option value="2">II Región</option>
-                                            <option value="3">III Región</option>
-                                            <option value="4">IV Región</option>
-                                            <option value="5">V Región</option>
-                                            <option value="6">VI Región</option>
-                                            <option value="7">VII Región</option>
-                                            <option value="8">VIII Región</option>
-                                            <option value="9">IX Región</option>
-                                            <option value="10">X Región</option>
-                                            <option value="11">XI Región</option>
-                                            <option value="12">XII Región</option>
-                                            <option value="13">XIII Región</option>
-                                            <option value="14">XIV Región</option>
-                                            <option value="15">XV Región</option>
-                                            <option value="16">XVI Región</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="row mb-2">
-                                    <label class="col-sm-3">Comuna:<span style="color: red; font-weight: bold;">*</span></label> 
-                                    <div class="col-sm-7">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Seleccionar</option>
-                                            <option value="1">ARICA</option>
-                                            <option value="2">CAMARONES</option>
-                                            <option value="3">PUTRE</option>
-                                            <option value="4">GENERAL LAGOS</option>
-                                            <option value="5">IQUIQUE</option>
-                                            <option value="6">HUARA</option>
-                                            <option value="7">CAMINA</option>
-                                            <option value="8">COLCHANE</option>
-                                            <option value="9">PICA</option>
-                                            <option value="10">POZO ALMONTE</option>
-                                            <option value="11">TOCOPILLA</option>
-                                            <option value="12">MARIA ELENA</option>
-                                            <option value="13">CALAMA</option>
-                                            <option value="14">OLLAGUE</option>
-                                            <option value="15">SAN PEDRO DE ATACAMA</option>
-                                            <option value="16">ANTOFAGASTA</option>
-                                        </select>       
-                                    </div>
-                                </div>                                   
-
-                        
-                                <div class="row mb-2">
-                                    <label class="col-sm-3">Lugar Específico:</label>
-                                    <div class="col-7">
-                                        <input type="text" class="form-control"> 
-                                    </div>
-                                </div>                                            
-
-                                <div class="row mb-2">    
-                                    <label class="col-sm-3">Referencia de la dirección: </label>
-                                    <div class="col-7">
-                                        <textarea class="form-control" rows="2"></textarea>
-                                    </div>
-                                </div>                    
-
-                                <div class="row mb-2">   
-                                    <label class="col-sm-3">Latitud:<span style="color: red; font-weight: bold;">*</span></label>  
-                                    <div class="col-7">
-                                        <input class="form-control" type="number">                   
-                                    </div>
-                                </div>
-
-                                <div class="row mb-2">   
-                                    <label class="col-sm-3">Longitud:<span style="color: red; font-weight: bold;">*</span></label>  
-                                    <div class="col-7">
-                                        <input class="form-control" type="number">         
-                                    </div>
-                                </div>                    
-
                         </div>
 
+                        <div class="row mb-2">
+                            <label class="col-sm-2">Región:<span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">I Región</option>
+                                    <option value="2">II Región</option>
+                                    <option value="3">III Región</option>
+                                    <option value="4">IV Región</option>
+                                    <option value="5">V Región</option>
+                                    <option value="6">VI Región</option>
+                                    <option value="7">VII Región</option>
+                                    <option value="8">VIII Región</option>
+                                    <option value="9">IX Región</option>
+                                    <option value="10">X Región</option>
+                                    <option value="11">XI Región</option>
+                                    <option value="12">XII Región</option>
+                                    <option value="13">XIII Región</option>
+                                    <option value="14">XIV Región</option>
+                                    <option value="15">XV Región</option>
+                                    <option value="16">XVI Región</option>
+                                </select>
+                            </div>
+
+                            <label class="col-sm-2">Comuna:<span style="color: red; font-weight: bold;">*</span></label> 
+                            <div class="col-sm-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">ARICA</option>
+                                    <option value="2">CAMARONES</option>
+                                    <option value="3">PUTRE</option>
+                                    <option value="4">GENERAL LAGOS</option>
+                                    <option value="5">IQUIQUE</option>
+                                    <option value="6">HUARA</option>
+                                    <option value="7">CAMINA</option>
+                                    <option value="8">COLCHANE</option>
+                                    <option value="9">PICA</option>
+                                    <option value="10">POZO ALMONTE</option>
+                                    <option value="11">TOCOPILLA</option>
+                                    <option value="12">MARIA ELENA</option>
+                                    <option value="13">CALAMA</option>
+                                    <option value="14">OLLAGUE</option>
+                                    <option value="15">SAN PEDRO DE ATACAMA</option>
+                                    <option value="16">ANTOFAGASTA</option>
+                                </select>       
+                            </div>
+                        </div>                                   
+
+                    
+                        <div class="row mb-2">
+                            <label class="col-sm-2">Lugar Específico:</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control"> 
+                            </div>
+                            <label class="col-sm-2">Referencia de la dirección: </label>
+                            <div class="col-sm-4">
+                                <textarea class="form-control" rows="2"></textarea>
+                            </div>
+                        </div>                    
+
+                        <div class="row mb-2">   
+                            <label class="col-sm-2">Latitud:<span style="color: red; font-weight: bold;">*</span></label>  
+                            <div class="col-sm-4">
+                                <input class="form-control" type="number">                   
+                            </div>
+
+                            <label class="col-sm-2">Longitud:<span style="color: red; font-weight: bold;">*</span></label>  
+                            <div class="col-sm-4">
+                                <input class="form-control" type="number">         
+                            </div>
+                        </div>                    
                     </div>
                 </div>
             </div>
