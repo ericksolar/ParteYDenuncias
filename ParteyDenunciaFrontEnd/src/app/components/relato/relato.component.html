@@ -5,65 +5,65 @@
         <!--area derecha-->
 
 
-        <form class="">
-            <div style="text-align: center;">
+        <form>
+
+            <div class="text-center">
                 <h3>Relato funcionario a cargo de la diligencia o del</h3>
                 <h3> denunciante para denuncias NNA </h3>
             </div>
 
 
-            <div class="" style="text-align: left; margin: 0px auto;">
-                <div class="row" style="max-width: 50%; margin: 0px auto;">
-                    <div class="col-3">
-                        <label>Nombre:<span style="color: red; font-weight: bold;">*</span></label>
-                    </div>
-                    <div class="col">
+            <div class="row mt-2">
+                <div class="row mb-2">
+                    <label class="col-sm-3">Nombre:<span style="color: red; font-weight: bold;">*</span></label>
+                    <div class="col-sm-5">
                         <input type="text" class="form-control">
                     </div>
                 </div>
-                <div class="row" style="max-width: 50%; margin: 0px auto;">
-                    <div class="col-3">
-                        <label>Grado:<span style="color: red; font-weight: bold;">*</span></label>
-                    </div>
-                    <div class="col">
+
+                <div class="row mb-2">
+                    <label class="col-sm-3">Grado:<span style="color: red; font-weight: bold;">*</span></label>
+                    <div class="col-sm-5">
                         <input type="text" class="form-control">
                     </div>
                 </div>
-                <div class="row" style="max-width: 50%; margin: 0px auto;">
-                    <div class="col-3">
-                        <label>RUN:<span style="color: red; font-weight: bold;">*</span></label>
-                    </div>
-                    <div class="col">
+
+                <div class="row mb-2">
+                    <label class="col-sm-3">RUN:<span style="color: red; font-weight: bold;">*</span></label>
+                    <div class="col-sm-5">
                         <input type="text" class="form-control">
                     </div>
                 </div>
-                <div class="row" style="max-width: 50%; margin: 0px auto;">
-                    <div class="col-3">
-                        <label>Narracion del hecho:<span style="color: red; font-weight: bold;">*</span></label>
-                    </div>
-                    <div class="col">
+
+                <div class="row mb-2">
+                    <label class="col-sm-3">Narracion del hecho:<span style="color: red; font-weight: bold;">*</span></label>
+                    <div class="col-sm-5">
                         <textarea class="form-control" rows="12" cols="35"></textarea>
                     </div>
                 </div>
-                <br><br><br>
-                <div class="row" style="max-width: 50%; margin: 0px auto;">
-                    <div class="col-3">
-                        <label>Firma:</label>
-                    </div>
-                    <div class="col">
-                        <P>_______________________________________________________</P>
+
+                <div class="row mb-3 mt-4">
+                    <label class="col-3">Firma:</label>
+                    <div class="col-sm-5">
+                        <P>____________________________________________</P>
                     </div>
                 </div>
-    
-                <div class="row border">
+                
+                <div class="row mt-2">
+                    <div class="d-grid gap-2  mx-auto justify-content-md-end">
+                        <button type="submit" class="btn btn-success btn-lg" routerLinkActive="active">Guardar</button>
+                    </div>
+                </div>  
+                <br>
+                <div class="row mt-3">
                     <div class="col d-grid gap-2">
                         <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/testigo" routerLinkActive="active">Atrás</button>
-    
                     </div>
+
                     <div class="col d-grid gap-2">
                         <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/fiscal" routerLinkActive="active">Siguiente</button>
-    
                     </div>
+
                 </div>
             </div>
 

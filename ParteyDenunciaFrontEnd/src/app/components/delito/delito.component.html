@@ -1,90 +1,81 @@
 <div class="row">
-    <div class="col border">
+    <div class="col-sm-12 border">
         <form>
-            <table style="width: 100%;">
 
-                <tr>
-                    <td colspan="3" class="text-center">
-                        <h3>Clasificacion del delito</h3>
-                        <small>(Solo lo debe llenar el funcionario policial)</small>
-                    </td>
-                </tr>
+            <div>
+                <div colspan="3" class="text-center">
+                    <h3>Clasificacion del delito</h3>
+                    <small>(Solo lo debe llenar el funcionario policial)</small>
+                </div>
+            </div>
 
-                <div class="row">
-                    
-                    <div class="col offset-3 mt-3">
+            <div class="row">
+                
+                <div class="col-sm mt-2 border">
 
-                        <tr>
-                            <td>
-                                <p> Grado de Ejecucion del delito: <span style="color: red; font-weight: bold;">*</span></p>
-                            </td>
-                            <td colspan="2">
-                                <select class="form-select">
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">Tentado</option>
-                                    <option value="2">Frustrado</option>
-                                    <option value="3">Consumado</option>
-                                  </select>
-                            </td>
-                        </tr>
+                    <div class="row mb-2">
+                        <label class="col-sm-3"> Grado de Ejecucion del delito: <span style="color: red; font-weight: bold;">*</span></label>
+                        <div class="col-sm-5">
+                            <select class="form-select">
+                                <option selected>Seleccionar</option>
+                                <option value="1">Tentado</option>
+                                <option value="2">Frustrado</option>
+                                <option value="3">Consumado</option>
+                                </select>
+                        </div>
+                    </div>
 
+                    <div class="row mb-2">
+                        <label class="col-sm-3">Modus Operandi:</label>
+                        <div class="col-sm-7">
+                            <textarea class="form-control" rows="6" cols="50" ></textarea>
+                        </div>
+                    </div>
 
+                    <div class="row mb-2">
+                        <label class="col-sm-3">Existen Lesionados: <span style="color: red; font-weight: bold;">*</span></label>
+                        <div class="col-sm-5">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">No</label>
+                            </div>
+                        </div>
+                    </div>
 
-                        <tr>
-                            <td >
-                                <label>Modus Operandi:</label>
-                            </td>
-                            <td>
-                                <textarea class="form-control" rows="6" cols="50" ></textarea>
-                            </td>
-                        </tr>
-
-
-                        <tr>
-                            <td >
-                                <label>Existen Lesionados: <span style="color: red; font-weight: bold;">*</span></label>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Si</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">No</label>
-                                </div>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td >
-                                <label>Existen Fallecidos:</label>
-                            </td>
-                            <td>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                    <label class="form-check-label" for="inlineRadio1">Si</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">No</label>
-                                </div>
-                            </td>
-                        </tr>
-
+                    <div class="row mb-2">
+                        <label class="col-sm-3">Existen Fallecidos:</label>
+                        <div class="col-sm-7">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Si</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                <label class="form-check-label" for="inlineRadio2">No</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </table>
-            <div class="row mt-5 ">
-                <div class="col d-grid gap-2">
-                    <button type="submit" class="btn btn-primary btn-lg" routerLink="/denunciante" routerLinkActive="active">Atrás</button>
-
-                </div>
-                <div class="col d-grid gap-2">
-                    <button type="submit" class="btn btn-primary btn-lg" routerLink="/transporte" routerLinkActive="active" >Siguiente</button>
-
+                <div class="row mt-2">
+                    <div class="d-grid gap-2  mx-auto justify-content-md-end">
+                        <button type="submit" class="btn btn-success btn-lg" routerLinkActive="active">Guardar</button>
+                    </div>
+                </div>  
+                <br>
+                <div class="row mt-2">
+                    <div class="col d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg" routerLink="/denunciante" routerLinkActive="active">Atrás</button>
+                    </div>
+                    <div class="col d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg" routerLink="/transporte" routerLinkActive="active" >Siguiente</button>
+                    </div>
                 </div>
             </div>
         </form>
     </div>
 </div>
+    
