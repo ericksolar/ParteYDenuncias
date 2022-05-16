@@ -6,483 +6,413 @@
         <!--area derecha-->
         <form autocomplete="off" [formGroup]="miFormulario">
             <!--area derecha-->
-            <table style="width: 100%;">
-                <tr>
-                    <td colspan="3" class="text-center">
-                        <h3>Datos del testigo</h3>
-                    </td>
-                </tr>
-                    <div class="row">
-                        <div class="col-6 border">
-                         <!-- <fieldset disabled> -->
+            <div class="col">
+                <div colspan="3" class="text-center">
+                    <h3>Datos del testigo</h3>
+                </div>
+                <div class="row">
+                    <div class="col col-sm-6 border">
+                        <!-- <fieldset disabled> -->
 
-                            <tr>
-                                <td>
-                                    <label>Testigos:</label>
-                                </td>
-                                <td>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" 
-                                                type="radio" 
-                                                name="inlineRadioOptions0" 
-                                                id="inlineRadio1" 
-                                                value="option1"
-                                                checked>
-                                        <label class="form-check-label" for="inlineRadio1">Si</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" 
-                                                type="radio" 
-                                                name="inlineRadioOptions0" 
-                                                id="inlineRadio2" 
-                                                value="option2">
-                                        <label class="form-check-label" for="inlineRadio2">No</label>
-                                    </div>                                
-                                </td>
-                            </tr>
-                            
-
-                            <tr>
-                                <td>
-                                    <label>Nombre: <span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-                                <td>
-                                    <input type="text" 
-                                            class="form-control"
-                                            formControlName="nombre">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Nombre Social (identidad de género)</label>
-                                </td>
-                                <td>
-                                    <input type="text" 
-                                            class="form-control"
-                                            formControlName="nombreSocial">
-                                </td>
-                            </tr>
-
-
-
-                            <tr>
-                                <td>
-                                    <label>Tipo de documento de identificación <span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-                                <td>
-                                    <select class="form-select"     
-                                            name="tipoDocumento"
-                                            >
-                                        <option selected> Seleccionar</option>
-                                        <option value="1">RUT</option>
-                                        <option value="2">Pasaporte</option>
-                                        <option value="3">DNI</option>
-                                    </select>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>N° de documento de identificación: <span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-                                <td>
-                                    <input type="text" 
-                                            class="form-control" 
-                                            aria-describedby="button-addon2"
-                                            formControlName="numeroDocumentoIdentificacion">
-                                </td>
-                                <td>
-                                    <button class="btn btn-outline-primary mb-1" 
-                                            type="button" 
-                                            id="button-addon2"
-                                            formControlName=""
-                                            >Buscar</button>                        
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Fecha de nacimiento</label>
-                                </td>
-                                <td>
-                                    <input type="date"  
-                                            class="form-control"
-                                            formControlName="">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Ciudad de nacimiento</label>
-                                </td>
-                                <td>
-                                    <input type="text" 
-                                            class="form-control"
-                                            formControlName="ciudadNacimiento">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Idioma o dialecto:</label>
-                                </td>
-                                <td>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Ingles</option>
-                                        <option value="2">Frances</option>
-                                        <option value="3">Aleman</option>
-                                        <option value="4">Español</option>
-                                    </select>                            
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>Nacionalidad:<span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-                                <td>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">UCRANIA</option>
-                                        <OPtion value="2">UGANDA</OPtion>
-                                        <option value="3">3NGLATERRA (GRAN BRETANA)</option>
-                                        <option value="4">ISLAS ULTRAMARINAS DE EE.UU.</option>
-                                        <option value="5">RUSSIA</option>
-                                        <option value="6">ESTADOS UNIDOS</option>
-                                        <option value="7">VOLTA SUPERIOR</option>
-                                        <option value="8">URUGUAY</option>
-                                        <option value="9">UZBEKISTAN</option>
-                                        <option value="10">VANUATU</option>
-                                        <option value="11">SAINT VINCENT AND THE GRENADINES</option>
-                                    </select>                                          
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>Escolaridad:</label>
-                                </td>
-                                <td>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Sin Estudios</option>
-                                        <option value="2">Educacion Basica</option>
-                                        <option value="3">Educacion Secundaria</option>
-                                        <option value="4">Educacion Secundaria Incompleta</option>
-                                        <option value="5">Educacion Universitaria</option>
-                                    </select>
-                                                          
-                                </td>
-                            </tr>
-    
-                            <tr>
-                                <td>
-                                    <label>Estado Migratorio <span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-                                <td>
-                                    <select class="form-select" aria-label="Default select example">
-                                            <option selected>Seleccionar</option>
-                                            <option value="1">Permanencia transitoria</option>
-                                            <option value="2">Residente temporal</option>
-                                            <option value="3">Residente oficial</option>
-                                            <option value="4">Residente definitivo</option>
-                                            <option value="5">Ilegal</option>
-                                        </select>
-    
-                                </td>
-                            </tr>
-    
-                            <tr>
-                                <td>
-                                    <label>Sexo Registral (Registro Civil)</label>
-                                </td>
-                                <td>
-                                    <select class="form-select" >
-                                            <option selected>Seleccionar</option>
-                                            <option value="1">Masculino</option>
-                                            <option value="2">Femenino</option>
-                                        </select>
-                                </td>
-                            </tr>
-    
-    
-                            <tr>
-                                <td>
-                                    <label for="disabledSelect" class="form-label">Identidad de género</label>
-                                </td>
-    
-                                <td>
-                                    <select class="form-select" name="genero">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Hombre</option>
-                                        <option value="2">Mujer</option>  
-                                        <option value="3">No Consultado</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Alias</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Pertenece a Pueblo Originario</label>
-                                </td>
-                                <td>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Mapuches</option>
-                                        <option value="2">Aymara</option>  
-                                        <option value="3">Rapa Nui</option> 
-                                        <option value="4">Diaguitas</option>
-                                        <option value="5">Atacameños</option>
-                                        <option value="6">Quechuas</option>
-                                        <option value="7">Collas</option>
-                                        <option value="8">Changos</option>
-                                        <option value="9">No Pertenece</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>Profesión/Oficio/Ocupación:</label>
-                                </td>
-                                <td>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">No Especifica</option>
-                                        <option value="2">Administrador de Empresas</option>  
-                                        <option value="3">Abogado</option> 
-                                        <option value="4">Adminsitrativo</option>
-                                        <option value="5">Agricultor</option>
-                                        <option value="6">Agricultor Maderero</option>
-                                        <option value="7">Agrónomo</option>
-                                        <option value="8">Analista de Sistemas</option>
-                                        <option value="9">Antropóloga</option>
-                                        <option value="1">Empleado Armada</option>
-                                        <option value="1">Armador Artesanal</option>
-                                    </select>
-                                </td>
-                            </tr>
-    
-    
-                            <tr>
-                                <td>
-                                    <label for="disabledSelect" class="form-label">Estado Civil</label>
-                                </td>
-    
-                                <td>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Soltero</option>
-                                        <option value="1">Casado</option>    
-                                        <option value="1">Separado de hecho</option>
-                                        <option value="1">Divorciado</option>    
-                                        <option value="1">Viudo</option>    
-                                        <option value="1">Acuerdo Union Civil</option>    
-                                    </select>
-                                </td>
-                            </tr>
-    
-                            <tr>
-                                <td>
-                                    <label>Estado<span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-                                <td>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Vivo/a</option>
-                                        <option value="2">Fallecido/a</option>
-                                        <option value="3">Presenta Halito</option>
-                                        <option value="4">Inestabilidad al caminar</option>
-                                        <option value="5">Rostro Congestionado</option>
-                                        <option value="6">Incoherencia al hablar</option>
-                                        <option value="7">Presenta Lesiones</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>¿Que lesiones? y origen de lesiones</label>
-                                </td>
-                                <td>
-                                    <textarea class="form-control" rows="4" cols="50"></textarea>
-                                    <br>
-                                </td>
-                            </tr>
-                        </div>
-                        <div class="col-6 border">
-
-                            <tr>
-                                <td>
-                                    <label for="disabledSelect" class="form-label">Tipo de Direccion <span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-
-                                <td>
-                                    <select class="form-select">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Particular</option>
-                                        <option value="2">Comercial</option>  
-                                    </select>
-
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Calle <span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>Numero <span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Departamento/oficina</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>Block</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>Poblacion o Villa</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>Sector</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Región: <span style="color: red; font-weight: bold;">*</span></p>
-
-                                </td>
-                                <td>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">I Región</option>
-                                        <option value="1">II Región</option>
-                                        <option value="2">III Región</option>
-                                        <option value="3">IV Región</option>
-                                        <option value="3">V Región</option>
-                                        <option value="1">VI Región</option>
-                                        <option value="1">VII Región</option>
-                                        <option value="2">VIII Región</option>
-                                        <option value="3">IX Región</option>
-                                        <option value="3">X Región</option>
-                                        <option value="1">XI Región</option>
-                                        <option value="1">XII Región</option>
-                                        <option value="2">XIII Región</option>
-                                        <option value="3">XIV Región</option>
-                                        <option value="3">XV Región</option>
-                                        <option value="3">XVI Región</option>
-
-                                    </select>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>Comuna <span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Observacion Referencia de la direccion</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-                            <hr>
-                            <tr>
-                                <td>
-                                    <label for="disabledSelect" class="form-label">Datos de contacto <span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-
-                                <td>
-                                    <select class="form-select" aria-label="Default select example"  name="contacto">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Particular</option>
-                                        <option value="2">Comercial</option> 
-                                        <option value="3">No tiene</option>
-                                    </select>
-                                
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Telefono fijo</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label>Telefono Movil <span style="color: red; font-weight: bold;">*</span></label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>Correo electronico</label>
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control">
-                                </td>
-                            </tr>
-
-                        <tr>
-                            <td class="mb-3" style="padding-right: 50px;">
-                                <label>Redes Sociales</label>
-                            </td>
-                            <td>
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Testigos:</label>
+                            <div class="col-sm-7">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" 
                                             type="radio" 
-                                            name="inlineRadio" 
+                                            name="inlineRadioOptions0" 
+                                            id="inlineRadio1" 
+                                            value="option1"
+                                            checked>
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadioOptions0" 
+                                            id="inlineRadio2" 
+                                            value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>                                
+                            </div>
+                        </div>
+
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Tipo de documento de identificación <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <select class="form-select"     
+                                        name="tipoDocumento"
+                                        >
+                                    <option selected> Seleccionar</option>
+                                    <option value="1">RUT</option>
+                                    <option value="2">Pasaporte</option>
+                                    <option value="3">DNI</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        
+                        <div class="row mb-2">
+                            <label class="col-sm-4">N° de documento de identificación: <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-6">
+                                <input type="text"  class="form-control" formControlName="numeroDocumento">
+                                <div class="col-sm-12">
+                                    <!-- <div class="form-text text-danger">
+                                        El numero de documento es obligatorio
+                                    </div> -->
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="col-sm-2">
+                                <button class="btn btn-outline-primary form-control" type="button" id="button-addon2">Buscar</button>                        
+                            </div>
+                            
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Nombre: <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <input type="text" 
+                                        class="form-control"
+                                        formControlName="nombre">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Nombre Social (identidad de género)</label>
+                            <div class="col-sm-7">
+                                <input type="text" 
+                                        class="form-control"
+                                        formControlName="nombreSocial">
+                            </div>
+                        </div>
+
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Fecha de nacimiento</label>
+                            <div class="col-sm-7">
+                                <input type="date"  
+                                        class="form-control"
+                                        formControlName="">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Ciudad de nacimiento</label>
+                            <div class="col-sm-7">
+                                <input type="text" 
+                                        class="form-control"
+                                        formControlName="ciudadNacimiento">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Idioma o dialecto:</label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Ingles</option>
+                                    <option value="2">Frances</option>
+                                    <option value="3">Aleman</option>
+                                    <option value="4">Español</option>
+                                </select>                            
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Nacionalidad:<span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">UCRANIA</option>
+                                    <OPtion value="2">UGANDA</OPtion>
+                                    <option value="3">3NGLATERRA (GRAN BRETANA)</option>
+                                    <option value="4">ISLAS ULTRAMARINAS DE EE.UU.</option>
+                                    <option value="5">RUSSIA</option>
+                                    <option value="6">ESTADOS UNIDOS</option>
+                                    <option value="7">VOLTA SUPERIOR</option>
+                                    <option value="8">URUGUAY</option>
+                                    <option value="9">UZBEKISTAN</option>
+                                    <option value="10">VANUATU</option>
+                                    <option value="11">SAINT VINCENT AND THE GRENADINES</option>
+                                </select>                                          
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Escolaridad:</label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Sin Estudios</option>
+                                    <option value="2">Educacion Basica</option>
+                                    <option value="3">Educacion Secundaria</option>
+                                    <option value="4">Educacion Secundaria Incompleta</option>
+                                    <option value="5">Educacion Universitaria</option>
+                                </select>
+                                                        
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Estado Migratorio <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Permanencia transitoria</option>
+                                        <option value="2">Residente temporal</option>
+                                        <option value="3">Residente oficial</option>
+                                        <option value="4">Residente definitivo</option>
+                                        <option value="5">Ilegal</option>
+                                    </select>
+
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Sexo Registral (Registro Civil)</label>
+                            <div class="col-sm-7">
+                                <select class="form-select" >
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Masculino</option>
+                                        <option value="2">Femenino</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Identidad de Género</label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Hombre</option>
+                                    <option value="2">Mujer</option>  
+                                    <option value="3">No Consultado</option>    
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Alias</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Pertenece a Pueblo Originario</label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Mapuches</option>
+                                    <option value="2">Aymara</option>  
+                                    <option value="3">Rapa Nui</option> 
+                                    <option value="4">Diaguitas</option>
+                                    <option value="5">Atacameños</option>
+                                    <option value="6">Quechuas</option>
+                                    <option value="7">Collas</option>
+                                    <option value="8">Changos</option>
+                                    <option value="9">No Pertenece</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Profesión / Oficio / Ocupación:</label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">No Especifica</option>
+                                    <option value="2">Administrador de Empresas</option>  
+                                    <option value="3">Abogado</option> 
+                                    <option value="4">Adminsitrativo</option>
+                                    <option value="5">Agricultor</option>
+                                    <option value="6">Agricultor Maderero</option>
+                                    <option value="7">Agrónomo</option>
+                                    <option value="8">Analista de Sistemas</option>
+                                    <option value="9">Antropóloga</option>
+                                    <option value="1">Empleado Armada</option>
+                                    <option value="1">Armador Artesanal</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Estado Civil</label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Soltero</option>
+                                    <option value="1">Casado</option>    
+                                    <option value="1">Separado de hecho</option>
+                                    <option value="1">Divorciado</option>    
+                                    <option value="1">Viudo</option>    
+                                    <option value="1">Acuerdo Union Civil</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Estado<span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Vivo/a</option>
+                                    <option value="2">Fallecido/a</option>
+                                    <option value="3">Presenta Halito</option>
+                                    <option value="4">Inestabilidad al caminar</option>
+                                    <option value="5">Rostro Congestionado</option>
+                                    <option value="6">Incoherencia al hablar</option>
+                                    <option value="7">Presenta Lesiones</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">¿Que lesiones? y origen de lesiones</label>
+                            <div class="col-sm-7">
+                                <textarea class="form-control" rows="4" cols="50"></textarea>
+                                <br>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col col-sm-6 border">
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Tipo de Dirección</label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Contacto Particular</option>
+                                    <option value="2">Contacto Comercial</option>  
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Calle <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Numero <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Departamento/oficina</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Block</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Poblacion o Villa</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Sector</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Región: <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">I Región</option>
+                                    <option value="1">II Región</option>
+                                    <option value="2">III Región</option>
+                                    <option value="3">IV Región</option>
+                                    <option value="3">V Región</option>
+                                    <option value="1">VI Región</option>
+                                    <option value="1">VII Región</option>
+                                    <option value="2">VIII Región</option>
+                                    <option value="3">IX Región</option>
+                                    <option value="3">X Región</option>
+                                    <option value="1">XI Región</option>
+                                    <option value="1">XII Región</option>
+                                    <option value="2">XIII Región</option>
+                                    <option value="3">XIV Región</option>
+                                    <option value="3">XV Región</option>
+                                    <option value="3">XVI Región</option>
+
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Comuna <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Observacion Referencia de la direccion</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        
+                        <hr>
+
+                        <div class="row mb-2">
+                            <label for="disabledSelect" class="col-sm-4 form-label">Datos de contacto <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <select class="form-select" aria-label="Default select example"  name="contacto">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Particular</option>
+                                    <option value="2">Comercial</option> 
+                                    <option value="3">No tiene</option>
+                                </select>
+                            
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Telefono fijo</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Telefono Movil <span style="color: red; font-weight: bold;">*</span></label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Correo electronico</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Redes Sociales</label>
+                            <div class="col-sm-7">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadioOptions" 
                                             id="inlineRadio1" 
                                             value="option1"
                                             (click)="habilitarCampoRedes()">
@@ -491,146 +421,139 @@
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" 
                                             type="radio" 
-                                            name="inlineRadio" 
+                                            name="inlineRadioOptions" 
                                             id="inlineRadio2" 
                                             value="option2"
                                             (click)="habilitarCampoRedes()"
                                             checked>
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
-                                <div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Cuáles Redes Sociales:</label>
+                            <div class="col-sm-7">
+                                <select class="form-select" 
+                                        [disabled]="textBoxDisabledRedes">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Twitter</option>
+                                    <option value="2">Facebook</option>
+                                    <option value="3">Instagram</option>
+                                    <option value="4">Tegram</option>
+                                    <option value="5">VK</option>
+                                </select>       
+                            </div>
+                        </div>
+
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Agregar Identificación/Login</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" [disabled]="textBoxDisabledRedes">
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label  class="col-sm-4">¿Conoce al denunciando(s)?¿Podria entregar descripcion de el o ellos?</label>
+                            <div  class="col-sm-7">
+                                <textarea class="form-control" rows="5" cols="50"></textarea>
+                                <br>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label  class="col-sm-4 form-label" >¿Que relacion tiene con el denunciado(s)?</label>
+                            <div  class="col-sm-7">
+                                <select class="form-select">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Padre</option>
+                                    <option value="2">Madre</option>
+                                    <option value="3">Hermana</option>
+                                    <option value="4">Hermano</option>
+                                    <option value="5">Tio</option>
+                                    <option value="6">Tia</option>
+                                    <option value="7">Abuelo</option>
+                                    <option value="8">Abuela</option>
+                                    <option value="9">Primo</option>
+                                    <option value="10">Primo</option>
+                                    <option value="11">Vecina</option>
+                                    <option value="12">Vecino</option>
+                                    <option value="13">Amigo</option>
+                                    <option value="14">Amiga</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <label  class="col-sm-4">¿Conoce o puede mencionar otros testigos?</label>
+                            <div  class="col-sm-7">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input"  
+                                            type="radio" 
+                                            name="inlineRadioOptions1" 
+                                            value="option1"
+                                            checked>
+                                    <label class="form-check-label"  for="inlineRadio1">Si</label>
                                 </div>
-                            </td>
-                        </tr>
-                  
-                            <tr>
-                                <label class="form-label">Cuáles Redes Sociales:</label>
-                                <td>
-                                    <select class="form-select" 
-                                            [disabled]="textBoxDisabledRedes">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Twitter</option>
-                                        <option value="2">Facebook</option>
-                                        <option value="3">Instagram</option>
-                                        <option value="4">Tegram</option>
-                                        <option value="5">VK</option>
-                                    </select>       
-                                </td>
-                            </tr>
-    
-    
-                            <tr>
-                                <td>
-                                    Agregar Identificación/Login
-                                </td>
-                                <td>
-                                    <input type="text" class="form-control" [disabled]="textBoxDisabledRedes">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>¿Conoce al denunciando(s)?</label>
-                                    <label>¿Podria entregar descripcion de el o ellos?</label>
-                                </td>
-                                <td>
-                                    <textarea class="form-control" rows="4" cols="50"></textarea>
-                                    <br>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td>
-                                    <label for="disabledSelect" class="form-label">¿Que relacion tiene con el denunciado(s)?</label>
-                                </td>
-
-                                <td>
-                                    <select class="form-select" aria-label="Default select example" name="denunciado">
-                                        <option selected>Seleccionar</option>
-                                        <option value="1">Padre</option>
-                                        <option value="2">Madre</option>
-                                        <option value="3">Hermana</option>
-                                        <option value="4">Hermano</option>
-                                        <option value="5">Tio</option>
-                                        <option value="6">Tia</option>
-                                        <option value="7">Abuelo</option>
-                                        <option value="8">Abuela</option>
-                                        <option value="9">Primo</option>
-                                        <option value="10">Primo</option>
-                                        <option value="11">Vecina</option>
-                                        <option value="12">Vecino</option>
-                                        <option value="13">Amigo</option>
-                                        <option value="14">Amiga</option>
-                                    </select>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td class="mb-3" style="padding-right: 50px;">
-                                    <label>¿Conoce o puede mencionar otros testigos?</label>
-                                </td>
-                                <td>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input"  
-                                                type="radio" 
-                                                name="inlineRadioOptions1" 
-                                                value="option1"
-                                                checked>
-                                        <label class="form-check-label"  for="inlineRadio1">Si</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadioOptions1" 
+                                            value="option2"
+                                            >
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                                <div class="form-check">
+                                    <div>
+                                        <label>Si la respuesta es SI, indicar referencias o nombres:</label>
+                                        <textarea class="form-control" rows="4" cols="70"></textarea>
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" 
-                                                type="radio" 
-                                                name="inlineRadioOptions1" 
-                                                value="option2"
-                                                >
-                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <label class="col-sm-4">¿Poosee algún registro o prueba de los hechos?</label>
+                            <div  class="col-sm-7">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input"  
+                                            type="radio" 
+                                            name="inlineRadioOptions3" 
+                                            value="option1"
+                                            checked>
+                                    <label class="form-check-label"  for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="inlineRadioOptions3" 
+                                            value="option2"
+                                            >
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                                <div class="form-check">
+                                    <div>
+                                        <label>Describa:</label>
+                                        <textarea class="form-control" rows="4" cols="70"></textarea>
                                     </div>
-                                    <div class="form-check">
-                                        <td style="padding-right: 50px;">
-                                            <label>Si la respuesta es SI, indicar referencias o nombres:</label>
-                                            <textarea class="form-control" rows="4" cols="70"></textarea>
-                                        </td>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="mb-3" style="padding-right: 50px;">
-                                    <label>¿Poosee algún registro o prueba de los hechos?</label>
-                                </td>
-                                <td>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input"  
-                                                type="radio" 
-                                                name="inlineRadioOptions3" 
-                                                value="option1"
-                                                checked>
-                                        <label class="form-check-label"  for="inlineRadio1">Si</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" 
-                                                type="radio" 
-                                                name="inlineRadioOptions3" 
-                                                value="option2"
-                                                >
-                                        <label class="form-check-label" for="inlineRadio2">No</label>
-                                    </div>
-                                    <div class="form-check">
-                                        <td style="padding-right: 50px;">
-                                            <label>Describa:</label>
-                                            <textarea class="form-control" rows="4" cols="70"></textarea>
-                                        </td>
-                                    </div>
-                                </td>
-
-                            </tr>
+                                </div>
+                            </div>
                         </div>
                     </div>
-            </table>
+                </div>
+            </div>
 
-            <div class="row mt-3">
+            <div class="row mt-2">
+                <div class="d-grid gap-2  mx-auto justify-content-md-end">
+                    <button type="submit" class="btn btn-success btn-lg" routerLinkActive="active">Guardar</button>
+                </div>
+            </div>  
+            <br>
+            <div class="row mt-2">
                 <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/imputado" routerLinkActive="active">Atrás</button></div>
                 <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/relato" routerLinkActive="active">Siguiente</button></div>                
             </div>
+
         </form>
     </div>
 </div>

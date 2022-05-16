@@ -7,23 +7,22 @@
         <span class="navbar-brand mb-0 h1" style="padding-left: 50px;">Parte y Denuncia</span>
     </div>
 </nav> -->
-
-<section>
-    <div class="container container-sm col-sm">
+<div class="row">
+    <div class="col border">
         <form>
-            <div class="col-sm-6">
+            <div class="col col-sm text-center">
                 <h3>FORMULARIO PARTE Y DENUNCIA</h3>
             </div>    
-            <div class="row border">
-                <div class="col-8 col-sm-8 border">
+            <div class="row">
+                <div class="col-sm-8 border">
                     <div class="mb-3 mt-3">
                         <label class="form-label">Institución a Cargo: DIRECTEMAR</label>
                     </div>
                     <div class="row mb-1">
-                        <div class="col-4 col-sm-4">
+                        <div class="col-sm-4">
                             <p>Gobernación Maritima:</p>
                         </div>                            
-                        <div class="col-8 col-sm-8">
+                        <div class="col-sm-6">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>Seleccionar</option>
                                 <option value="1">GOBERNACIÓN MARÍTIMA DE ARICA</option>  
@@ -34,10 +33,10 @@
                         </div>
                     </div>
                     <div class="row mb-1">
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <p>Unidad Policial:</p>
                         </div>                            
-                        <div class="col-8">
+                        <div class="col-sm-6">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>Seleccionar</option>
                                 <option value="1">CAPITANIA DE PUERTO VALPARAISO</option>  
@@ -47,10 +46,10 @@
                         </div>
                     </div>
                     <div class="row  mb-1">
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <p>Parte:</p>
                         </div>                            
-                        <div class="col-8">
+                        <div class="col-sm-6">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>Seleccionar</option>
                                 <option value="1">DENUNCIA SIN DETENIDO.</option>
@@ -60,10 +59,10 @@
                         </div>
                     </div>
                     <div class="row  mb-1">
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <p>Conducción:</p>
                         </div>                            
-                        <div class="col-8">
+                        <div class="col-sm-6">
                             <select class="form-select" aria-label="Default select example">
                                 <option selected>Seleccionar</option>
                                 <option value="1">Pasa a control de detenccion</option>
@@ -74,54 +73,52 @@
                     </div>  
 
                     <div class="row mb-1">
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <label>Número de Parte: N° 6.853 N°</label>
                         </div>
-                        <div class="col-8">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control">
                         </div>
                     </div>
 
                     <div class="row mb-1">
-                        <div class="col-4">
+                        <div class="col-sm-4">
                             <label>Parte Ampliado:</label>
                         </div>
-                        <div class="col-8">
+                        <div class="col-sm-6">
                             <input type="text" class="form-control">
                         </div>
                     </div>
 
                     
-                    <div class="row mt-5">
-                        <div class="col-3 col-sm-3">
+                    <div class="row mt-3">
+                        <div class="col-sm-3">
                             <label class="form-label">Fecha Inicio denuncia:</label>
                         </div> 
-                        <div class="col-3 col-sm-3">
-                            <input class="form-label" type="date">
+                        <div class="col-sm-3">
+                            <input class="form-control" type="date">
                         </div>    
-                        <div class="col-3 col-sm-3">
-                            <label >Hora inicio denuncia:</label>
+                        <div class="col-sm-3">
+                            <label  class="form-label">Hora inicio denuncia:</label>
                         </div>
-                        <div class="col-3 col-sm-3">
-                            <input  type="time">
+                        <div class="col-sm-3">
+                            <input class="form-control"  type="time">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-3 col-sm-3">
-                            <label> Fecha fin denuncia:</label>
+                        <div class="col-sm-3">
+                            <label  class="form-label"> Fecha fin denuncia:</label>
                         </div>
-                        <div class="col-3 col-sm-3">
-                            <input class="form-label" type="date">
+                        <div class="col-sm-3">
+                            <input class="form-control" type="date">
                         </div> 
-                        <div class="col-3 col-sm-3">
-                            <label> Hora fin denuncia:</label>
+                        <div class="col-sm-3">
+                            <label  class="form-label"> Hora fin denuncia:</label>
                         </div>
-                        <div class="col-3 col-sm-3">
-                            <input  type="time">
+                        <div class="col-sm-3">
+                            <input class="form-control"  type="time">
                         </div>
                     </div>
                 </div> 
-                <div class="col-4 col-sm-4 border">   
+                <div class="col-sm border">   
                     <div class="mb-3 mt-3">
                         <h6>Lugar de Adopción del Procedimiento: </h6>
                     </div> 
@@ -151,54 +148,21 @@
                             </td>
                         </tr>
                     </div>
+                </div>
+                <br>
+                <div class="row mt-2">
+                    <div class="d-grid gap-2  mx-auto justify-content-md-end">
+                        <button type="submit" class="btn btn-success btn-lg" routerLinkActive="active">Guardar</button>
+                    </div>
+                </div>    
+                <div class="row mt-2">
+                    <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg" routerLink="/datosgenerales" routerLinkActive="active">Siguiente</button></div>                
+                </div>
+            </div>        
 
-                </div>
-            </div>        
-            <div class="clearfix"></div>
-            <!-- section -->   
-            <br>
-            <!-- <div class="row">
-                <div class="col p-2">            
-                      
-                        <h3>Acta General de la Denuncia </h3>
-                        <br>
-                        <div class="row ">
-                            <div class="col-3">
-                            </div>
-                            <div class="col-3 ">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">Con Denenidos</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                                    <label class="form-check-label" for="flexCheckChecked">Sin Detenidos</label>
-                                </div>
-                            </div>
-                            <div class="col-4 ">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                                    <label class="form-check-label" for="flexCheckChecked">Pasa a Control de Detención</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                                    <label class="form-check-label" for="flexCheckChecked">No pasa a Control de Detención</label>
-                                </div>
-            
-                            </div>
-                        </div>
-                    </div>        
-            </div>
-            <br> -->
-            <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4"></div>
-                <div class="col-4 d-grid gap-2">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/datosgenerales" routerLinkActive="active">Siguiente</button>
-                </div>
-            </div>        
         </form>  
     </div>
+</div>
 
-</section>
+
 

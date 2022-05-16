@@ -4,11 +4,11 @@
         <form autocomplete="off" [formGroup]="miFormulario"> 
             <!-- <fieldset disabled> -->
             <div class="col">
-                    <div colspan="3" class="col-sm-12 text-center">
+                    <div class="col-sm-12 text-center">
                         <h3 >Datos del Denunciante</h3>
                     </div>
                 <div class="row">
-                    <div class="col col-sm border">
+                    <div class="col col-sm-6 border">
 
                         <div class="row mb-2">
                             <label class="col-sm-4">Tipo de documento de Identificación:<span style="color: red; font-weight: bold;">*</span></label>
@@ -25,7 +25,7 @@
                         <div class="row mb-2">
                             <label class="col-sm-4">N° de documento de identificación: <span style="color: red; font-weight: bold;">*</span></label>
                             <div class="col-sm-6">
-                                <input type="text"  class="form-control" value="Seleccionar" formControlName="numeroDocumento">
+                                <input type="text"  class="form-control" formControlName="numeroDocumento">
                                 <div class="col-sm-12">
                                     <div class="form-text text-danger"
                                                 *ngIf="campoValido('numeroDocumento')">
@@ -57,7 +57,7 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label class="col-sm-4">Fecha de nacimiento: <span style="color: red; font-weight: bold;">*</span></label>
+                            <label class="col-sm-4">Fecha de nacimiento:<span style="color: red; font-weight: bold;">*</span></label>
                             <div class="col-sm-7">
                                 <input type="date" 
                                         class="form-control"
@@ -519,7 +519,7 @@
                             <hr>
 
                             <div class="row mb-2">
-                                <label class="col-sm-4">Para casos de NNA, indicar:</label>
+                                <label class="col-sm-5">Para casos de NNA, indicar:</label>
                                 <div class="col-sm-7">
                                     <select class="form-select" aria-label="Default select example">
                                         <option selected>Seleccionar</option>
@@ -534,7 +534,7 @@
 
 
                             <div class="row mb-2">
-                                <label class="col-sm-4">Parentesco/Vínculo/relación</label>
+                                <label class="col-sm-5">Parentesco/Vínculo/relación</label>
                                 <div class="col-sm-7">
                                     <select class="form-select" aria-label="Default select example">
                                         <!-- [(ngModel)]="selectedTipoDocumento" name="parentesco" -->
@@ -562,7 +562,7 @@
                             </div>
 
                             <div class="row mb-2">
-                                <label class="col-sm-4">¿Es el denunciante el adulto protector/referente de la víctima?</label>
+                                <label class="col-sm-5">¿Es el denunciante el adulto protector/referente de la víctima?</label>
                                 <div class="col-sm-7">
                                     <div class="form-check form-check-inline">
                                         <input  class="form-check-input" 
@@ -588,14 +588,14 @@
                             <br>
 
                             <div class="row mb-2">
-                                    <label class="col-sm-4">Persona(s) a quien(es) el niño, niña o adolecente contó los hechos (si es que los contó)</label><br>
+                                    <label class="col-sm-5">Persona(s) a quien(es) el niño, niña o adolecente contó los hechos (si es que los contó)</label><br>
                                     <div class="col-sm-7">
                                         <textarea class="form-control mb-1" rows="4" cols="50"></textarea>
                                     </div>
                             </div>
                         
                             <div class="row mb-2">
-                                <label class="col-sm-4">¿Cómo supo usted de estos hechos?</label><br>
+                                <label class="col-sm-5">¿Cómo supo usted de estos hechos?</label><br>
                                 <div class="col-sm-7">
                                     <textarea class="form-control mb-1" rows="4" cols="50"></textarea>
                                 </div>
@@ -605,8 +605,13 @@
                     </div>
                 </div>
             </div>
-
-            <div class="row mt-5">
+            <div class="row mt-2">
+                <div class="d-grid gap-2  mx-auto justify-content-md-end">
+                    <button type="submit" class="btn btn-success btn-lg" routerLinkActive="active">Guardar</button>
+                </div>
+            </div>  
+            <br>
+            <div class="row mt-2">
                 <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/datosgenerales" routerLinkActive="active">Atrás</button></div>
                 <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/delito" routerLinkActive="active">Siguiente</button></div>                
             </div>
