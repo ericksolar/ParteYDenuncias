@@ -1,16 +1,17 @@
 <div class="row">
-    <div class="col border">
+    <div class="col-sm-12 border">
         <!--area derecha-->
         <form autocomplete="off" [formGroup]="miFormulario"> 
             <!-- <fieldset disabled> -->
-            <div class="col">
+            <div class="col-sm-12">
                     <div class="col-sm-12 text-center">
                         <h3 >Datos del Denunciante</h3>
                     </div>
-                <div class="row">
+                <div class="row mt-2"  *ngFor="let denunciante of denunciantes().controls; let i=index" [formGroupName]="i">
                     <div class="col col-sm-6 border">
 
                         <div class="row mb-2">
+
                             <label class="col-sm-4">Tipo de documento de Identificación:<span style="color: red; font-weight: bold;">*</span></label>
                             <div class="col-sm-7">
                                 <select class="form-select" formControlName="tipoDocumento">
@@ -588,10 +589,10 @@
                             <br>
 
                             <div class="row mb-2">
-                                    <label class="col-sm-5">Persona(s) a quien(es) el niño, niña o adolecente contó los hechos (si es que los contó)</label><br>
-                                    <div class="col-sm-7">
-                                        <textarea class="form-control mb-1" rows="4" cols="50"></textarea>
-                                    </div>
+                                <label class="col-sm-5">Persona(s) a quien(es) el niño, niña o adolecente contó los hechos (si es que los contó)</label><br>
+                                <div class="col-sm-7">
+                                    <textarea class="form-control mb-1" rows="4" cols="50"></textarea>
+                                </div>
                             </div>
                         
                             <div class="row mb-2">
@@ -605,13 +606,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-2">
-                <div class="d-grid gap-2  mx-auto justify-content-md-end">
-                    <button type="submit" class="btn btn-success btn-lg" routerLinkActive="active">Guardar</button>
+            <div class="row mt-3">
+                <div class="col-sm-10 mt-2">
+                    <button type="submit" (click)="agregarDenunciantes()" class="btn btn-success btn-lg btn-block ">Agregar Denunciante</button>
                 </div>
-            </div>  
+                <div class="col mt-2">
+                    <button type="submit" class="btn btn-success btn-lg btn-block ">Guardar</button>
+                </div>                
+            </div>
             <br>
-            <div class="row mt-2">
+            <div class="row mt-3">
                 <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/datosgenerales" routerLinkActive="active">Atrás</button></div>
                 <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/delito" routerLinkActive="active">Siguiente</button></div>                
             </div>

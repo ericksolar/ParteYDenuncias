@@ -23,7 +23,7 @@
                                 <select class="form-select"
                                         formControlName="tipoDelito">
                                     <option disabled value="null">Seleccionar</option>
-                                    <option *ngFor="let delito of tpDelito" [ngValue]="delito">
+                                    <option *ngFor="let delito of tpDelito; let i = index " [ngValue]="delito">
                                     {{ delito }}
                                     </option>
                                 </select>                    
@@ -33,11 +33,11 @@
                         <div class="row mb-2">
                             <label class="col-sm-3"> Zona del Delito: <span style="color: red; font-weight: bold;">*</span></label>
                             <div class="col-sm-4">
-                                <select class="form-select" 
+                                <select class="form-select"
                                         formControlName="zonaDelito">
                                 <option disabled value="null">Seleccionar</option>
-                                    <option *ngFor="let zona of tpZonaDelito ; let i = index">
-                                    {{ zona.NMZonaDelito }}
+                                    <option *ngFor="let delito of tpZonaDelito; let i = index" [ngValue]="delito">
+                                    {{ delito }}
                                     </option>
                                 </select>
                             </div>
@@ -99,7 +99,6 @@
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" 
                                 formControlName="calle">
-                                <!-- [disabled]="miFormulario.get['zonaDelito'].value == 'Marítimo'" -->
                             </div>
 
                             <label class="col-sm-2">Número:</label> 
