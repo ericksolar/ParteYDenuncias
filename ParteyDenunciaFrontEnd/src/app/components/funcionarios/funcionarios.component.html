@@ -1,60 +1,41 @@
 <div class="row border">
     <!-- <fieldset disabled> -->
 
-    <div class="col-8 offset-2 p-3">
+    <div class="col">
        
-        <tr>
-            <td colspan="3" class="text-center">
+            <div class="text-center">
                 <h3>Datos de funcionario(s) acompañante(s) del procedimiento(s)</h3>
-            </td>
-        </tr>
+            </div>
         
         <form>
 
-            <div class="row mt-2 mb-1">
-                <div class="col-4">
-                    <label>RUT:<span style="color: red; font-weight: bold;">*</span></label>
-                </div>                            
-                <div class="col-6">
+            <div class="row mb-2 mt-3">
+                <label class="col-sm-2">RUT:<span style="color: red; font-weight: bold;">*</span></label>
+                <div class="col-sm-4">
                     <input type="text" class="form-control">
                 </div>
-                <div class="col-2">
+                <div class="col-sm-1">
                     <button class="btn btn-outline-primary mb-1 form-control" type="button" id="button-addon2">Buscar</button>                        
                 </div>
             </div>
 
-            <div class="row mb-1">
-                <div class="col-4">
-                    <label>Nombre:<span style="color: red; font-weight: bold;">*</span></label>
-                </div>                            
-                <div class="col-6">
-                    <input type="text" class="form-control">
-                </div>
-            </div>
-
-            <!-- <tr>
-                <td class="mb-3">
-                    <label>NPI:<span style="color: red; font-weight: bold;">*</span></label>
-                </td>
-                <td>
-                    <input type="text" class="form-control">
-                </td>
-            </tr> -->
-
-            <div class="row mb-1">
-                <div class="col-4">
-                    <label>Grado:<span style="color: red; font-weight: bold;">*</span></label>
-                </div>                            
-                <div class="col-6">
+            <div class="row mb-2">
+                <label class="col-sm-2">Nombre:<span style="color: red; font-weight: bold;">*</span></label>
+                <div class="col-sm-4">
                     <input type="text" class="form-control">
                 </div>
             </div>
 
             <div class="row mb-2">
-                <div class="col-4">
-                    <p>Rol en el procedimiento:</p>
-                </div>                            
-                <div class="col-6">
+                <label class="col-sm-2">Grado:<span style="color: red; font-weight: bold;">*</span></label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <label class="col-sm-2">Rol en el procedimiento:</label>
+                <div class="col-sm-4">
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Seleccionar</option>
                         <option value="1">Testigo</option>
@@ -64,61 +45,45 @@
                 </div>
             </div>
 
-            <div class="row mt-4">
-                <div class="col-4">
-                    <label>Firma:</label>
-                </div>                            
-                <div class="col-8">
+            <div class="row mb-2">
+                <label class="col-sm-2">Firma:</label>
+                <div class="col-sm-4">
                     <p>___________________________________________________</p>
                 </div>
             </div>
 
-            <hr>
-
-            
-            <hr>
-
             <div class="row border text-center">
-                <div class="col">
+                <div class="col-sm-6 mt-2">
                     <button type="submit" class="btn btn-success btn-lg btn-block">Imprimir Parte y Denuncia</button>
-
                 </div>
-                <div class="col">
-                    <button type="submit" class="btn btn-success btn-lg btn-block">Adjuntar Documentos</button>
 
+                <div class="col-sm-6 mt-2">
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Adjuntar Documentos</button>
                 </div>
 
             </div>
 
-
             <div class="row border mt-5 text-center">
-                <div class="col">
+                <div class="col-sm-12">
                     <button type="submit" class="btn btn-success btn-lg btn-block">Descargar PDF</button>
-
                 </div>
-
             </div>
 
             <!-- </fieldset> -->
 
-
-
             <div class="row border mt-5 text-center">
-                <div class="col">
+                <div class="col-sm-4">
                     <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/fiscal" routerLinkActive="active">Atrás</button>
-
                 </div>
-                <div class="col">
+                
+                <div class="col-sm-4">
                     <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/home" routerLinkActive="active">Inicio</button>
-
                 </div>
-                <div class="col">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/funcionario" routerLinkActive="active">Grabar</button>
 
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" routerLink="/funcionario" routerLinkActive="active">Grabar</button>
                 </div>
             </div>
-
-
 
         </form>
     </div>

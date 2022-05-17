@@ -5,23 +5,20 @@
     <div class="col border">
 
         <form>
-            <table style="width: 100%;">
-
-                <tr>
-                    <td colspan="3" class="text-center">
+            <div class="col">
+                <div>
+                    <div class="text-center">
                         <h3>Instrucciones del fiscal </h3>
                         <small>(En caso de contactos telefonicos)</small>
-                    </td>
-                </tr>
+                    </div>
+                </div>
                 
                 <div class="row">
-                    <div class="col offset-4 mt-3">
+                    <div class="col col-sm mt-3">
 
-                        <tr>
-                            <td>
-                                <label>¿Hubo contacto con el fiscal?</label>
-                            </td>
-                            <td>
+                        <div class="row mb-2">
+                            <label class="col-sm-3">¿Hubo contacto con el fiscal?</label>
+                            <div class="col-sm-5">
                                 <div class="form-check">
                                     <input class="form-check-input" 
                                             type="radio" 
@@ -44,49 +41,48 @@
                                         No
                                     </label>
                                 </div>
-                            </td>
-                        </tr>
+                            </div>
+                        </div>
 
-                        <tr>
-                            <td>
-                                <label>Nombre de Fiscal:</label>
-                            </td>
-                            <td>
+                        <div class="row mb-2">
+                            <label class="col-sm-3">Nombre de Fiscal:</label>
+                            <div class="col-sm-5">
                                 <input type="text" class="form-control"  [disabled]="textBoxDisabledFiscal">
-                            </td>
-                        </tr>
+                            </div>
+                        </div>
 
-                        <tr>
-                            <td>
-                                <label>Fiscalia local de:</label>
-                            </td>
-                            <td>
+                        <div class="row mb-2">
+                            <label class="col-sm-3">Fiscalia local de:</label>
+                            <div class="col-sm-5">
                                 <input type="text" class="form-control"  [disabled]="textBoxDisabledFiscal">
-                            </td>
-                        </tr>
+                            </div>
+                        </div>
 
-                        <tr>
-                            <td>
-                                <label>Instrucciones:</label>
-                            </td>
-                            <td>
+                        <div class="row mb-2">
+                            <label class="col-sm-3">Instrucciones:</label>
+                            <div class="col-sm-5">
                                 <textarea class="form-control" rows="5" cols="50"  [disabled]="textBoxDisabledFiscal"></textarea>
-                            </td>
-                        </tr>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-            </table>
-            <div class="row mt-5">
+            </div>
+            <div class="row mb-2">
+                <div class="d-grid gap-2  mx-auto justify-content-md-end">
+                    <button type="submit" class="btn btn-success btn-lg" routerLinkActive="active">Guardar</button>
+                </div>
+            </div>  
+            <br>
+            <div class="row mt-3">
                 <div class="col d-grid gap-2">
                     <button type="submit" class="btn btn-primary btn-lg" routerLink="/relato" routerLinkActive="active">Atrás</button>
 
                 </div>
                 <div class="col d-grid gap-2">
                     <button type="submit" class="btn btn-primary btn-lg" routerLink="/funcionarios" routerLinkActive="active" >Siguiente</button>
-
                 </div>
             </div>
+
         </form>
     </div>
 
