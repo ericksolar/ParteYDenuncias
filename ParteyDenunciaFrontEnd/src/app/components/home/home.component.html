@@ -9,7 +9,7 @@
 </nav> -->
 <div class="row">
     <div class="col border">
-        <form>
+        <form autocomplete="off" [formGroup]="miFormulario">
             <div class="col col-sm text-center">
                 <h3>FORMULARIO PARTE Y DENUNCIA</h3>
             </div>    
@@ -32,7 +32,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row mb-1">
+                    <div class="row mb-2">
                         <div class="col-sm-4">
                             <p>Unidad Policial:</p>
                         </div>                            
@@ -45,20 +45,21 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row  mb-1">
+                    <div class="row  mb-2">
                         <div class="col-sm-4">
                             <p>Parte:</p>
                         </div>                            
                         <div class="col-sm-6">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Seleccionar</option>
-                                <option value="1">DENUNCIA SIN DETENIDO.</option>
-                                <option value="2">DENUNCIA CON DETENIDO.</option>
-                                <!-- <option value="3">PARTE POLICIAL.</option>   -->
-                                </select>
+                            <select class="form-select"
+                                formControlName="parte">
+                                <option disabled value="null">Seleccionar</option>
+                                <option *ngFor="let tpparte of tpParte; let i=index" [ngValue]="tpparte">
+                                {{ tpparte }}
+                                </option>
+                            </select>
                         </div>
                     </div>
-                    <div class="row  mb-1">
+                    <div class="row  mb-2">
                         <div class="col-sm-4">
                             <p>Conducción:</p>
                         </div>                            
@@ -72,7 +73,7 @@
                         </div>
                     </div>  
 
-                    <div class="row mb-1">
+                    <div class="row mb-2">
                         <div class="col-sm-4">
                             <label>Número de Parte: N° 6.853 N°</label>
                         </div>
@@ -139,7 +140,7 @@
                     <div class="form-check">
                         <tr>
                             <td>
-                                <input  class="form-check-input" [(ngModel)]="selectedTLugarProcedimiento"  type="radio" value="otro" name="flexRadioDefault" id="flexRadioDefault4">
+                                <input formControlName="lugarProcedimiento" class="form-check-input" [(ngModel)]="selectedTLugarProcedimiento"  type="radio" value="otro" name="flexRadioDefault" id="flexRadioDefault4">
                                 <label class="form-check-label" for="flexCheckChecked">Otro</label>
                                 <div class="form-group" *ngIf="selectedTLugarProcedimiento">
                                     <label>Lugar</label>
