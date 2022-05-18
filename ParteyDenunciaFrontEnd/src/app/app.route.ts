@@ -8,11 +8,8 @@ import { FuncionariosComponent } from './components/funcionarios/funcionarios.co
 import { FiscalComponent } from './components/fiscal/fiscal.component';
 import { RelatoComponent } from './components/relato/relato.component';
 import { DelitoComponent } from './components/delito/delito.component';
-
 import { TestigoComponent } from './components/testigo/testigo.component';
-
 import { ImputadoComponent } from './components/imputado/imputado.component';
-
 import { TransporteComponent } from './components/transporte/transporte.component';
 import { VictimaComponent } from './components/victima/victima.component';
 

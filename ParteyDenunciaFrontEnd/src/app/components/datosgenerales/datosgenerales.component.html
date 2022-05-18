@@ -23,7 +23,7 @@
                                 <select class="form-select"
                                         formControlName="tipoDelito">
                                     <option disabled value="null">Seleccionar</option>
-                                    <option *ngFor="let delito of tpDelito; let i = index " [ngValue]="delito">
+                                    <option *ngFor="let delito of tpDelito; let i = index " [value]="delito">
                                     {{ delito }}
                                     </option>
                                 </select>                    
@@ -35,9 +35,9 @@
                             <div class="col-sm-4">
                                 <select class="form-select"
                                         formControlName="zonaDelito">
-                                <option disabled value="null">Seleccionar</option>
-                                    <option *ngFor="let delito of tpZonaDelito; let i = index" [ngValue]="delito">
-                                    {{ delito }}
+                                    <option disabled value="null">Seleccionar</option>
+                                    <option *ngFor="let tpzonadelito of tpZonaDelito; let i=index" [ngValue]="tpzonadelito">
+                                    {{ tpzonadelito }}
                                     </option>
                                 </select>
                             </div>
@@ -52,13 +52,13 @@
                                     <option value="1">Vía Pública</option>
                                     <option value="2">Local Comercial</option>
                                     <option value="3">Domicilio Particular</option>
-                                    <option value="4">Esdivcimiento Educacional</option>
-                                    <option value="5">A BORDO DE AVE O EMBARCACIÓN</option>
-                                    <option value="6">INTERIOR PUERTO O TERMINAL</option>
-                                    <option value="7">RAMPA</option>
-                                    <option value="8">TERRENO DE PLAYA</option>
-                                    <option value="9">ARTEFACTO NAVAL</option>
-                                    <option value="10">MAR</option>          
+                                    <option value="4">Establecimiento Educacional</option>
+                                    <option value="5">A bordo de nave o embarcacion</option>
+                                    <option value="6">Interior puerto o terminal</option>
+                                    <option value="7">Rampa</option>
+                                    <option value="8">Terreno de playa</option>
+                                    <option value="9">Artefacto naval</option>
+                                    <option value="10">Mar</option>          
                                 </select>
                                 <!-- <div class="form-group" *ngIf="TipoOcurrencia == 'otro'">
                                     <input type="text" class="" id="name" ngModel name="other_college_name" required>
@@ -92,9 +92,10 @@
                         <label>Dirección del Delito</label>
                     </div>
 
-                    <div class="col mb-2">
-
-                        <div class="row mb-2">
+                    <div class="col mb-2" >
+                        <div class="row mb-2" *ngIf="miFormulario.get('zonaDelito')?.value !== 'Marítimo' && 
+                                                miFormulario.get('zonaDelito')?.value !== 'Fluvial' && 
+                                                miFormulario.get('zonaDelito')?.value !== 'Lacustre'">
                             <label class="col-sm-2">Calle:<span style="color: red; font-weight: bold;">*</span></label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" 
@@ -109,7 +110,9 @@
                     
 
                     
-                        <div class="row mb-2">
+                        <div class="row mb-2" *ngIf="miFormulario.get('zonaDelito')?.value !== 'Marítimo' &&
+                                                    miFormulario.get('zonaDelito')?.value !== 'Fluvial' && 
+                                                    miFormulario.get('zonaDelito')?.value !== 'Lacustre'">
                             <label class="col-sm-2">Depto/Oficina:</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control">
@@ -121,7 +124,9 @@
                             </div>
                         </div>
 
-                        <div class="row mb-2">
+                        <div class="row mb-2" *ngIf="miFormulario.get('zonaDelito')?.value !== 'Marítimo' && 
+                                                    miFormulario.get('zonaDelito')?.value !== 'Fluvial' && 
+                                                    miFormulario.get('zonaDelito')?.value !== 'Lacustre' ">
                             <label class="col-sm-2">Población o Villa:</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control">
@@ -220,3 +225,4 @@
         </form>
     </div>
 </div>
+
