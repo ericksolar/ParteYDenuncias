@@ -23,7 +23,7 @@
                                 <select class="form-select"
                                         formControlName="tipoDelito">
                                     <option disabled value="null">Seleccionar</option>
-                                    <option *ngFor="let delito of tpDelito; let i = index " [ngValue]="delito">
+                                    <option *ngFor="let delito of tpDelito; let i = index " [value]="delito">
                                     {{ delito }}
                                     </option>
                                 </select>                    
@@ -35,9 +35,9 @@
                             <div class="col-sm-4">
                                 <select class="form-select"
                                         formControlName="zonaDelito">
-                                <option disabled value="null">Seleccionar</option>
-                                    <option *ngFor="let delito of tpZonaDelito; let i = index" [ngValue]="delito">
-                                    {{ delito }}
+                                    <option disabled value="null">Seleccionar</option>
+                                    <option *ngFor="let tpzonadelito of tpZonaDelito; let i=index" [ngValue]="tpzonadelito">
+                                    {{ tpzonadelito }}
                                     </option>
                                 </select>
                             </div>
@@ -92,9 +92,10 @@
                         <label>Dirección del Delito</label>
                     </div>
 
-                    <div class="col mb-2">
-
-                        <div class="row mb-2">
+                    <div class="col mb-2" >
+                        <div class="row mb-2" *ngIf="miFormulario.get('zonaDelito')?.value !== 'Marítimo' && 
+                                                miFormulario.get('zonaDelito')?.value !== 'Fluvial' && 
+                                                miFormulario.get('zonaDelito')?.value !== 'Lacustre'">
                             <label class="col-sm-2">Calle:<span style="color: red; font-weight: bold;">*</span></label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control" 
@@ -109,7 +110,9 @@
                     
 
                     
-                        <div class="row mb-2">
+                        <div class="row mb-2" *ngIf="miFormulario.get('zonaDelito')?.value !== 'Marítimo' &&
+                                                    miFormulario.get('zonaDelito')?.value !== 'Fluvial' && 
+                                                    miFormulario.get('zonaDelito')?.value !== 'Lacustre'">
                             <label class="col-sm-2">Depto/Oficina:</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control">
@@ -121,7 +124,9 @@
                             </div>
                         </div>
 
-                        <div class="row mb-2">
+                        <div class="row mb-2" *ngIf="miFormulario.get('zonaDelito')?.value !== 'Marítimo' && 
+                                                    miFormulario.get('zonaDelito')?.value !== 'Fluvial' && 
+                                                    miFormulario.get('zonaDelito')?.value !== 'Lacustre' ">
                             <label class="col-sm-2">Población o Villa:</label>
                             <div class="col-sm-4">
                                 <input type="text" class="form-control">
@@ -220,3 +225,4 @@
         </form>
     </div>
 </div>
+
