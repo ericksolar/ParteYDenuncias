@@ -25,7 +25,11 @@ export class DatosgeneralesComponent implements OnInit {
 
   tpZonaDelito: any  = [ 'Rural','Urbano','Marítimo','Fluvial','Lacustre'];
 
-  // console.log(tpZonaDelito[0]);
+  regiones: any = ['I Región','II Región','III Región','IV Región','V Región','VI Región','VII Región','VIII Región','IX Región','X Región','XI Región','XII Región','XIII Región','XIV Región','XV Región','XVI Región']
+
+  tpLugarOcurrencia: any = ['Vía Pública', 'Local Comercial','Domicilio Particular','Establecimiento Educacional','A bordo de nave o embarcacion','Interior puerto o terminal','Rampa','Terreno de playa','Artefacto naval','Mar']        
+
+  comunas: any = ['ARICA','CAMARONES','PUTRE','GENERAL LAGOS','IQUIQUE','HUARA','CAMINA','COLCHANE','PICA','POZO ALMONTE','TOCOPILLA','MARIA ELENA','CALAMA','OLLAGUE','SAN PEDRO DE ATACAMA','ANTOFAGASTA']
 
   constructor(private fb: FormBuilder) {
     this.miFormulario = this.fb.group({
@@ -69,5 +73,10 @@ export class DatosgeneralesComponent implements OnInit {
   get TPtipoDelito(){
     return this.miFormulario.get('tipoDelito');
   }
+
+  get getRegiones(){
+    return [ ...this.regiones ];
+  }
+
 
 }
