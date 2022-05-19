@@ -13,7 +13,7 @@
                         <div class="row mb-2">
                             <label  class="col-sm-3"> Fecha y Hora: <span style="color: red; font-weight: bold;">*</span> </label>
                             <div class="col-sm-4">
-                                <input type="datetime-local" class="form-control">
+                                <input formControlName="fecha" type="datetime-local" class="form-control">
                             </div>
                         </div>
 
@@ -46,19 +46,12 @@
                         <div class="row mb-2 ">
                             <label  class="col-sm-3"> Tipo de Lugar de Ocurrencia: <span style="color: red; font-weight: bold;">*</span></label>
                             <div class="col-sm-4">
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" formControlName="TipoLugarOcurrencia">
                                     <!-- [(ngModel)]="TipoOcurrencia" name="Ocurrencia" -->
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">Vía Pública</option>
-                                    <option value="2">Local Comercial</option>
-                                    <option value="3">Domicilio Particular</option>
-                                    <option value="4">Establecimiento Educacional</option>
-                                    <option value="5">A bordo de nave o embarcacion</option>
-                                    <option value="6">Interior puerto o terminal</option>
-                                    <option value="7">Rampa</option>
-                                    <option value="8">Terreno de playa</option>
-                                    <option value="9">Artefacto naval</option>
-                                    <option value="10">Mar</option>          
+                                    <option disabled value="null">Seleccionar</option>
+                                    <option *ngFor="let tplugar of tpLugarOcurrencia; let i=index" [ngValue]="tplugar">
+                                    {{ tplugar }}
+                                    </option>                                      
                                 </select>
                                 <!-- <div class="form-group" *ngIf="TipoOcurrencia == 'otro'">
                                     <input type="text" class="" id="name" ngModel name="other_college_name" required>
@@ -69,7 +62,7 @@
                         <div class="row mb-2">
                             <label class="col-sm-3">Lugar Específico de ocurrencia: </label>
                             <div class="col-sm-7">
-                                <textarea class="form-control" rows="4" formControlName="lugarEspecifico">
+                                <textarea class="form-control" rows="4" formControlName="lugarOcurrencia">
                                     <div class="col-sm-12">
                                         <div class="form-text text-danger">
                                             Contador de caracteres
@@ -104,7 +97,7 @@
 
                             <label class="col-sm-2">Número:</label> 
                             <div class="col-sm-4">
-                                <input type="text" class="form-control">
+                                <input formControlName="numero" type="text" class="form-control">
                             </div>
                         </div>                        
                     
@@ -115,12 +108,12 @@
                                                     miFormulario.get('zonaDelito')?.value !== 'Lacustre'">
                             <label class="col-sm-2">Depto/Oficina:</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control">
+                                <input formControlName="departamento" type="text" class="form-control">
                             </div>
 
                             <label class="col-sm-2">Block:</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control">
+                                <input formControlName="block" type="text" class="form-control">
                             </div>
                         </div>
 
@@ -129,60 +122,33 @@
                                                     miFormulario.get('zonaDelito')?.value !== 'Lacustre' ">
                             <label class="col-sm-2">Población o Villa:</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control">
+                                <input formControlName="poblacion" type="text" class="form-control">
                             </div>
 
                             <label class="col-sm-2">Sector:</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control">
+                                <input formControlName="sector" type="text" class="form-control">
                             </div>
                         </div>
 
                         <div class="row mb-2">
                             <label class="col-sm-2">Región:<span style="color: red; font-weight: bold;">*</span></label>
                             <div class="col-sm-4">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">I Región</option>
-                                    <option value="2">II Región</option>
-                                    <option value="3">III Región</option>
-                                    <option value="4">IV Región</option>
-                                    <option value="5">V Región</option>
-                                    <option value="6">VI Región</option>
-                                    <option value="7">VII Región</option>
-                                    <option value="8">VIII Región</option>
-                                    <option value="9">IX Región</option>
-                                    <option value="10">X Región</option>
-                                    <option value="11">XI Región</option>
-                                    <option value="12">XII Región</option>
-                                    <option value="13">XIII Región</option>
-                                    <option value="14">XIV Región</option>
-                                    <option value="15">XV Región</option>
-                                    <option value="16">XVI Región</option>
+                                <select class="form-select" formControlName="region">
+                                    <option [value]="null" selected>Seleccionar</option>
+                                    <option *ngFor="let region of regiones"
+                                            [ngValue]="region">{{region}}</option>
+
                                 </select>
                             </div>
 
                             <label class="col-sm-2">Comuna:<span style="color: red; font-weight: bold;">*</span></label> 
                             <div class="col-sm-4">
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">ARICA</option>
-                                    <option value="2">CAMARONES</option>
-                                    <option value="3">PUTRE</option>
-                                    <option value="4">GENERAL LAGOS</option>
-                                    <option value="5">IQUIQUE</option>
-                                    <option value="6">HUARA</option>
-                                    <option value="7">CAMINA</option>
-                                    <option value="8">COLCHANE</option>
-                                    <option value="9">PICA</option>
-                                    <option value="10">POZO ALMONTE</option>
-                                    <option value="11">TOCOPILLA</option>
-                                    <option value="12">MARIA ELENA</option>
-                                    <option value="13">CALAMA</option>
-                                    <option value="14">OLLAGUE</option>
-                                    <option value="15">SAN PEDRO DE ATACAMA</option>
-                                    <option value="16">ANTOFAGASTA</option>
-                                </select>       
+                                <select class="form-select" formControlName="comuna">
+                                    <option [value]="null" selected>Seleccionar</option>
+                                    <option *ngFor="let comuna of comunas"
+                                            [ngValue]="comuna ">{{comuna}}</option>
+                                </select>      
                             </div>
                         </div>                                   
 
@@ -194,19 +160,19 @@
                             </div>
                             <label class="col-sm-2">Referencia de la dirección: </label>
                             <div class="col-sm-4">
-                                <textarea class="form-control" rows="2"></textarea>
+                                <textarea formControlName="referencia" class="form-control" rows="2"></textarea>
                             </div>
                         </div>                    
 
                         <div class="row mb-2">   
                             <label class="col-sm-2">Latitud:<span style="color: red; font-weight: bold;">*</span></label>  
                             <div class="col-sm-4">
-                                <input class="form-control" type="number">                   
+                                <input formControlName="latitud" class="form-control" type="number">                   
                             </div>
 
                             <label class="col-sm-2">Longitud:<span style="color: red; font-weight: bold;">*</span></label>  
                             <div class="col-sm-4">
-                                <input class="form-control" type="number">         
+                                <input formControlName="longitud" class="form-control" type="number">         
                             </div>
                         </div>                    
                     </div>
@@ -226,3 +192,4 @@
     </div>
 </div>
 
+<!-- <pre>{{ miFormulario.value | json }}</pre> -->

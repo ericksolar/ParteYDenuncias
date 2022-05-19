@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit {
   selectedTLugarProcedimiento: string ='';
   isChecked: boolean = true;
   tpParte: any  = [ 'DENUNCIA SIN DETENIDO','DENUNCIA CON DETENIDO'];
-
-  
+  tpConduccion: any = ['Pasa a control de detenccion','No pasa a control de detenccion','En espera de citación fiscalia']
+  tpLugarProcedimiento: any = ['Guardia','Borde Costero','Unidad Marítima','Otro']
 
   constructor(private fb: FormBuilder) {
 
@@ -28,21 +28,28 @@ export class HomeComponent implements OnInit {
       numeroParte: [],
       parteAmpliado: [],
       lugarProcedimiento: [],
+      otroLugarProcedimiento: [],
       fechaInicio: [],
       horaInicio:[],
       FechaFin: [],
       horaFin: [],
     })
-    
   }
+
+  // getParteConduccion(){
+  //   if(this.miFormulario.get('parte')?.value == 'DENUNCIA SIN DETENIDO'){
+  //       this.miFormulario.get('conduccion')?.value == 'En espera de citación fiscalia'
+  //   }else{
+  //     (this.miFormulario.get('parte')?.value == 'DENUNCIA CON DETENIDO'){
+  //       this.miFormulario.get('conduccion')?.value === 'No pasa a control de detenccion'
+  //     }
+  //   }
+  // }
+    
+}
 
 
 
 
   
 
-
-
-
-
-}
