@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class TestigoComponent implements OnInit {
 
   textBoxDisabledRedes = true;
+  textBoxDisabledDenunciado = true;
 
   ngOnInit(): void {
 
@@ -63,6 +64,10 @@ export class TestigoComponent implements OnInit {
     this.textBoxDisabledRedes = !this.textBoxDisabledRedes;
   }
 
+  habilitarCampoDenunciado()
+  {
+    this.textBoxDisabledDenunciado = !this.textBoxDisabledDenunciado;
+  }
 
 
 }
