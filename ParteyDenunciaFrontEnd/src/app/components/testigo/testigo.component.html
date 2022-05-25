@@ -455,32 +455,65 @@
                         </div>
 
                         <div class="row mb-2">
-                            <label  class="col-sm-4">¿Conoce al denunciando(s)?¿Podria entregar descripcion de el o ellos?</label>
-                            <div  class="col-sm-7">
-                                <textarea class="form-control" rows="5" cols="50"></textarea>
-                                <br>
+                            <label class="col-sm-4">¿Conoce al denunciado(s)?</label>
+                            <div class="col-sm-7">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="flexRadioDefault" 
+                                            id="flexRadioDefault1"
+                                            (click)="habilitarCampoDenunciado()">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="flexRadioDefault" 
+                                            id="flexRadioDefault2" 
+                                            (click)="habilitarCampoDenunciado()"
+                                            checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
                             </div>
                         </div>
 
                         <div class="row mb-2">
-                            <label  class="col-sm-4 form-label" >¿Que relacion tiene con el denunciado(s)?</label>
-                            <div  class="col-sm-7">
-                                <select class="form-select">
+                            <label class="col-sm-4">¿Podría entregar descripción de él o ellos?</label>
+                            <div class="col-sm-7">
+                                <textarea class="form-control" [disabled]="textBoxDisabledDenunciado" rows="4" cols="50"></textarea>
+                            </div>
+                        </div>
+                        
+
+                        <!-- <div>
+                            <div>
+                                <p>¿Conoce al denunciado(s)? <br> ¿Podría entregar descripción de él o ellos?</p>
+
+                            </div>
+                            <div>
+                                <input type="text">
+                            </div>
+                        </div> -->
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">Qué relación tiene con el denunciado(s)</label>
+                            <div class="col-sm-7" colspan="2">
+                                <select class="form-select" [disabled]="textBoxDisabledDenunciado" name="denunciado">
                                     <option selected>Seleccionar</option>
-                                    <option value="1">Padre</option>
-                                    <option value="2">Madre</option>
-                                    <option value="3">Hermana</option>
-                                    <option value="4">Hermano</option>
-                                    <option value="5">Tio</option>
-                                    <option value="6">Tia</option>
-                                    <option value="7">Abuelo</option>
-                                    <option value="8">Abuela</option>
-                                    <option value="9">Primo</option>
-                                    <option value="10">Primo</option>
-                                    <option value="11">Vecina</option>
-                                    <option value="12">Vecino</option>
-                                    <option value="13">Amigo</option>
-                                    <option value="14">Amiga</option>
+                                    <option value="1">Papá</option>
+                                    <option value="2">Mamá</option>
+                                    <option value="3">Tíos</option>
+                                    <option value="4">Abuelos</option>
+                                    <option value="5">Hermano</option>
+                                    <option value="6">Vecino</option>
+                                    <option value="6">Amigo(a)</option>
+                                    <option value="6">Profesor(a)</option>
+                                    <option value="6">Guardador</option>
+                                    <option value="6">Ninguna</option>
                                 </select>
                             </div>
                         </div>
