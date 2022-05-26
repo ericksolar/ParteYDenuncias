@@ -29,6 +29,7 @@ import { RelatoComponent } from './components/relato/relato.component';
 import { FiscalComponent } from './components/fiscal/fiscal.component';
 import { FuncionariosComponent } from './components/funcionarios/funcionarios.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -54,6 +55,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpClientModule,
     APPROUTING
   ],
   providers: [],

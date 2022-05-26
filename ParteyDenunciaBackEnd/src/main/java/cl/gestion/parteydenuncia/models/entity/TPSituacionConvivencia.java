@@ -11,24 +11,24 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="tpsituacionconvivencia")
+@Table(name ="TPSituacionConvivencia")
 public class TPSituacionConvivencia  implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
-	@Column(name ="cdtpsituacionconvivencia")
-	private Long cdtpSituacionConvivencia;
+	@Column(name ="CDTPSituacionConvivencia")
+	private int cdtpSituacionConvivencia;
 	
-	@Column(name ="gltpsituacionconvivencia", nullable = false)
+	@Column(name ="GLTPSituacionConvivencia", nullable = false)
 	private String gltpSituacionConvivencia;
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
-	public Long getCdtpSituacionConvivencia() {
+	public int getCdtpSituacionConvivencia() {
 		return cdtpSituacionConvivencia;
 	}
 
@@ -36,12 +36,12 @@ public class TPSituacionConvivencia  implements Serializable{
 		return gltpSituacionConvivencia;
 	}
 
-	public void setCdtpSituacionConvivencia(Long cdtpSituacionConvivencia) {
+	public void setCdtpSituacionConvivencia(int cdtpSituacionConvivencia) {
 		this.cdtpSituacionConvivencia = cdtpSituacionConvivencia;
 	}
 
 	public void setGltpSituacionConvivencia(String gltpSituacionConvivencia) {
 		this.gltpSituacionConvivencia = gltpSituacionConvivencia;
 	}
-	
+
 }
