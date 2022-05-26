@@ -11,37 +11,39 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="TPRolImputado")
-public class TPRolImputado implements Serializable{
+@Table(name ="TPConduccion")
+public class TPConduccion implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
-	@Column(name ="CDTPRolImputado")
-	private int cdtpRolImputado;
+	@Column(name ="CDTPConduccion")
+	private int cdtpConduccion;
 	
-	@Column(name ="GLTPRolImputado", nullable = false)
-	private String gltpRolImputado;
+	@Column(name ="GLTPConduccion", nullable = false)
+	private String gltpConduccion;
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
-	public int getCdtpRolImputado() {
-		return cdtpRolImputado;
+	public int getCdtpConduccion() {
+		return cdtpConduccion;
 	}
 
-	public String getGltpRolImputado() {
-		return gltpRolImputado;
+	public String getGltpConduccion() {
+		return gltpConduccion;
 	}
 
-	public void setCdtpRolImputado(int cdtpRolImputado) {
-		this.cdtpRolImputado = cdtpRolImputado;
+	public void setCdtpConduccion(int cdtpConduccion) {
+		this.cdtpConduccion = cdtpConduccion;
 	}
 
-	public void setGltpRolImputado(String gltpRolImputado) {
-		this.gltpRolImputado = gltpRolImputado;
+	public void setGltpConduccion(String gltpConduccion) {
+		this.gltpConduccion = gltpConduccion;
 	}
 	
+	
+
 }

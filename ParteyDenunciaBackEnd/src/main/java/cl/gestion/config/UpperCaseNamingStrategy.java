@@ -15,5 +15,5 @@ public class UpperCaseNamingStrategy extends SpringPhysicalNamingStrategy {
     private String UnderscoreToSnakeCase(String id) {
     	return id.replaceAll("_", "");
     }
-
+    
 }
