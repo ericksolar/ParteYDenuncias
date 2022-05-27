@@ -1,7 +1,9 @@
 import { Component, OnInit , AfterContentInit} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { TPConduccion } from 'src/app/models/tp-conduccion';
+import { TPSituacionDenuncia } from 'src/app/models/tp-situacion-denuncia';
 import { TpConduccionService } from 'src/app/servicios/tp-conduccion.service';
+import { TpSituacionDenunciaService } from 'src/app/servicios/tp-situacion-denuncia.service';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +15,15 @@ export class HomeComponent implements OnInit {
   miFormulario: FormGroup;
   selectedTLugarProcedimiento: string ='';
   isChecked: boolean = true;
-  tpParte: any  = [ 'DENUNCIA SIN DETENIDO','DENUNCIA CON DETENIDO'];
+  // tpParte: any  = [ 'DENUNCIA SIN DETENIDO','DENUNCIA CON DETENIDO'];
   // tpConduccion: any = ['Pasa a control de detenccion','No pasa a control de detenccion','En espera de citación fiscalia']
   tpLugarProcedimiento: any = ['Guardia','Borde Costero','Unidad Marítima','Otro']
+  tpParte: TPSituacionDenuncia[] | undefined;
   tpConduccion: TPConduccion[] | undefined;
 
-  constructor(private fb: FormBuilder, private tpConduccionService: TpConduccionService) {
+  constructor(private fb: FormBuilder, 
+              private tpConduccionService: TpConduccionService,
+              private tpSituacionDenunciaService: TpSituacionDenunciaService) {
 
     this.miFormulario = this.fb.group({
       gobernacion: [],
@@ -38,12 +43,20 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.start();
+    this.getTPConduccion();
+    this.getTPSituacionDenuncia();
   }
 
-  start(){
+  getTPConduccion(){
     this.tpConduccionService.getAllTpConduccion().subscribe(data =>{
       this.tpConduccion =  data;
+      console.log(data);
+    })
+  }
+
+  getTPSituacionDenuncia(){
+    this.tpSituacionDenunciaService.getAllTPSituacionDenuncia().subscribe(data =>{
+      this.tpParte =  data;
       console.log(data);
     })
   }

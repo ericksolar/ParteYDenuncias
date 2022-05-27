@@ -38,7 +38,7 @@
                         </div>                            
                         <div class="col-sm-6">
                             <select class="form-select">
-                                <option selected>Seleccionar</option>
+                                <option selected value>Seleccionar</option>
                                 <option value="1">CAPITANIA DE PUERTO VALPARAISO</option>  
                                 <option value="2">CAPITANIA DE PUERTO SAN ANTONIO</option>  
                                 <option value="2">CAPITANIA DE PUERTO QUINTERO</option>  
@@ -52,8 +52,9 @@
                         <div class="col-sm-6">
                             <select class="form-select" formControlName="parte" >
                                 <option disabled value="null">Seleccionar</option>
-                                <option *ngFor="let tpparte of tpParte; let i=index" [ngValue]="tpparte">
-                                {{ tpparte }}
+                                <option *ngFor="let tpparte of tpParte" 
+                                        [ngValue]="tpparte.cdtpSituacion">
+                                {{ tpparte.gltpSituacion }}
                                 </option>
                             </select>
                         </div>
@@ -63,7 +64,7 @@
                             <label>Conducción:</label>
                         </div>                            
                         <div class="col-sm-6">
-                            <select class="form-select" formControlName="conduccion" (click)="start()">
+                            <select class="form-select" formControlName="conduccion">
                                 <option disabled value="null">Seleccionar</option>
                                 <option *ngFor="let conducciones of tpConduccion"
                                         [ngValue]="conducciones.cdtpConduccion">
@@ -159,6 +160,4 @@
         </form>  
     </div>
 </div>
-
-
 
