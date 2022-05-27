@@ -63,17 +63,20 @@
                             <label>Conducción:</label>
                         </div>                            
                         <div class="col-sm-6">
-                            <select class="form-select" formControlName="conduccion">
+                            <select class="form-select" formControlName="conduccion" (click)="start()">
                                 <option disabled value="null">Seleccionar</option>
-                                <option *ngFor="let tpconduccion of tpConduccion; let i=index"
-                                        [ngValue]="tpconduccion">
-                                        <ng-container change="getParteConduccion()">
-                                            {{ tpconduccion }}
-                                        </ng-container>
+                                <option *ngFor="let conducciones of tpConduccion"
+                                        [ngValue]="conducciones.cdtpConduccion">
+                                        {{conducciones.gltpConduccion}}
+
                                 </option>
                             </select>
                         </div>
                     </div>  
+                    <!-- <button (click)="start()">click</button> -->
+                    <!-- {{tpConduccion | json}} -->
+                    <!-- {{tpConduccion}} -->
+                    <!-- {{tpConduccion[0].CDTPConduccion | json}} -->
 
                     <div class="row mb-2">
                         <div class="col-sm-4">

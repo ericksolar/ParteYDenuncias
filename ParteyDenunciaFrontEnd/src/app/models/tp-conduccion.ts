@@ -1,6 +1,5 @@
-export class TpConduccion {
-
-    CDTPConduccion?: string;
-    GLTPConduccion?: string;
-
+export interface TPConduccion {
+    cdtpConduccion: number;
+    gltpConduccion: string;
 }
+
