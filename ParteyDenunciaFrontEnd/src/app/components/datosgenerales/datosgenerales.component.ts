@@ -17,6 +17,8 @@ export class DatosgeneralesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  desc = '';
+
   miFormulario: FormGroup;
 
   tpDelito: any = [ 'ABIGEATO', 'AGRESIÓN CON LESIONES','ALTERACIÓN DEL ORDEN PÚBLICO', 'AMENAZAS', 'AROOJAR PIEDRAS U OBJETOS EN LUGARES PÚBLICOS', 'ATENTADO CONTRA LA AUTORIDAD', 'BAÑISTA TEMERARIO' , 'COHECHO', 'DAÑOS',
@@ -37,7 +39,7 @@ export class DatosgeneralesComponent implements OnInit {
       tipoDelito: [],
       zonaDelito: [],
       TipoLugarOcurrencia: [],
-      lugarOcurrencia: [],
+      lugarOcurrencia: [,[Validators.maxLength(250)]],
       calle: [],
       numero: [],
       departamento: [],
@@ -67,7 +69,6 @@ export class DatosgeneralesComponent implements OnInit {
     this.miFormulario.controls['zonaDelito'].setValue(e.target.value, {
       onlySelf: true
       })
-    
   }
 
   get TPtipoDelito(){

@@ -2,7 +2,7 @@
     <!--area arriba-->
 
     <div class="col border">
-        <form>
+        <form autocomplete="off" [formGroup]="miFormulario">
         <!--area derecha-->
           <div class="col">
 
@@ -20,7 +20,7 @@
                             <div class="col-sm-7">
                                 <select class="form-select" aria-label="Default select example">
                                     <option selected default>Seleccionar</option>
-                                    <option value="1">RUN</option>
+                                    <option value="1">RUT</option>
                                     <option value="2">Pasaporte</option>
                                     <option value="3">DNI</option>
                                 </select>
@@ -452,7 +452,6 @@
                                             type="radio" 
                                             name="inlineRadioOptions2" 
                                             value="option1"
-                                            (click)="habilitarCampoRedes()"
                                             >
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
@@ -461,7 +460,7 @@
                                             type="radio" 
                                             name="inlineRadioOptions2" 
                                             value="option2"
-                                            (click)="habilitarCampoRedes()"
+                                            
                                             checked>
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
@@ -472,7 +471,7 @@
                             <label class="col-sm-4">Cuáles Redes Sociales:</label>
                             <div class="col-sm-7">
                                 <select class="form-select"
-                                        [disabled]="textBoxDisabledRedes">
+                                        >
                                     <option selected>Seleccionar</option>
                                     <option value="1">Twitter</option>
                                     <option value="2">Facebook</option>
@@ -486,7 +485,7 @@
                         <div class="row mb-2">
                             <label class="col-sm-4">Agregar Identificación/Login</label>
                             <div class="col-sm-7">
-                                <input type="text" class="form-control" [disabled]="textBoxDisabledRedes">
+                                <input type="text" class="form-control">
                             </div>
                         </div>
 
@@ -509,15 +508,17 @@
                         <div class="row mb-2">
                             <label class="col-sm-4">Tipo de Residencia</label>
                             <div class="col-sm-7">
-                                <select class="form-select" aria-label="Default select example" name="vive">
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">Institucional</option>
-                                    <option value="2">Particular</option>
+                                <select class="form-select"
+                                        formControlName="tipoResidencia">
+                                    <option value="null">Seleccionar</option>
+                                    <option *ngFor="let tplugar of tpResidencia; let i=index" [ngValue]="tplugar">
+                                        {{ tplugar }}
+                                    </option>
                                 </select>
                             </div>
                         </div>
 
-                        <div class="row mb-2">
+                        <div class="row mb-2" *ngIf="miFormulario.get('tipoResidencia')?.value == 'Institucional'">
                             <label class="col-sm-4">Nombre residencia institucional</label>
                             <div class="col-sm-7">
                                 <input type="text" class="form-control">
@@ -535,7 +536,8 @@
                                 <input type="text">
                             </div>
                         </div> -->
-                        <div class="row mb-2">
+
+                        <!-- <div class="row mb-2">
                             <label class="col-sm-4">¿Conoce al denunciado(s)?</label>
                             <div class="col-sm-7">
                                 <div class="form-check form-check-inline">
@@ -543,8 +545,8 @@
                                             type="radio" 
                                             name="flexRadioDefault" 
                                             id="flexRadioDefault1"
-                                            (click)="habilitarCampoDenunciado()">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                            >
+                                    <label class="form-check-label" value="si" for="flexRadioDefault1">
                                         Si
                                     </label>
                                 </div>
@@ -553,9 +555,36 @@
                                             type="radio" 
                                             name="flexRadioDefault" 
                                             id="flexRadioDefault2" 
-                                            (click)="habilitarCampoDenunciado()"
+                                            
                                             checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
+                                    <label class="form-check-label" value="no" for="flexRadioDefault2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="row mb-2">
+                            <label class="col-sm-4">¿Conoce al denunciado(s)?</label>
+                            <div class="col-sm-7">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="flexRadioDefault" 
+                                            id="flexRadioDefault1"
+                                            >
+                                    <label class="form-check-label" value="si" for="flexRadioDefault1">
+                                        Si
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" 
+                                            type="radio" 
+                                            name="flexRadioDefault" 
+                                            id="flexRadioDefault2" 
+                                            
+                                            checked>
+                                    <label class="form-check-label" value="no" for="flexRadioDefault2">
                                         No
                                     </label>
                                 </div>
@@ -565,7 +594,7 @@
                         <div class="row mb-2">
                             <label class="col-sm-4">¿Podría entregar descripción de él o ellos?</label>
                             <div class="col-sm-7">
-                                <textarea class="form-control" [disabled]="textBoxDisabledDenunciado" rows="4" cols="50"></textarea>
+                                <textarea class="form-control" rows="4" cols="50"></textarea>
                             </div>
                         </div>
                         
@@ -583,7 +612,7 @@
                         <div class="row mb-2">
                             <label class="col-sm-4">Qué relación tiene con el denunciado(s)</label>
                             <div class="col-sm-7" colspan="2">
-                                <select class="form-select" [disabled]="textBoxDisabledDenunciado" name="denunciado">
+                                <select class="form-select" name="denunciado">
                                     <option selected>Seleccionar</option>
                                     <option value="1">Papá</option>
                                     <option value="2">Mamá</option>
@@ -612,6 +641,6 @@
                     <div class="col d-grid gap-2"><button type="submit" class="btn btn-primary btn-lg btn-block " routerLink="/imputado" routerLinkActive="active">Siguiente</button></div>                
                 </div>
             </div>
-        </form>    
+        </form>
     </div>
 </div>

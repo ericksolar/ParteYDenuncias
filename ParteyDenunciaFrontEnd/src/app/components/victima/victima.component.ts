@@ -7,29 +7,38 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./victima.component.css']
 })
 export class VictimaComponent implements OnInit {
-
-  textBoxDisabledRedes = true;
-  textBoxDisabledDenunciado = true;
-
-  miFormulario: FormGroup = this.fb.group({
-    nombre: [  , [ Validators.required ] ],
-    redesSociales:[  , [ ] ],
-
-  })
-
-  constructor(private fb: FormBuilder) {}
-
+  
   ngOnInit(): void {
   }
 
-  habilitarCampoRedes(){
-    this.textBoxDisabledRedes = !this.textBoxDisabledRedes;
+  // textBoxDisabledRedes = true;
+  // textBoxDisabledDenunciado = true;
+  miFormulario: FormGroup;
+
+
+  tpResidencia: any = ['Institucional', 'Particular']        
+  conoceDenunciado: any = ['Si','No']
+
+  
+
+  constructor(private fb: FormBuilder) {
+    this.miFormulario = this.fb.group({
+      nombre: [  , [ Validators.required ] ],
+      redesSociales:[  , [ ] ],
+      tipoResidencia: [],
+    })
   }
 
-  habilitarCampoDenunciado()
-  {
-    this.textBoxDisabledDenunciado = !this.textBoxDisabledDenunciado;
-  }
+  
+
+  // habilitarCampoRedes(){
+  //   this.textBoxDisabledRedes = !this.textBoxDisabledRedes;
+  // }
+
+  // habilitarCampoDenunciado()
+  // {
+  //   this.textBoxDisabledDenunciado = !this.textBoxDisabledDenunciado;
+  // }
 
 
 }

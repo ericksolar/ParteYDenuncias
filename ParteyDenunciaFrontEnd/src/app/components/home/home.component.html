@@ -51,9 +51,9 @@
                         </div>                            
                         <div class="col-sm-6">
                             <select class="form-select" formControlName="parte" >
-                                <option disabled value="null">Seleccionar</option>
+                                <option value="null">Seleccionar</option>
                                 <option *ngFor="let tpparte of tpParte" 
-                                        [ngValue]="tpparte.cdtpSituacion">
+                                        [value]="tpparte.cdtpSituacion">
                                 {{ tpparte.gltpSituacion }}
                                 </option>
                             </select>
@@ -65,7 +65,7 @@
                         </div>                            
                         <div class="col-sm-6">
                             <select class="form-select" formControlName="conduccion">
-                                <option disabled value="null">Seleccionar</option>
+                                <option value="null">Seleccionar</option>
                                 <option *ngFor="let conducciones of tpConduccion"
                                         [ngValue]="conducciones.cdtpConduccion">
                                         {{conducciones.gltpConduccion}}
@@ -137,7 +137,8 @@
                             <input  type="radio" id="tplugarprocedimiento-{{i}}" [value]="tplugarprocedimiento" formControlName="lugarProcedimiento">
                             <!-- <label>{{tplugarprocedimiento}}</label> -->
                             <label class="form-check-label" for="flexCheckDefault" data-bs-toggle="tooltip" title="Hace referencia a la capitania de puerto">
-                             {{tplugarprocedimiento}}</label>
+                             {{tplugarprocedimiento}}
+                            </label>
                         </div>
                         <div class="form-group" *ngIf="miFormulario.get('lugarProcedimiento')?.value == 'Otro'">
                             <label>Otro lugar</label>
