@@ -1,4 +1,4 @@
-package cl.gestion.parteydenuncia.models.entity;
+package cl.gestion.models.entity;
 
 import java.io.Serializable;
 

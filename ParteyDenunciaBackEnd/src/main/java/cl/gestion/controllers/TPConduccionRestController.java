@@ -2,8 +2,8 @@ package cl.gestion.controllers;
 
 import java.util.List;
 
-import cl.gestion.parteydenuncia.models.services.ITPConduccionServices;
-import cl.gestion.parteydenuncia.models.entity.TPConduccion;
+import cl.gestion.models.entity.TPConduccion;
+import cl.gestion.models.services.ITPConduccionServices;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cl.gestion.parteydenuncia.models.entity.TPSituacionDenuncia;
-import cl.gestion.parteydenuncia.models.services.ITPSituacionDenunciaServices;
+import cl.gestion.models.entity.TPSituacionDenuncia;
+import cl.gestion.models.services.ITPSituacionDenunciaServices;
 
 
 
