@@ -16,7 +16,7 @@ export class VictimaComponent implements OnInit {
   miFormulario: FormGroup;
 
 
-  tpResidencia: any = ['Institucional', 'Particular']        
+  tpResidencia: any = ['Institucional', 'Particular', 'Situacion de Calle']        
   conoceDenunciado: any = ['Si','No']
 
   
