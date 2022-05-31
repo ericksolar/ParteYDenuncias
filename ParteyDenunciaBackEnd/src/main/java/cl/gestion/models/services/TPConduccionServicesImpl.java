@@ -1,12 +1,12 @@
-package cl.gestion.parteydenuncia.models.services;
+package cl.gestion.models.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cl.gestion.parteydenuncia.models.dao.ITPConduccionDao;
-import cl.gestion.parteydenuncia.models.entity.TPConduccion;
+import cl.gestion.models.dao.ITPConduccionDao;
+import cl.gestion.models.entity.TPConduccion;
 
 @Service
 public class TPConduccionServicesImpl implements ITPConduccionServices {

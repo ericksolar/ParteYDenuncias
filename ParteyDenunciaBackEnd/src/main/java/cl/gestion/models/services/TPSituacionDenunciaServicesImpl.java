@@ -1,12 +1,12 @@
-package cl.gestion.parteydenuncia.models.services;
+package cl.gestion.models.services;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import cl.gestion.parteydenuncia.models.dao.ITPSituacionDenunciaDao;
-import cl.gestion.parteydenuncia.models.entity.TPSituacionDenuncia;
+import cl.gestion.models.dao.ITPSituacionDenunciaDao;
+import cl.gestion.models.entity.TPSituacionDenuncia;
 
 @Service
 public class TPSituacionDenunciaServicesImpl implements ITPSituacionDenunciaServices{

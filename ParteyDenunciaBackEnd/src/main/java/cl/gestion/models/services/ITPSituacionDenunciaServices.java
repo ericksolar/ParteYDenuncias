@@ -1,6 +1,7 @@
-package cl.gestion.parteydenuncia.models.services;
+package cl.gestion.models.services;
 import java.util.List;
-import cl.gestion.parteydenuncia.models.entity.TPSituacionDenuncia;
+
+import cl.gestion.models.entity.TPSituacionDenuncia;
 
 public interface ITPSituacionDenunciaServices {
 	
