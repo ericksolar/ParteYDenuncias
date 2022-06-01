@@ -19,7 +19,7 @@ public class TPResidencia implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPResidencia")
-	private int cdtpResidencia;
+	private Integer cdtpResidencia;
 	
 	@Column(name ="GLTPResidencia", nullable = false)
 	private String gltpResidencia;
@@ -28,7 +28,7 @@ public class TPResidencia implements Serializable{
 		return serialVersionUID;
 	}
 
-	public int getCdtpResidencia() {
+	public Integer getCdtpResidencia() {
 		return cdtpResidencia;
 	}
 
@@ -36,7 +36,7 @@ public class TPResidencia implements Serializable{
 		return gltpResidencia;
 	}
 
-	public void setCdtpResidencia(int cdtpResidencia) {
+	public void setCdtpResidencia(Integer cdtpResidencia) {
 		this.cdtpResidencia = cdtpResidencia;
 	}
 
@@ -44,4 +44,5 @@ public class TPResidencia implements Serializable{
 		this.gltpResidencia = gltpResidencia;
 	}
 
+	
 }

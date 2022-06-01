@@ -18,7 +18,7 @@ public class TPNNA  implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPNNA")
-	private int cdtpNNA;
+	private Integer cdtpNNA;
 	
 	@Column(name ="GLTPNNA", nullable = false)
 	private String gltpNNA;
@@ -27,7 +27,7 @@ public class TPNNA  implements Serializable{
 		return serialVersionUID;
 	}
 
-	public int getCdtpNNA() {
+	public Integer getCdtpNNA() {
 		return cdtpNNA;
 	}
 
@@ -35,13 +35,14 @@ public class TPNNA  implements Serializable{
 		return gltpNNA;
 	}
 
-	public void setCdtpNNA(int cdtpNNA) {
+	public void setCdtpNNA(Integer cdtpNNA) {
 		this.cdtpNNA = cdtpNNA;
 	}
 
 	public void setGltpNNA(String gltpNNA) {
 		this.gltpNNA = gltpNNA;
 	}
+
 	
 	
 

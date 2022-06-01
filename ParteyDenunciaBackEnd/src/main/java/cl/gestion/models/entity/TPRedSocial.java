@@ -19,7 +19,7 @@ public class TPRedSocial implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPRedSocial")
-	private int cdtpRedSocial;
+	private Integer cdtpRedSocial;
 	
 	@Column(name ="GLTPRedSocial", nullable = false)
 	private String gltpRedSocial;
@@ -28,7 +28,7 @@ public class TPRedSocial implements Serializable{
 		return serialVersionUID;
 	}
 
-	public int getCdtpRedSocial() {
+	public Integer getCdtpRedSocial() {
 		return cdtpRedSocial;
 	}
 
@@ -36,12 +36,14 @@ public class TPRedSocial implements Serializable{
 		return gltpRedSocial;
 	}
 
-	public void setCdtpRedSocial(int cdtpRedSocial) {
+	public void setCdtpRedSocial(Integer cdtpRedSocial) {
 		this.cdtpRedSocial = cdtpRedSocial;
 	}
 
 	public void setGltpRedSocial(String gltpRedSocial) {
 		this.gltpRedSocial = gltpRedSocial;
 	}
+
+	
 
 }
