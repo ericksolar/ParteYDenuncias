@@ -18,7 +18,7 @@ public class TPMedioNotificacion implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPMedioNotificacion")
-	private int cdtpMedioNotificacion;
+	private Integer cdtpMedioNotificacion;
 	
 	@Column(name ="GLTPMedioNotificacion", nullable = false)
 	private String gltpMedioNotificacion;
@@ -27,7 +27,7 @@ public class TPMedioNotificacion implements Serializable{
 		return serialVersionUID;
 	}
 
-	public int getCdtpMedioNotificacion() {
+	public Integer getCdtpMedioNotificacion() {
 		return cdtpMedioNotificacion;
 	}
 
@@ -35,13 +35,14 @@ public class TPMedioNotificacion implements Serializable{
 		return gltpMedioNotificacion;
 	}
 
-	public void setCdtpMedioNotificacion(int cdtpMedioNotificacion) {
+	public void setCdtpMedioNotificacion(Integer cdtpMedioNotificacion) {
 		this.cdtpMedioNotificacion = cdtpMedioNotificacion;
 	}
 
 	public void setGltpMedioNotificacion(String gltpMedioNotificacion) {
 		this.gltpMedioNotificacion = gltpMedioNotificacion;
 	}
+	
 	
 
 }

@@ -18,7 +18,7 @@ public class TPGradoEjecucion implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPGradoEjecucion")
-	private int cdtpGradoEjecucion;
+	private Integer cdtpGradoEjecucion;
 	
 	@Column(name ="GLTPDelito", nullable = false)
 	private String gltpDelito;
@@ -27,7 +27,7 @@ public class TPGradoEjecucion implements Serializable{
 		return serialVersionUID;
 	}
 
-	public int getCdtpGradoEjecucion() {
+	public Integer getCdtpGradoEjecucion() {
 		return cdtpGradoEjecucion;
 	}
 
@@ -35,14 +35,14 @@ public class TPGradoEjecucion implements Serializable{
 		return gltpDelito;
 	}
 
-	public void setCdtpGradoEjecucion(int cdtpGradoEjecucion) {
+	public void setCdtpGradoEjecucion(Integer cdtpGradoEjecucion) {
 		this.cdtpGradoEjecucion = cdtpGradoEjecucion;
 	}
 
 	public void setGltpDelito(String gltpDelito) {
 		this.gltpDelito = gltpDelito;
 	}
-
+	
 	
 	
 }

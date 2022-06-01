@@ -18,7 +18,7 @@ public class TPIdioma  implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPIdioma")
-	private int cdtpIdioma;
+	private Integer cdtpIdioma;
 	
 	@Column(name ="GLTPIdioma", nullable = false)
 	private String gltpIdioma;
@@ -27,7 +27,7 @@ public class TPIdioma  implements Serializable{
 		return serialVersionUID;
 	}
 
-	public int getCdtpIdioma() {
+	public Integer getCdtpIdioma() {
 		return cdtpIdioma;
 	}
 
@@ -35,13 +35,14 @@ public class TPIdioma  implements Serializable{
 		return gltpIdioma;
 	}
 
-	public void setCdtpIdioma(int cdtpIdioma) {
+	public void setCdtpIdioma(Integer cdtpIdioma) {
 		this.cdtpIdioma = cdtpIdioma;
 	}
 
 	public void setGltpIdioma(String gltpIdioma) {
 		this.gltpIdioma = gltpIdioma;
 	}
-
+	
+	
 	
 }

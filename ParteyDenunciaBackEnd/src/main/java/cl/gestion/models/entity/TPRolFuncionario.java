@@ -19,7 +19,7 @@ public class TPRolFuncionario implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPRolFuncionario")
-	private int cdtpRolFuncionario;
+	private Integer cdtpRolFuncionario;
 	
 	@Column(name ="GLTPRolFuncionario", nullable = false)
 	private String gltpRolFuncionario;
@@ -28,7 +28,7 @@ public class TPRolFuncionario implements Serializable{
 		return serialVersionUID;
 	}
 
-	public int getCdtpRolFuncionario() {
+	public Integer getCdtpRolFuncionario() {
 		return cdtpRolFuncionario;
 	}
 
@@ -36,12 +36,14 @@ public class TPRolFuncionario implements Serializable{
 		return gltpRolFuncionario;
 	}
 
-	public void setCdtpRolFuncionario(int cdtpRolFuncionario) {
+	public void setCdtpRolFuncionario(Integer cdtpRolFuncionario) {
 		this.cdtpRolFuncionario = cdtpRolFuncionario;
 	}
 
 	public void setGltpRolFuncionario(String gltpRolFuncionario) {
 		this.gltpRolFuncionario = gltpRolFuncionario;
 	}
+
+	
 
 }

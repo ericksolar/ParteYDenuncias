@@ -18,16 +18,16 @@ public class TPCausaDetencion implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPCausaDetencion")
-	private int cdtpCausaDetencion;
+	private Integer cdtpCausaDetencion;
 	
-	@Column(name ="GLTPRelacion", nullable = false)
+	@Column(name ="GLTPCausaDetencion", nullable = false)
 	private String gltpCausaDetencion;
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
-	public int getCdtpCausaDetencion() {
+	public Integer getCdtpCausaDetencion() {
 		return cdtpCausaDetencion;
 	}
 
@@ -35,13 +35,13 @@ public class TPCausaDetencion implements Serializable{
 		return gltpCausaDetencion;
 	}
 
-	public void setCdtpCausaDetencion(int cdtpCausaDetencion) {
+	public void setCdtpCausaDetencion(Integer cdtpCausaDetencion) {
 		this.cdtpCausaDetencion = cdtpCausaDetencion;
 	}
 
 	public void setGltpCausaDetencion(String gltpCausaDetencion) {
 		this.gltpCausaDetencion = gltpCausaDetencion;
 	}
-	
+
 	
 }

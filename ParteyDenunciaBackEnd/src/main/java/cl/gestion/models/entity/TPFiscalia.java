@@ -18,7 +18,7 @@ public class TPFiscalia implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPFiscalia")
-	private int cdtpFiscalia;
+	private Integer cdtpFiscalia;
 	
 	@Column(name ="GLTPFiscalia", nullable = false)
 	private String gltpFiscalia;
@@ -27,7 +27,7 @@ public class TPFiscalia implements Serializable{
 		return serialVersionUID;
 	}
 
-	public int getCdtpFiscalia() {
+	public Integer getCdtpFiscalia() {
 		return cdtpFiscalia;
 	}
 
@@ -35,13 +35,12 @@ public class TPFiscalia implements Serializable{
 		return gltpFiscalia;
 	}
 
-	public void setCdtpFiscalia(int cdtpFiscalia) {
+	public void setCdtpFiscalia(Integer cdtpFiscalia) {
 		this.cdtpFiscalia = cdtpFiscalia;
 	}
 
 	public void setGltpFiscalia(String gltpFiscalia) {
 		this.gltpFiscalia = gltpFiscalia;
 	}
-	
 	
 }

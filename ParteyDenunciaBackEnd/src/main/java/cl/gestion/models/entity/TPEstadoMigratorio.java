@@ -18,7 +18,7 @@ public class TPEstadoMigratorio  implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPEstadoMigratorio")
-	private int cdtpEstadoMigratorio;
+	private Integer cdtpEstadoMigratorio;
 	
 	@Column(name ="GLTPEstadoMigratorio", nullable = false)
 	private String gltpEstadoMigratorio;
@@ -27,7 +27,7 @@ public class TPEstadoMigratorio  implements Serializable{
 		return serialVersionUID;
 	}
 
-	public int getCdtpEstadoMigratorio() {
+	public Integer getCdtpEstadoMigratorio() {
 		return cdtpEstadoMigratorio;
 	}
 
@@ -35,7 +35,7 @@ public class TPEstadoMigratorio  implements Serializable{
 		return gltpEstadoMigratorio;
 	}
 
-	public void setCdtpEstadoMigratorio(int cdtpEstadoMigratorio) {
+	public void setCdtpEstadoMigratorio(Integer cdtpEstadoMigratorio) {
 		this.cdtpEstadoMigratorio = cdtpEstadoMigratorio;
 	}
 
@@ -43,6 +43,5 @@ public class TPEstadoMigratorio  implements Serializable{
 		this.gltpEstadoMigratorio = gltpEstadoMigratorio;
 	}
 
-	
 	
 }
