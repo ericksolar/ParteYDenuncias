@@ -5,12 +5,23 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 @Entity
 @Table(name ="DenunciaReferencia")
@@ -23,8 +34,10 @@ public class DenunciaReferencia implements Serializable{
 	@Column(name ="IDDenunciaReferencia")
 	private Integer idDenunciaReferencia;
 	
-	@Column(name ="IDDenunciaOrigen")
-	private Integer idDenunciaOrigen;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denunciaReferencia"})	
+	@JoinColumn(name = "IDDenunciaOrigen", nullable = false) 
+	private Denuncia denuncia;
 	
 	@Column(name ="IDDenunciaAmpliacion")
 	private Integer idDenunciaAmpliacion;
@@ -40,56 +53,4 @@ public class DenunciaReferencia implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdDenunciaReferencia() {
-		return idDenunciaReferencia;
-	}
-
-	public Integer getIdDenunciaOrigen() {
-		return idDenunciaOrigen;
-	}
-
-	public Integer getIdDenunciaAmpliacion() {
-		return idDenunciaAmpliacion;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdDenunciaReferencia(Integer idDenunciaReferencia) {
-		this.idDenunciaReferencia = idDenunciaReferencia;
-	}
-
-	public void setIdDenunciaOrigen(Integer idDenunciaOrigen) {
-		this.idDenunciaOrigen = idDenunciaOrigen;
-	}
-
-	public void setIdDenunciaAmpliacion(Integer idDenunciaAmpliacion) {
-		this.idDenunciaAmpliacion = idDenunciaAmpliacion;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
 }

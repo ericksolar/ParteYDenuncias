@@ -5,12 +5,23 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 
 @Entity
 @Table(name ="NarracionDenuncia")
@@ -23,12 +34,16 @@ public class NarracionDenuncia  implements Serializable{
 	@Column(name ="IDNarracion")
 	private Integer idNarracion;
 	
-	@Column(name ="IDFuncionario")
-	private Integer idFuncionario;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "narracionDenuncia"})	
+	@JoinColumn(name = "IDFuncionario", nullable = false) 
+	private Funcionario funcionario;
 	
-	@Column(name ="IDInvolucrado")
-	private Integer idInvolucrado;
-	
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "narracionDenuncia"})	
+	@JoinColumn(name = "IDInvolucrado", nullable = false) 
+	private Involucrado involucrado;
+
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fcIngreso;
@@ -43,64 +58,4 @@ public class NarracionDenuncia  implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdNarracion() {
-		return idNarracion;
-	}
-
-	public Integer getIdFuncionario() {
-		return idFuncionario;
-	}
-
-	public Integer getIdInvolucrado() {
-		return idInvolucrado;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public String getGlNarracionHechos() {
-		return glNarracionHechos;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdNarracion(Integer idNarracion) {
-		this.idNarracion = idNarracion;
-	}
-
-	public void setIdFuncionario(Integer idFuncionario) {
-		this.idFuncionario = idFuncionario;
-	}
-
-	public void setIdInvolucrado(Integer idInvolucrado) {
-		this.idInvolucrado = idInvolucrado;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setGlNarracionHechos(String glNarracionHechos) {
-		this.glNarracionHechos = glNarracionHechos;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
 }

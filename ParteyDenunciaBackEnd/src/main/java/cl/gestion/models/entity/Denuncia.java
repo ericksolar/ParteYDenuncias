@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="Denuncia")
 public class Denuncia  implements Serializable{
@@ -62,88 +68,4 @@ public class Denuncia  implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdDenuncia() {
-		return idDenuncia;
-	}
-
-	public Integer getIdInstitucionCargo() {
-		return idInstitucionCargo;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public Integer getCdReparticion() {
-		return cdReparticion;
-	}
-
-	public TPDocumento getTpDocumento() {
-		return tpDocumento;
-	}
-
-	public Integer getNrDocumento() {
-		return nrDocumento;
-	}
-
-	public Date getFcInicioDenuncia() {
-		return fcInicioDenuncia;
-	}
-
-	public Date getFcTerminoDenuncia() {
-		return fcTerminoDenuncia;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdDenuncia(Integer idDenuncia) {
-		this.idDenuncia = idDenuncia;
-	}
-
-	public void setIdInstitucionCargo(Integer idInstitucionCargo) {
-		this.idInstitucionCargo = idInstitucionCargo;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setCdReparticion(Integer cdReparticion) {
-		this.cdReparticion = cdReparticion;
-	}
-
-	public void setTpDocumento(TPDocumento tpDocumento) {
-		this.tpDocumento = tpDocumento;
-	}
-
-	public void setNrDocumento(Integer nrDocumento) {
-		this.nrDocumento = nrDocumento;
-	}
-
-	public void setFcInicioDenuncia(Date fcInicioDenuncia) {
-		this.fcInicioDenuncia = fcInicioDenuncia;
-	}
-
-	public void setFcTerminoDenuncia(Date fcTerminoDenuncia) {
-		this.fcTerminoDenuncia = fcTerminoDenuncia;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
 }

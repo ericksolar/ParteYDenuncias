@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="DenunciaPorMenorEdad")
 public class DenunciaPorMenorEdad  implements Serializable{
@@ -29,8 +35,10 @@ public class DenunciaPorMenorEdad  implements Serializable{
 	@Column(name ="IDDenunciaNNA")
 	private Integer idDenunciaNNA;
 	
-	@Column(name ="IDInvolucradoDenunciante")
-	private Integer idInvolucradoDenunciante;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denunciaPorMenorEdad"})	
+	@JoinColumn(name = "IDInvolucradoDenunciante", nullable = false) 
+	private Involucrado involucrado;
 	
 	@Column(name ="IDAdultoProtector")
 	private Integer idAdultoProtector;
@@ -53,10 +61,10 @@ public class DenunciaPorMenorEdad  implements Serializable{
 	private Boolean lgAdultoProtector;
 	
 	@Column(name ="GLPersonaRelata")
-	private Boolean glPersonaRelata;
+	private String glPersonaRelata;
 	
 	@Column(name ="GLConoceHechos")
-	private Boolean glConoceHechos;
+	private String glConoceHechos;
 	
 	@Column(name ="FCExpiracion")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -64,97 +72,4 @@ public class DenunciaPorMenorEdad  implements Serializable{
 	
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdDenunciaNNA() {
-		return idDenunciaNNA;
-	}
-
-	public Integer getIdInvolucradoDenunciante() {
-		return idInvolucradoDenunciante;
-	}
-
-	public Integer getIdAdultoProtector() {
-		return idAdultoProtector;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public TPNNA getTpNNA() {
-		return tpNNA;
-	}
-
-	public TPRelacion getTpRelacion() {
-		return tpRelacion;
-	}
-
-	public Boolean getLgAdultoProtector() {
-		return lgAdultoProtector;
-	}
-
-	public Boolean getGlPersonaRelata() {
-		return glPersonaRelata;
-	}
-
-	public Boolean getGlConoceHechos() {
-		return glConoceHechos;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdDenunciaNNA(Integer idDenunciaNNA) {
-		this.idDenunciaNNA = idDenunciaNNA;
-	}
-
-	public void setIdInvolucradoDenunciante(Integer idInvolucradoDenunciante) {
-		this.idInvolucradoDenunciante = idInvolucradoDenunciante;
-	}
-
-	public void setIdAdultoProtector(Integer idAdultoProtector) {
-		this.idAdultoProtector = idAdultoProtector;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setTpNNA(TPNNA tpNNA) {
-		this.tpNNA = tpNNA;
-	}
-
-	public void setTpRelacion(TPRelacion tpRelacion) {
-		this.tpRelacion = tpRelacion;
-	}
-
-	public void setLgAdultoProtector(Boolean lgAdultoProtector) {
-		this.lgAdultoProtector = lgAdultoProtector;
-	}
-
-	public void setGlPersonaRelata(Boolean glPersonaRelata) {
-		this.glPersonaRelata = glPersonaRelata;
-	}
-
-	public void setGlConoceHechos(Boolean glConoceHechos) {
-		this.glConoceHechos = glConoceHechos;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
 }

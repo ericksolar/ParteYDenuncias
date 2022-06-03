@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="PersonaParte")
 public class PersonaParte implements Serializable{
@@ -77,114 +83,4 @@ public class PersonaParte implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdPersonaParte() {
-		return idPersonaParte;
-	}
-
-	public Integer getIdPersona() {
-		return idPersona;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public String getNMSocial() {
-		return NMSocial;
-	}
-
-	public TPEstadoMigratorio getTpEstadoMigratorio() {
-		return tpEstadoMigratorio;
-	}
-
-	public TPGradoEscolaridad getTpGradoEscolaridad() {
-		return tpGradoEscolaridad;
-	}
-
-	public TPPuebloOriginario getTpPuebloOriginario() {
-		return tpPuebloOriginario;
-	}
-
-	public TPIdioma getTpIdioma() {
-		return tpIdioma;
-	}
-
-	public TPIdentidadGenero getTpIdentidadGenero() {
-		return tpIdentidadGenero;
-	}
-
-	public Integer getIdDireccion() {
-		return idDireccion;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdPersonaParte(Integer idPersonaParte) {
-		this.idPersonaParte = idPersonaParte;
-	}
-
-	public void setIdPersona(Integer idPersona) {
-		this.idPersona = idPersona;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setNMSocial(String nMSocial) {
-		NMSocial = nMSocial;
-	}
-
-	public void setTpEstadoMigratorio(TPEstadoMigratorio tpEstadoMigratorio) {
-		this.tpEstadoMigratorio = tpEstadoMigratorio;
-	}
-
-	public void setTpGradoEscolaridad(TPGradoEscolaridad tpGradoEscolaridad) {
-		this.tpGradoEscolaridad = tpGradoEscolaridad;
-	}
-
-	public void setTpPuebloOriginario(TPPuebloOriginario tpPuebloOriginario) {
-		this.tpPuebloOriginario = tpPuebloOriginario;
-	}
-
-	public void setTpIdioma(TPIdioma tpIdioma) {
-		this.tpIdioma = tpIdioma;
-	}
-
-	public void setTpIdentidadGenero(TPIdentidadGenero tpIdentidadGenero) {
-		this.tpIdentidadGenero = tpIdentidadGenero;
-	}
-
-	public void setIdDireccion(Integer idDireccion) {
-		this.idDireccion = idDireccion;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-
-	public String getGlAlias() {
-		return glAlias;
-	}
-
-	public void setGlAlias(String glAlias) {
-		this.glAlias = glAlias;
-	}
-	
-	
-	
 }

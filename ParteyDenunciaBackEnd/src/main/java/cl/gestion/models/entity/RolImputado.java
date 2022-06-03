@@ -19,6 +19,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="RolImputado")
 public class RolImputado implements Serializable{
@@ -49,56 +55,4 @@ public class RolImputado implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdRolImputado() {
-		return idRolImputado;
-	}
-
-	public Integer getIdInvolucrado() {
-		return idInvolucrado;
-	}
-
-	public TPRolImputado getTpRolImputado() {
-		return tpRolImputado;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdRolImputado(Integer idRolImputado) {
-		this.idRolImputado = idRolImputado;
-	}
-
-	public void setIdInvolucrado(Integer idInvolucrado) {
-		this.idInvolucrado = idInvolucrado;
-	}
-
-	public void setTpRolImputado(TPRolImputado tpRolImputado) {
-		this.tpRolImputado = tpRolImputado;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
 }

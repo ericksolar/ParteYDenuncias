@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="Detencion")
 public class Detencion implements Serializable{
@@ -28,6 +34,11 @@ public class Detencion implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="IDDetencion")
 	private Integer idDetencion;
+	
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "detencion"})	
+	@JoinColumn(name = "IDInvolucrado", nullable = false) 
+	private Involucrado involucrado;
 	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -54,73 +65,5 @@ public class Detencion implements Serializable{
 	
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdDetencion() {
-		return idDetencion;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public String getGlLugarDetencion() {
-		return glLugarDetencion;
-	}
-
-	public Date getFcDetencion() {
-		return fcDetencion;
-	}
-
-	public String getGlNotificaAdultoResponsable() {
-		return glNotificaAdultoResponsable;
-	}
-
-	public TPMedioNotificacion getTpMedioNotificacion() {
-		return tpMedioNotificacion;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdDetencion(Integer idDetencion) {
-		this.idDetencion = idDetencion;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setGlLugarDetencion(String glLugarDetencion) {
-		this.glLugarDetencion = glLugarDetencion;
-	}
-
-	public void setFcDetencion(Date fcDetencion) {
-		this.fcDetencion = fcDetencion;
-	}
-
-	public void setGlNotificaAdultoResponsable(String glNotificaAdultoResponsable) {
-		this.glNotificaAdultoResponsable = glNotificaAdultoResponsable;
-	}
-
-	public void setTpMedioNotificacion(TPMedioNotificacion tpMedioNotificacion) {
-		this.tpMedioNotificacion = tpMedioNotificacion;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
 
 }

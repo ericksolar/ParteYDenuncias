@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="Delito")
 public class Delito implements Serializable{
@@ -31,6 +37,11 @@ public class Delito implements Serializable{
 	
 	@Column(name ="IDDenuncia")
 	private Integer idDenuncia;
+	
+	/**@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "delito"})	
+	@JoinColumn(name = "IDDenuncia", nullable = false) 
+	private Denuncia denuncia;**/
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -57,81 +68,4 @@ public class Delito implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdDelito() {
-		return idDelito;
-	}
-
-	public Integer getIdDenuncia() {
-		return idDenuncia;
-	}
-
-	public TPGradoEjecucion getTpGradoEjecucion() {
-		return tpGradoEjecucion;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public String getGlModusOperandi() {
-		return glModusOperandi;
-	}
-
-	public Boolean getLgLesionados() {
-		return lgLesionados;
-	}
-
-	public Boolean getLgFallecidos() {
-		return lgFallecidos;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdDelito(Integer idDelito) {
-		this.idDelito = idDelito;
-	}
-
-	public void setIdDenuncia(Integer idDenuncia) {
-		this.idDenuncia = idDenuncia;
-	}
-
-	public void setTpGradoEjecucion(TPGradoEjecucion tpGradoEjecucion) {
-		this.tpGradoEjecucion = tpGradoEjecucion;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setGlModusOperandi(String glModusOperandi) {
-		this.glModusOperandi = glModusOperandi;
-	}
-
-	public void setLgLesionados(Boolean lgLesionados) {
-		this.lgLesionados = lgLesionados;
-	}
-
-	public void setLgFallecidos(Boolean lgFallecidos) {
-		this.lgFallecidos = lgFallecidos;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
-	
 }

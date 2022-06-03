@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="Involucrado")
 public class Involucrado implements Serializable{
@@ -25,37 +31,41 @@ public class Involucrado implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="IDInvolucrado")
 	private Integer idInvolucrado;
-	
-	@Column(name ="IDDenuncia")
-	private Integer idDenuncia;
 	
 	@Column(name ="IDPersonaParte")
 	private Integer idPersonaParte;
 	
-	@Column(name ="IDDireccion")
-	private Integer idDireccion;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})	
+	@JoinColumn(name = "IDDenuncia", nullable = false) 
+	private Denuncia denuncia;
 	
-	@Column(name ="FCIngreso")
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date fcIngreso;
-	
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})	
+	@JoinColumn(name = "IDDireccion", nullable = false) 
+	private Direccion direccion;
+
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPContactoDenuncia", nullable = false)
-	private TPContactoDenuncia TPContactoDenuncia;
+	private TPContactoDenuncia tpContactoDenuncia;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPSituacionConvivencia", nullable = false)
-	private TPSituacionConvivencia TPSituacionConvivencia;
+	private TPSituacionConvivencia tpSituacionConvivencia;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPInvolucrado", nullable = false)
 	private TPInvolucrado tpInvolucrado;
+	
+	@Column(name ="FCIngreso")
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date fcIngreso;
 	
 	@Column(name ="GLDetalleLesiones")
 	private String glDetalleLesiones;
@@ -73,115 +83,4 @@ public class Involucrado implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdInvolucrado() {
-		return idInvolucrado;
-	}
-
-	public Integer getIdDenuncia() {
-		return idDenuncia;
-	}
-
-	public Integer getIdPersonaParte() {
-		return idPersonaParte;
-	}
-
-	public Integer getIdDireccion() {
-		return idDireccion;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public TPContactoDenuncia getTPContactoDenuncia() {
-		return TPContactoDenuncia;
-	}
-
-	public TPSituacionConvivencia getTPSituacionConvivencia() {
-		return TPSituacionConvivencia;
-	}
-
-	public TPInvolucrado getTpInvolucrado() {
-		return tpInvolucrado;
-	}
-
-	public String getGlDetalleLesiones() {
-		return glDetalleLesiones;
-	}
-
-	public String getGlOtrosTestigos() {
-		return glOtrosTestigos;
-	}
-
-	public String getGlPruebaHechos() {
-		return glPruebaHechos;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdInvolucrado(Integer idInvolucrado) {
-		this.idInvolucrado = idInvolucrado;
-	}
-
-	public void setIdDenuncia(Integer idDenuncia) {
-		this.idDenuncia = idDenuncia;
-	}
-
-	public void setIdPersonaParte(Integer idPersonaParte) {
-		this.idPersonaParte = idPersonaParte;
-	}
-
-	public void setIdDireccion(Integer idDireccion) {
-		this.idDireccion = idDireccion;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setTPContactoDenuncia(TPContactoDenuncia tPContactoDenuncia) {
-		TPContactoDenuncia = tPContactoDenuncia;
-	}
-
-	public void setTPSituacionConvivencia(TPSituacionConvivencia tPSituacionConvivencia) {
-		TPSituacionConvivencia = tPSituacionConvivencia;
-	}
-
-	public void setTpInvolucrado(TPInvolucrado tpInvolucrado) {
-		this.tpInvolucrado = tpInvolucrado;
-	}
-
-	public void setGlDetalleLesiones(String glDetalleLesiones) {
-		this.glDetalleLesiones = glDetalleLesiones;
-	}
-
-	public void setGlOtrosTestigos(String glOtrosTestigos) {
-		this.glOtrosTestigos = glOtrosTestigos;
-	}
-
-	public void setGlPruebaHechos(String glPruebaHechos) {
-		this.glPruebaHechos = glPruebaHechos;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
-	
-	
-	
 }
