@@ -20,9 +20,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="NarracionDenuncia")
 public class NarracionDenuncia  implements Serializable{
@@ -58,4 +55,65 @@ public class NarracionDenuncia  implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdNarracion() {
+		return idNarracion;
+	}
+
+	public Funcionario getFuncionario() {
+		return funcionario;
+	}
+
+	public Involucrado getInvolucrado() {
+		return involucrado;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public String getGlNarracionHechos() {
+		return glNarracionHechos;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdNarracion(Integer idNarracion) {
+		this.idNarracion = idNarracion;
+	}
+
+	public void setFuncionario(Funcionario funcionario) {
+		this.funcionario = funcionario;
+	}
+
+	public void setInvolucrado(Involucrado involucrado) {
+		this.involucrado = involucrado;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setGlNarracionHechos(String glNarracionHechos) {
+		this.glNarracionHechos = glNarracionHechos;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
+
+	
 }

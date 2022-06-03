@@ -21,9 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="ContactoRedSocial")
 public class ContactoRedSocial implements Serializable{
@@ -61,5 +58,73 @@ public class ContactoRedSocial implements Serializable{
 	
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdRedSocial() {
+		return idRedSocial;
+	}
+
+	public PersonaParte getPersonaParte() {
+		return personaParte;
+	}
+
+	public TPRedSocial getTpRedSocial() {
+		return tpRedSocial;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public String getGlIdentificador() {
+		return glIdentificador;
+	}
+
+	public Boolean getLgParticular() {
+		return lgParticular;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdRedSocial(Integer idRedSocial) {
+		this.idRedSocial = idRedSocial;
+	}
+
+	public void setPersonaParte(PersonaParte personaParte) {
+		this.personaParte = personaParte;
+	}
+
+	public void setTpRedSocial(TPRedSocial tpRedSocial) {
+		this.tpRedSocial = tpRedSocial;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setGlIdentificador(String glIdentificador) {
+		this.glIdentificador = glIdentificador;
+	}
+
+	public void setLgParticular(Boolean lgParticular) {
+		this.lgParticular = lgParticular;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
 	
 }

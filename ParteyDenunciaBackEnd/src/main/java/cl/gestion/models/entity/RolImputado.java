@@ -22,9 +22,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="RolImputado")
 public class RolImputado implements Serializable{
@@ -36,8 +33,10 @@ public class RolImputado implements Serializable{
 	@Column(name ="IDRolImputado")
 	private Integer idRolImputado;
 	
-	@Column(name ="IDInvolucrado")
-	private Integer idInvolucrado;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "rolImputado"})	
+	@JoinColumn(name = "IDInvolucrado", nullable = false) 
+	private Involucrado involucrado;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
@@ -54,5 +53,57 @@ public class RolImputado implements Serializable{
 		    		  
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdRolImputado() {
+		return idRolImputado;
+	}
+
+	public Involucrado getInvolucrado() {
+		return involucrado;
+	}
+
+	public TPRolImputado getTpRolImputado() {
+		return tpRolImputado;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdRolImputado(Integer idRolImputado) {
+		this.idRolImputado = idRolImputado;
+	}
+
+	public void setInvolucrado(Involucrado involucrado) {
+		this.involucrado = involucrado;
+	}
+
+	public void setTpRolImputado(TPRolImputado tpRolImputado) {
+		this.tpRolImputado = tpRolImputado;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
 
 }

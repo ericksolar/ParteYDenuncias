@@ -21,9 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="Direccion")
 public class Direccion  implements Serializable{
@@ -89,4 +86,145 @@ public class Direccion  implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdDireccion() {
+		return idDireccion;
+	}
+
+	public Integer getCdComuna() {
+		return cdComuna;
+	}
+
+	public String getGlSector() {
+		return glSector;
+	}
+
+	public String getGlBlock() {
+		return glBlock;
+	}
+
+	public String getNmCalle() {
+		return nmCalle;
+	}
+
+	public String getNmVillaPoblacion() {
+		return nmVillaPoblacion;
+	}
+
+	public String getGlNumero() {
+		return glNumero;
+	}
+
+	public String getGlReferencia() {
+		return glReferencia;
+	}
+
+	public String getGlDepartamento() {
+		return glDepartamento;
+	}
+
+	public float getNrLatitud() {
+		return nrLatitud;
+	}
+
+	public float getNrlongitud() {
+		return nrlongitud;
+	}
+
+	public TPContactoDenuncia getTpContactoDenuncia() {
+		return tpContactoDenuncia;
+	}
+
+	public TPResidencia getTpResidencia() {
+		return tpResidencia;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public String getNmResidenciaInstitucional() {
+		return nmResidenciaInstitucional;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdDireccion(Integer idDireccion) {
+		this.idDireccion = idDireccion;
+	}
+
+	public void setCdComuna(Integer cdComuna) {
+		this.cdComuna = cdComuna;
+	}
+
+	public void setGlSector(String glSector) {
+		this.glSector = glSector;
+	}
+
+	public void setGlBlock(String glBlock) {
+		this.glBlock = glBlock;
+	}
+
+	public void setNmCalle(String nmCalle) {
+		this.nmCalle = nmCalle;
+	}
+
+	public void setNmVillaPoblacion(String nmVillaPoblacion) {
+		this.nmVillaPoblacion = nmVillaPoblacion;
+	}
+
+	public void setGlNumero(String glNumero) {
+		this.glNumero = glNumero;
+	}
+
+	public void setGlReferencia(String glReferencia) {
+		this.glReferencia = glReferencia;
+	}
+
+	public void setGlDepartamento(String glDepartamento) {
+		this.glDepartamento = glDepartamento;
+	}
+
+	public void setNrLatitud(float nrLatitud) {
+		this.nrLatitud = nrLatitud;
+	}
+
+	public void setNrlongitud(float nrlongitud) {
+		this.nrlongitud = nrlongitud;
+	}
+
+	public void setTpContactoDenuncia(TPContactoDenuncia tpContactoDenuncia) {
+		this.tpContactoDenuncia = tpContactoDenuncia;
+	}
+
+	public void setTpResidencia(TPResidencia tpResidencia) {
+		this.tpResidencia = tpResidencia;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setNmResidenciaInstitucional(String nmResidenciaInstitucional) {
+		this.nmResidenciaInstitucional = nmResidenciaInstitucional;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
+	
+	
 }

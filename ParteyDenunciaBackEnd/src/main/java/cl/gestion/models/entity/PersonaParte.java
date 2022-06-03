@@ -21,9 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="PersonaParte")
 public class PersonaParte implements Serializable{
@@ -38,15 +35,17 @@ public class PersonaParte implements Serializable{
 	@Column(name ="IDPersona")
 	private Integer idPersona;
 	
-	@Column(name ="IDDireccion")
-	private Integer idDireccion;
-	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fcIngreso;
 	
 	@Column(name ="NMSocial")
 	private String NMSocial;
+	
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "personaParte"})	
+	@JoinColumn(name = "IDDireccion", nullable = false) 
+	private Direccion direccion;
 
 	@Column(name ="GLAlias")
 	private String glAlias;
@@ -83,4 +82,112 @@ public class PersonaParte implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdPersonaParte() {
+		return idPersonaParte;
+	}
+
+	public Integer getIdPersona() {
+		return idPersona;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public String getNMSocial() {
+		return NMSocial;
+	}
+
+	public Direccion getDireccion() {
+		return direccion;
+	}
+
+	public String getGlAlias() {
+		return glAlias;
+	}
+
+	public TPEstadoMigratorio getTpEstadoMigratorio() {
+		return tpEstadoMigratorio;
+	}
+
+	public TPGradoEscolaridad getTpGradoEscolaridad() {
+		return tpGradoEscolaridad;
+	}
+
+	public TPPuebloOriginario getTpPuebloOriginario() {
+		return tpPuebloOriginario;
+	}
+
+	public TPIdioma getTpIdioma() {
+		return tpIdioma;
+	}
+
+	public TPIdentidadGenero getTpIdentidadGenero() {
+		return tpIdentidadGenero;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdPersonaParte(Integer idPersonaParte) {
+		this.idPersonaParte = idPersonaParte;
+	}
+
+	public void setIdPersona(Integer idPersona) {
+		this.idPersona = idPersona;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setNMSocial(String nMSocial) {
+		NMSocial = nMSocial;
+	}
+
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
+	}
+
+	public void setGlAlias(String glAlias) {
+		this.glAlias = glAlias;
+	}
+
+	public void setTpEstadoMigratorio(TPEstadoMigratorio tpEstadoMigratorio) {
+		this.tpEstadoMigratorio = tpEstadoMigratorio;
+	}
+
+	public void setTpGradoEscolaridad(TPGradoEscolaridad tpGradoEscolaridad) {
+		this.tpGradoEscolaridad = tpGradoEscolaridad;
+	}
+
+	public void setTpPuebloOriginario(TPPuebloOriginario tpPuebloOriginario) {
+		this.tpPuebloOriginario = tpPuebloOriginario;
+	}
+
+	public void setTpIdioma(TPIdioma tpIdioma) {
+		this.tpIdioma = tpIdioma;
+	}
+
+	public void setTpIdentidadGenero(TPIdentidadGenero tpIdentidadGenero) {
+		this.tpIdentidadGenero = tpIdentidadGenero;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
+	
 }

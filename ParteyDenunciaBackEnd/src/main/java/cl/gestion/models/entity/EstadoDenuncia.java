@@ -21,9 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="EstadoDenuncia")
 public class EstadoDenuncia implements Serializable{
@@ -56,4 +53,57 @@ public class EstadoDenuncia implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdEstadoDenuncia() {
+		return idEstadoDenuncia;
+	}
+
+	public Denuncia getDenuncia() {
+		return denuncia;
+	}
+
+	public TPEstadoDenuncia getTpEstadoDenuncia() {
+		return tpEstadoDenuncia;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdEstadoDenuncia(Integer idEstadoDenuncia) {
+		this.idEstadoDenuncia = idEstadoDenuncia;
+	}
+
+	public void setDenuncia(Denuncia denuncia) {
+		this.denuncia = denuncia;
+	}
+
+	public void setTpEstadoDenuncia(TPEstadoDenuncia tpEstadoDenuncia) {
+		this.tpEstadoDenuncia = tpEstadoDenuncia;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
+	
+	
 }
