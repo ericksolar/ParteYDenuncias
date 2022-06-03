@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="ContactoRedSocial")
 public class ContactoRedSocial implements Serializable{
@@ -28,9 +34,11 @@ public class ContactoRedSocial implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="IDRedSocial")
 	private Integer idRedSocial;
-	
-	@Column(name ="IDPersonaParte")
-	private Integer idPersonaParte;
+
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "contactoRedSocial"})	
+	@JoinColumn(name = "IDPersonaParte", nullable = false) 
+	private PersonaParte personaParte;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -53,74 +61,5 @@ public class ContactoRedSocial implements Serializable{
 	
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdRedSocial() {
-		return idRedSocial;
-	}
-
-	public Integer getIdPersonaParte() {
-		return idPersonaParte;
-	}
-
-	public TPRedSocial getTpRedSocial() {
-		return tpRedSocial;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public String getGlIdentificador() {
-		return glIdentificador;
-	}
-
-	public Boolean getLgParticular() {
-		return lgParticular;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdRedSocial(Integer idRedSocial) {
-		this.idRedSocial = idRedSocial;
-	}
-
-	public void setIdPersonaParte(Integer idPersonaParte) {
-		this.idPersonaParte = idPersonaParte;
-	}
-
-	public void setTpRedSocial(TPRedSocial tpRedSocial) {
-		this.tpRedSocial = tpRedSocial;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setGlIdentificador(String glIdentificador) {
-		this.glIdentificador = glIdentificador;
-	}
-
-	public void setLgParticular(Boolean lgParticular) {
-		this.lgParticular = lgParticular;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
 	
 }

@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="PerfilImputado")
 public class PerfilImputado implements Serializable{
@@ -29,8 +35,10 @@ public class PerfilImputado implements Serializable{
 	@Column(name ="IDPerfilImputado")
 	private Integer idPerfilImputado;
 	
-	@Column(name ="IDInvolucrado")
-	private Integer idInvolucrado;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "perfilImputado"})	
+	@JoinColumn(name = "IDInvolucrado", nullable = false) 
+	private Involucrado involucrado;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -48,56 +56,4 @@ public class PerfilImputado implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdPerfilImputado() {
-		return idPerfilImputado;
-	}
-
-	public Integer getIdInvolucrado() {
-		return idInvolucrado;
-	}
-
-	public TPPerfil getTpPerfil() {
-		return tpPerfil;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdPerfilImputado(Integer idPerfilImputado) {
-		this.idPerfilImputado = idPerfilImputado;
-	}
-
-	public void setIdInvolucrado(Integer idInvolucrado) {
-		this.idInvolucrado = idInvolucrado;
-	}
-
-	public void setTpPerfil(TPPerfil tpPerfil) {
-		this.tpPerfil = tpPerfil;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
 }

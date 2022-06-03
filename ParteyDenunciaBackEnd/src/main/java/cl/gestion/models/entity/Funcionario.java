@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="Funcionario")
 public class Funcionario implements Serializable{
@@ -25,12 +31,14 @@ public class Funcionario implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="IDFuncionario")
 	private Integer idFuncionario;
 	
-	@Column(name ="IDDenuncia")
-	private Integer idDenuncia;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "funcionario"})	
+	@JoinColumn(name = "IDDenuncia", nullable = false) 
+	private Denuncia denuncia;
 	
 	@Column(name ="IDPersona")
 	private Integer idPersona;
@@ -59,89 +67,5 @@ public class Funcionario implements Serializable{
 	
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdFuncionario() {
-		return idFuncionario;
-	}
-
-	public Integer getIdDenuncia() {
-		return idDenuncia;
-	}
-
-	public Integer getIdPersona() {
-		return idPersona;
-	}
-
-	public Boolean getLgResponsableDiligencia() {
-		return lgResponsableDiligencia;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public String getGlRolProcedimiento() {
-		return glRolProcedimiento;
-	}
-
-	public Integer getCdGrado() {
-		return cdGrado;
-	}
-
-	public TPRolFuncionario getTpRolFuncionario() {
-		return tpRolFuncionario;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdFuncionario(Integer idFuncionario) {
-		this.idFuncionario = idFuncionario;
-	}
-
-	public void setIdDenuncia(Integer idDenuncia) {
-		this.idDenuncia = idDenuncia;
-	}
-
-	public void setIdPersona(Integer idPersona) {
-		this.idPersona = idPersona;
-	}
-
-	public void setLgResponsableDiligencia(Boolean lgResponsableDiligencia) {
-		this.lgResponsableDiligencia = lgResponsableDiligencia;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setGlRolProcedimiento(String glRolProcedimiento) {
-		this.glRolProcedimiento = glRolProcedimiento;
-	}
-
-	public void setCdGrado(Integer cdGrado) {
-		this.cdGrado = cdGrado;
-	}
-
-	public void setTpRolFuncionario(TPRolFuncionario tpRolFuncionario) {
-		this.tpRolFuncionario = tpRolFuncionario;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
 
 }

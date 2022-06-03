@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="EstadoDenuncia")
 public class EstadoDenuncia implements Serializable{
@@ -29,8 +35,10 @@ public class EstadoDenuncia implements Serializable{
 	@Column(name ="IDEstadoDenuncia")
 	private Integer idEstadoDenuncia;
 	
-	@Column(name ="IDDenuncia")
-	private Integer idDenuncia;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "estadoDenuncia"})	
+	@JoinColumn(name = "IDDenuncia", nullable = false) 
+	private Denuncia denuncia;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -48,57 +56,4 @@ public class EstadoDenuncia implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdEstadoDenuncia() {
-		return idEstadoDenuncia;
-	}
-
-	public Integer getIdDenuncia() {
-		return idDenuncia;
-	}
-
-	public TPEstadoDenuncia getTpEstadoDenuncia() {
-		return tpEstadoDenuncia;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdEstadoDenuncia(Integer idEstadoDenuncia) {
-		this.idEstadoDenuncia = idEstadoDenuncia;
-	}
-
-	public void setIdDenuncia(Integer idDenuncia) {
-		this.idDenuncia = idDenuncia;
-	}
-
-	public void setTpEstadoDenuncia(TPEstadoDenuncia tpEstadoDenuncia) {
-		this.tpEstadoDenuncia = tpEstadoDenuncia;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
-	
 }

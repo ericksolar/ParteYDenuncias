@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="DetalleImputado")
 public class DetalleImputado  implements Serializable{
@@ -29,8 +35,10 @@ public class DetalleImputado  implements Serializable{
 	@Column(name ="IDDetalleImputado")
 	private Integer idDetalleImputado;
 	
-	@Column(name ="IDInvolucrado")
-	private Integer idInvolucrado;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "detalleImputado"})	
+	@JoinColumn(name = "IDInvolucrado", nullable = false) 
+	private Involucrado involucrado;
 	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -62,88 +70,5 @@ public class DetalleImputado  implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdDetalleImputado() {
-		return idDetalleImputado;
-	}
-
-	public Integer getIdInvolucrado() {
-		return idInvolucrado;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public TPSituacionDenuncia getTpSituacionDenuncia() {
-		return tpSituacionDenuncia;
-	}
-
-	public Boolean getLgValidaIdentidad() {
-		return lgValidaIdentidad;
-	}
-
-	public Boolean getLgIdentidadPositiva() {
-		return lgIdentidadPositiva;
-	}
-
-	public TPConduccion getTpConduccion() {
-		return tpConduccion;
-	}
-
-	public String getGlLesiones() {
-		return glLesiones;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdDetalleImputado(Integer idDetalleImputado) {
-		this.idDetalleImputado = idDetalleImputado;
-	}
-
-	public void setIdInvolucrado(Integer idInvolucrado) {
-		this.idInvolucrado = idInvolucrado;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setTpSituacionDenuncia(TPSituacionDenuncia tpSituacionDenuncia) {
-		this.tpSituacionDenuncia = tpSituacionDenuncia;
-	}
-
-	public void setLgValidaIdentidad(Boolean lgValidaIdentidad) {
-		this.lgValidaIdentidad = lgValidaIdentidad;
-	}
-
-	public void setLgIdentidadPositiva(Boolean lgIdentidadPositiva) {
-		this.lgIdentidadPositiva = lgIdentidadPositiva;
-	}
-
-	public void setTpConduccion(TPConduccion tpConduccion) {
-		this.tpConduccion = tpConduccion;
-	}
-
-	public void setGlLesiones(String glLesiones) {
-		this.glLesiones = glLesiones;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
 	
 }

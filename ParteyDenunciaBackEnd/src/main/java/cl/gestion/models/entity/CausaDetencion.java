@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="CausaDetencion")
 public class CausaDetencion implements Serializable{
@@ -25,13 +31,15 @@ public class CausaDetencion implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="IDCausaDetencion")
 	private Integer idCausaDetencion;
 	
-	@Column(name ="IDDetencion")
-	private Integer idDetencion;
-	
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "causaDetencion"})	
+	@JoinColumn(name = "IDDetencion", nullable = false) 
+	private Detencion detencion;
+
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPCausaDetencion", nullable = false)
@@ -47,57 +55,4 @@ public class CausaDetencion implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdCausaDetencion() {
-		return idCausaDetencion;
-	}
-
-	public Integer getIdDetencion() {
-		return idDetencion;
-	}
-
-	public TPCausaDetencion getTpCausaDetencion() {
-		return tpCausaDetencion;
-	}
-
-	public String getGlDetalle() {
-		return glDetalle;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdCausaDetencion(Integer idCausaDetencion) {
-		this.idCausaDetencion = idCausaDetencion;
-	}
-
-	public void setIdDetencion(Integer idDetencion) {
-		this.idDetencion = idDetencion;
-	}
-
-	public void setTpCausaDetencion(TPCausaDetencion tpCausaDetencion) {
-		this.tpCausaDetencion = tpCausaDetencion;
-	}
-
-	public void setGlDetalle(String glDetalle) {
-		this.glDetalle = glDetalle;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
-	
 }

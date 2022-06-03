@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="MedioTransporteInvolucrado")
 public class MedioTransporteInvolucrado implements Serializable{
@@ -29,11 +35,15 @@ public class MedioTransporteInvolucrado implements Serializable{
 	@Column(name ="IDMedioTransInvol")
 	private Integer idMedioTransInvol;
 	
-	@Column(name ="IDMedioTransporte")
-	private Integer idMedioTransporte;
-	
-	@Column(name ="IDInvolucrado")
-	private Integer idInvolucrado;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporteInvolucrado"})	
+	@JoinColumn(name = "IDMedioTransporte", nullable = false) 
+	private MedioTransporte medioTransporte;
+
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporteInvolucrado"})	
+	@JoinColumn(name = "IDInvolucrado", nullable = false) 
+	private Involucrado involucrado;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -51,64 +61,4 @@ public class MedioTransporteInvolucrado implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdMedioTransInvol() {
-		return idMedioTransInvol;
-	}
-
-	public Integer getIdMedioTransporte() {
-		return idMedioTransporte;
-	}
-
-	public Integer getIdInvolucrado() {
-		return idInvolucrado;
-	}
-
-	public TPUsoMedio getTpUsoMedio() {
-		return tpUsoMedio;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdMedioTransInvol(Integer idMedioTransInvol) {
-		this.idMedioTransInvol = idMedioTransInvol;
-	}
-
-	public void setIdMedioTransporte(Integer idMedioTransporte) {
-		this.idMedioTransporte = idMedioTransporte;
-	}
-
-	public void setIdInvolucrado(Integer idInvolucrado) {
-		this.idInvolucrado = idInvolucrado;
-	}
-
-	public void setTpUsoMedio(TPUsoMedio tpUsoMedio) {
-		this.tpUsoMedio = tpUsoMedio;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
 }

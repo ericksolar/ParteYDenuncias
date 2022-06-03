@@ -18,6 +18,12 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+
 @Entity
 @Table(name ="EstadoInvolucrado")
 public class EstadoInvolucrado implements Serializable{
@@ -29,8 +35,10 @@ public class EstadoInvolucrado implements Serializable{
 	@Column(name ="IDEstadoInvolucrado")
 	private Integer idEstadoInvolucrado;
 	
-	@Column(name ="IDInvolucrado")
-	private Integer idInvolucrado;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "estadoInvolucrado"})	
+	@JoinColumn(name = "IDInvolucrado", nullable = false) 
+	private Involucrado involucrado;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -47,59 +55,5 @@ public class EstadoInvolucrado implements Serializable{
 	
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-
-	public Integer getIdEstadoInvolucrado() {
-		return idEstadoInvolucrado;
-	}
-
-	public Integer getIdInvolucrado() {
-		return idInvolucrado;
-	}
-
-	public TPEstadoPersona getTPEstadoPersona() {
-		return TPEstadoPersona;
-	}
-
-	public Date getFcIngreso() {
-		return fcIngreso;
-	}
-
-	public Date getFcExpiracion() {
-		return fcExpiracion;
-	}
-
-	public Integer getNrRutUsuario() {
-		return nrRutUsuario;
-	}
-
-	public void setIdEstadoInvolucrado(Integer idEstadoInvolucrado) {
-		this.idEstadoInvolucrado = idEstadoInvolucrado;
-	}
-
-	public void setIdInvolucrado(Integer idInvolucrado) {
-		this.idInvolucrado = idInvolucrado;
-	}
-
-	public void setTPEstadoPersona(TPEstadoPersona tPEstadoPersona) {
-		TPEstadoPersona = tPEstadoPersona;
-	}
-
-	public void setFcIngreso(Date fcIngreso) {
-		this.fcIngreso = fcIngreso;
-	}
-
-	public void setFcExpiracion(Date fcExpiracion) {
-		this.fcExpiracion = fcExpiracion;
-	}
-
-	public void setNrRutUsuario(Integer nrRutUsuario) {
-		this.nrRutUsuario = nrRutUsuario;
-	}
-	
-	
 
 }
