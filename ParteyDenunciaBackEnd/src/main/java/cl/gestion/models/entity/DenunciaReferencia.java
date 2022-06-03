@@ -20,9 +20,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="DenunciaReferencia")
 public class DenunciaReferencia implements Serializable{
@@ -39,8 +36,10 @@ public class DenunciaReferencia implements Serializable{
 	@JoinColumn(name = "IDDenunciaOrigen", nullable = false) 
 	private Denuncia denuncia;
 	
-	@Column(name ="IDDenunciaAmpliacion")
-	private Integer idDenunciaAmpliacion;
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denunciaReferencia"})	
+	@JoinColumn(name = "IDDenunciaAmpliacion", nullable = false) 
+	private Denuncia denunciaAmpliacion;
 	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -53,4 +52,57 @@ public class DenunciaReferencia implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdDenunciaReferencia() {
+		return idDenunciaReferencia;
+	}
+
+	public Denuncia getDenuncia() {
+		return denuncia;
+	}
+
+	public Denuncia getDenunciaAmpliacion() {
+		return denunciaAmpliacion;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdDenunciaReferencia(Integer idDenunciaReferencia) {
+		this.idDenunciaReferencia = idDenunciaReferencia;
+	}
+
+	public void setDenuncia(Denuncia denuncia) {
+		this.denuncia = denuncia;
+	}
+
+	public void setDenunciaAmpliacion(Denuncia denunciaAmpliacion) {
+		this.denunciaAmpliacion = denunciaAmpliacion;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
+	
+	
 }

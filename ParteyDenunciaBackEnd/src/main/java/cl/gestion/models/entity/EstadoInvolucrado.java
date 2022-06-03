@@ -21,9 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="EstadoInvolucrado")
 public class EstadoInvolucrado implements Serializable{
@@ -56,4 +53,57 @@ public class EstadoInvolucrado implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdEstadoInvolucrado() {
+		return idEstadoInvolucrado;
+	}
+
+	public Involucrado getInvolucrado() {
+		return involucrado;
+	}
+
+	public TPEstadoPersona getTPEstadoPersona() {
+		return TPEstadoPersona;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdEstadoInvolucrado(Integer idEstadoInvolucrado) {
+		this.idEstadoInvolucrado = idEstadoInvolucrado;
+	}
+
+	public void setInvolucrado(Involucrado involucrado) {
+		this.involucrado = involucrado;
+	}
+
+	public void setTPEstadoPersona(TPEstadoPersona tPEstadoPersona) {
+		TPEstadoPersona = tPEstadoPersona;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
+	
+	
 }

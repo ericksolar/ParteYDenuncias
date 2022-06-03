@@ -21,8 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 
 @Entity
 @Table(name ="Funcionario")
@@ -54,7 +52,7 @@ public class Funcionario implements Serializable{
 	private String glRolProcedimiento;
 	
 	@Column(name ="CDGrado")
-	private Integer cdGrado;
+	private Short cdGrado;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -68,4 +66,89 @@ public class Funcionario implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdFuncionario() {
+		return idFuncionario;
+	}
+
+	public Denuncia getDenuncia() {
+		return denuncia;
+	}
+
+	public Integer getIdPersona() {
+		return idPersona;
+	}
+
+	public Boolean getLgResponsableDiligencia() {
+		return lgResponsableDiligencia;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public String getGlRolProcedimiento() {
+		return glRolProcedimiento;
+	}
+
+	public Short getCdGrado() {
+		return cdGrado;
+	}
+
+	public TPRolFuncionario getTpRolFuncionario() {
+		return tpRolFuncionario;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdFuncionario(Integer idFuncionario) {
+		this.idFuncionario = idFuncionario;
+	}
+
+	public void setDenuncia(Denuncia denuncia) {
+		this.denuncia = denuncia;
+	}
+
+	public void setIdPersona(Integer idPersona) {
+		this.idPersona = idPersona;
+	}
+
+	public void setLgResponsableDiligencia(Boolean lgResponsableDiligencia) {
+		this.lgResponsableDiligencia = lgResponsableDiligencia;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setGlRolProcedimiento(String glRolProcedimiento) {
+		this.glRolProcedimiento = glRolProcedimiento;
+	}
+
+	public void setCdGrado(Short cdGrado) {
+		this.cdGrado = cdGrado;
+	}
+
+	public void setTpRolFuncionario(TPRolFuncionario tpRolFuncionario) {
+		this.tpRolFuncionario = tpRolFuncionario;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
+	
+	
 }

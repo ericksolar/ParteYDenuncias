@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 
 @Entity
 @Table(name ="InstruccionFiscal")
@@ -35,17 +33,17 @@ public class InstruccionFiscal implements Serializable{
 	private Integer idInstruccionFiscal;
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "funcionario"})	
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "instruccionFiscal"})	
 	@JoinColumn(name = "IDDenuncia", nullable = false) 
 	private Denuncia denuncia;
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "funcionario"})	
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "instruccionFiscal"})	
 	@JoinColumn(name = "IDFiscalia", nullable = false) 
 	private Fiscalia fiscalia;
 	
-	@Column(name ="IDPersonaParte")
-	private Integer idPersonaParte;
+	@Column(name ="IDPersonaFiscal")
+	private Integer idPersonaFiscal;
 	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -60,5 +58,73 @@ public class InstruccionFiscal implements Serializable{
 	
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdInstruccionFiscal() {
+		return idInstruccionFiscal;
+	}
+
+	public Denuncia getDenuncia() {
+		return denuncia;
+	}
+
+	public Fiscalia getFiscalia() {
+		return fiscalia;
+	}
+
+	public Integer getIdPersonaFiscal() {
+		return idPersonaFiscal;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public String getGlInstruccionFiscal() {
+		return glInstruccionFiscal;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdInstruccionFiscal(Integer idInstruccionFiscal) {
+		this.idInstruccionFiscal = idInstruccionFiscal;
+	}
+
+	public void setDenuncia(Denuncia denuncia) {
+		this.denuncia = denuncia;
+	}
+
+	public void setFiscalia(Fiscalia fiscalia) {
+		this.fiscalia = fiscalia;
+	}
+
+	public void setIdPersonaFiscal(Integer idPersonaFiscal) {
+		this.idPersonaFiscal = idPersonaFiscal;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setGlInstruccionFiscal(String glInstruccionFiscal) {
+		this.glInstruccionFiscal = glInstruccionFiscal;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
 
 }

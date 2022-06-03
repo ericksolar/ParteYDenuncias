@@ -21,9 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="DenunciaPorMenorEdad")
 public class DenunciaPorMenorEdad  implements Serializable{
@@ -72,4 +69,98 @@ public class DenunciaPorMenorEdad  implements Serializable{
 	
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdDenunciaNNA() {
+		return idDenunciaNNA;
+	}
+
+	public Involucrado getInvolucrado() {
+		return involucrado;
+	}
+
+	public Integer getIdAdultoProtector() {
+		return idAdultoProtector;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public TPNNA getTpNNA() {
+		return tpNNA;
+	}
+
+	public TPRelacion getTpRelacion() {
+		return tpRelacion;
+	}
+
+	public Boolean getLgAdultoProtector() {
+		return lgAdultoProtector;
+	}
+
+	public String getGlPersonaRelata() {
+		return glPersonaRelata;
+	}
+
+	public String getGlConoceHechos() {
+		return glConoceHechos;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdDenunciaNNA(Integer idDenunciaNNA) {
+		this.idDenunciaNNA = idDenunciaNNA;
+	}
+
+	public void setInvolucrado(Involucrado involucrado) {
+		this.involucrado = involucrado;
+	}
+
+	public void setIdAdultoProtector(Integer idAdultoProtector) {
+		this.idAdultoProtector = idAdultoProtector;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setTpNNA(TPNNA tpNNA) {
+		this.tpNNA = tpNNA;
+	}
+
+	public void setTpRelacion(TPRelacion tpRelacion) {
+		this.tpRelacion = tpRelacion;
+	}
+
+	public void setLgAdultoProtector(Boolean lgAdultoProtector) {
+		this.lgAdultoProtector = lgAdultoProtector;
+	}
+
+	public void setGlPersonaRelata(String glPersonaRelata) {
+		this.glPersonaRelata = glPersonaRelata;
+	}
+
+	public void setGlConoceHechos(String glConoceHechos) {
+		this.glConoceHechos = glConoceHechos;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
+	
+	
 }

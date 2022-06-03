@@ -21,8 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 
 @Entity
 @Table(name ="CausaDetencion")
@@ -54,5 +52,59 @@ public class CausaDetencion implements Serializable{
 	
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdCausaDetencion() {
+		return idCausaDetencion;
+	}
+
+	public Detencion getDetencion() {
+		return detencion;
+	}
+
+	public TPCausaDetencion getTpCausaDetencion() {
+		return tpCausaDetencion;
+	}
+
+	public String getGlDetalle() {
+		return glDetalle;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdCausaDetencion(Integer idCausaDetencion) {
+		this.idCausaDetencion = idCausaDetencion;
+	}
+
+	public void setDetencion(Detencion detencion) {
+		this.detencion = detencion;
+	}
+
+	public void setTpCausaDetencion(TPCausaDetencion tpCausaDetencion) {
+		this.tpCausaDetencion = tpCausaDetencion;
+	}
+
+	public void setGlDetalle(String glDetalle) {
+		this.glDetalle = glDetalle;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
+	
+	
 
 }

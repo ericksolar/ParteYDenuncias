@@ -21,9 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="MedioTransporteInvolucrado")
 public class MedioTransporteInvolucrado implements Serializable{
@@ -60,5 +57,65 @@ public class MedioTransporteInvolucrado implements Serializable{
 	
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdMedioTransInvol() {
+		return idMedioTransInvol;
+	}
+
+	public MedioTransporte getMedioTransporte() {
+		return medioTransporte;
+	}
+
+	public Involucrado getInvolucrado() {
+		return involucrado;
+	}
+
+	public TPUsoMedio getTpUsoMedio() {
+		return tpUsoMedio;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdMedioTransInvol(Integer idMedioTransInvol) {
+		this.idMedioTransInvol = idMedioTransInvol;
+	}
+
+	public void setMedioTransporte(MedioTransporte medioTransporte) {
+		this.medioTransporte = medioTransporte;
+	}
+
+	public void setInvolucrado(Involucrado involucrado) {
+		this.involucrado = involucrado;
+	}
+
+	public void setTpUsoMedio(TPUsoMedio tpUsoMedio) {
+		this.tpUsoMedio = tpUsoMedio;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
 
 }

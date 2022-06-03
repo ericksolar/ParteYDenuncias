@@ -21,9 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
-
 @Entity
 @Table(name ="Involucrado")
 public class Involucrado implements Serializable{
@@ -83,4 +80,113 @@ public class Involucrado implements Serializable{
 	@Column(name ="NRRutUsuario")
 	private Integer nrRutUsuario;
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+	public Integer getIdInvolucrado() {
+		return idInvolucrado;
+	}
+
+	public Integer getIdPersonaParte() {
+		return idPersonaParte;
+	}
+
+	public Denuncia getDenuncia() {
+		return denuncia;
+	}
+
+	public Direccion getDireccion() {
+		return direccion;
+	}
+
+	public TPContactoDenuncia getTpContactoDenuncia() {
+		return tpContactoDenuncia;
+	}
+
+	public TPSituacionConvivencia getTpSituacionConvivencia() {
+		return tpSituacionConvivencia;
+	}
+
+	public TPInvolucrado getTpInvolucrado() {
+		return tpInvolucrado;
+	}
+
+	public Date getFcIngreso() {
+		return fcIngreso;
+	}
+
+	public String getGlDetalleLesiones() {
+		return glDetalleLesiones;
+	}
+
+	public String getGlOtrosTestigos() {
+		return glOtrosTestigos;
+	}
+
+	public String getGlPruebaHechos() {
+		return glPruebaHechos;
+	}
+
+	public Date getFcExpiracion() {
+		return fcExpiracion;
+	}
+
+	public Integer getNrRutUsuario() {
+		return nrRutUsuario;
+	}
+
+	public void setIdInvolucrado(Integer idInvolucrado) {
+		this.idInvolucrado = idInvolucrado;
+	}
+
+	public void setIdPersonaParte(Integer idPersonaParte) {
+		this.idPersonaParte = idPersonaParte;
+	}
+
+	public void setDenuncia(Denuncia denuncia) {
+		this.denuncia = denuncia;
+	}
+
+	public void setDireccion(Direccion direccion) {
+		this.direccion = direccion;
+	}
+
+	public void setTpContactoDenuncia(TPContactoDenuncia tpContactoDenuncia) {
+		this.tpContactoDenuncia = tpContactoDenuncia;
+	}
+
+	public void setTpSituacionConvivencia(TPSituacionConvivencia tpSituacionConvivencia) {
+		this.tpSituacionConvivencia = tpSituacionConvivencia;
+	}
+
+	public void setTpInvolucrado(TPInvolucrado tpInvolucrado) {
+		this.tpInvolucrado = tpInvolucrado;
+	}
+
+	public void setFcIngreso(Date fcIngreso) {
+		this.fcIngreso = fcIngreso;
+	}
+
+	public void setGlDetalleLesiones(String glDetalleLesiones) {
+		this.glDetalleLesiones = glDetalleLesiones;
+	}
+
+	public void setGlOtrosTestigos(String glOtrosTestigos) {
+		this.glOtrosTestigos = glOtrosTestigos;
+	}
+
+	public void setGlPruebaHechos(String glPruebaHechos) {
+		this.glPruebaHechos = glPruebaHechos;
+	}
+
+	public void setFcExpiracion(Date fcExpiracion) {
+		this.fcExpiracion = fcExpiracion;
+	}
+
+	public void setNrRutUsuario(Integer nrRutUsuario) {
+		this.nrRutUsuario = nrRutUsuario;
+	}
+	
+	
 }
