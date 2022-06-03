@@ -278,100 +278,132 @@
 
                         <!-- <fieldset AQUI IBA DOMICILIO   disabled> -->
 
-                        <p>Datos de Contacto:</p>
-                        <div class="row mb-2">
-                            <label class="col-sm-4">Tipo de Contacto</label>
-                            <div class="col-sm-7">
-                                <select class="form-select" aria-label="Default select example" >
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">Particular</option>
-                                    <option value="2">Comercial</option>  
-                                    <option value="3">No tiene</option>    
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <label class="col-sm-4">Teléfono Fijo:</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <label class="col-sm-4">Teléfono Móvil:</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <div class="row mb-2">
-                            <label class="col-sm-4">Correo Electrónico:</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-
-                        <!-- <div class="col-sm-7">
-                            <div style="padding-right: 50px;">
-                                <label class="col-sm-4">Redes Sociales:</label>
-                            </div>
-                            <div class="col-sm-7">
-                                <select class="form-select" aria-label="Default select example">
-                                        <option selected>Seleccione Si / No </option>
-                                        <option value="1">Si</option>
-                                        <option value="1">No</option>
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Tipo de Dirección</label>
+                                <div class="col-sm-7">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">Contacto Particular</option>
+                                        <option value="2">Contacto Comercial</option>  
                                     </select>
+                                </div>
                             </div>
-                        </div> -->
 
-                        <div class="row mb-2">
-                            <label class="col-sm-4">Redes Sociales</label>
-                            <div class="col-sm-7">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" 
-                                            type="radio" 
-                                            name="inlineRadioOptions" 
-                                            id="inlineRadio1" 
-                                            value="option1"
-                                            (click)="habilitarCampoRedes()">
-                                    <label class="form-check-label" for="inlineRadio1">Si</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" 
-                                            type="radio" 
-                                            name="inlineRadioOptions" 
-                                            id="inlineRadio2" 
-                                            value="option2"
-                                            (click)="habilitarCampoRedes()"
-                                            checked>
-                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Calle:<span style="color: red; font-weight: bold;">*</span></label>
+                                <div class="col-sm-7">
+                                    <input type="text" 
+                                            class="form-control"
+                                            formControlName="calle">
+                                    <span class="form-text text-danger"
+                                            *ngIf="campoValido('calle')">
+                                        La calle es obligatoria
+                                    </span>
                                 </div>
                             </div>
-                        </div>
+
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Número:<span style="color: red; font-weight: bold;">*</span></label>
+                                <div class="col-sm-7">
+                                    <input type="text" 
+                                            class="form-control"
+                                            formControlName="numero">
+                                    <span class="form-text text-danger"
+                                            *ngIf="campoValido('numero')">
+                                        El numero es obligatorio
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Departamento/Oficina:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Block:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Población/Villa:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Sector:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Región:<span style="color: red; font-weight: bold;">*</span></label>
+                                <div class="col-sm-7">
+                                    <select class="form-select" formControlName="region">
+                                        <option [ngValue]="null" disabled>Seleccionar</option>
+                                        <option value="1">I Región</option>
+                                        <option value="1">II Región</option>
+                                        <option value="2">III Región</option>
+                                        <option value="3">IV Región</option>
+                                        <option value="3">V Región</option>
+                                        <option value="1">VI Región</option>
+                                        <option value="1">VII Región</option>
+                                        <option value="2">VIII Región</option>
+                                        <option value="3">IX Región</option>
+                                        <option value="3">X Región</option>
+                                        <option value="1">XI Región</option>
+                                        <option value="1">XII Región</option>
+                                        <option value="2">XIII Región</option>
+                                        <option value="3">XIV Región</option>
+                                        <option value="3">XV Región</option>
+                                        <option value="3">XVI Región</option>
+                                    </select>
+                                    <span class="form-text text-danger"
+                                            *ngIf="campoValido('region')">
+                                        La region es obligatoria
+                                    </span>  
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Comuna:</label>
+                                <div class="col-sm-7">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>Seleccionar</option>
+                                        <option value="1">ARICA</option>
+                                        <option value="2">CAMARONES</option>
+                                        <option value="3">PUTRE</option>
+                                        <option value="4">GENERAL LAGOS</option>
+                                        <option value="5">IQUIQUE</option>
+                                        <option value="6">HUARA</option>
+                                        <option value="7">CAMINA</option>
+                                        <option value="8">COLCHANE</option>
+                                        <option value="9">PICA</option>
+                                        <option value="10">POZO ALMONTE</option>
+                                        <option value="11">TOCOPILLA</option>
+                                        <option value="12">MARIA ELENA</option>
+                                        <option value="13">CALAMA</option>
+                                        <option value="14">OLLAGUE</option>
+                                        <option value="15">SAN PEDRO DE ATACAMA</option>
+                                        <option value="16">ANTOFAGASTA</option>
+                                    </select>       
+                                </div>
+                            </div>
+
+                            <div class="row mb-2">
+                                <label class="col-sm-4">Observación referencia de la dirección:</label>
+                                <div class="col-sm-7">
+                                    <textarea class="form-control" rows="4" cols="50"></textarea>
+                                </div>
+                            </div>
                         
-                        <div class="row mb-2">
-                            <label class="col-sm-4">Cuáles Redes Sociales:</label>
-                            <div class="col-sm-7">
-                                <select class="form-select" 
-                                        [disabled]="textBoxDisabledRedes">
-                                    <option selected>Seleccionar</option>
-                                    <option value="1">Twitter</option>
-                                    <option value="2">Facebook</option>
-                                    <option value="3">Instagram</option>
-                                    <option value="4">Tegram</option>
-                                    <option value="5">VK</option>
-                                </select>       
-                            </div>
-                        </div>
-
-
-                        <div class="row mb-2">
-                            <label class="col-sm-4">Agregar Identificación/Login</label>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control" [disabled]="textBoxDisabledRedes">
-                            </div>
-                        </div>
 
                         <!-- <div class="col-sm-7">
                             <div class="col-sm-7">
@@ -417,131 +449,101 @@
 
                             <div class="col-sm">
 
-                                <div class="row mb-2">
-                                    <label class="col-sm-4">Tipo de Dirección</label>
-                                    <div class="col-sm-7">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Seleccionar</option>
-                                            <option value="1">Contacto Particular</option>
-                                            <option value="2">Contacto Comercial</option>  
-                                        </select>
+                                <p>Datos de Contacto:</p>
+                                    <div class="row mb-2">
+                                        <label class="col-sm-4">Tipo de Contacto</label>
+                                        <div class="col-sm-7">
+                                            <select class="form-select" aria-label="Default select example" >
+                                                <option selected>Seleccionar</option>
+                                                <option value="1">Particular</option>
+                                                <option value="2">Comercial</option>  
+                                                <option value="3">No tiene</option>    
+                                            </select>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="row mb-2">
-                                    <label class="col-sm-4">Calle:<span style="color: red; font-weight: bold;">*</span></label>
-                                    <div class="col-sm-7">
-                                        <input type="text" 
-                                                class="form-control"
-                                                formControlName="calle">
-                                        <span class="form-text text-danger"
-                                                *ngIf="campoValido('calle')">
-                                            La calle es obligatoria
-                                        </span>
+                                    <div class="row mb-2">
+                                        <label class="col-sm-4">Teléfono Fijo:</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="row mb-2">
-                                    <label class="col-sm-4">Número:<span style="color: red; font-weight: bold;">*</span></label>
-                                    <div class="col-sm-7">
-                                        <input type="text" 
-                                                class="form-control"
-                                                formControlName="numero">
-                                        <span class="form-text text-danger"
-                                                *ngIf="campoValido('numero')">
-                                            El numero es obligatorio
-                                        </span>
+                                    <div class="row mb-2">
+                                        <label class="col-sm-4">Teléfono Móvil:</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="row mb-2">
-                                    <label class="col-sm-4">Departamento/Oficina:</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control">
+                                    <div class="row mb-2">
+                                        <label class="col-sm-4">Correo Electrónico:</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="row mb-2">
-                                    <label class="col-sm-4">Block:</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
+                                    <!-- <div class="col-sm-7">
+                                        <div style="padding-right: 50px;">
+                                            <label class="col-sm-4">Redes Sociales:</label>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <select class="form-select" aria-label="Default select example">
+                                                    <option selected>Seleccione Si / No </option>
+                                                    <option value="1">Si</option>
+                                                    <option value="1">No</option>
+                                                </select>
+                                        </div>
+                                    </div> -->
 
-                                <div class="row mb-2">
-                                    <label class="col-sm-4">Población/Villa:</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control">
+                                    <div class="row mb-2">
+                                        <label class="col-sm-4">Redes Sociales</label>
+                                        <div class="col-sm-7">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" 
+                                                        type="radio" 
+                                                        name="inlineRadioOptions" 
+                                                        id="inlineRadio1" 
+                                                        value="option1"
+                                                        (click)="habilitarCampoRedes()">
+                                                <label class="form-check-label" for="inlineRadio1">Si</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" 
+                                                        type="radio" 
+                                                        name="inlineRadioOptions" 
+                                                        id="inlineRadio2" 
+                                                        value="option2"
+                                                        (click)="habilitarCampoRedes()"
+                                                        checked>
+                                                <label class="form-check-label" for="inlineRadio2">No</label>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                    
+                                    <div class="row mb-2">
+                                        <label class="col-sm-4">Cuáles Redes Sociales:</label>
+                                        <div class="col-sm-7">
+                                            <select class="form-select" 
+                                                    [disabled]="textBoxDisabledRedes">
+                                                <option selected>Seleccionar</option>
+                                                <option value="1">Twitter</option>
+                                                <option value="2">Facebook</option>
+                                                <option value="3">Instagram</option>
+                                                <option value="4">Tegram</option>
+                                                <option value="5">VK</option>
+                                            </select>       
+                                        </div>
+                                    </div>
 
-                                <div class="row mb-2">
-                                    <label class="col-sm-4">Sector:</label>
-                                    <div class="col-sm-7">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
 
-                                <div class="row mb-2">
-                                    <label class="col-sm-4">Región:<span style="color: red; font-weight: bold;">*</span></label>
-                                    <div class="col-sm-7">
-                                        <select class="form-select" formControlName="region">
-                                            <option [ngValue]="null" disabled>Seleccionar</option>
-                                            <option value="1">I Región</option>
-                                            <option value="1">II Región</option>
-                                            <option value="2">III Región</option>
-                                            <option value="3">IV Región</option>
-                                            <option value="3">V Región</option>
-                                            <option value="1">VI Región</option>
-                                            <option value="1">VII Región</option>
-                                            <option value="2">VIII Región</option>
-                                            <option value="3">IX Región</option>
-                                            <option value="3">X Región</option>
-                                            <option value="1">XI Región</option>
-                                            <option value="1">XII Región</option>
-                                            <option value="2">XIII Región</option>
-                                            <option value="3">XIV Región</option>
-                                            <option value="3">XV Región</option>
-                                            <option value="3">XVI Región</option>
-                                        </select>
-                                        <span class="form-text text-danger"
-                                                *ngIf="campoValido('region')">
-                                            La region es obligatoria
-                                        </span>  
+                                    <div class="row mb-2">
+                                        <label class="col-sm-4">Agregar Identificación/Login</label>
+                                        <div class="col-sm-7">
+                                            <input type="text" class="form-control" [disabled]="textBoxDisabledRedes">
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="row mb-2">
-                                    <label class="col-sm-4">Comuna:</label>
-                                    <div class="col-sm-7">
-                                        <select class="form-select" aria-label="Default select example">
-                                            <option selected>Seleccionar</option>
-                                            <option value="1">ARICA</option>
-                                            <option value="2">CAMARONES</option>
-                                            <option value="3">PUTRE</option>
-                                            <option value="4">GENERAL LAGOS</option>
-                                            <option value="5">IQUIQUE</option>
-                                            <option value="6">HUARA</option>
-                                            <option value="7">CAMINA</option>
-                                            <option value="8">COLCHANE</option>
-                                            <option value="9">PICA</option>
-                                            <option value="10">POZO ALMONTE</option>
-                                            <option value="11">TOCOPILLA</option>
-                                            <option value="12">MARIA ELENA</option>
-                                            <option value="13">CALAMA</option>
-                                            <option value="14">OLLAGUE</option>
-                                            <option value="15">SAN PEDRO DE ATACAMA</option>
-                                            <option value="16">ANTOFAGASTA</option>
-                                        </select>       
-                                    </div>
-                                </div>
-
-                                <div class="row mb-2">
-                                    <label class="col-sm-4">Observación referencia de la dirección:</label>
-                                    <div class="col-sm-7">
-                                        <textarea class="form-control" rows="4" cols="50"></textarea>
-                                    </div>
-                                </div>
+                                
 
                             </div>
 
