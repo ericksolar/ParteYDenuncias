@@ -44,6 +44,4 @@ public class TPConduccion implements Serializable{
 		this.gltpConduccion = gltpConduccion;
 	}
 	
-	
-
 }
