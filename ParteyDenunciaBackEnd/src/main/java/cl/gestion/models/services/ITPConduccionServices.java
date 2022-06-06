@@ -8,8 +8,13 @@ public interface ITPConduccionServices {
 
 	public List<TPConduccion> findAll();
 	
-
-
+	public TPConduccion findById(Integer id);
+	
+	public TPConduccion save(TPConduccion tpConduccion);
+	
+	public void delete(Integer id);
+	
+	public TPConduccion update(TPConduccion tpConduccion);
 
 	
 }
