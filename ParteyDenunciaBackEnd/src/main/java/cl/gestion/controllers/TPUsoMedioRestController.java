@@ -56,11 +56,8 @@ public class TPUsoMedioRestController {
 	public TPUsoMedio Update(@RequestBody TPUsoMedio tpUsoMedio, @PathVariable Integer id)
 	{
 		TPUsoMedio tpUsoMedioTemp = tpUsoMedioServices.findById(id);
-		tpUsoMedioTemp.setCdtpUsoMedio(tpUsoMedio.getCdtpUsoMedio());
-		tpUsoMedioTemp.setCdtpUsoMedio(tpUsoMedio.getCdtpUsoMedio());		
+		tpUsoMedioTemp.setGltpUsoMedio(tpUsoMedio.getGltpUsoMedio());		
 		return tpUsoMedioServices.save(tpUsoMedioTemp);
 	}
-
-
 	
 }

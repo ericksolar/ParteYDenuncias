@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import cl.gestion.models.dao.IFuncionarioDao;
 import cl.gestion.models.entity.Funcionario;
-import cl.gestion.models.entity.TPEstadoMigratorio;
 
 @Service
 public class FuncionarioServicesImp implements IFuncionarioServices{

@@ -36,7 +36,7 @@ public class InvolucradoDenunciadoServicesImp implements IInvolucradoDenunciadoS
 
 	@Override
 	public InvolucradoDenunciado update(InvolucradoDenunciado involucradoDenunciado) {
-		involucradoDenunciadoDao.deleteById(involucradoDenunciado.getIdInvolucradoDenunciado())
+		involucradoDenunciadoDao.deleteById(involucradoDenunciado.getIdInvolucradoDenunciado());
 		return involucradoDenunciadoDao.save(involucradoDenunciado);
 	}
 

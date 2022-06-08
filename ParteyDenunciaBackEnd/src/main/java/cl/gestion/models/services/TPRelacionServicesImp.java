@@ -3,10 +3,12 @@ package cl.gestion.models.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import cl.gestion.models.dao.ITPRelacionDao;
 import cl.gestion.models.entity.TPRelacion;
 
+@Service
 public class TPRelacionServicesImp implements ITPRelacionServices{
 
 	@Autowired
