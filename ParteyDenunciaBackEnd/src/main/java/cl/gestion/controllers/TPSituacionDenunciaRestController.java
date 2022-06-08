@@ -16,10 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import cl.gestion.models.entity.TPSituacionDenuncia;
-import cl.gestion.models.entity.TPUsoMedio;
 import cl.gestion.models.services.ITPSituacionDenunciaServices;
-
-
 
 @CrossOrigin(origins = "*", allowedHeaders="*", maxAge=3600) 
 @RestController
@@ -59,7 +56,6 @@ public class TPSituacionDenunciaRestController {
 	public TPSituacionDenuncia Update(@RequestBody TPSituacionDenuncia tpSituacionDenuncia, @PathVariable Integer id)
 	{
 		TPSituacionDenuncia tpSituacionDenunciaTemp = tpSituacionDenunciaServices.findById(id);
-		tpSituacionDenunciaTemp.setCdtpSituacion(tpSituacionDenuncia.getCdtpSituacion());
 		tpSituacionDenunciaTemp.setGltpSituacion(tpSituacionDenuncia.getGltpSituacion());
 		return tpSituacionDenunciaServices.save(tpSituacionDenunciaTemp);
 	}

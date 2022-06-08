@@ -56,7 +56,6 @@ public class TPZonaDelitoRestController {
 	public TPZonaDelito Update(@RequestBody TPZonaDelito tpZonaDelito, @PathVariable Integer id)
 	{
 		TPZonaDelito tpZonaDelitoTemp = tpZonaDelitoServices.findById(id);
-		tpZonaDelitoTemp.setCdtpZonaDelito(tpZonaDelito.getCdtpZonaDelito());
 		tpZonaDelitoTemp.setNmzonadelito(tpZonaDelito.getNmzonadelito());	
 		return tpZonaDelitoServices.save(tpZonaDelitoTemp);
 	}

@@ -3,10 +3,12 @@ package cl.gestion.models.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import cl.gestion.models.dao.ITPRedSocialDao;
 import cl.gestion.models.entity.TPRedSocial;
 
+@Service
 public class TPRedSocialServicesImp implements ITPRedSocialServices{
 
 	@Autowired

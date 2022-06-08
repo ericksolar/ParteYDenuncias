@@ -26,7 +26,7 @@ public class TPNNAServicesImp implements ITPNNAServices{
 
 	@Override
 	public TPNNA save(TPNNA tpNNA) {
-		return tpNNADao.save(tpNNA)
+		return tpNNADao.save(tpNNA);
 	}
 
 	@Override

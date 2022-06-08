@@ -8,7 +8,7 @@ import { TPSituacionDenuncia } from '../models/tp-situacion-denuncia';
 })
 export class TpSituacionDenunciaService {
 
-  url:string = "http://localhost:8080/api/tpsituaciondenuncia/"
+  url:string = "http://localhost:8080/api/tipos-situacion-denuncia/"
 
   constructor(private http: HttpClient) { }
 

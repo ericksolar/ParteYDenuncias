@@ -8,7 +8,7 @@ import { TPConduccion } from '../models/tp-conduccion';
 })
 export class TpConduccionService {
 
-  url:string = "http://localhost:8080/api/tpconduccion/"
+  url:string = "http://localhost:8080/api/tipos-conduccion/"
 
   constructor(private http: HttpClient) { }
 
