@@ -7,8 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name ="TPConduccion")
@@ -17,11 +18,11 @@ public class TPConduccion implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)//estas ID siempre van porque el ID en las tablas tipo son el CDTP
 	@Column(name ="CDTPConduccion")
 	private Integer cdtpConduccion;
 	
-	@Column(name ="GLTPConduccion", nullable = false)
+	@Column(name ="GLTPConduccion")
 	private String gltpConduccion;
 
 	public static long getSerialversionuid() {

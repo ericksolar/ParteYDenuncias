@@ -44,7 +44,7 @@ public class TPZonaDelitoRestController {
 		tpZonaDelitoServices.delete(id);
 	}
 	
-	@PostMapping("/tipos--zona-delito")
+	@PostMapping("/tipos-zona-delito")
 	@ResponseStatus(HttpStatus.CREATED)
 	public TPZonaDelito Create(@RequestBody TPZonaDelito tpZonaDelito)
 	{

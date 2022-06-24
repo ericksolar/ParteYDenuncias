@@ -1,5 +1,7 @@
 package cl.gestion.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -26,4 +28,14 @@ public class InvolucradoRestController {
 	{				
 		return involucradoServices.save(involucrado);
 	}
+	
+	/*@PostMapping("/crearPersona")
+	@ResponseStatus(HttpStatus.CREATED)
+	public void CrearPersona()
+	{				
+		involucradoServices.UsarPaCrearPersona();
+		System.out.println("involucradoServices.UsarPaCrearPersona()");
+	}*/
+	
+	
 }

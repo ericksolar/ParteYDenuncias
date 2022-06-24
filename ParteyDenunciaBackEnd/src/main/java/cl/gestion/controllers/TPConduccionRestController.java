@@ -48,6 +48,7 @@ public class TPConduccionRestController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public TPConduccion Create(@RequestBody TPConduccion tpConduccion)
 	{
+		tpConduccion.setCdtpConduccion(null);
 		return tpConduccionServices.save(tpConduccion);
 	}
 	
