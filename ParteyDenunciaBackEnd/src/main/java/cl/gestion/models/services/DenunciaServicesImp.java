@@ -1,5 +1,7 @@
 package cl.gestion.models.services;
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,5 +41,16 @@ public class DenunciaServicesImp implements IDenunciaServices{
 		denunciaDao.deleteById(denuncia.getCdReparticion());
 		return denunciaDao.save(denuncia);
 	}
+
+	@Override
+	public void PA_CrearDenunciaReparticionCorrelativo( String CDReparticion, String IDInstitucionCargo, String FCInicioDenuncia, String FCTerminoDenuncia, String NRRutUsuario) {
+		denunciaDao.PA_CrearDenunciaReparticionCorrelativo(CDReparticion, IDInstitucionCargo, FCInicioDenuncia, FCTerminoDenuncia, NRRutUsuario);
+	}
+
+
+
+
+	
+	
 
 }

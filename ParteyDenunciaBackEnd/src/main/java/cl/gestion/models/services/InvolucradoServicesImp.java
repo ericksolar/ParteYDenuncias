@@ -40,4 +40,11 @@ public class InvolucradoServicesImp implements IInvolucradoServices{
 		return involucradoDao.save(involucrado);
 	}
 
+	/*@Override
+	public void UsarPaCrearPersona() {
+		IInvolucradoDao.postCrearPersona(1, 180323120, 1, "157548512", "Oscar");
+		System.out.println("Oscar");
+
+	}*/
+
 }

@@ -15,4 +15,6 @@ public interface IInvolucradoServices {
 	public void delete(Integer id);
 	
 	public Involucrado update(Involucrado involucrado);
+	
+	//public void UsarPaCrearPersona();
 }

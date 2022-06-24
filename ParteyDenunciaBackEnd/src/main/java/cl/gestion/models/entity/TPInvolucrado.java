@@ -42,6 +42,8 @@ public class TPInvolucrado implements Serializable{
 	public void setGltpInvolucrado(String gltpInvolucrado) {
 		this.gltpInvolucrado = gltpInvolucrado;
 	}
+	
+	
 
 	
 	

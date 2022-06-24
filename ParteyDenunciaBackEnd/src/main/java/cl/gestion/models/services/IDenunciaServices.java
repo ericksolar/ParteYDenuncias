@@ -1,5 +1,6 @@
 package cl.gestion.models.services;
 
+import java.util.Date;
 import java.util.List;
 
 import cl.gestion.models.entity.Denuncia;
@@ -15,4 +16,7 @@ public interface IDenunciaServices {
 	public void delete(Integer id);
 	
 	public Denuncia update(Denuncia denuncia);
+	
+	public void PA_CrearDenunciaReparticionCorrelativo( String CDReparticion, String IDInstitucionCargo, String FCInicioDenuncia, String FCTerminoDenuncia, String NRRutUsuario);
+
 }
