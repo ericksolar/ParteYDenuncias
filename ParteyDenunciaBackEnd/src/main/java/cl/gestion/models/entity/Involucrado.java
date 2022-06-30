@@ -188,5 +188,4 @@ public class Involucrado implements Serializable{
 		this.nrRutUsuario = nrRutUsuario;
 	}
 	
-	
 }
