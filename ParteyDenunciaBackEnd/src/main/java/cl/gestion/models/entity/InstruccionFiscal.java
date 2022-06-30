@@ -17,9 +17,6 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Getter;
-import lombok.Setter;
-
 
 @Entity
 @Table(name ="InstruccionFiscal")
@@ -71,9 +68,9 @@ public class InstruccionFiscal implements Serializable{
 		return denuncia;
 	}
 
-	public Fiscalia getFiscalia() {
-		return fiscalia;
-	}
+//	public Fiscalia getFiscalia() {
+//		return fiscalia;
+//	}
 
 	public Integer getIdPersonaFiscal() {
 		return idPersonaFiscal;
@@ -103,9 +100,9 @@ public class InstruccionFiscal implements Serializable{
 		this.denuncia = denuncia;
 	}
 
-	public void setFiscalia(Fiscalia fiscalia) {
-		this.fiscalia = fiscalia;
-	}
+//	public void setFiscalia(Fiscalia fiscalia) {
+//		this.fiscalia = fiscalia;
+//	}
 
 	public void setIdPersonaFiscal(Integer idPersonaFiscal) {
 		this.idPersonaFiscal = idPersonaFiscal;

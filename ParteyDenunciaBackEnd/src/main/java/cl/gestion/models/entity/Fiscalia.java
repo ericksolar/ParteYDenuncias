@@ -35,7 +35,8 @@ public class Fiscalia implements Serializable{
 	private Integer idFiscalia;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "idFiscaliaSup")
+    @JoinColumn(name = "IDFiscaliaSup")
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "parent"})	
     private Fiscalia parent;
 
     @OneToMany(mappedBy = "parent")
