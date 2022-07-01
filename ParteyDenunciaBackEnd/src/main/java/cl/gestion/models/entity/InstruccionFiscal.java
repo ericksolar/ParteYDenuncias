@@ -34,8 +34,8 @@ public class InstruccionFiscal implements Serializable{
 	@JoinColumn(name = "IDDenuncia", nullable = false) 
 	private Denuncia denuncia;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "instruccionFiscal"})	
+	@ManyToOne(fetch = FetchType.LAZY) 
 	@JoinColumn(name = "IDFiscalia", nullable = false) 
 	private Fiscalia fiscalia;
 	
@@ -68,9 +68,6 @@ public class InstruccionFiscal implements Serializable{
 		return denuncia;
 	}
 
-//	public Fiscalia getFiscalia() {
-//		return fiscalia;
-//	}
 
 	public Integer getIdPersonaFiscal() {
 		return idPersonaFiscal;
@@ -100,9 +97,7 @@ public class InstruccionFiscal implements Serializable{
 		this.denuncia = denuncia;
 	}
 
-//	public void setFiscalia(Fiscalia fiscalia) {
-//		this.fiscalia = fiscalia;
-//	}
+
 
 	public void setIdPersonaFiscal(Integer idPersonaFiscal) {
 		this.idPersonaFiscal = idPersonaFiscal;
@@ -123,5 +118,15 @@ public class InstruccionFiscal implements Serializable{
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
 	}
+
+	public Fiscalia getFiscalia() {
+		return fiscalia;
+	}
+
+	public void setFiscalia(Fiscalia fiscalia) {
+		this.fiscalia = fiscalia;
+	}
+	
+	
 
 }

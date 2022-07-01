@@ -40,7 +40,7 @@ public class EstadoInvolucrado implements Serializable{
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPEstadoPersona", nullable = false)
-	private TPEstadoPersona TPEstadoPersona;
+	private TPEstadoPersona tpEstadoPersona;
 	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -65,10 +65,6 @@ public class EstadoInvolucrado implements Serializable{
 		return involucrado;
 	}
 
-	public TPEstadoPersona getTPEstadoPersona() {
-		return TPEstadoPersona;
-	}
-
 	public Date getFcIngreso() {
 		return fcIngreso;
 	}
@@ -89,10 +85,6 @@ public class EstadoInvolucrado implements Serializable{
 		this.involucrado = involucrado;
 	}
 
-	public void setTPEstadoPersona(TPEstadoPersona tPEstadoPersona) {
-		TPEstadoPersona = tPEstadoPersona;
-	}
-
 	public void setFcIngreso(Date fcIngreso) {
 		this.fcIngreso = fcIngreso;
 	}
@@ -104,6 +96,13 @@ public class EstadoInvolucrado implements Serializable{
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
 	}
-	
+
+	public TPEstadoPersona getTpEstadoPersona() {
+		return tpEstadoPersona;
+	}
+
+	public void setTpEstadoPersona(TPEstadoPersona tpEstadoPersona) {
+		this.tpEstadoPersona = tpEstadoPersona;
+	}
 	
 }
