@@ -34,13 +34,15 @@ public class Fiscalia implements Serializable{
 	@Column(name ="IDFiscalia")
 	private Integer idFiscalia;
 	
+	//llamarse a si misma
 	@ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "IDFiscaliaSup")
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "parent"})	
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "parent"})
     private Fiscalia parent;
 
-    @OneToMany(mappedBy = "parent")
-    private Collection<Fiscalia> children;
+//	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "children"})
+//    @OneToMany(mappedBy = "parent")
+//    private Collection<Fiscalia> children;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -79,10 +81,6 @@ public class Fiscalia implements Serializable{
 		return parent;
 	}
 
-	public Collection<Fiscalia> getChildren() {
-		return children;
-	}
-
 	public TPFiscalia getTpFiscalia() {
 		return tpFiscalia;
 	}
@@ -119,10 +117,6 @@ public class Fiscalia implements Serializable{
 		this.parent = parent;
 	}
 
-	public void setChildren(Collection<Fiscalia> children) {
-		this.children = children;
-	}
-
 	public void setTpFiscalia(TPFiscalia tpFiscalia) {
 		this.tpFiscalia = tpFiscalia;
 	}
@@ -150,6 +144,7 @@ public class Fiscalia implements Serializable{
 	public void setFcExpiracion(Date fcExpiracion) {
 		this.fcExpiracion = fcExpiracion;
 	}
+	
 	
 	
 }
