@@ -2,6 +2,7 @@ package cl.gestion.models.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -71,6 +73,20 @@ public class Direccion  implements Serializable{
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPResidencia", nullable = false)
 	private TPResidencia tpResidencia;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "direccion")
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "direccion"})
+	private List<DetalleDenuncia> detalleDenuncia;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "direccion")
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "direccion"})
+	private List<PersonaParte> personaParte;
+	
+	/*
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "direccion", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "direccion"})
+	private List<Involucrado> involucrado;
+	*/
 	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -226,5 +242,29 @@ public class Direccion  implements Serializable{
 		this.nrRutUsuario = nrRutUsuario;
 	}
 	
+	public List<DetalleDenuncia> getDetalleDenuncia() {
+		return detalleDenuncia;
+	}
+
+	public void setDetalleDenuncia(List<DetalleDenuncia> detalleDenuncia) {
+		this.detalleDenuncia = detalleDenuncia;
+	}
+	/*
+	public List<Involucrado> getInvolucrado() {
+		return involucrado;
+	}
+	
+	
+	public void setInvolucrado(List<Involucrado> involucrado) {
+		this.involucrado = involucrado;
+	}
+	*/
+	public void setPersonaParte(List<PersonaParte> personaParte) {
+		this.personaParte = personaParte;
+	}
+	
+	public List<PersonaParte> getPersonaParte() {
+		return personaParte;
+	}
 	
 }

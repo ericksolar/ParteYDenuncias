@@ -2,6 +2,7 @@ package cl.gestion.models.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -44,7 +46,7 @@ public class PersonaParte implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "personaParte"})	
-	@JoinColumn(name = "IDDireccion", nullable = false) 
+	@JoinColumn(name = "IDDireccion") 
 	private Direccion direccion;
 
 	@Column(name ="GLAlias")
@@ -74,6 +76,12 @@ public class PersonaParte implements Serializable{
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPIdentidadGenero", nullable = false)
 	private TPIdentidadGenero tpIdentidadGenero;
+	
+	/*
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "personaParte", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "personaParte"})
+	private List<ContactoRedSocial> contactoRedSocial;
+	*/
 
 	@Column(name ="FCExpiracion")
 	@Temporal(TemporalType.TIMESTAMP)

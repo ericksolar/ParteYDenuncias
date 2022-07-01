@@ -2,6 +2,7 @@ package cl.gestion.models.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -60,6 +62,44 @@ public class Involucrado implements Serializable{
 	@JoinColumn(name = "CDTPInvolucrado", nullable = false)
 	private TPInvolucrado tpInvolucrado;
 	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<EstadoInvolucrado> estadoInvolucrado;
+	
+	/*
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<Detencion> detencion;
+	
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<MedioTransporteInvolucrado> medioTransporteInvolucrado;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<NarracionDenuncia> narracionDenuncia;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<DenunciaPorMenorEdad> denunciaPorMenorEdad;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<InvolucradoDenunciado> involucradoDenunciado;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<RolImputado> rolImputado;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<PerfilImputado> perfilImputado;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<DetalleImputado> DetalleImputado;
+	*/
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fcIngreso;
@@ -187,5 +227,14 @@ public class Involucrado implements Serializable{
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
 	}
+
+	public List<EstadoInvolucrado> getEstadoInvolucrado() {
+		return estadoInvolucrado;
+	}
+
+	public void setEstadoInvolucrado(List<EstadoInvolucrado> estadoInvolucrado) {
+		this.estadoInvolucrado = estadoInvolucrado;
+	}
+	
 	
 }
