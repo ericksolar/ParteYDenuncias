@@ -2,6 +2,7 @@ package cl.gestion.models.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -43,6 +45,34 @@ public class Denuncia  implements Serializable{
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPDocumento", nullable = false)
 	private TPDocumento tpDocumento;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
+	private List<Funcionario> funcionario;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
+	private List<DenunciaReferencia> denunciaReferencia;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
+	private List<EstadoDenuncia> estadoDenuncia;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
+	private List<InstruccionFiscal> instruccionFiscal;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
+	private List<Delito> delito;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
+	private List<DetalleDenuncia> detalleDenuncia;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
+	private List<Involucrado> involucrado;
 	
 	@Column(name ="NRDocumento")
 	private Integer nrDocumento;
@@ -145,6 +175,61 @@ public class Denuncia  implements Serializable{
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
 	}
-	
+
+	public List<Funcionario> getFuncionario() {
+		return funcionario;
+	}
+
+	public List<DenunciaReferencia> getDenunciaReferencia() {
+		return denunciaReferencia;
+	}
+
+	public List<EstadoDenuncia> getEstadoDenuncia() {
+		return estadoDenuncia;
+	}
+
+	public List<InstruccionFiscal> getInstruccionFiscal() {
+		return instruccionFiscal;
+	}
+
+	public List<Delito> getDelito() {
+		return delito;
+	}
+
+	public List<DetalleDenuncia> getDetalleDenuncia() {
+		return detalleDenuncia;
+	}
+
+	public List<Involucrado> getInvolucrado() {
+		return involucrado;
+	}
+
+	public void setFuncionario(List<Funcionario> funcionario) {
+		this.funcionario = funcionario;
+	}
+
+	public void setDenunciaReferencia(List<DenunciaReferencia> denunciaReferencia) {
+		this.denunciaReferencia = denunciaReferencia;
+	}
+
+	public void setEstadoDenuncia(List<EstadoDenuncia> estadoDenuncia) {
+		this.estadoDenuncia = estadoDenuncia;
+	}
+
+	public void setInstruccionFiscal(List<InstruccionFiscal> instruccionFiscal) {
+		this.instruccionFiscal = instruccionFiscal;
+	}
+
+	public void setDelito(List<Delito> delito) {
+		this.delito = delito;
+	}
+
+	public void setDetalleDenuncia(List<DetalleDenuncia> detalleDenuncia) {
+		this.detalleDenuncia = detalleDenuncia;
+	}
+
+	public void setInvolucrado(List<Involucrado> involucrado) {
+		this.involucrado = involucrado;
+	}
 	
 }

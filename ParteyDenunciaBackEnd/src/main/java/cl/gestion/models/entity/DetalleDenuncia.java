@@ -39,7 +39,7 @@ public class DetalleDenuncia implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.LAZY) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "detalleDenuncia"})	
-	@JoinColumn(name = "IDDireccion", nullable = false) 
+	@JoinColumn(name = "IDDireccion") 
 	private Direccion direccion;
 
 	@Column(name ="FCIngreso")
