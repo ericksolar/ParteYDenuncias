@@ -77,11 +77,11 @@ public class PersonaParte implements Serializable{
 	@JoinColumn(name = "CDTPIdentidadGenero", nullable = false)
 	private TPIdentidadGenero tpIdentidadGenero;
 	
-	/*
+	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "personaParte", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "personaParte"})
 	private List<ContactoRedSocial> contactoRedSocial;
-	*/
+	
 
 	@Column(name ="FCExpiracion")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -196,6 +196,14 @@ public class PersonaParte implements Serializable{
 
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
+	}
+
+	public List<ContactoRedSocial> getContactoRedSocial() {
+		return contactoRedSocial;
+	}
+
+	public void setContactoRedSocial(List<ContactoRedSocial> contactoRedSocial) {
+		this.contactoRedSocial = contactoRedSocial;
 	}
 	
 }

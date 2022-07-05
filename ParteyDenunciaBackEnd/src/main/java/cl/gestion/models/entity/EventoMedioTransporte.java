@@ -6,6 +6,7 @@ import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,8 +16,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 
 @Entity
 @Table(name ="EventoMedioTransporte")
@@ -29,14 +30,11 @@ public class EventoMedioTransporte  implements Serializable{
 	@Column(name ="IDEventoMedioTransporte")
 	private Integer idEventoMedioTransporte;
 	
-	/**@OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "IDMedioTransporte", referencedColumnName = "IDMedioTransporte")
-    private MedioTransporte MedioTransporte;**/
+	@OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "IDMedioTransporte")
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "eventoMedioTransporte"})
+    private MedioTransporte medioTransporte;
 	
-	@OneToOne
-	@JoinColumn(name = "IDMedioTransporte")
-	private MedioTransporte medioTransporte;
-
 	@Column(name ="IDEvento")
 	private Integer idEvento;
 	
@@ -59,10 +57,6 @@ public class EventoMedioTransporte  implements Serializable{
 
 	public Integer getIdEventoMedioTransporte() {
 		return idEventoMedioTransporte;
-	}
-
-	public MedioTransporte getMedioTransporte() {
-		return medioTransporte;
 	}
 
 	public Integer getIdEvento() {
@@ -89,10 +83,6 @@ public class EventoMedioTransporte  implements Serializable{
 		this.idEventoMedioTransporte = idEventoMedioTransporte;
 	}
 
-	public void setMedioTransporte(MedioTransporte medioTransporte) {
-		this.medioTransporte = medioTransporte;
-	}
-
 	public void setIdEvento(Integer idEvento) {
 		this.idEvento = idEvento;
 	}
@@ -112,7 +102,13 @@ public class EventoMedioTransporte  implements Serializable{
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
 	}
-	
-	
-	
+
+	public MedioTransporte getMedioTransporte() {
+		return medioTransporte;
+	}
+
+	public void setMedioTransporte(MedioTransporte medioTransporte) {
+		this.medioTransporte = medioTransporte;
+	}
+
 }

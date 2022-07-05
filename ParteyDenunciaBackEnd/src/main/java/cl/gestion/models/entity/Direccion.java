@@ -74,19 +74,9 @@ public class Direccion  implements Serializable{
 	@JoinColumn(name = "CDTPResidencia", nullable = false)
 	private TPResidencia tpResidencia;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "direccion")
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "direccion"})
-	private List<DetalleDenuncia> detalleDenuncia;
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "direccion")
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "direccion"})
-	private List<PersonaParte> personaParte;
-	
-	/*
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "direccion", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "direccion"})
-	private List<Involucrado> involucrado;
-	*/
+	private List<PersonaParte> personaParte;
 	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -241,30 +231,13 @@ public class Direccion  implements Serializable{
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
 	}
-	
-	public List<DetalleDenuncia> getDetalleDenuncia() {
-		return detalleDenuncia;
-	}
 
-	public void setDetalleDenuncia(List<DetalleDenuncia> detalleDenuncia) {
-		this.detalleDenuncia = detalleDenuncia;
-	}
-	/*
-	public List<Involucrado> getInvolucrado() {
-		return involucrado;
-	}
-	
-	
-	public void setInvolucrado(List<Involucrado> involucrado) {
-		this.involucrado = involucrado;
-	}
-	*/
-	public void setPersonaParte(List<PersonaParte> personaParte) {
-		this.personaParte = personaParte;
-	}
-	
 	public List<PersonaParte> getPersonaParte() {
 		return personaParte;
+	}
+
+	public void setPersonaParte(List<PersonaParte> personaParte) {
+		this.personaParte = personaParte;
 	}
 	
 }

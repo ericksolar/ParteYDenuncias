@@ -29,7 +29,6 @@ public class InstruccionFiscalRestController {
 		return instruccionFiscalServices.findAll();
 	}
 	
-	
 	@PostMapping("/instruccion-fiscal")
 	@ResponseStatus(HttpStatus.CREATED)
 	public InstruccionFiscal Create(@RequestBody InstruccionFiscal instruccionFiscal)

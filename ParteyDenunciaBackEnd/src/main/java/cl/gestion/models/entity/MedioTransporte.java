@@ -39,12 +39,12 @@ public class MedioTransporte implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fcIngreso;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPUsoMedio", nullable = false)
 	private TPUsoMedio tpUsoMedio;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPMedioTransporte", nullable = false)
 	private TPMedioTransporte tpMedioTransporte;
@@ -53,8 +53,8 @@ public class MedioTransporte implements Serializable{
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporte"})
 	private List<MedioTransporteInvolucrado> medioTransporteInvolucrado;
 	
-	@OneToOne
-	@JoinColumn(name = "IDEventoMedioTransporte")
+	@OneToOne(mappedBy = "medioTransporte")	
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporte"})
 	private EventoMedioTransporte eventoMedioTransporte;
 	
 	@Column(name ="IDMovil")
@@ -118,6 +118,14 @@ public class MedioTransporte implements Serializable{
 
 	public TPMedioTransporte getTpMedioTransporte() {
 		return tpMedioTransporte;
+	}
+
+	public List<MedioTransporteInvolucrado> getMedioTransporteInvolucrado() {
+		return medioTransporteInvolucrado;
+	}
+
+	public EventoMedioTransporte getEventoMedioTransporte() {
+		return eventoMedioTransporte;
 	}
 
 	public Integer getIdMovil() {
@@ -192,6 +200,14 @@ public class MedioTransporte implements Serializable{
 		this.tpMedioTransporte = tpMedioTransporte;
 	}
 
+	public void setMedioTransporteInvolucrado(List<MedioTransporteInvolucrado> medioTransporteInvolucrado) {
+		this.medioTransporteInvolucrado = medioTransporteInvolucrado;
+	}
+
+	public void setEventoMedioTransporte(EventoMedioTransporte eventoMedioTransporte) {
+		this.eventoMedioTransporte = eventoMedioTransporte;
+	}
+
 	public void setIdMovil(Integer idMovil) {
 		this.idMovil = idMovil;
 	}
@@ -247,23 +263,5 @@ public class MedioTransporte implements Serializable{
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
 	}
-
-	public List<MedioTransporteInvolucrado> getMedioTransporteInvolucrado() {
-		return medioTransporteInvolucrado;
-	}
-
-	public EventoMedioTransporte getEventoMedioTransporte() {
-		return eventoMedioTransporte;
-	}
-
-	public void setMedioTransporteInvolucrado(List<MedioTransporteInvolucrado> medioTransporteInvolucrado) {
-		this.medioTransporteInvolucrado = medioTransporteInvolucrado;
-	}
-
-	public void setEventoMedioTransporte(EventoMedioTransporte eventoMedioTransporte) {
-		this.eventoMedioTransporte = eventoMedioTransporte;
-	}	
-	
-	
 	
 }
