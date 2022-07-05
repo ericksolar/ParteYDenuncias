@@ -46,7 +46,7 @@ public class InvolucradoDenunciado  implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fcIngreso;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPRelacion", nullable = false)
 	private TPRelacion tpRelacion;
@@ -140,4 +140,5 @@ public class InvolucradoDenunciado  implements Serializable{
 		this.nrRutUsuario = nrRutUsuario;
 	}
 
+	
 }

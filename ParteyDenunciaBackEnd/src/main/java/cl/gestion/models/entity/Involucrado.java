@@ -66,19 +66,9 @@ public class Involucrado implements Serializable{
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
 	private List<EstadoInvolucrado> estadoInvolucrado;
 	
-	/*
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
-	private List<Detencion> detencion;
-	
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
-	private List<MedioTransporteInvolucrado> medioTransporteInvolucrado;
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
-	private List<NarracionDenuncia> narracionDenuncia;
+	private List<RolImputado> rolImputado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
@@ -86,20 +76,32 @@ public class Involucrado implements Serializable{
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
-	private List<InvolucradoDenunciado> involucradoDenunciado;
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
-	private List<RolImputado> rolImputado;
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
 	private List<PerfilImputado> perfilImputado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
-	private List<DetalleImputado> DetalleImputado;
-	*/
+	private List<MedioTransporteInvolucrado> medioTransporteInvolucrado;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<DetalleImputado> detalleImputado;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	private List<Detencion> detencion;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado",cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado", "denunciadoInvolucrado"})
+	private List<InvolucradoDenunciado> involucrado;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denunciadoInvolucrado",cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado", "denunciadoInvolucrado"})
+	private List<InvolucradoDenunciado> involucradoDenunciado;
+	
+//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
+//	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+//	private List<NarracionDenuncia> narracionDenuncia;
+	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fcIngreso;
@@ -232,9 +234,73 @@ public class Involucrado implements Serializable{
 		return estadoInvolucrado;
 	}
 
+	public List<RolImputado> getRolImputado() {
+		return rolImputado;
+	}
+
 	public void setEstadoInvolucrado(List<EstadoInvolucrado> estadoInvolucrado) {
 		this.estadoInvolucrado = estadoInvolucrado;
 	}
-	
-	
+
+	public void setRolImputado(List<RolImputado> rolImputado) {
+		this.rolImputado = rolImputado;
+	}
+
+	public List<DenunciaPorMenorEdad> getDenunciaPorMenorEdad() {
+		return denunciaPorMenorEdad;
+	}
+
+	public void setDenunciaPorMenorEdad(List<DenunciaPorMenorEdad> denunciaPorMenorEdad) {
+		this.denunciaPorMenorEdad = denunciaPorMenorEdad;
+	}
+
+	public List<PerfilImputado> getPerfilImputado() {
+		return perfilImputado;
+	}
+
+	public void setPerfilImputado(List<PerfilImputado> perfilImputado) {
+		this.perfilImputado = perfilImputado;
+	}
+
+	public List<MedioTransporteInvolucrado> getMedioTransporteInvolucrado() {
+		return medioTransporteInvolucrado;
+	}
+
+	public void setMedioTransporteInvolucrado(List<MedioTransporteInvolucrado> medioTransporteInvolucrado) {
+		this.medioTransporteInvolucrado = medioTransporteInvolucrado;
+	}
+
+	public List<DetalleImputado> getDetalleImputado() {
+		return detalleImputado;
+	}
+
+	public void setDetalleImputado(List<DetalleImputado> detalleImputado) {
+		this.detalleImputado = detalleImputado;
+	}
+
+	public List<Detencion> getDetencion() {
+		return detencion;
+	}
+
+	public void setDetencion(List<Detencion> detencion) {
+		this.detencion = detencion;
+	}
+
+	public List<InvolucradoDenunciado> getInvolucrado() {
+		return involucrado;
+	}
+
+	public List<InvolucradoDenunciado> getInvolucradoDenunciado() {
+		return involucradoDenunciado;
+	}
+
+	public void setInvolucrado(List<InvolucradoDenunciado> involucrado) {
+		this.involucrado = involucrado;
+	}
+
+	public void setInvolucradoDenunciado(List<InvolucradoDenunciado> involucradoDenunciado) {
+		this.involucradoDenunciado = involucradoDenunciado;
+	}
+
+
 }
