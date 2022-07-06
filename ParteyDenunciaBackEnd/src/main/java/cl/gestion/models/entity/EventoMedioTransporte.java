@@ -30,7 +30,7 @@ public class EventoMedioTransporte  implements Serializable{
 	@Column(name ="IDEventoMedioTransporte")
 	private Integer idEventoMedioTransporte;
 	
-	@OneToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
     @JoinColumn(name = "IDMedioTransporte")
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "eventoMedioTransporte"})
     private MedioTransporte medioTransporte;

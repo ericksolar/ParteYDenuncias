@@ -44,7 +44,7 @@ public class PersonaParte implements Serializable{
 	@Column(name ="NMSocial")
 	private String NMSocial;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "personaParte"})	
 	@JoinColumn(name = "IDDireccion") 
 	private Direccion direccion;
@@ -52,37 +52,35 @@ public class PersonaParte implements Serializable{
 	@Column(name ="GLAlias")
 	private String glAlias;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPEstadoMigratorio", nullable = false)
 	private TPEstadoMigratorio tpEstadoMigratorio;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPGradoEscolaridad", nullable = false)
 	private TPGradoEscolaridad tpGradoEscolaridad;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPPuebloOriginario", nullable = false)
 	private TPPuebloOriginario tpPuebloOriginario;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPIdioma", nullable = false)
 	private TPIdioma tpIdioma;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPIdentidadGenero", nullable = false)
 	private TPIdentidadGenero tpIdentidadGenero;
-	
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "personaParte", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "personaParte"})
 	private List<ContactoRedSocial> contactoRedSocial;
 	
-
 	@Column(name ="FCExpiracion")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fcExpiracion;

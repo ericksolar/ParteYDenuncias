@@ -44,7 +44,7 @@ public class Fiscalia implements Serializable{
 //    @OneToMany(mappedBy = "parent")
 //    private Collection<Fiscalia> children;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPFiscalia", nullable = false)
 	private TPFiscalia tpFiscalia;

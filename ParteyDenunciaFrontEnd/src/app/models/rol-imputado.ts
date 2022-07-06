@@ -1,10 +1,18 @@
 import { Involucrado } from "./involucrado";
-import { TPRolImputado } from "./tp-rol-imputado";
+import { TpRolImputado } from "./tp-rol-imputado";
+
+// export interface RolImputado {
+//     idRolImputado: number;
+//     involucrado:   Involucrado;
+//     tpRolImputado: TpRolImputado;
+//     fcIngreso:     Date;
+//     fcExpiracion:  Date;
+//     nrRutUsuario:  number;
+// }
 
 export interface RolImputado {
     idRolImputado: number;
-    involucrado:   Involucrado;
-    tpRolImputado: TPRolImputado;
+    tpRolImputado: TpRolImputado;
     fcIngreso:     Date;
     fcExpiracion:  Date;
     nrRutUsuario:  number;

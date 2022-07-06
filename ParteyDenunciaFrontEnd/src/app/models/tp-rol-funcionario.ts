@@ -1,4 +1,5 @@
-export interface TPRolFuncionario {
+export interface TpRolFuncionario {
     cdtpRolFuncionario: number;
     gltpRolFuncionario: string;
 }
+

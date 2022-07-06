@@ -1,4 +1,4 @@
-export interface TPFiscalia {
+export interface TpFiscalia {
     cdtpFiscalia: number;
     gltpFiscalia: string;
 }

@@ -53,7 +53,7 @@ public class MedioTransporte implements Serializable{
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporte"})
 	private List<MedioTransporteInvolucrado> medioTransporteInvolucrado;
 	
-	@OneToOne(mappedBy = "medioTransporte")	
+	@OneToOne(mappedBy = "medioTransporte", cascade=CascadeType.ALL)	
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporte"})
 	private EventoMedioTransporte eventoMedioTransporte;
 	

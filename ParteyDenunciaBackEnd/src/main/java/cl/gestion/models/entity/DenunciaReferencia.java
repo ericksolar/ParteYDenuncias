@@ -3,6 +3,7 @@ package cl.gestion.models.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -31,12 +32,12 @@ public class DenunciaReferencia implements Serializable{
 	@Column(name ="IDDenunciaReferencia")
 	private Integer idDenunciaReferencia;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denunciaReferencia"})	
 	@JoinColumn(name = "IDDenunciaOrigen", nullable = false) 
-	private Denuncia denuncia;
+	private Denuncia denunciaOrigen;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denunciaReferencia"})	
 	@JoinColumn(name = "IDDenunciaAmpliacion", nullable = false) 
 	private Denuncia denunciaAmpliacion;
@@ -60,10 +61,6 @@ public class DenunciaReferencia implements Serializable{
 		return idDenunciaReferencia;
 	}
 
-	public Denuncia getDenuncia() {
-		return denuncia;
-	}
-
 	public Denuncia getDenunciaAmpliacion() {
 		return denunciaAmpliacion;
 	}
@@ -84,10 +81,6 @@ public class DenunciaReferencia implements Serializable{
 		this.idDenunciaReferencia = idDenunciaReferencia;
 	}
 
-	public void setDenuncia(Denuncia denuncia) {
-		this.denuncia = denuncia;
-	}
-
 	public void setDenunciaAmpliacion(Denuncia denunciaAmpliacion) {
 		this.denunciaAmpliacion = denunciaAmpliacion;
 	}
@@ -102,6 +95,14 @@ public class DenunciaReferencia implements Serializable{
 
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
+	}
+
+	public Denuncia getDenunciaOrigen() {
+		return denunciaOrigen;
+	}
+
+	public void setDenunciaOrigen(Denuncia denunciaOrigen) {
+		this.denunciaOrigen = denunciaOrigen;
 	}
 	
 	

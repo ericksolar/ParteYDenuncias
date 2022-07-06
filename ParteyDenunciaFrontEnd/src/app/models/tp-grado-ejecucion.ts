@@ -1,4 +1,4 @@
-export interface TPGradoEjecucion {
+export interface TpGradoEjecucion {
     cdtpGradoEjecucion: number;
     gltpDelito:         string;
 }

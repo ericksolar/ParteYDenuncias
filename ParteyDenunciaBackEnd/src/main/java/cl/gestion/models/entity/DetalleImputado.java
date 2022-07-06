@@ -32,7 +32,7 @@ public class DetalleImputado  implements Serializable{
 	@Column(name ="IDDetalleImputado")
 	private Integer idDetalleImputado;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "detalleImputado"})	
 	@JoinColumn(name = "IDInvolucrado", nullable = false) 
 	private Involucrado involucrado;
@@ -41,7 +41,7 @@ public class DetalleImputado  implements Serializable{
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fcIngreso;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPSituacion", nullable = false)
 	private TPSituacionDenuncia tpSituacionDenuncia;
@@ -52,7 +52,7 @@ public class DetalleImputado  implements Serializable{
 	@Column(name ="LGIdentidadPositiva")
 	private Boolean lgIdentidadPositiva;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPConduccion", nullable = false)
 	private TPConduccion tpConduccion;

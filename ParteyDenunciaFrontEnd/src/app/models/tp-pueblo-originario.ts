@@ -1,4 +1,4 @@
-export interface TPPuebloOriginario {
+export interface TpPuebloOriginario {
     cdtpPuebloOriginario: number;
     gltpPuebloOriginario: string;
 }

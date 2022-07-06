@@ -1,4 +1,4 @@
-export interface TPRedSocial {
+export interface TpRedSocial {
     cdtpRedSocial: number;
     gltpRedSocial: string;
 }

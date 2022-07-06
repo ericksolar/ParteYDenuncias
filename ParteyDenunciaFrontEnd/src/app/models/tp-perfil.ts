@@ -1,4 +1,5 @@
-export interface TPPerfil {
+export interface TpPerfil {
     cdtpPerfil: number;
     gltpPerfil: string;
 }
+

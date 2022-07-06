@@ -1,4 +1,4 @@
-export interface TPResidencia {
+export interface TpResidencia {
     cdtpResidencia: number;
     gltpResidencia: string;
 }

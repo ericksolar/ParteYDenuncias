@@ -1,4 +1,4 @@
-export interface TPIdioma {
+export interface TpIdioma {
     cdtpIdioma: number;
     gltpIdioma: string;
 }

@@ -1,5 +1,4 @@
-export interface TPConduccion {
+export interface TpConduccion {
     cdtpConduccion: number;
     gltpConduccion: string;
 }
-

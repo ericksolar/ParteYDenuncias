@@ -1,4 +1,4 @@
-export interface TPRelacion {
+export interface TpRelacion {
     cdtpRelacion: number;
     gltpRelacion: string;
 }

@@ -1,4 +1,4 @@
-export interface TPGradoEscolaridad {
+export interface TpGradoEscolaridad {
     cdtpGradoEscolaridad: number;
     gltpGradoEscolaridad: string;
 }

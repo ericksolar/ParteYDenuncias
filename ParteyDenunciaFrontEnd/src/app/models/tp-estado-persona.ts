@@ -1,4 +1,4 @@
-export interface TPEstadoPersona {
+export interface TpEstadoPersona {
     cdtpEstadoPersona: number;
     gltpEstadoPersona: string;
 }

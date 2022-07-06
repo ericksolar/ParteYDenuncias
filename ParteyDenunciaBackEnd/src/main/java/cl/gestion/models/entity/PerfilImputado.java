@@ -32,12 +32,12 @@ public class PerfilImputado implements Serializable{
 	@Column(name ="IDPerfilImputado")
 	private Integer idPerfilImputado;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "perfilImputado"})	
 	@JoinColumn(name = "IDInvolucrado", nullable = false) 
 	private Involucrado involucrado;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPPerfil", nullable = false)
 	private TPPerfil tpPerfil;
