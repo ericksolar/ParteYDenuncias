@@ -32,12 +32,12 @@ public class EstadoInvolucrado implements Serializable{
 	@Column(name ="IDEstadoInvolucrado")
 	private Integer idEstadoInvolucrado;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "estadoInvolucrado"})	
 	@JoinColumn(name = "IDInvolucrado", nullable = false) 
 	private Involucrado involucrado;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPEstadoPersona", nullable = false)
 	private TPEstadoPersona tpEstadoPersona;

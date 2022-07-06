@@ -31,10 +31,19 @@ public class Funcionario implements Serializable{
 	@Column(name ="IDFuncionario")
 	private Integer idFuncionario;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "funcionario"})	
 	@JoinColumn(name = "IDDenuncia", nullable = false) 
 	private Denuncia denuncia;
+	
+	@ManyToOne(fetch = FetchType.LAZY) 		
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	@JoinColumn(name = "CDTPRolFuncionario", nullable = false)
+	private TPRolFuncionario tpRolFuncionario;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "funcionario",cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "funcionario","involucrado"})
+	private List<NarracionDenuncia> narracionDenuncia;
 	
 	@Column(name ="IDPersona")
 	private Integer idPersona;
@@ -51,11 +60,6 @@ public class Funcionario implements Serializable{
 	
 	@Column(name ="CDGrado")
 	private Short cdGrado;
-	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	@JoinColumn(name = "CDTPRolFuncionario", nullable = false)
-	private TPRolFuncionario tpRolFuncionario;
 	
 	@Column(name ="FCExpiracion")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -146,6 +150,18 @@ public class Funcionario implements Serializable{
 
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
-	}	
+	}
+
+	public List<NarracionDenuncia> getNarracionDenuncia() {
+		return narracionDenuncia;
+	}
+
+	public void setNarracionDenuncia(List<NarracionDenuncia> narracionDenuncia) {
+		this.narracionDenuncia = narracionDenuncia;
+	}
+
+	
+
+	
 	
 }

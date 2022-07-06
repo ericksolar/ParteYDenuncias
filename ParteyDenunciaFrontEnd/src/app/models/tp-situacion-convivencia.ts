@@ -1,4 +1,4 @@
-export interface TPSituacionConvivencia {
+export interface TpSituacionConvivencia {
     cdtpSituacionConvivencia: number;
     gltpSituacionConvivencia: string;
 }

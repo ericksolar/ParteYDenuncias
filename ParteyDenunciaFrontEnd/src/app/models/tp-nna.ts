@@ -1,4 +1,4 @@
 export interface TpNNA {
     cdtpNNA: number;
-    gltpNNA: string;    
+    gltpNNA: string;
 }

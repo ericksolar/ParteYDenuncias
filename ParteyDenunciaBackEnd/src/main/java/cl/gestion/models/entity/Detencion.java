@@ -32,7 +32,7 @@ public class Detencion implements Serializable{
 	@Column(name ="IDDetencion")
 	private Integer idDetencion;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "detencion"})	
 	@JoinColumn(name = "IDInvolucrado", nullable = false) 
 	private Involucrado involucrado;
@@ -51,7 +51,7 @@ public class Detencion implements Serializable{
 	@Column(name ="GLNotificaAdultoResponsable")
 	private String glNotificaAdultoResponsable;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPMedioNotificacion", nullable = false)
 	private TPMedioNotificacion tpMedioNotificacion;

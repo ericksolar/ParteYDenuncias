@@ -37,27 +37,27 @@ public class Involucrado implements Serializable{
 	@Column(name ="IDPersonaParte")
 	private Integer idPersonaParte;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})	
 	@JoinColumn(name = "IDDenuncia", nullable = false) 
 	private Denuncia denuncia;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})	
 	@JoinColumn(name = "IDDireccion", nullable = false) 
 	private Direccion direccion;
 
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPContactoDenuncia", nullable = false)
 	private TPContactoDenuncia tpContactoDenuncia;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPSituacionConvivencia", nullable = false)
 	private TPSituacionConvivencia tpSituacionConvivencia;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPInvolucrado", nullable = false)
 	private TPInvolucrado tpInvolucrado;
@@ -98,9 +98,9 @@ public class Involucrado implements Serializable{
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado", "denunciadoInvolucrado"})
 	private List<InvolucradoDenunciado> involucradoDenunciado;
 	
-//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-//	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
-//	private List<NarracionDenuncia> narracionDenuncia;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado",cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado","funcionario"})
+	private List<NarracionDenuncia> narracionDenuncia;
 	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -300,6 +300,14 @@ public class Involucrado implements Serializable{
 
 	public void setInvolucradoDenunciado(List<InvolucradoDenunciado> involucradoDenunciado) {
 		this.involucradoDenunciado = involucradoDenunciado;
+	}
+
+	public List<NarracionDenuncia> getNarracionDenuncia() {
+		return narracionDenuncia;
+	}
+
+	public void setNarracionDenuncia(List<NarracionDenuncia> narracionDenuncia) {
+		this.narracionDenuncia = narracionDenuncia;
 	}
 
 

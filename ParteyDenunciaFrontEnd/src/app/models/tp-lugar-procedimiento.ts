@@ -1,4 +1,4 @@
-export interface TPLugarProcedimiento {
+export interface TpLugarProcedimiento {
     cdtpLugarProcedimiento: number;
     gltpLugarProcedimiento: string;
 }

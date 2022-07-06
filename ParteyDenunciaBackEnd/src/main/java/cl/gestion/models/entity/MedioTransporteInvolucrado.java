@@ -31,17 +31,17 @@ public class MedioTransporteInvolucrado implements Serializable{
 	@Column(name ="IDMedioTransInvol")
 	private Integer idMedioTransInvol;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporteInvolucrado"})	
 	@JoinColumn(name = "IDMedioTransporte", nullable = false) 
 	private MedioTransporte medioTransporte;
 
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporteInvolucrado"})	
 	@JoinColumn(name = "IDInvolucrado", nullable = false) 
 	private Involucrado involucrado;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPUsoMedio", nullable = false)
 	private TPUsoMedio tpUsoMedio;

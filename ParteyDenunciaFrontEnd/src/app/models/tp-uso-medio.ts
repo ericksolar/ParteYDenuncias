@@ -1,5 +1,4 @@
-export interface TPUsoMedio {
+export interface TpUsoMedio {
     cdtpUsoMedio: number;
     gltpUsoMedio: string;
 }
-

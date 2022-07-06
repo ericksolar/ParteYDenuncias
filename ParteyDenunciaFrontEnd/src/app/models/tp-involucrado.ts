@@ -1,5 +1,4 @@
-export interface TPInvolucrado {
+export interface TpInvolucrado {
     cdtpInvolucrado: number;
     gltpInvolucrado: string;
 }
-

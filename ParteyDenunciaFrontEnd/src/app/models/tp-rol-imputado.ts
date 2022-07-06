@@ -1,4 +1,4 @@
-export interface TPRolImputado {
+export interface TpRolImputado {
     cdtpRolImputado: number;
     gltpRolImputado: string;
 }

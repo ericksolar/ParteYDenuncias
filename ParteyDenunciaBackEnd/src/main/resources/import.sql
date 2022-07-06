@@ -411,7 +411,7 @@ insert into DetalleDenuncia (IDDenuncia, FCIngreso, CDTPZonaDelito, CDTPLugarOcu
 insert into DetalleDenuncia (IDDenuncia, FCIngreso, CDTPZonaDelito, CDTPLugarOcurrencia, CDTPLugarProcedimiento, CDTPCausaDetencion, IDDireccion, NMLugar, FCExpiracion, NRRutUsuario) values (10, '12/5/2021', 5, 2, 1, 10, 10, 'Ventosanzap', '2/1/2022', 199819182);
 
 --DenunciaReferencia
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (1, 0, '8/19/2021', '2/1/2022', 216769957);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (1, 2, '8/19/2021', '2/1/2022', 216769957);
 insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (2, 5, '11/27/2021', '2/1/2022', 134749214);
 insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (3, 5, '11/25/2021', '2/1/2022', 156262650);
 insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (4, 4, '11/18/2021', '2/1/2022', 108379853);
@@ -453,11 +453,11 @@ insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpira
 insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (3, 3, 'Fresenius Kabi USA, LLC', '2/1/2022', 165796387);
 insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (4, 3, 'State of Florida DOH Central Pharmacy', '2/1/2022', 109446487);
 insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (5, 6, 'Publix Super Markets Inc', '2/1/2022', 197775346);
-insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (6, 6, 'Quality Home Products', '2/1/2022', 168642058);
-insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (7, 4, 'Allergy Laboratories, Inc.', '2/1/2022', 109379433);
-insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (8, 9, 'Physicians Total Care, Inc.', '2/1/2022', 154209666);
-insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (9, 3, 'Melaleuca Inc.', '2/1/2022', 210119141);
-insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (10, 9, 'Rite Aid Corporation', '2/1/2022', 194955100);
+--insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (6, 6, 'Quality Home Products', '2/1/2022', 168642058);
+--insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (7, 4, 'Allergy Laboratories, Inc.', '2/1/2022', 109379433);
+--insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (8, 9, 'Physicians Total Care, Inc.', '2/1/2022', 154209666);
+--insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (9, 3, 'Melaleuca Inc.', '2/1/2022', 210119141);
+--insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (10, 9, 'Rite Aid Corporation', '2/1/2022', 194955100);
 
 --Delito
 insert into Delito (IDDenuncia, CDTPGradoEjecucion, FCIngreso, GLModusOperandi, LGLesionados, LGFallecidos, FCExpiracion, NRRutUsuario) values (1, 2, '2021-07-11', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', 1, 2, '2022-06-14', 21169963);

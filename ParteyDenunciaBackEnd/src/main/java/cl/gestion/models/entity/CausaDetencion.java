@@ -33,12 +33,12 @@ public class CausaDetencion implements Serializable{
 	@Column(name ="IDCausaDetencion")
 	private Integer idCausaDetencion;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "causaDetencion"})	
 	@JoinColumn(name = "IDDetencion", nullable = false) 
 	private Detencion detencion;
 
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPCausaDetencion", nullable = false)
 	private TPCausaDetencion tpCausaDetencion;

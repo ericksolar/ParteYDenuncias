@@ -1,4 +1,4 @@
-export interface TPEstadoMigratorio {
+export interface TpEstadoMigratorio {
     cdtpEstadoMigratorio: number;
     gltpEstadoMigratorio: string;
 }

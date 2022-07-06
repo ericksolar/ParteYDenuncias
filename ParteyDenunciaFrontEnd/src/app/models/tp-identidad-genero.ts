@@ -1,4 +1,4 @@
-export interface TPIdentidadGenero {
+export interface TpIdentidadGenero {
     cdtpIdentidadGenero: number;
     gltpIdentidadGenero: string;
 }

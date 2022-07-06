@@ -1,4 +1,4 @@
-export interface TPMedioNotificacion {
+export interface TpMedioNotificacion {
     cdtpMedioNotificacion: number;
     gltpMedioNotificacion: string;
 }

@@ -64,12 +64,12 @@ public class Direccion  implements Serializable{
 	@Column(name ="NRlongitud")
 	private float  nrlongitud;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPContactoDenuncia", nullable = false)
 	private TPContactoDenuncia tpContactoDenuncia;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPResidencia", nullable = false)
 	private TPResidencia tpResidencia;

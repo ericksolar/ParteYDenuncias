@@ -1,4 +1,5 @@
-export interface TPMedioTransporte {
+export interface TpMedioTransporte {
     cdtpMedioTransporte: number;
     gltpMedioTransporte: string;
 }
+

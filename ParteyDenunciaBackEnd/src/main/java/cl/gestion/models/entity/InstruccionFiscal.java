@@ -3,6 +3,7 @@ package cl.gestion.models.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -29,13 +30,13 @@ public class InstruccionFiscal implements Serializable{
 	@Column(name ="IDInstruccionFiscal")
 	private Integer idInstruccionFiscal;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "instruccionFiscal"})	
 	@JoinColumn(name = "IDDenuncia", nullable = false) 
 	private Denuncia denuncia;
 	
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "instruccionFiscal"})	
-	@ManyToOne(fetch = FetchType.LAZY) 
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JoinColumn(name = "IDFiscalia", nullable = false) 
 	private Fiscalia fiscalia;
 	

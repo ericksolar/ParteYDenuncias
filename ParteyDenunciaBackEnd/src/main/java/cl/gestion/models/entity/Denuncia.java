@@ -41,7 +41,7 @@ public class Denuncia  implements Serializable{
 	@Column(name ="CDReparticion")
 	private Integer cdReparticion;
 	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 		
+	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	@JoinColumn(name = "CDTPDocumento", nullable = false)
 	private TPDocumento tpDocumento;
@@ -49,10 +49,6 @@ public class Denuncia  implements Serializable{
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
 	private List<Funcionario> funcionario;
-	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
-	private List<DenunciaReferencia> denunciaReferencia;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
@@ -73,6 +69,14 @@ public class Denuncia  implements Serializable{
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
 	private List<Involucrado> involucrado;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denunciaOrigen", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denunciaOrigen","denunciaAmpliacion"})
+	private List<DenunciaReferencia> origenDenuncia;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denunciaAmpliacion", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denunciaOrigen","denunciaAmpliacion"})
+	private List<DenunciaReferencia> ampliacionDenuncia;
 	
 	@Column(name ="NRDocumento")
 	private Integer nrDocumento;
@@ -180,10 +184,6 @@ public class Denuncia  implements Serializable{
 		return funcionario;
 	}
 
-	public List<DenunciaReferencia> getDenunciaReferencia() {
-		return denunciaReferencia;
-	}
-
 	public List<EstadoDenuncia> getEstadoDenuncia() {
 		return estadoDenuncia;
 	}
@@ -208,10 +208,6 @@ public class Denuncia  implements Serializable{
 		this.funcionario = funcionario;
 	}
 
-	public void setDenunciaReferencia(List<DenunciaReferencia> denunciaReferencia) {
-		this.denunciaReferencia = denunciaReferencia;
-	}
-
 	public void setEstadoDenuncia(List<EstadoDenuncia> estadoDenuncia) {
 		this.estadoDenuncia = estadoDenuncia;
 	}
@@ -230,6 +226,22 @@ public class Denuncia  implements Serializable{
 
 	public void setInvolucrado(List<Involucrado> involucrado) {
 		this.involucrado = involucrado;
+	}
+
+	public List<DenunciaReferencia> getOrigenDenuncia() {
+		return origenDenuncia;
+	}
+
+	public List<DenunciaReferencia> getAmpliacionDenuncia() {
+		return ampliacionDenuncia;
+	}
+
+	public void setOrigenDenuncia(List<DenunciaReferencia> origenDenuncia) {
+		this.origenDenuncia = origenDenuncia;
+	}
+
+	public void setAmpliacionDenuncia(List<DenunciaReferencia> ampliacionDenuncia) {
+		this.ampliacionDenuncia = ampliacionDenuncia;
 	}
 	
 }
