@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
-import { TPConduccion } from '../models/tp-conduccion';
+import { TpConduccion } from '../models/tp-conduccion';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +12,8 @@ export class TpConduccionService {
 
   constructor(private http: HttpClient) { }
 
-  getAllTpConduccion(): Observable<TPConduccion[]>{
-    return this.http.get<TPConduccion[]>(this.url).pipe(
+  getAllTpConduccion(): Observable<TpConduccion[]>{
+    return this.http.get<TpConduccion[]>(this.url).pipe(
       catchError( this.handleError)
     );
   }

@@ -1,4 +1,4 @@
-import { Involucrado } from "./involucrado";
+// import { Involucrado } from "./involucrado";
 import { TpRolImputado } from "./tp-rol-imputado";
 
 // export interface RolImputado {

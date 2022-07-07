@@ -1,10 +1,18 @@
-import { Involucrado } from "./involucrado";
-import { TPEstadoPersona } from "./tp-estado-persona";
+// import { Involucrado } from "./involucrado";
+import { TpEstadoPersona } from "./tp-estado-persona";
+
+// export interface EstadoInvolucrado {
+//     idEstadoInvolucrado: number;
+//     involucrado:         Involucrado;
+//     tpEstadoPersona:     TPEstadoPersona;
+//     fcIngreso:           Date;
+//     fcExpiracion:        Date;
+//     nrRutUsuario:        number;
+// }
 
 export interface EstadoInvolucrado {
     idEstadoInvolucrado: number;
-    involucrado:         Involucrado;
-    tpEstadoPersona:     TPEstadoPersona;
+    tpEstadoPersona:     TpEstadoPersona;
     fcIngreso:           Date;
     fcExpiracion:        Date;
     nrRutUsuario:        number;

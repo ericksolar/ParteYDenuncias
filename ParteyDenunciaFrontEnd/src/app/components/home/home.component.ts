@@ -1,7 +1,7 @@
 import { Component, OnInit , AfterContentInit} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { TPConduccion } from 'src/app/models/tp-conduccion';
-import { TPSituacionDenuncia } from 'src/app/models/tp-situacion-denuncia';
+import { TpConduccion } from 'src/app/models/tp-conduccion';
+import { TpSituacionDenuncia } from 'src/app/models/tp-situacion-denuncia';
 import { TpConduccionService } from 'src/app/servicios/tp-conduccion.service';
 import { TpSituacionDenunciaService } from 'src/app/servicios/tp-situacion-denuncia.service';
 
@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
   // tpParte: any  = [ 'DENUNCIA SIN DETENIDO','DENUNCIA CON DETENIDO'];
   // tpConduccion: any = ['Pasa a control de detenccion','No pasa a control de detenccion','En espera de citación fiscalia']
   tpLugarProcedimiento: any = ['Guardia','Borde Costero','Unidad Marítima','Otro']
-  tpParte: TPSituacionDenuncia[] | undefined;
-  tpConduccion: TPConduccion[] | undefined;
+  tpParte: TpSituacionDenuncia[] | undefined;
+  tpConduccion: TpConduccion[] | undefined;
 
   constructor(private fb: FormBuilder, 
               private tpConduccionService: TpConduccionService,
