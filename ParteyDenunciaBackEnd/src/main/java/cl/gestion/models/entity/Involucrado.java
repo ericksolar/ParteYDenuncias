@@ -92,11 +92,11 @@ public class Involucrado implements Serializable{
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado",cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado", "denunciadoInvolucrado"})
-	private List<InvolucradoDenunciado> involucrado;
+	private List<InvolucradoDenunciado> involucradoDenunciado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denunciadoInvolucrado",cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado", "denunciadoInvolucrado"})
-	private List<InvolucradoDenunciado> involucradoDenunciado;
+	private List<InvolucradoDenunciado> denunciadoInvolucrado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado",cascade=CascadeType.ALL)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado","funcionario"})
@@ -286,22 +286,6 @@ public class Involucrado implements Serializable{
 		this.detencion = detencion;
 	}
 
-	public List<InvolucradoDenunciado> getInvolucrado() {
-		return involucrado;
-	}
-
-	public List<InvolucradoDenunciado> getInvolucradoDenunciado() {
-		return involucradoDenunciado;
-	}
-
-	public void setInvolucrado(List<InvolucradoDenunciado> involucrado) {
-		this.involucrado = involucrado;
-	}
-
-	public void setInvolucradoDenunciado(List<InvolucradoDenunciado> involucradoDenunciado) {
-		this.involucradoDenunciado = involucradoDenunciado;
-	}
-
 	public List<NarracionDenuncia> getNarracionDenuncia() {
 		return narracionDenuncia;
 	}
@@ -310,5 +294,21 @@ public class Involucrado implements Serializable{
 		this.narracionDenuncia = narracionDenuncia;
 	}
 
+	public List<InvolucradoDenunciado> getDenunciadoInvolucrado() {
+		return denunciadoInvolucrado;
+	}
 
+	public void setDenunciadoInvolucrado(List<InvolucradoDenunciado> denunciadoInvolucrado) {
+		this.denunciadoInvolucrado = denunciadoInvolucrado;
+	}
+
+	public List<InvolucradoDenunciado> getInvolucradoDenunciado() {
+		return involucradoDenunciado;
+	}
+
+	public void setInvolucradoDenunciado(List<InvolucradoDenunciado> involucradoDenunciado) {
+		this.involucradoDenunciado = involucradoDenunciado;
+	}
+
+	
 }

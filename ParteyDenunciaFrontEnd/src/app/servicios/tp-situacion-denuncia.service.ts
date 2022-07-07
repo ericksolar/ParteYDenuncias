@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
-import { TPSituacionDenuncia } from '../models/tp-situacion-denuncia';
+import { TpSituacionDenuncia } from '../models/tp-situacion-denuncia';
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +12,8 @@ export class TpSituacionDenunciaService {
 
   constructor(private http: HttpClient) { }
 
-  getAllTPSituacionDenuncia(): Observable<TPSituacionDenuncia[]>{
-    return this.http.get<TPSituacionDenuncia[]>(this.url).pipe(
+  getAllTPSituacionDenuncia(): Observable<TpSituacionDenuncia[]>{
+    return this.http.get<TpSituacionDenuncia[]>(this.url).pipe(
       catchError( this.handleError)
     );
   }

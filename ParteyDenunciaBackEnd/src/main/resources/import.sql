@@ -226,12 +226,12 @@ insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion
 insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (8, 2, '2021-05-15', '2022-06-25', 141451247);
 insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (9, 3, '2021-10-04', '2022-06-22', 169767970);
 insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (6, 4, '2021-01-07', '2022-06-16', 166387320);
---insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (5, 1, '2021-01-01', '2022-06-25', 110083195);
---insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (6, 2, '2021-01-27', '2022-06-25', 120807643);
---insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (7, 3, '2021-11-11', '2022-06-25', 193274561);
---insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (8, 4, '2021-10-28', '2022-06-17', 153632520);
---insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (9, 2, '2022-02-06', '2022-06-16', 110053628);
---insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (10, 4, '2021-06-21', '2022-06-21', 171387392);
+insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (5, 1, '2021-01-01', '2022-06-25', 110083195);
+insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (6, 2, '2021-01-27', '2022-06-25', 120807643);
+insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (7, 3, '2021-11-11', '2022-06-25', 193274561);
+insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (8, 4, '2021-10-28', '2022-06-17', 153632520);
+insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (9, 2, '2022-02-06', '2022-06-16', 110053628);
+insert into RolImputado (IDInvolucrado, CDTPRolImputado, FCIngreso, FCExpiracion, NRRutUsuario) values (10, 4, '2021-06-21', '2022-06-21', 171387392);
 
 
 --PerfilImputado
@@ -239,12 +239,12 @@ insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, 
 insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (8, 3, '2021-07-14', '2022-06-20', 153412958);
 insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (9, 2, '2022-01-16', '2022-06-16', 143217047);
 insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (6, 2, '2021-02-12', '2022-06-26', 134447498);
---insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (5, 5, '2021-03-30', '2022-06-21', 169362684);
---insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (6, 1, '2021-09-20', '2022-06-23', 176347540);
---insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (7, 3, '2021-05-05', '2022-06-22', 180137905);
---insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (8, 1, '2021-11-14', '2022-06-20', 117965854);
---insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (9, 3, '2021-09-18', '2022-06-22', 192680578);
---insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (10, 5, '2022-02-26', '2022-06-25', 132834399);
+insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (5, 5, '2021-03-30', '2022-06-21', 169362684);
+insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (6, 1, '2021-09-20', '2022-06-23', 176347540);
+insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (7, 3, '2021-05-05', '2022-06-22', 180137905);
+insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (8, 1, '2021-11-14', '2022-06-20', 117965854);
+insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (9, 3, '2021-09-18', '2022-06-22', 192680578);
+insert into PerfilImputado (IDInvolucrado, CDTPPerfil, FCIngreso, FCExpiracion, NRRutUsuario) values (10, 5, '2022-02-26', '2022-06-25', 132834399);
 
 --Funcionario
 insert into Funcionario (IDDenuncia, IDPersona, LGResponsableDiligencia, FCIngreso, GLRolProcedimiento, CDGrado, CDTPRolFuncionario, FCExpiracion, NRRutUsuario) values (1, 1, 1, '2021-09-16', 'Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.', 1, 1, '2022-06-26', 130979051);
@@ -384,6 +384,11 @@ insert into Detencion (IDInvolucrado, FCIngreso, GLLugarDetencion, FCDetencion, 
 insert into Detencion (IDInvolucrado, FCIngreso, GLLugarDetencion, FCDetencion, GLNotificaAdultoResponsable, CDTPMedioNotificacion, FCExpiracion, NRRutUsuario) values (3, '7/24/2021', '88875 Sloan Junction', '2/1/2022', 'Street', 1, '2/1/2022', 192701050);
 insert into Detencion (IDInvolucrado, FCIngreso, GLLugarDetencion, FCDetencion, GLNotificaAdultoResponsable, CDTPMedioNotificacion, FCExpiracion, NRRutUsuario) values (4, '7/13/2021', '7829 Londonderry Alley', '2/1/2022', 'Terrace', 3, '2/1/2022', 122454296);
 insert into Detencion (IDInvolucrado, FCIngreso, GLLugarDetencion, FCDetencion, GLNotificaAdultoResponsable, CDTPMedioNotificacion, FCExpiracion, NRRutUsuario) values (5, '3/27/2021', '07146 Welch Terrace', '2/1/2022', 'Plaza', 3, '2/1/2022', 101847156);
+insert into Detencion (IDInvolucrado, FCIngreso, GLLugarDetencion, FCDetencion, GLNotificaAdultoResponsable, CDTPMedioNotificacion, FCExpiracion, NRRutUsuario) values (1, '6/21/2021', '0353 Washington Street', '2/1/2022', 'Crossing', 1, '2/1/2022', 212900912);
+insert into Detencion (IDInvolucrado, FCIngreso, GLLugarDetencion, FCDetencion, GLNotificaAdultoResponsable, CDTPMedioNotificacion, FCExpiracion, NRRutUsuario) values (2, '9/30/2021', '8 Hanover Alley', '2/1/2022', 'Plaza', 2, '2/1/2022', 124901689);
+insert into Detencion (IDInvolucrado, FCIngreso, GLLugarDetencion, FCDetencion, GLNotificaAdultoResponsable, CDTPMedioNotificacion, FCExpiracion, NRRutUsuario) values (3, '7/24/2021', '88875 Sloan Junction', '2/1/2022', 'Street', 1, '2/1/2022', 192701050);
+insert into Detencion (IDInvolucrado, FCIngreso, GLLugarDetencion, FCDetencion, GLNotificaAdultoResponsable, CDTPMedioNotificacion, FCExpiracion, NRRutUsuario) values (4, '7/13/2021', '7829 Londonderry Alley', '2/1/2022', 'Terrace', 3, '2/1/2022', 122454296);
+insert into Detencion (IDInvolucrado, FCIngreso, GLLugarDetencion, FCDetencion, GLNotificaAdultoResponsable, CDTPMedioNotificacion, FCExpiracion, NRRutUsuario) values (5, '3/27/2021', '07146 Welch Terrace', '2/1/2022', 'Plaza', 3, '2/1/2022', 101847156);
 
 
 --DetalleImputado
@@ -453,11 +458,11 @@ insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpira
 insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (3, 3, 'Fresenius Kabi USA, LLC', '2/1/2022', 165796387);
 insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (4, 3, 'State of Florida DOH Central Pharmacy', '2/1/2022', 109446487);
 insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (5, 6, 'Publix Super Markets Inc', '2/1/2022', 197775346);
---insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (6, 6, 'Quality Home Products', '2/1/2022', 168642058);
---insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (7, 4, 'Allergy Laboratories, Inc.', '2/1/2022', 109379433);
---insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (8, 9, 'Physicians Total Care, Inc.', '2/1/2022', 154209666);
---insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (9, 3, 'Melaleuca Inc.', '2/1/2022', 210119141);
---insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (10, 9, 'Rite Aid Corporation', '2/1/2022', 194955100);
+insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (6, 6, 'Quality Home Products', '2/1/2022', 168642058);
+insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (7, 4, 'Allergy Laboratories, Inc.', '2/1/2022', 109379433);
+insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (8, 9, 'Physicians Total Care, Inc.', '2/1/2022', 154209666);
+insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (9, 3, 'Melaleuca Inc.', '2/1/2022', 210119141);
+insert into CausaDetencion (IDDetencion, CDTPCausaDetencion, GLDetalle, FCExpiracion, NRRutUsuario) values (10, 9, 'Rite Aid Corporation', '2/1/2022', 194955100);
 
 --Delito
 insert into Delito (IDDenuncia, CDTPGradoEjecucion, FCIngreso, GLModusOperandi, LGLesionados, LGFallecidos, FCExpiracion, NRRutUsuario) values (1, 2, '2021-07-11', 'Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.', 1, 2, '2022-06-14', 21169963);

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import cl.gestion.models.dto.DenunciaDTO;
+import cl.gestion.models.dto.PADenunciaDTO;
 import cl.gestion.models.entity.Denuncia;
 import cl.gestion.models.services.IDenunciaServices;
 
@@ -38,7 +38,7 @@ public class DenunciaRestController {
 		
 	@PostMapping("/denunciaPA")
 	@ResponseStatus(HttpStatus.CREATED)
-	public void PA_CrearDenunciaReparticionCorrelativo(@RequestBody DenunciaDTO denunciadto)
+	public void PA_CrearDenunciaReparticionCorrelativo(@RequestBody PADenunciaDTO denunciadto)
 	{			
 		//denunciaServices.PA_CrearDenunciaReparticionCorrelativo("22", "99", "2022-06-24T18:49:46.135", "2022-06-24T18:49:46.135", "180323120");
 		//System.out.println(denunciadto.getCdReparticion());

@@ -2,6 +2,7 @@ package cl.gestion.models.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -12,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -37,6 +39,15 @@ public class Detencion implements Serializable{
 	@JoinColumn(name = "IDInvolucrado", nullable = false) 
 	private Involucrado involucrado;
 	
+	@ManyToOne(fetch = FetchType.LAZY) 		
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	@JoinColumn(name = "CDTPMedioNotificacion", nullable = false)
+	private TPMedioNotificacion tpMedioNotificacion;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "detencion", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "detencion"})
+	private List<CausaDetencion> causaDetencion;
+	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fcIngreso;
@@ -50,11 +61,6 @@ public class Detencion implements Serializable{
 	
 	@Column(name ="GLNotificaAdultoResponsable")
 	private String glNotificaAdultoResponsable;
-	
-	@ManyToOne(fetch = FetchType.LAZY) 		
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	@JoinColumn(name = "CDTPMedioNotificacion", nullable = false)
-	private TPMedioNotificacion tpMedioNotificacion;
 	
 	@Column(name ="FCExpiracion")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -138,6 +144,13 @@ public class Detencion implements Serializable{
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
 	}
-	
+
+	public List<CausaDetencion> getCausaDetencion() {
+		return causaDetencion;
+	}
+
+	public void setCausaDetencion(List<CausaDetencion> causaDetencion) {
+		this.causaDetencion = causaDetencion;
+	}
 	
 }

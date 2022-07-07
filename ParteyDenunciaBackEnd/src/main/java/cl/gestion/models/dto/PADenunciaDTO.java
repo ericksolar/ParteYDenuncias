@@ -2,7 +2,7 @@ package cl.gestion.models.dto;
 
 import java.io.Serializable;
 
-public class DenunciaDTO  implements Serializable{
+public class PADenunciaDTO  implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 

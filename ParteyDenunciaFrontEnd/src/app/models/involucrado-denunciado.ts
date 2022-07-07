@@ -1,16 +1,24 @@
-import { Involucrado } from "./involucrado";
-import { TPRelacion } from "./tp-relacion";
+// import { Involucrado } from "./involucrado";
+import { TpRelacion } from "./tp-relacion";
 
-export interface InvolucradoDenunciado {
+// export interface InvolucradoDenunciado {
+//     idInvolucradoDenunciado: number;
+//     involucrado:             Involucrado;
+//     denunciadoInvolucrado:   Involucrado;
+//     fcIngreso:               Date;
+//     tpRelacion:              TPRelacion;
+//     glDescripcionDenunciado: string;
+//     lgConoceDenunciado:      boolean;
+//     fcExpiracion:            Date;
+//     nrRutUsuario:            number;
+// }
+
+export interface InvolucradoDenunciado{
     idInvolucradoDenunciado: number;
-    involucrado:             Involucrado;
-    denunciadoInvolucrado:   Involucrado;
     fcIngreso:               Date;
-    tpRelacion:              TPRelacion;
+    tpRelacion:              TpRelacion;
     glDescripcionDenunciado: string;
     lgConoceDenunciado:      boolean;
     fcExpiracion:            Date;
     nrRutUsuario:            number;
 }
-
-
