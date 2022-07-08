@@ -3,6 +3,7 @@ package cl.gestion.models.services;
 import java.util.Date;
 import java.util.List;
 
+import cl.gestion.models.dto.DenunciaDTO;
 import cl.gestion.models.entity.Denuncia;
 
 public interface IDenunciaServices {
@@ -11,7 +12,7 @@ public interface IDenunciaServices {
 	
 	public Denuncia findById(Integer id);
 	
-	public Denuncia save(Denuncia denuncia);
+	public Denuncia save(DenunciaDTO denunciaDTO);
 	
 	public void delete(Integer id);
 	

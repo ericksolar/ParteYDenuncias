@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import cl.gestion.models.dto.DenunciaDTO;
 import cl.gestion.models.dto.PADenunciaDTO;
 import cl.gestion.models.entity.Denuncia;
 import cl.gestion.models.services.IDenunciaServices;
@@ -31,9 +32,10 @@ public class DenunciaRestController {
 	
 	@PostMapping("/denuncia")
 	@ResponseStatus(HttpStatus.CREATED)
-	public Denuncia Create(@RequestBody Denuncia denuncia)
+	public Denuncia saveDenuncia(@RequestBody DenunciaDTO denunciaDTO)
 	{				
-		return denunciaServices.save(denuncia);
+		
+		return denunciaServices.save(denunciaDTO);
 	}
 		
 	@PostMapping("/denunciaPA")

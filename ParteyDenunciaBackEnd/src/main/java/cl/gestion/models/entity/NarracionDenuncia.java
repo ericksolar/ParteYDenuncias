@@ -34,12 +34,12 @@ public class NarracionDenuncia  implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "narracionDenuncia"})	
-	@JoinColumn(name = "IDFuncionario", nullable = false) 
+	@JoinColumn(name = "IDFuncionario") 
 	private Funcionario funcionario;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "narracionDenuncia"})	
-	@JoinColumn(name = "IDInvolucrado", nullable = false) 
+	@JoinColumn(name = "IDInvolucrado") 
 	private Involucrado involucrado;
 
 	@Column(name ="FCIngreso")

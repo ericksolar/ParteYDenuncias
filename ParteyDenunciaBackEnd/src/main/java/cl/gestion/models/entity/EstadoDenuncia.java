@@ -34,12 +34,12 @@ public class EstadoDenuncia implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "estadoDenuncia"})	
-	@JoinColumn(name = "IDDenuncia", nullable = false) 
+	@JoinColumn(name = "IDDenuncia") 
 	private Denuncia denuncia;
 	
 	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	@JoinColumn(name = "CDTPEstadoDenuncia", nullable = false)
+	@JoinColumn(name = "CDTPEstadoDenuncia")
 	private TPEstadoDenuncia tpEstadoDenuncia;
 	
 	@Column(name ="FCIngreso")
