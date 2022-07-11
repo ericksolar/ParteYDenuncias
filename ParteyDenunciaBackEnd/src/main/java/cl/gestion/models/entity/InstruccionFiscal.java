@@ -36,7 +36,7 @@ public class InstruccionFiscal implements Serializable{
 	private Denuncia denuncia;
 	
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "instruccionFiscal"})	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
+	@ManyToOne(fetch = FetchType.LAZY) 
 	@JoinColumn(name = "IDFiscalia", nullable = false) 
 	private Fiscalia fiscalia;
 	

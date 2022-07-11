@@ -32,35 +32,35 @@ public class DenunciaConverter {
 		Denuncia denuncia = new Denuncia();
 		denuncia.setIdDenuncia(null);
 		
-		for(Funcionario funcionario: denunciaDTO.getFuncionario())
+//		for(Funcionario funcionario: denunciaDTO.getFuncionario())
+//		{
+//			funcionario.setIdFuncionario(null);
+//			funcionario.setDenuncia(denuncia);
+//			for(NarracionDenuncia narracionDenuncia: funcionario.getNarracionDenuncia())
+//			{
+//				narracionDenuncia.setIdNarracion(null);
+//				narracionDenuncia.setFuncionario(funcionario);
+//			}
+//		}
+		
+		for(EstadoDenuncia estadoDenuncia: denunciaDTO.getEstadoDenuncia())
 		{
-			funcionario.setIdFuncionario(null);
-			funcionario.setDenuncia(denuncia);
-			for(NarracionDenuncia narracionDenuncia: funcionario.getNarracionDenuncia())
-			{
-				narracionDenuncia.setIdNarracion(null);
-				narracionDenuncia.setFuncionario(funcionario);
-			}
+			estadoDenuncia.setIdEstadoDenuncia(null);
+			estadoDenuncia.setDenuncia(denuncia);
 		}
 		
-//		for(EstadoDenuncia estadoDenuncia: denunciaDTO.getEstadoDenuncia())
-//		{
-//			estadoDenuncia.setIdEstadoDenuncia(null);
-//			estadoDenuncia.setDenuncia(denuncia);
-//		}
-//		
-//		for(InstruccionFiscal instruccionFiscal: denunciaDTO.getInstruccionFiscal())
-//		{
-//			instruccionFiscal.setIdInstruccionFiscal(null);
-//			instruccionFiscal.setDenuncia(denuncia);
-//		}
-//		
-//		for(Delito delito: denunciaDTO.getDelito())
-//		{
-//			delito.setIdDelito(null);
-//			delito.setDenuncia(denuncia);
-//		}
-//		
+		for(InstruccionFiscal instruccionFiscal: denunciaDTO.getInstruccionFiscal())
+		{
+			instruccionFiscal.setIdInstruccionFiscal(null);
+			instruccionFiscal.setDenuncia(denuncia);
+		}
+		
+		for(Delito delito: denunciaDTO.getDelito())
+		{
+			delito.setIdDelito(null);
+			delito.setDenuncia(denuncia);
+		}
+		
 //		for(DetalleDenuncia detalleDenuncia: denunciaDTO.getDetalleDenuncia())
 //		{
 //			detalleDenuncia.setIdDetalleDenuncia(null);
@@ -177,11 +177,21 @@ public class DenunciaConverter {
 //			ampliacionDenuncia.setIdDenunciaReferencia(null);
 //			ampliacionDenuncia.setDenunciaAmpliacion(denuncia);
 //		}
+
+		denuncia.setIdInstitucionCargo(denunciaDTO.getIdInstitucionCargo());
+		denuncia.setFcIngreso(denunciaDTO.getFcIngreso());
+		denuncia.setCdReparticion(denunciaDTO.getCdReparticion());
+		denuncia.setTpDocumento(denunciaDTO.getTpDocumento());
+		denuncia.setNrDocumento(denunciaDTO.getNrDocumento());
+		denuncia.setFcInicioDenuncia(denunciaDTO.getFcInicioDenuncia());
+		denuncia.setFcTerminoDenuncia(denunciaDTO.getFcTerminoDenuncia());
+		denuncia.setFcExpiracion(denunciaDTO.getFcExpiracion());
+		denuncia.setNrRutUsuario(denunciaDTO.getNrRutUsuario());
 		
-		denuncia.setFuncionario(denunciaDTO.getFuncionario());
-//		denuncia.setEstadoDenuncia(denunciaDTO.getEstadoDenuncia());
-//		denuncia.setInstruccionFiscal(denunciaDTO.getInstruccionFiscal());
-//		denuncia.setDelito(denunciaDTO.getDelito());
+//		denuncia.setFuncionario(denunciaDTO.getFuncionario());
+		denuncia.setEstadoDenuncia(denunciaDTO.getEstadoDenuncia());
+		denuncia.setInstruccionFiscal(denunciaDTO.getInstruccionFiscal());
+		denuncia.setDelito(denunciaDTO.getDelito());
 //		denuncia.setDetalleDenuncia(denunciaDTO.getDetalleDenuncia());
 //		denuncia.setInvolucrado(denunciaDTO.getInvolucrado());
 //		denuncia.setOrigenDenuncia(denunciaDTO.getOrigenDenuncia());

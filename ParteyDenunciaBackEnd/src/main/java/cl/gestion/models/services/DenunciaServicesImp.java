@@ -39,7 +39,7 @@ public class DenunciaServicesImp implements IDenunciaServices{
 		denuncia = denunciaConverter.ConvertDTOtoEntitytoPersist(denunciaDTO);
 		denuncia = denunciaDao.save(denuncia);
 		
-		return denunciaDao.findById(denuncia.getIdDenuncia()).orElse(null);
+		return denuncia;
 	}
 
 	@Override

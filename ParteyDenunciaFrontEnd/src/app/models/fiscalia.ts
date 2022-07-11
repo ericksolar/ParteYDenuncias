@@ -2,7 +2,7 @@ import { TpFiscalia } from "./tp-fiscalia";
 
 export interface Fiscalia {
     idFiscalia:   number;
-    parent?:      Fiscalia;
+    fiscalia?:      Fiscalia;
     tpFiscalia:   TpFiscalia;
     nmFiscalia:   string;
     tpComuna:     number;

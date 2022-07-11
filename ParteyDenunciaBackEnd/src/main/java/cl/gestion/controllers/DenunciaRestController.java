@@ -34,7 +34,7 @@ public class DenunciaRestController {
 	@ResponseStatus(HttpStatus.CREATED)
 	public Denuncia saveDenuncia(@RequestBody DenunciaDTO denunciaDTO)
 	{				
-		
+
 		return denunciaServices.save(denunciaDTO);
 	}
 		
