@@ -20,7 +20,7 @@ public class TPDocumento implements Serializable{
 	@Column(name ="CDTPDocumento")
 	private Integer cdtpDocumento;
 	
-	@Column(name ="GLTPDocumento", nullable = false)
+	@Column(name ="GLTPDocumento")//, nullable = false
 	private String gltpDocumento;
 
 	public static long getSerialversionuid() {

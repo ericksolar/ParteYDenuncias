@@ -41,7 +41,7 @@ public class Detencion implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	@JoinColumn(name = "CDTPMedioNotificacion", nullable = false)
+	@JoinColumn(name = "CDTPMedioNotificacion")//, nullable = false
 	private TPMedioNotificacion tpMedioNotificacion;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "detencion", cascade=CascadeType.ALL)

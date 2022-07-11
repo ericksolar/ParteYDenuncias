@@ -38,7 +38,7 @@ public class Funcionario implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.LAZY) 		
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	@JoinColumn(name = "CDTPRolFuncionario")
+	@JoinColumn(name = "CDTPRolFuncionario", nullable = false)
 	private TPRolFuncionario tpRolFuncionario;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "funcionario",cascade=CascadeType.ALL)
@@ -160,8 +160,4 @@ public class Funcionario implements Serializable{
 		this.narracionDenuncia = narracionDenuncia;
 	}
 
-	
-
-	
-	
 }
