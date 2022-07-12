@@ -47,7 +47,7 @@ public class Denuncia  implements Serializable{
 	private TPDocumento tpDocumento;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
+	@JsonIgnoreProperties( value={"hibernateLazyInitializer", "handler", "denuncia"}, allowSetters=true)
 	private List<Funcionario> funcionario;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
@@ -58,7 +58,7 @@ public class Denuncia  implements Serializable{
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
 	private List<InstruccionFiscal> instruccionFiscal;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL)
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denuncia", cascade=CascadeType.ALL) //, cascade=CascadeType.ALL
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "denuncia"})
 	private List<Delito> delito;
 	
@@ -80,7 +80,7 @@ public class Denuncia  implements Serializable{
 	
 	@Column(name ="NRDocumento")
 	private Integer nrDocumento;
-	
+	 
 	@Column(name ="FCInicioDenuncia")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fcInicioDenuncia;

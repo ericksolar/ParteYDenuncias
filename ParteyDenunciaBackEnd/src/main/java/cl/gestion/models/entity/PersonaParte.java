@@ -43,11 +43,6 @@ public class PersonaParte implements Serializable{
 	
 	@Column(name ="NMSocial")
 	private String NMSocial;
-	
-	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "personaParte"})	
-	@JoinColumn(name = "IDDireccion") 
-	private Direccion direccion;
 
 	@Column(name ="GLAlias")
 	private String glAlias;
@@ -77,8 +72,13 @@ public class PersonaParte implements Serializable{
 	@JoinColumn(name = "CDTPIdentidadGenero", nullable = false)
 	private TPIdentidadGenero tpIdentidadGenero;
 	
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "personaParte"}, allowSetters=true)	
+	@JoinColumn(name = "IDDireccion") 
+	private Direccion direccion;
+	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "personaParte", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "personaParte"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "personaParte"})
 	private List<ContactoRedSocial> contactoRedSocial;
 	
 	@Column(name ="FCExpiracion")

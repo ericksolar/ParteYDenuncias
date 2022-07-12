@@ -32,7 +32,7 @@ public class Funcionario implements Serializable{
 	private Integer idFuncionario;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "funcionario"})	
+	@JsonIgnoreProperties( value={"hibernateLazyInitializer", "handler", "funcionario"}, allowSetters=true)	
 	@JoinColumn(name = "IDDenuncia") 
 	private Denuncia denuncia;
 	
@@ -41,8 +41,8 @@ public class Funcionario implements Serializable{
 	@JoinColumn(name = "CDTPRolFuncionario", nullable = false)
 	private TPRolFuncionario tpRolFuncionario;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "funcionario",cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "funcionario","involucrado"})
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "funcionario", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "funcionario","involucrado"}, allowSetters=true)
 	private List<NarracionDenuncia> narracionDenuncia;
 	
 	@Column(name ="IDPersona")
