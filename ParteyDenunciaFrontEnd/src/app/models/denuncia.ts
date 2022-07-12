@@ -32,8 +32,8 @@ export interface Denuncia {
     delito:             Delito[];
     detalleDenuncia:    DetalleDenuncia[];
     involucrado:        Involucrado[];
-    origenDenuncia:     NDenuncia[];
-    ampliacionDenuncia: NDenuncia[];
+    origenDenuncia:     DenunciaReferencia[];
+    ampliacionDenuncia: DenunciaReferencia[];
     nrDocumento:        number;
     fcInicioDenuncia:   Date;
     fcTerminoDenuncia:  Date;

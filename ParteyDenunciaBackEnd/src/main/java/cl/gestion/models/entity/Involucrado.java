@@ -38,7 +38,7 @@ public class Involucrado implements Serializable{
 	private Integer idPersonaParte;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})	
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado"},allowSetters=true)	
 	@JoinColumn(name = "IDDenuncia", nullable = false) 
 	private Denuncia denuncia;
 	
@@ -99,7 +99,7 @@ public class Involucrado implements Serializable{
 	private List<InvolucradoDenunciado> denunciadoInvolucrado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado",cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado","funcionario"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado","funcionario"},allowSetters=true)
 	private List<NarracionDenuncia> narracionDenuncia;
 	
 	@Column(name ="FCIngreso")
