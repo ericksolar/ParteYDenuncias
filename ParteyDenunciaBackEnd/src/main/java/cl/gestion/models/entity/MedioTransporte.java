@@ -49,13 +49,13 @@ public class MedioTransporte implements Serializable{
 	@JoinColumn(name = "CDTPMedioTransporte", nullable = false)
 	private TPMedioTransporte tpMedioTransporte;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "medioTransporte", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporte"})
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "medioTransporte")
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "medioTransporte"})
 	private List<MedioTransporteInvolucrado> medioTransporteInvolucrado;
 	
-	@OneToOne(fetch = FetchType.LAZY,mappedBy = "medioTransporte", cascade=CascadeType.ALL)	
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporte"})
-	private EventoMedioTransporte eventoMedioTransporte;
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "medioTransporte")
+	@JsonIgnoreProperties( value={"hibernateLazyInitializer", "handler", "medioTransporte"})
+	private List<EventoMedioTransporte> eventoMedioTransporte;
 	
 	@Column(name ="IDMovil")
 	private Integer idMovil;
@@ -122,10 +122,6 @@ public class MedioTransporte implements Serializable{
 
 	public List<MedioTransporteInvolucrado> getMedioTransporteInvolucrado() {
 		return medioTransporteInvolucrado;
-	}
-
-	public EventoMedioTransporte getEventoMedioTransporte() {
-		return eventoMedioTransporte;
 	}
 
 	public Integer getIdMovil() {
@@ -204,10 +200,6 @@ public class MedioTransporte implements Serializable{
 		this.medioTransporteInvolucrado = medioTransporteInvolucrado;
 	}
 
-	public void setEventoMedioTransporte(EventoMedioTransporte eventoMedioTransporte) {
-		this.eventoMedioTransporte = eventoMedioTransporte;
-	}
-
 	public void setIdMovil(Integer idMovil) {
 		this.idMovil = idMovil;
 	}
@@ -263,5 +255,14 @@ public class MedioTransporte implements Serializable{
 	public void setNrRutUsuario(Integer nrRutUsuario) {
 		this.nrRutUsuario = nrRutUsuario;
 	}
+
+	public List<EventoMedioTransporte> getEventoMedioTransporte() {
+		return eventoMedioTransporte;
+	}
+
+	public void setEventoMedioTransporte(List<EventoMedioTransporte> eventoMedioTransporte) {
+		this.eventoMedioTransporte = eventoMedioTransporte;
+	}
+	
 	
 }

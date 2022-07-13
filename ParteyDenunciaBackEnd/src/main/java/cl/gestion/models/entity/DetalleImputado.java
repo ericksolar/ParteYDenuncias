@@ -33,7 +33,7 @@ public class DetalleImputado  implements Serializable{
 	private Integer idDetalleImputado;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "detalleImputado"})	
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "detalleImputado"},allowSetters=true)	
 	@JoinColumn(name = "IDInvolucrado", nullable = false) 
 	private Involucrado involucrado;
 	

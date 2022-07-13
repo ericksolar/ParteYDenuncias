@@ -98,7 +98,7 @@ public class DenunciaConverter {
 			
 			for(PersonaParte personaParte: direccion.getPersonaParte())
 			{
-				personaParte.setIdPersona(null);
+				personaParte.setIdPersonaParte(null);
 				personaParte.setDireccion(direccion);
 				
 				for(ContactoRedSocial contactoRedSocial: personaParte.getContactoRedSocial())
@@ -120,11 +120,11 @@ public class DenunciaConverter {
 				rolImputado.setInvolucrado(involucrado);
 			}
 			
-//			for(DenunciaPorMenorEdad denunciaPorMenorEdad: involucrado.getDenunciaPorMenorEdad())
-//			{
-//				denunciaPorMenorEdad.setIdDenunciaNNA(null);
-//				denunciaPorMenorEdad.setInvolucrado(involucrado);
-//			}
+			for(DenunciaPorMenorEdad denunciaPorMenorEdad: involucrado.getDenunciaPorMenorEdad())
+			{
+				denunciaPorMenorEdad.setIdDenunciaNNA(null);
+				denunciaPorMenorEdad.setInvolucrado(involucrado);
+			}
 			
 			for(PerfilImputado perfilImputado: involucrado.getPerfilImputado())
 			{
@@ -135,22 +135,24 @@ public class DenunciaConverter {
 			for(MedioTransporteInvolucrado medioTransporteInvolucrado: involucrado.getMedioTransporteInvolucrado())
 			{
 				medioTransporteInvolucrado.setIdMedioTransInvol(null);
-				medioTransporteInvolucrado.setInvolucrado(involucrado);
+				medioTransporteInvolucrado.setInvolucrado(involucrado);				
 				
 				MedioTransporte medioTransporte = medioTransporteInvolucrado.getMedioTransporte();
 				medioTransporte.setIdMedioTransporte(null);
-				medioTransporteInvolucrado.setMedioTransporte(medioTransporte);
+				for(EventoMedioTransporte eventoMedioTransporte: medioTransporte.getEventoMedioTransporte())
+				{
+					eventoMedioTransporte.setIdEventoMedioTransporte(null);
+					eventoMedioTransporte.setMedioTransporte(medioTransporte);
+				}
 				
-				EventoMedioTransporte eventoMedioTransporte = medioTransporte.getEventoMedioTransporte();
-				eventoMedioTransporte.setIdEventoMedioTransporte(medioTransporteInvolucrado.getMedioTransporte().getIdMedioTransporte());
 				
 			}
 			
-//			for(DetalleImputado detalleImputado: involucrado.getDetalleImputado())
-//			{
-//				detalleImputado.setIdDetalleImputado(null);
-//				detalleImputado.setInvolucrado(involucrado);
-//			}
+			for(DetalleImputado detalleImputado: involucrado.getDetalleImputado())
+			{
+				detalleImputado.setIdDetalleImputado(null);
+				detalleImputado.setInvolucrado(involucrado);
+			}
 			
 //			for(Detencion detencion: involucrado.getDetencion())
 //			{
@@ -170,11 +172,11 @@ public class DenunciaConverter {
 //				denunciadoInvolucrado.setInvolucrado(involucrado);
 //			}
 			
-			for(NarracionDenuncia narracionDenuncia: involucrado.getNarracionDenuncia())
-			{
-				narracionDenuncia.setIdNarracion(null);
-				narracionDenuncia.setInvolucrado(involucrado);
-			}
+//			for(NarracionDenuncia narracionDenuncia: involucrado.getNarracionDenuncia())
+//			{
+//				narracionDenuncia.setIdNarracion(null);
+//				narracionDenuncia.setInvolucrado(involucrado);
+//			}
 		}
 //		
 //		for(DenunciaReferencia origenDenuncia: denunciaDTO.getOrigenDenuncia()) 
