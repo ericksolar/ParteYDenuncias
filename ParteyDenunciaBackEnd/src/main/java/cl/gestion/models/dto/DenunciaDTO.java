@@ -64,14 +64,16 @@ public class DenunciaDTO implements Serializable{
 	
 	private List<PerfilImputado> perfilImputado;
 
-//	private List<Detencion> detencion;
 	private List<MedioTransporteInvolucrado> medioTransporteInvolucrado;
 	private List<MedioTransporte> medioTransporte;
 	private List<EventoMedioTransporte> eventoMedioTransporte;
-//	private List<DetalleImputado> detalleImputado;
+	
+	private List<DetalleImputado> detalleImputado;
+//	private List<Detencion> detencion;
+//	private List<CausaDetencion> causaDetencion;
+	
 //	private List<InvolucradoDenunciado> involucradoDenunciado,denunciadoInvolucrado;
 //	private List<DenunciaReferencia> origenDenuncia, ampliacionDenuncia;
-//	private List<CausaDetencion> causaDetencion;
 	
 	public static long getSerialversionuid() {
 		return serialVersionUID;
@@ -220,11 +222,12 @@ public class DenunciaDTO implements Serializable{
 	public void setPerfilImputado(List<PerfilImputado> perfilImputado) {
 		this.perfilImputado = perfilImputado;
 	}
-	
-	
-	
-	
-	
+	public List<DetalleImputado> getDetalleImputado() {
+		return detalleImputado;
+	}
+	public void setDetalleImputado(List<DetalleImputado> detalleImputado) {
+		this.detalleImputado = detalleImputado;
+	}
 	public List<MedioTransporteInvolucrado> getMedioTransporteInvolucrado() {
 		return medioTransporteInvolucrado;
 	}
@@ -243,10 +246,6 @@ public class DenunciaDTO implements Serializable{
 	public void setEventoMedioTransporte(List<EventoMedioTransporte> eventoMedioTransporte) {
 		this.eventoMedioTransporte = eventoMedioTransporte;
 	}
-
-	
-	
-	
 	
 	
 }

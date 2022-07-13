@@ -43,7 +43,7 @@ public class Involucrado implements Serializable{
 	private Denuncia denuncia;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})	
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado"},allowSetters=true)	
 	@JoinColumn(name = "IDDireccion", nullable = false) 
 	private Direccion direccion;
 
@@ -63,43 +63,43 @@ public class Involucrado implements Serializable{
 	private TPInvolucrado tpInvolucrado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado"})
 	private List<EstadoInvolucrado> estadoInvolucrado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado"})
 	private List<RolImputado> rolImputado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado"})
 	private List<DenunciaPorMenorEdad> denunciaPorMenorEdad;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado"})
 	private List<PerfilImputado> perfilImputado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado"})
 	private List<MedioTransporteInvolucrado> medioTransporteInvolucrado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado"})
 	private List<DetalleImputado> detalleImputado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado"})
 	private List<Detencion> detencion;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado",cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado", "denunciadoInvolucrado"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado", "denunciadoInvolucrado"})
 	private List<InvolucradoDenunciado> involucradoDenunciado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "denunciadoInvolucrado",cascade=CascadeType.ALL)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "involucrado", "denunciadoInvolucrado"})
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado", "denunciadoInvolucrado"})
 	private List<InvolucradoDenunciado> denunciadoInvolucrado;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "involucrado",cascade=CascadeType.ALL)
-	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado","funcionario"},allowSetters=true)
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "involucrado","funcionario"})
 	private List<NarracionDenuncia> narracionDenuncia;
 	
 	@Column(name ="FCIngreso")

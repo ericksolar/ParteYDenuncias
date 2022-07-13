@@ -32,12 +32,12 @@ public class MedioTransporteInvolucrado implements Serializable{
 	private Integer idMedioTransInvol;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporteInvolucrado"})	
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "medioTransporteInvolucrado"})	
 	@JoinColumn(name = "IDMedioTransporte", nullable = false) 
 	private MedioTransporte medioTransporte;
 
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "medioTransporteInvolucrado"})	
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "medioTransporteInvolucrado"})	
 	@JoinColumn(name = "IDInvolucrado", nullable = false) 
 	private Involucrado involucrado;
 	

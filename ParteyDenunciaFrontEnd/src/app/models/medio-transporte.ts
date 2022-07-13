@@ -28,7 +28,7 @@ export interface MedioTransporte {
     fcIngreso:             Date;
     tpUsoMedio:            TpUsoMedio;
     tpMedioTransporte:     TpMedioTransporte;
-    eventoMedioTransporte: EventoMedioTransporte;
+    eventoMedioTransporte: EventoMedioTransporte[];
     idMovil:               number;
     lgEncargoRobo:         boolean;
     lgIncautado:           boolean;

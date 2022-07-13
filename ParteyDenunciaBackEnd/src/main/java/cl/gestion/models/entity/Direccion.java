@@ -75,8 +75,12 @@ public class Direccion  implements Serializable{
 	private TPResidencia tpResidencia;
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "direccion", cascade=CascadeType.ALL)
-	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "direccion"}, allowSetters=true)
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "direccion"},allowSetters=true)
 	private List<PersonaParte> personaParte;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "direccion", cascade=CascadeType.ALL)
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "direccion"})
+	private List<Involucrado> involucrado;
 	
 	@Column(name ="FCIngreso")
 	@Temporal(TemporalType.TIMESTAMP)

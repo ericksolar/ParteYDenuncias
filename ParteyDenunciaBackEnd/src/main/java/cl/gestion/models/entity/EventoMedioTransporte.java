@@ -11,7 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -30,9 +30,9 @@ public class EventoMedioTransporte  implements Serializable{
 	@Column(name ="IDEventoMedioTransporte")
 	private Integer idEventoMedioTransporte;
 	
-	@OneToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "eventoMedioTransporte"},allowSetters=true)
     @JoinColumn(name = "IDMedioTransporte")
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "eventoMedioTransporte"})
     private MedioTransporte medioTransporte;
 	
 	@Column(name ="IDEvento")
