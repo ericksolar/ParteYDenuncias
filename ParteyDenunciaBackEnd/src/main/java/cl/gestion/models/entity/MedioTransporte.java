@@ -49,11 +49,11 @@ public class MedioTransporte implements Serializable{
 	@JoinColumn(name = "CDTPMedioTransporte", nullable = false)
 	private TPMedioTransporte tpMedioTransporte;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "medioTransporte")
+	@OneToMany(fetch = FetchType.LAZY, cascade=CascadeType.ALL) //, mappedBy = "medioTransporte",
 	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "medioTransporte"})
 	private List<MedioTransporteInvolucrado> medioTransporteInvolucrado;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "medioTransporte")
+	@OneToMany(fetch = FetchType.LAZY, cascade=CascadeType.ALL) //, mappedBy = "medioTransporte"
 	@JsonIgnoreProperties( value={"hibernateLazyInitializer", "handler", "medioTransporte"})
 	private List<EventoMedioTransporte> eventoMedioTransporte;
 	

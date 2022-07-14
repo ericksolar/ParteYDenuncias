@@ -20,9 +20,6 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity
 @Table(name ="Detencion")
 public class Detencion implements Serializable{
@@ -35,7 +32,7 @@ public class Detencion implements Serializable{
 	private Integer idDetencion;
 	
 	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "detencion"})	
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "detencion"},allowSetters=true)	
 	@JoinColumn(name = "IDInvolucrado", nullable = false) 
 	private Involucrado involucrado;
 	

@@ -20,9 +20,6 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import lombok.Getter;
-import lombok.Setter;
-
 @Entity
 @Table(name ="Involucrado")
 public class Involucrado implements Serializable{
