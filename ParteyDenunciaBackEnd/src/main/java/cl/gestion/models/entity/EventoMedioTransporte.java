@@ -30,8 +30,8 @@ public class EventoMedioTransporte  implements Serializable{
 	@Column(name ="IDEventoMedioTransporte")
 	private Integer idEventoMedioTransporte;
 	
-	@ManyToOne(fetch = FetchType.LAZY) 
-	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "eventoMedioTransporte"},allowSetters=true)
+	@ManyToOne(fetch = FetchType.LAZY, cascade=CascadeType.ALL) 
+	@JsonIgnoreProperties(value={"hibernateLazyInitializer", "handler", "eventoMedioTransporte"})
     @JoinColumn(name = "IDMedioTransporte")
     private MedioTransporte medioTransporte;
 	
@@ -110,5 +110,5 @@ public class EventoMedioTransporte  implements Serializable{
 	public void setMedioTransporte(MedioTransporte medioTransporte) {
 		this.medioTransporte = medioTransporte;
 	}
-
+	
 }

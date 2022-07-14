@@ -69,10 +69,10 @@ public class DenunciaDTO implements Serializable{
 	private List<EventoMedioTransporte> eventoMedioTransporte;
 	
 	private List<DetalleImputado> detalleImputado;
-//	private List<Detencion> detencion;
-//	private List<CausaDetencion> causaDetencion;
+	private List<Detencion> detencion;
+	private List<CausaDetencion> causaDetencion;
 	
-//	private List<InvolucradoDenunciado> involucradoDenunciado,denunciadoInvolucrado;
+	private List<InvolucradoDenunciado> involucradoDenunciado,denunciadoInvolucrado;
 //	private List<DenunciaReferencia> origenDenuncia, ampliacionDenuncia;
 	
 	public static long getSerialversionuid() {
@@ -246,6 +246,31 @@ public class DenunciaDTO implements Serializable{
 	public void setEventoMedioTransporte(List<EventoMedioTransporte> eventoMedioTransporte) {
 		this.eventoMedioTransporte = eventoMedioTransporte;
 	}
+	public List<Detencion> getDetencion() {
+		return detencion;
+	}
+	public void setDetencion(List<Detencion> detencion) {
+		this.detencion = detencion;
+	}
+	public List<CausaDetencion> getCausaDetencion() {
+		return causaDetencion;
+	}
+	public void setCausaDetencion(List<CausaDetencion> causaDetencion) {
+		this.causaDetencion = causaDetencion;
+	}
+	public List<InvolucradoDenunciado> getDenunciadoInvolucrado() {
+		return denunciadoInvolucrado;
+	}
+	public void setDenunciadoInvolucrado(List<InvolucradoDenunciado> denunciadoInvolucrado) {
+		this.denunciadoInvolucrado = denunciadoInvolucrado;
+	}
+	public List<InvolucradoDenunciado> getInvolucradoDenunciado() {
+		return involucradoDenunciado;
+	}
+	public void setInvolucradoDenunciado(List<InvolucradoDenunciado> involucradoDenunciado) {
+		this.involucradoDenunciado = involucradoDenunciado;
+	}
+
 	
 	
 }

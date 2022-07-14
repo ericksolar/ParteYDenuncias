@@ -5,6 +5,7 @@ import java.util.Iterator;
 import org.springframework.stereotype.Component;
 
 import cl.gestion.models.dto.DenunciaDTO;
+import cl.gestion.models.entity.CausaDetencion;
 import cl.gestion.models.entity.ContactoRedSocial;
 import cl.gestion.models.entity.Delito;
 import cl.gestion.models.entity.Denuncia;
@@ -154,23 +155,33 @@ public class DenunciaConverter {
 				detalleImputado.setInvolucrado(involucrado);
 			}
 			
-//			for(Detencion detencion: involucrado.getDetencion())
-//			{
-//				detencion.setIdDetencion(null);
-//				detencion.setInvolucrado(involucrado);
-//			}
+			for(Detencion detencion: involucrado.getDetencion())
+			{
+				detencion.setIdDetencion(null);
+				detencion.setInvolucrado(involucrado);
+				for(CausaDetencion causaDetencion: detencion.getCausaDetencion())
+				{
+					causaDetencion.setIdCausaDetencion(null);
+					causaDetencion.setDetencion(detencion);
+				}
+			}
 			
-//			for(InvolucradoDenunciado involucradoDenunciado: involucrado.getInvolucradoDenunciado())
-//			{
-//				involucradoDenunciado.setIdInvolucradoDenunciado(null);
-//				involucradoDenunciado.setInvolucrado(involucrado);
-//			}
+			for(InvolucradoDenunciado involucradoDenunciado: involucrado.getInvolucradoDenunciado())
+			{
+				involucradoDenunciado.setIdInvolucradoDenunciado(null);
+				involucradoDenunciado.setInvolucrado(involucrado);
+//				for(InvolucradoDenunciado denunciadoInvolucrado: involucrado.getDenunciadoInvolucrado()) 
+//				{
+//					denunciadoInvolucrado.setIdInvolucradoDenunciado(null);
+//					denunciadoInvolucrado.setDenunciadoInvolucrado(involucrado);
+//				}
+			}
 			
-//			for(InvolucradoDenunciado denunciadoInvolucrado: involucrado.getDenunciadoInvolucrado())
-//			{
-//				denunciadoInvolucrado.setIdInvolucradoDenunciado(null);
-//				denunciadoInvolucrado.setInvolucrado(involucrado);
-//			}
+			for(InvolucradoDenunciado denunciadoInvolucrado: involucrado.getDenunciadoInvolucrado())
+			{
+				denunciadoInvolucrado.setIdInvolucradoDenunciado(null);
+				denunciadoInvolucrado.setInvolucrado(involucrado);
+			}
 			
 //			for(NarracionDenuncia narracionDenuncia: involucrado.getNarracionDenuncia())
 //			{

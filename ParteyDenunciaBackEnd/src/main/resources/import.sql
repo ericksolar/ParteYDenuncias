@@ -295,16 +295,10 @@ insert into MedioTransporteInvolucrado (IDMedioTransporte, IDInvolucrado, CDTPUs
 
 
 --InvolucradoDenunciado
-insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (1, 1, '2022-01-05', 1, 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', 0, '2022-06-23', 178685085);
-insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (2, 2, '2021-06-04', 3, 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.', 0, '2022-06-16', 163343101);
-insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (3, 3, '2021-04-16', 3, 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 0, '2022-06-16', 152502399);
-insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (4, 4, '2021-06-22', 2, 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.', 0, '2022-06-16', 112490905);
-insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (5, 5, '2022-01-11', 2, 'In congue. Etiam justo. Etiam pretium iaculis justo.', 0, '2022-06-26', 131527712);
-insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (6, 6, '2022-02-27', 3, 'Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.', 1, '2022-06-23', 180913058);
-insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (7, 7, '2022-02-01', 3, 'Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.', 0, '2022-06-23', 146951529);
-insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (8, 8, '2021-02-24', 2, 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', 1, '2022-06-24', 113585092);
-insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (9, 9, '2021-03-27', 2, 'Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.', 0, '2022-06-19', 132879904);
-insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (10, 10, '2022-01-20', 2, 'Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.', 0, '2022-06-19', 177721123);
+insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (1, 8, '2022-01-05', 1, 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.', 0, '2022-06-23', 178685085);
+insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (10, 6, '2021-06-04', 3, 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.', 0, '2022-06-16', 163343101);
+insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (7, 3, '2021-04-16', 3, 'In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.', 0, '2022-06-16', 152502399);
+insert into InvolucradoDenunciado (IDInvolucrado, IDDenunciadoInvolucrado, FCIngreso, CDTPRelacion, GLDescripcionDenunciado, LGConoceDenunciado, FCExpiracion, NRRutUsuario) values (4, 9, '2021-06-22', 2, 'Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.', 0, '2022-06-16', 112490905);
 
 --Fiscalia
 insert into Fiscalia (NMFiscalia, CDTPComuna, FCIngreso, GLDireccion, NRFono, CDTPFiscalia, IDFiscaliaSup, FCExpiracion) values ('Matsoft', 5, '8/22/2021', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '65485125', 2, NULL , '2/1/2022');
@@ -416,16 +410,16 @@ insert into DetalleDenuncia (IDDenuncia, FCIngreso, CDTPZonaDelito, CDTPLugarOcu
 insert into DetalleDenuncia (IDDenuncia, FCIngreso, CDTPZonaDelito, CDTPLugarOcurrencia, CDTPLugarProcedimiento, CDTPCausaDetencion, IDDireccion, NMLugar, FCExpiracion, NRRutUsuario) values (10, '12/5/2021', 5, 2, 1, 10, 10, 'Ventosanzap', '2/1/2022', 199819182);
 
 --DenunciaReferencia
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (1, 2, '8/19/2021', '2/1/2022', 216769957);
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (2, 5, '11/27/2021', '2/1/2022', 134749214);
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (3, 5, '11/25/2021', '2/1/2022', 156262650);
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (4, 4, '11/18/2021', '2/1/2022', 108379853);
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (5, 2, '10/20/2021', '2/1/2022', 137726281);
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (6, 6, '11/19/2021', '2/1/2022', 197348948);
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (7, 7, '7/30/2021', '2/1/2022', 144218519);
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (8, 5, '8/17/2021', '2/1/2022', 155726583);
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (9, 8, '1/3/2022', '2/1/2022', 191925558);
-insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (10,9, '4/23/2021', '2/1/2022', 120207107);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (1, 2, '8/19/2021', '4/1/2022', 216769957);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (2, 5, '11/27/2021', '21/4/2022', 134749214);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (3, 5, '11/25/2021', '23/1/2022', 156262650);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (4, 4, '11/18/2021', '2/11/2022', 108379853);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (5, 2, '10/20/2021', '2/2/2022', 137726281);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (6, 6, '11/19/2021', '2/12/2022', 197348948);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (7, 7, '7/30/2021', '2/0/2022', 144218519);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (8, 5, '8/17/2021', '2/3/2022', 155726583);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (9, 8, '1/3/2022', '2/6/2022', 191925558);
+insert into DenunciaReferencia (IDDenunciaOrigen, IDDenunciaAmpliacion, FCIngreso, FCExpiracion, NRRutUsuario) values (10,9, '4/23/2021', '2/2/2022', 120207107);
 
 --DenunciaPorMenorEdad
 insert into DenunciaPorMenorEdad (IDInvolucradoDenunciante, FCIngreso, CDTPNNA, LGAdultoProtector, CDTPRelacion, IDAdultoProtector, GLPersonaRelata, GLConoceHechos, FCExpiracion, NRRutUsuario) values (1, '5/5/2021', 1, 1, 1, 1, 'in tempus sit amet sem fusce consequat', 'est risus', '2/1/2022', 120644628);
